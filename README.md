@@ -1,4 +1,5 @@
-# Katalon Studio Samples: BDD Cucumber Tests
+# Mezon End to End Testing
+
 Katalon Studio is a free and easy-to-use automated functional and regression testing platform. It provides users the ability to implement full automated testing solutions for their application projects with minimal engineering and programming skill requirements.
 ______
 The **katalon-bdd-cucumber-tests** perform UI & API functional automation tests written in BDD Cucumber format on Jira Web Application using Katalon Studio. The examples in this project range from common to advanced test cases.
