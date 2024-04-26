@@ -12,10 +12,10 @@
       <variableId>bd062a7a-c2dc-4d13-bcee-f4cf4153e704</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>'baseUrl'</defaultValue>
+      <defaultValue>GlobalVariable.baseUrl</defaultValue>
       <description></description>
       <id>bd062a7a-c2dc-4d13-bcee-f4cf4153e704</id>
-      <masked>false</masked>
+      <masked>true</masked>
       <name>url</name>
    </variable>
 </TestCaseEntity>

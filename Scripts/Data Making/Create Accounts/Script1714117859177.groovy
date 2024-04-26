@@ -17,10 +17,5 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
-
-WebUI.navigateToUrl(url)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/div_WELCOME BACKSo glad to meet you againCo_a266bd'), 
-    0)
+WebUI.callTestCase(findTestCase('Tools/Create Account'), [('userEmail') : email, ('userPassword') : password], FailureHandling.STOP_ON_FAILURE)
 

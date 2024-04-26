@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_WELCOME BACK_flex-row justify-start ite_4a6a2f</name>
+   <tag></tag>
+   <elementGuidId>30185b45-4e73-4bc4-8ac2-7aae5ed2c939</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='app-layout']/div/div/div/div/div/div[3]/div[2]/div/div/div[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>div:nth-child(2) > div > div > div:nth-child(2) >> nth=0</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>0b2e1868-421f-45e3-88ef-dc0e4594ef08</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex-row justify-start items-center flex w-full h-fit pt-3 pr-4 pb-3 pl-4 gap-x-2 rounded-[4px] bg-[#000000] relative border-[1px] border-[#1e1e1e] border-[#1e1e1e]</value>
+      <webElementGuid>3ba47d0e-7912-4ada-a57f-07b586ac3b8d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app-layout&quot;)/div[1]/div[@class=&quot;w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center&quot;]/div[@class=&quot;justify-center items-center flex w-full h-full sm:max-h-[580px] sm:h-9/10 sm:max-w-[450px] lg:min-w-[850px] lg:max-h-[620px]  rounded-none sm:rounded-2xl lg:p-12 px-0 bg-[#0b0b0b] flex-col mx-auto&quot;]/div[@class=&quot;relative top-0 flex-col pb-0 lg:top-0 lg:pb-0 flex lg:flex-row lg:gap-x-12 items-center w-full overflow-y-auto hide-scrollbar lg:overflow-y-visible&quot;]/div[@class=&quot;flex-col justify-start items-center flex h-fit p-0 gap-2 pb-2 lg:pb-0 md:gap-4 w-9/10&quot;]/div[@class=&quot;flex-col justify-start items-center flex lg:w-[496px] h-fit lg:px-0 w-450 max-w-full&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit gap-y-5&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit gap-y-5&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit gap-y-3 relative&quot;]/div[@class=&quot;flex-row justify-start items-center flex w-full h-fit pt-3 pr-4 pb-3 pl-4 gap-x-2 rounded-[4px] bg-[#000000] relative border-[1px] border-[#1e1e1e] border-[#1e1e1e]&quot;]</value>
+      <webElementGuid>aa705e35-ce27-43a0-a655-6bd1dae05cfa</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='app-layout']/div/div/div/div/div/div[3]/div[2]/div/div/div[2]</value>
+      <webElementGuid>ea197496-34c7-4bff-b6df-3ae3aa1f79cc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='WELCOME BACK'])[1]/following::div[9]</value>
+      <webElementGuid>3e3e0df5-4c82-4cc0-8495-71123fa8281a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/preceding::div[3]</value>
+      <webElementGuid>d15c97a8-372b-4127-bf35-7372f614c31e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign in'])[1]/preceding::div[5]</value>
+      <webElementGuid>d2a5137b-cddf-416a-b919-457b107e9b52</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div[2]</value>
+      <webElementGuid>d14cb2af-10e0-4290-a67b-3636207b5c99</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='app-layout']/div/div/div/div/div/div[3]/div[2]/div/div[2]/div[2]/div</value>
+      <webElementGuid>69f212a3-4642-4466-b379-b1de6b373981</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='WELCOME BACK'])[1]/following::div[13]</value>
+      <webElementGuid>48135de3-e944-4a7a-b341-c3fbd5058544</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/preceding::div[1]</value>
+      <webElementGuid>213ce7c3-0417-47f2-8f4c-a4d2b8bf0a81</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign in'])[1]/preceding::div[1]</value>
+      <webElementGuid>0d192f7f-6f40-4003-a361-633ba85832e7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div[2]/div[2]/div</value>
+      <webElementGuid>c53dcf89-dc66-48dd-b666-0d94e9f5ee08</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

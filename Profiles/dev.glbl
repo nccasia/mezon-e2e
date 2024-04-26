@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>dev</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://dev-mezon.nccsoft.vn/guess/login'</initValue>
+      <name>baseUrl</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

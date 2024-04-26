@@ -19,8 +19,19 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl(url)
+WebUI.navigateToUrl('https://dev-mezon.nccsoft.vn/guess/login')
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/div_WELCOME BACKSo glad to meet you againCo_a266bd'), 
-    0)
+WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), userEmail)
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/div_WELCOME BACK_flex-row justify-start ite_4a6a2f'))
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/div_WELCOME BACKSo glad to meet you againCo_a266bd'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), userPassword)
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/button_Sign in'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/button_Friends'), 0)
+
+WebUI.closeBrowser()
 
