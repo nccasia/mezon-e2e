@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_WELCOME BACKSo glad to meet you againCo_a266bd</name>
+   <tag></tag>
+   <elementGuidId>0dc175c6-0418-4172-941f-e5b139b567da</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.w-screen.h-screen.overflow-x-hidden.overflow-y-scroll.scrollbar-hide.flex.items-center</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='app-layout']/div/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>#app-layout div >> internal:has-text=&quot;WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone numbe&quot;i >> nth=1</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>4ad82aed-520e-42fe-a8b9-a88342e5f917</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value> w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center</value>
+      <webElementGuid>654fa017-d124-427e-8642-6944f3b670ed</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone number✱Password✱Forgot your password?Sign inNeed an account?Sign upSign in by QR codeUse Mezon on mobile to scan QR</value>
+      <webElementGuid>1b81bbf4-5d7b-46ee-b140-41cccb40a35b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app-layout&quot;)/div[1]/div[@class=&quot;w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center&quot;]</value>
+      <webElementGuid>5b60799c-0849-481a-b029-a532636fb75e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='app-layout']/div/div</value>
+      <webElementGuid>d15c0ac1-754e-45d3-bad3-2be260e4cc77</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div/div</value>
+      <webElementGuid>9797bfd8-1e4a-4f5d-be4e-a0922aa89c46</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone number✱Password✱Forgot your password?Sign inNeed an account?Sign upSign in by QR codeUse Mezon on mobile to scan QR' or . = 'WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone number✱Password✱Forgot your password?Sign inNeed an account?Sign upSign in by QR codeUse Mezon on mobile to scan QR')]</value>
+      <webElementGuid>49fab98f-497d-4521-bb94-140d5aea60b9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
