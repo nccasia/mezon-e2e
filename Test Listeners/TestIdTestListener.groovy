@@ -1,4 +1,4 @@
-//import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -22,25 +22,25 @@ import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.context.TestSuiteContext
 
-import com.kms.katalon.core.cucumber.keyword.internal.CucumberGlueGenerator
 
+class TestIdTestListener {
+    /**
+     * Executes before every test suite starts.
+     * @param testSuiteContext: related information of the executed test suite.
+     */
+    @BeforeTestSuite
+    def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
+        Long timestamp = System.currentTimeMillis();
+        
+        // convert Long to string
+        GlobalVariable.testExecutionId = Long.toString(timestamp);
+    }
 
-class TestListener {
-	/**
-	 * Executes before every test case starts.
-	 * @param testCaseContext related information of the executed test case.
-	 */
-	@BeforeTestCase
-	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
-		CucumberGlueGenerator.addDefaultPackages();
-	}
-	
-	/**
-	 * Executes after every test case ends.
-	 * @param testCaseContext related information of the executed test case.
-	 */
-	@AfterTestCase
-	def afterTestcase(TestCaseContext testCaseContext) {
-		WebUI.closeBrowser();
-	}
+    /**
+     * Executes after every test suite ends.
+     * @param testSuiteContext: related information of the executed test suite.
+     */
+    @AfterTestSuite
+    def sampleAfterTestSuite(TestSuiteContext testSuiteContext) {
+    }
 }

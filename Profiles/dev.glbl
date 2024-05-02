@@ -9,4 +9,9 @@
       <initValue>'https://dev-mezon.nccsoft.vn/guess/login'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>testExecutionId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

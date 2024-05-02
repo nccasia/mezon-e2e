@@ -1,4 +1,5 @@
 package mezon
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -42,18 +43,25 @@ import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
-
-
 class Login {
 
+    // Given I am logged in with "<email>" and "<password>"
+    @Given('I am logged in with "(.*)" and "(.*)"')
+    def givenIAmLoggedInWith(String email, String password) {
+        WebUI.callTestCase(findTestCase('Definitions/I am logged in with'), [('email') : email
+            , ('password') : password], FailureHandling.STOP_ON_FAILURE)
+    }
 
-	@Given("The Login Page is opening")
-	def givenIAmOnLoginPage() {
-		WebUI.callTestCase(findTestCase('Steps/The Login Page is opening'), [:], FailureHandling.STOP_ON_FAILURE)
-	}
+    // Given The Login Page is opening
+    @Given('The Login Page is opening')
+    def givenIAmOnLoginPage() {
+        WebUI.callTestCase(findTestCase('Definitions/The Login Page is opening'), [:], FailureHandling.STOP_ON_FAILURE)
+    }
 
-	@Then("Login page should display correctly")
-	def givenLoginPageShouldDisplayCorrectly() {
-		WebUI.callTestCase(findTestCase('Web UI/Login page should display correctly'), [:], FailureHandling.STOP_ON_FAILURE)
-	}
+    // When I login with "<email>" and "<password>"
+    @Then('Login page should display correctly')
+    def givenLoginPageShouldDisplayCorrectly() {
+        WebUI.callTestCase(findTestCase('Web UI/Login page should display correctly'), [:], FailureHandling.STOP_ON_FAILURE)
+    }
+
 }

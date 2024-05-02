@@ -17,25 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/h1_WELCOME BACK'))
+WebUI.click(findTestObject('Object Repository/Page_Mezon/div_'))
 
-WebUI.verifyElementText(findTestObject('Object Repository/Page_Mezon/h1_WELCOME BACK'), 'WELCOME BACK')
+WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Add Clan'))
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/p_So glad to meet you again'))
+WebUI.click(findTestObject('Object Repository/Page_Mezon/input_CLAN NAME_bg-bgPrimary font-400  px-1_0056bc'))
 
-WebUI.verifyElementText(findTestObject('Object Repository/Page_Mezon/p_So glad to meet you again'), 'So glad to meet you again!')
+WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_CLAN NAME_bg-bgPrimary font-400  px-1_0056bc'), clanName.toUpperCase())
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/p_Email or Phone number'))
+WebUI.click(findTestObject('Object Repository/Page_Mezon/button_Create'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/p_Email or Phone number'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/p_Welcome to  general'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), 0)
+WebUI.delay(1)
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/p_Password'))
+WebUI.waitForElementPresent(findTestObject('Page_Mezon/div_E'), 0)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/p_Password'), 0)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), 0)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/button_Sign in'), 0)
+WebUI.verifyElementText(findTestObject('Object Repository/Page_Mezon/p_general'), 'general')
 

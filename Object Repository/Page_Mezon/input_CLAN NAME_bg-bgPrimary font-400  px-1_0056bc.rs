@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_CLAN NAME_bg-bgPrimary font-400  px-1_0056bc</name>
+   <tag></tag>
+   <elementGuidId>d784843c-ee04-48e1-b67e-625da2b603d5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//input[@type='text'])[3]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:attr=[placeholder=&quot;rUvCGyFyir's clan&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>88ac7aee-cb15-4f1c-8b1f-70447eb90060</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>text</value>
+      <webElementGuid>c2e634f0-bb89-42ff-a0ac-56b425505001</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>bg-bgPrimary font-[400]  px-[16px] rounded w-full text-white outline-none bg-bgSurface mb-2 mt-4 py-2</value>
+      <webElementGuid>8e8cca22-2290-498c-91d7-46697eeab3ca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>placeholder</name>
+      <type>Main</type>
+      <value>rUvCGyFyir's clan</value>
+      <webElementGuid>821b6c89-088b-42ad-8f05-2d810df7ed65</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;wf-notosans-n4-active wf-active&quot;]/body[1]/div[@class=&quot;justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-black bg-opacity-80 text-white&quot;]/div[@class=&quot;relative w-full max-w-[684px] sm:h-auto h-full&quot;]/div[@class=&quot;border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-[#151515] outline-none focus:outline-none h-full sm:h-auto&quot;]/div[@class=&quot;relative px-5 py-4 flex-auto bg-transparent&quot;]/div[@class=&quot;bg-[#323232] ounded-[5px] bg-transparent&quot;]/div[@class=&quot;flex items-center flex-col justify-center&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;w-full&quot;]/input[@class=&quot;bg-bgPrimary font-[400]  px-[16px] rounded w-full text-white outline-none bg-bgSurface mb-2 mt-4 py-2&quot;]</value>
+      <webElementGuid>74fd7313-597d-4b01-ba7a-5a0d8f202dde</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//input[@type='text'])[3]</value>
+      <webElementGuid>125bcd8a-f232-4a86-8ba5-900a3684becb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div[2]/div/div/div/div/input</value>
+      <webElementGuid>b6c7b287-b17d-401c-ab3b-18ddc4cc2de7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//input[@type = 'text' and @placeholder = concat(&quot;rUvCGyFyir&quot; , &quot;'&quot; , &quot;s clan&quot;)]</value>
+      <webElementGuid>1d6544f7-ab4c-48aa-bcf2-3718040936bb</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

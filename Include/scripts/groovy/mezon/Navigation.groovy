@@ -48,6 +48,6 @@ class Navigation {
 
 	@Then("Close browser")
 	def givenIAmOnLoginPage() {
-		WebUI.callTestCase(findTestCase('Steps/Close browser'), [:], FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase('Definitions/Close browser'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 }

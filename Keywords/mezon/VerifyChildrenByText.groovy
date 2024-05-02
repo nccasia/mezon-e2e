@@ -7,7 +7,7 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testcase.TestCase
 import com.kms.katalon.core.testcase.TestCaseFactory
@@ -15,8 +15,8 @@ import com.kms.katalon.core.testdata.TestData
 import com.kms.katalon.core.testdata.TestDataFactory
 import com.kms.katalon.core.testobject.ObjectRepository
 import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
 
 import internal.GlobalVariable
 
@@ -37,29 +37,27 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 
-import cucumber.api.java.en.And
-import cucumber.api.java.en.Given
-import cucumber.api.java.en.Then
-import cucumber.api.java.en.When
 
+class VerifyChildrenByText {
 
-
-class Common {
     /**
-     * The step definitions below match with Katalon sample Gherkin steps
+     * Verify that has a child element with text
+     * @param parent parent element
+     * @param text text to verify
+     * @return void
      */
-    @Given("I want to write a step with (.*)")
-    def I_want_to_write_a_step_with_name(String name) {
-        println name
-    }
+    @Keyword
+    def verifyChildrenByText(TestObject parrent, String text) {
+        WebElement parentEl = WebUiBuiltInKeywords.findWebElement(parrent)
+        List<WebElement> childrenEl = parentEl.findElements(By.xpath(".//*"))
 
-    @When("I check for the (\\d+) in step")
-    def I_check_for_the_value_in_step(int value) {
-        println value
-    }
+        for (WebElement childEl : childrenEl) {
+            if (childEl.getText().equals(text)) {
+                KeywordUtil.markPassed("Element has a child with text: " + text)
+                return
+            }
+        }
 
-    @Then("I verify the (.*) in step")
-    def I_verify_the_status_in_step(String status) {
-        println status
+        KeywordUtil.markFailed("Element does not have a child with text: " + text)
     }
 }

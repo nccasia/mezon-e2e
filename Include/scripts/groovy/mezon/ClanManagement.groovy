@@ -1,4 +1,5 @@
 package mezon
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -42,24 +43,25 @@ import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
+import mezon.TestParams
 
+class ClanManagement {
 
-class Common {
-    /**
-     * The step definitions below match with Katalon sample Gherkin steps
-     */
-    @Given("I want to write a step with (.*)")
-    def I_want_to_write_a_step_with_name(String name) {
-        println name
+    // When I create a clan with name "<clanName>"
+    @When('I create a clan with name "(.*)"')
+    def whenICreateAClanWithName(String clanName) {
+        WebUI.callTestCase(findTestCase('Definitions/I create a clan with name'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
     }
 
-    @When("I check for the (\\d+) in step")
-    def I_check_for_the_value_in_step(int value) {
-        println value
+    // Then I should see the clan "<clanName>" in my clan list
+    @Then('I should see the clan "(.*)" in my clan list')
+    def thenIShouldSeeTheClanInMyClanList(String clanName) {
+        WebUI.callTestCase(findTestCase('Definitions/I should see the clan in my clan list'), [('clanName') : clanName], FailureHandling.STOP_ON_FAILURE)
     }
 
-    @Then("I verify the (.*) in step")
-    def I_verify_the_status_in_step(String status) {
-        println status
+    // And I should natigated to the clan "<clanName>" page
+    @And('I should natigated to the clan "(.*)" page')
+    def andIShouldNatigatedToTheClanPage(String clanName) {
+        WebUI.callTestCase(findTestCase('Definitions/I should natigated to the clan page'), [('clanName') : clanName], FailureHandling.STOP_ON_FAILURE)
     }
 }

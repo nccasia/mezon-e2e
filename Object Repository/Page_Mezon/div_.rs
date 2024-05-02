@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_</name>
+   <tag></tag>
+   <elementGuidId>fcf6d45b-e9c3-47b0-9f54-6cf2d211c90d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='menu']/div[2]/div</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>div >> internal:has-text=/^\+$/ >> nth=2</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>da0a6acb-9014-45e9-bfef-796a62116cc3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>size-12 bg-[#1E1E1E] flex justify-center items-center rounded-full cursor-pointer hover:rounded-xl hover:bg-slate-800 transition-all duration-200 </value>
+      <webElementGuid>0e1d8853-a490-4e5d-bfa3-b13533dc8785</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>+</value>
+      <webElementGuid>e2367cab-4fcc-4d99-9f7d-f3db7fc335ca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;menu&quot;)/div[@class=&quot;relative py-2&quot;]/div[@class=&quot;size-12 bg-[#1E1E1E] flex justify-center items-center rounded-full cursor-pointer hover:rounded-xl hover:bg-slate-800 transition-all duration-200&quot;]</value>
+      <webElementGuid>bfe55aa8-2e3c-4e88-9d65-2bc77e2f572d</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='menu']/div[2]/div</value>
+      <webElementGuid>2b98af98-1164-4bd8-9f6d-6918dbc0b6fa</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Friends'])[1]/preceding::div[7]</value>
+      <webElementGuid>059c7ded-e099-4cfa-b861-cb84a03616eb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='R'])[1]/preceding::div[12]</value>
+      <webElementGuid>65ef364a-cb1c-4b88-9a7f-806c1addd9b8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div/div/div/div[2]/div</value>
+      <webElementGuid>c8acc442-76c8-41e4-9538-79626e5fa47d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = '+' or . = '+')]</value>
+      <webElementGuid>7d23c297-c8b4-4e8a-b249-1d58b1daedaf</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

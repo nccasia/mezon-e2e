@@ -17,25 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/h1_WELCOME BACK'))
+WebUI.callTestCase(findTestCase('Definitions/The Login Page is opening'), [('url') : GlobalVariable.baseUrl], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementText(findTestObject('Object Repository/Page_Mezon/h1_WELCOME BACK'), 'WELCOME BACK')
+WebUI.callTestCase(findTestCase('Web UI/Login page should display correctly'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/p_So glad to meet you again'))
-
-WebUI.verifyElementText(findTestObject('Object Repository/Page_Mezon/p_So glad to meet you again'), 'So glad to meet you again!')
-
-WebUI.click(findTestObject('Object Repository/Page_Mezon/p_Email or Phone number'))
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/p_Email or Phone number'), 0)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), 0)
-
-WebUI.click(findTestObject('Object Repository/Page_Mezon/p_Password'))
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/p_Password'), 0)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), 0)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/button_Sign in'), 0)
+WebUI.callTestCase(findTestCase('Steps/Login using email and password'), [:], FailureHandling.STOP_ON_FAILURE)
 
