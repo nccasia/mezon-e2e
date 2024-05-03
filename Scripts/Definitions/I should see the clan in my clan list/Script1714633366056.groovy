@@ -19,5 +19,5 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.click(findTestObject('Object Repository/Page_Mezon/div_'))
 
-WebUI.verifyElementText(findTestObject('null'), clanName)
+CustomKeywords.'mezon.VerifyChildrenByText.verifyChildrenByText'(findTestObject('Page_Mezon/clan-list-items-wrapper'), clanName)
 

@@ -21,7 +21,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords;
 class TestParams {
     public static String getParam(String param) {
         // if param is end with '-$EID' then replace it with GlobalVariable.testExecutionId
-        if (param.endsWith("-$EID")) {
+        if (param.contains("$EID")) {
             
             // cast object to string
             String testExecutionId = GlobalVariable.testExecutionId.toString();

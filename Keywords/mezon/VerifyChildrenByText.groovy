@@ -48,7 +48,7 @@ class VerifyChildrenByText {
      */
     @Keyword
     def verifyChildrenByText(TestObject parrent, String text) {
-        WebElement parentEl = WebUiBuiltInKeywords.findWebElement(parrent)
+        WebElement parentEl = WebUiBuiltInKeywords.findWebElement(parrent, 30)
         List<WebElement> childrenEl = parentEl.findElements(By.xpath(".//*"))
 
         for (WebElement childEl : childrenEl) {

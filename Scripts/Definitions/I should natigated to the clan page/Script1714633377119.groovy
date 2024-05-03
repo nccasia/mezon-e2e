@@ -17,3 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+actUrl = WebUI.getUrl()
+
+CustomKeywords.'kms.turing.katalon.plugins.assertj.StringAssert.contains'(actUrl, '/chat/clans/', false, '')
+
+actClanName = WebUI.getText(findTestObject('Page_Mezon/p-main-clan-name'), FailureHandling.STOP_ON_FAILURE)
+
+CustomKeywords.'kms.turing.katalon.plugins.assertj.StringAssert.equals'(clanName, actClanName, false, '', FailureHandling.STOP_ON_FAILURE)
+

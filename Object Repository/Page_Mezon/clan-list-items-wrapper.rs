@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_CLAN01-1714640930815</name>
+   <name>clan-list-items-wrapper</name>
    <tag></tag>
    <elementGuidId>edd3dee2-7b27-45a5-a6a2-00f81ce32bcf</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='menu']/div[2]/div[2]/div/div/div[14]/div/span</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@id='menu']/div[2]/div[2]/div/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,7 +28,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>2e30c876-d7f1-4047-82f4-99e2320f4438</webElementGuid>
+      <webElementGuid>1bd46925-4c1b-48cf-93b8-d98c9c2c6490</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -37,7 +36,7 @@
       <name>class</name>
       <type>Main</type>
       <value>text-[16px] one-line</value>
-      <webElementGuid>f1bb9060-659e-4fb9-a696-3cf3a896c458</webElementGuid>
+      <webElementGuid>91193d19-afcd-498d-b523-415a8af241f0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,7 +44,7 @@
       <name>text</name>
       <type>Main</type>
       <value>CLAN01-1714640930815</value>
-      <webElementGuid>b8469528-9263-436e-8395-37b288eeee26</webElementGuid>
+      <webElementGuid>926eb1d7-5872-4dcb-887c-3769c69a146f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -53,7 +52,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;menu&quot;)/div[@class=&quot;relative py-2&quot;]/div[@class=&quot;absolute bottom-0 right-0 top-0 left-[60px] z-10 bg-bgSecondary&quot;]/div[@class=&quot;flex w-64 flex-col text-[16px] px-3 py-2 gap-2 z-50 border-[1px] border-bg-bgSecondary border-borderDefault bg-bgSecondary rounded-lg&quot;]/div[@class=&quot;overflow-y-auto max-h-36&quot;]/div[@class=&quot;w-auto flex py-1 px-2 items-center cursor-pointer justify-between rounded-md text-contentSecondary&quot;]/div[@class=&quot;flex items-center gap-4 w-10/12&quot;]/span[@class=&quot;text-[16px] one-line&quot;]</value>
-      <webElementGuid>52b234b2-8267-481d-b1ec-a3141b198816</webElementGuid>
+      <webElementGuid>27265de4-9b52-41dd-99cb-3357fb5ed779</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -61,7 +60,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='menu']/div[2]/div[2]/div/div/div[14]/div/span</value>
-      <webElementGuid>dd4af2ff-369f-4666-ac18-7e598ca4f951</webElementGuid>
+      <webElementGuid>c44269c7-863a-4ecc-b2d8-6c66452a6009</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -69,7 +68,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='C'])[11]/following::span[1]</value>
-      <webElementGuid>705c8253-d66b-4cd8-9889-8928b473b3cb</webElementGuid>
+      <webElementGuid>0c12efa9-b404-44cd-bf90-74d02b934922</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -77,7 +76,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='CLAN01-1714640860665'])[1]/following::span[1]</value>
-      <webElementGuid>3958c6d6-3908-4495-9c6a-f1b2096dab49</webElementGuid>
+      <webElementGuid>f2e0eb36-fbf1-402d-8951-38f10572d004</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,7 +84,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Add Clan'])[1]/preceding::span[1]</value>
-      <webElementGuid>d4e2fc12-98b6-4169-a866-b653ad8b046e</webElementGuid>
+      <webElementGuid>85e80f31-e488-481d-a1a0-74741084d641</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -93,7 +92,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Friends'])[1]/preceding::span[2]</value>
-      <webElementGuid>47aba9a4-7370-4214-b904-bc961c7d4020</webElementGuid>
+      <webElementGuid>aa244c37-0a78-4d2c-8db6-c0656e9cb19a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,7 +100,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='CLAN01-1714640930815']/parent::*</value>
-      <webElementGuid>e764c6a4-6fa1-4dc6-84b7-201ba90c5e23</webElementGuid>
+      <webElementGuid>44382710-5c9b-4a11-8e6c-eef22b8b2caa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,7 +108,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[14]/div/span</value>
-      <webElementGuid>31971afe-80cc-4f29-b2ee-c9e2f7d0d168</webElementGuid>
+      <webElementGuid>bf25a662-18ce-4254-8583-962e3ffd9123</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -117,6 +116,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//span[(text() = 'CLAN01-1714640930815' or . = 'CLAN01-1714640930815')]</value>
-      <webElementGuid>cc2b54e4-8d85-48c7-a3d7-f45adbfa90bc</webElementGuid>
+      <webElementGuid>a1407b3a-7d45-46d4-9c5a-14965ff535e2</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

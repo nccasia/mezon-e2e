@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>p_E2E-CLAN</name>
+   <name>p-main-clan-name</name>
    <tag></tag>
    <elementGuidId>c20cf2b4-77c7-4933-9f10-db77afc07dd7</elementGuidId>
    <selectorCollection>
