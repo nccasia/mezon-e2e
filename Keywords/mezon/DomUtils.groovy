@@ -38,8 +38,7 @@ import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.exception.WebElementNotFoundException
 
 
-class VerifyChildrenByText {
-
+class DomUtils {
     /**
      * Verify that has a child element with text
      * @param parent parent element
@@ -55,6 +54,28 @@ class VerifyChildrenByText {
             if (childEl.getText().equals(text)) {
                 KeywordUtil.markPassed("Element has a child with text: " + text)
                 return
+            }
+        }
+
+        KeywordUtil.markFailed("Element does not have a child with text: " + text)
+    }
+
+    /**
+     * find element by text content
+     * @param TestObject parent
+     * @param String text
+     * @return WebElement
+     */
+    @Keyword
+    def findElementByText(TestObject parent, String text) {
+        WebElement parentEl = WebUiBuiltInKeywords.findWebElement(parent, 30)
+        List<WebElement> childrenEl = parentEl.findElements(By.xpath(".//*"))
+
+        for (WebElement childEl : childrenEl) {
+            String elText = childEl.getText()
+            String cleanElText = elText.replaceAll("\\s+", " ").trim()
+            if (cleanElText.equals(text)) {
+                return childEl
             }
         }
 

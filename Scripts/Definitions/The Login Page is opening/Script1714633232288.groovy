@@ -24,3 +24,5 @@ WebUI.navigateToUrl(url)
 WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/div_WELCOME BACKSo glad to meet you againCo_a266bd'), 
     0)
 
+WebUI.takeScreenshotAsCheckpoint('LoginPage')
+

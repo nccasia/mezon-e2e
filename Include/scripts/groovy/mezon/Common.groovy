@@ -62,4 +62,10 @@ class Common {
     def I_verify_the_status_in_step(String status) {
         println status
     }
+
+    // And I do nothing
+    @And("I do nothing")
+    def I_do_nothing() {
+        println "I do nothing"
+    }
 }

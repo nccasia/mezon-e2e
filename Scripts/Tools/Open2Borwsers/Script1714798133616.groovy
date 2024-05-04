@@ -17,7 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_'))
+WebUI.openBrowser('')
 
-WebUI.verifyElementPresent(findTestObject('Page_Mezon/clan-list-items-item', [('clanName') : clanName]), 0)
+WebUI.navigateToMaskedUrl('https://stackoverflow.com/questions/46003188/xpath-expression-to-match-text-correctly-but-trim-leading-and-trailing-whitespa')
+
+CustomKeywords.'mezon.BrowserUtils.openNewWindow'()
 

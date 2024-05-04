@@ -11,4 +11,4 @@ Feature: Clan Creation
 
     Examples:
       | email             | password   | clanName    |
-      | e2euser1@ncc.asia | e2euser1A@ | CLAN01-1714728485690 |
+      | e2euser1@ncc.asia | e2euser1A@ | CLAN01-$EID |
