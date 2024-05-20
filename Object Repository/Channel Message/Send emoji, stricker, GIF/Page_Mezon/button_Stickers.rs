@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Stickers</name>
+   <tag></tag>
+   <elementGuidId>3ddbb705-2114-4c1c-9863-f8ea050e03dc</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class='cursor-pointer'][2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>54837e67-b5ea-4a26-b498-a126fbf1cb9e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>relative px-2 mx-2 rounded-md  dark:text-gray-300 text-colorTextLightMode dark:hover:text-white hover:text-black </value>
+      <webElementGuid>87fce25b-7c07-4c6b-881f-3a069ce24c1b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Emoji</value>
+      <webElementGuid>c5af574f-6a87-4e12-a8dd-e2218ef1e235</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex h-heightWithoutTopBar flex-row&quot;]/div[@class=&quot;flex flex-col flex-1 w-widthMessageViewChat h-full false&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightModeSecond h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;fixed bottom-[66px] z-10 right-64&quot;]/div[@class=&quot;w-[370px] sbm:w-[500px] h-fit rounded-lg dark:bg-bgSecondary bg-bgLightMode shadow shadow-neutral-900 min-h-[500px]&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;flex justify-start flex-row mt-3 border-b border-blue-500 pb-1 pt-1&quot;]/button[@class=&quot;relative px-2 mx-2 rounded-md  dark:text-gray-300 text-colorTextLightMode dark:hover:text-white hover:text-black&quot;]</value>
+      <webElementGuid>694a6e96-d23a-466f-a6b5-eee6fc2d8bb3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='mainChat']/div/div/div[2]/div[2]/div/div/div/div/button[3]</value>
+      <webElementGuid>d2fba42d-4101-436d-b8ce-c36419716eda</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Stickers'])[1]/following::button[1]</value>
+      <webElementGuid>42481389-b1bc-4726-bc68-f868ede37efe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Gifs'])[1]/following::button[2]</value>
+      <webElementGuid>b19f1e67-f1a3-4b6b-b710-f3e5202eb67c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='😂'])[1]/preceding::button[1]</value>
+      <webElementGuid>7e1f94b8-9a7c-45bb-8396-cc79def11c9a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='😂'])[2]/preceding::button[1]</value>
+      <webElementGuid>7c051c88-4b82-423c-93de-f17dbe1a3ed9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Emoji']/parent::*</value>
+      <webElementGuid>1a613823-7ce3-4150-8208-733ac348382f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[2]/div/div/div/div/button[3]</value>
+      <webElementGuid>f2002e72-5270-4637-864b-21f89de45de9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[(text() = 'Emoji' or . = 'Emoji')]</value>
+      <webElementGuid>b4a2e552-74b1-4f0d-be73-bcc847d667aa</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
