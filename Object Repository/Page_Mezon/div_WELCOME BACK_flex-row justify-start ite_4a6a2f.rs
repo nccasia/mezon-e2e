@@ -6,12 +6,12 @@
    <elementGuidId>30185b45-4e73-4bc4-8ac2-7aae5ed2c939</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@id='channelList']/div/div/div/div/div[4]/div/div[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='app-layout']/div/div/div/div/div/div[3]/div[2]/div/div/div[2]</value>
+         <key>CSS</key>
+         <value>div.relative.flex.flex-wrap.items-center</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,26 +29,74 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>0b2e1868-421f-45e3-88ef-dc0e4594ef08</webElementGuid>
+      <webElementGuid>fcb19018-0e34-49b6-88a7-f36dd9cc6961</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>flex-row justify-start items-center flex w-full h-fit pt-3 pr-4 pb-3 pl-4 gap-x-2 rounded-[4px] bg-[#000000] relative border-[1px] border-[#1e1e1e] border-[#1e1e1e]</value>
-      <webElementGuid>3ba47d0e-7912-4ada-a57f-07b586ac3b8d</webElementGuid>
+      <value>relative flex flex-wrap items-center</value>
+      <webElementGuid>86ecd934-dc67-4f9f-a9f5-d21854f3e73a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;app-layout&quot;)/div[1]/div[@class=&quot;w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center&quot;]/div[@class=&quot;justify-center items-center flex w-full h-full sm:max-h-[580px] sm:h-9/10 sm:max-w-[450px] lg:min-w-[850px] lg:max-h-[620px]  rounded-none sm:rounded-2xl lg:p-12 px-0 bg-[#0b0b0b] flex-col mx-auto&quot;]/div[@class=&quot;relative top-0 flex-col pb-0 lg:top-0 lg:pb-0 flex lg:flex-row lg:gap-x-12 items-center w-full overflow-y-auto hide-scrollbar lg:overflow-y-visible&quot;]/div[@class=&quot;flex-col justify-start items-center flex h-fit p-0 gap-2 pb-2 lg:pb-0 md:gap-4 w-9/10&quot;]/div[@class=&quot;flex-col justify-start items-center flex lg:w-[496px] h-fit lg:px-0 w-450 max-w-full&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit gap-y-5&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit gap-y-5&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit gap-y-3 relative&quot;]/div[@class=&quot;flex-row justify-start items-center flex w-full h-fit pt-3 pr-4 pb-3 pl-4 gap-x-2 rounded-[4px] bg-[#000000] relative border-[1px] border-[#1e1e1e] border-[#1e1e1e]&quot;]</value>
-      <webElementGuid>aa705e35-ce27-43a0-a655-6bd1dae05cfa</webElementGuid>
+      <value>id(&quot;channelList&quot;)/div[@class=&quot;w-[100vw] h-[100vh] overflow-hidden fixed top-0 left-0 z-50 bg-black bg-opacity-80 flex flex-row justify-center items-center&quot;]/div[@class=&quot;z-60 w-full h-full sm:w-4/5 sm:max-h-[570px] md:w-[684px] bg-bgPrimary rounded-2xl flex-col justify-start  items-start gap-3 inline-flex&quot;]/div[@class=&quot;self-stretch md:h-96 flex-col justify-start items-start flex&quot;]/div[@class=&quot;self-stretch md:h-96 px-5 pt-8 flex-col justify-start items-start gap-3 flex&quot;]/div[@class=&quot;Frame348 self-stretch h-[62px] flex-col justify-start items-start gap-2 mt-2 flex&quot;]/div[@class=&quot;Frame347 self-stretch justify-start items-center gap-3 inline-flex&quot;]/div[@class=&quot;relative flex flex-wrap items-center&quot;]</value>
+      <webElementGuid>41e71bdd-4493-4799-8dc9-bfbe3552a7dc</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='channelList']/div/div/div/div/div[4]/div/div[2]</value>
+      <webElementGuid>5fbafcde-8273-45a8-aa55-29c8f78880bd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Is private channel?'])[1]/following::div[1]</value>
+      <webElementGuid>5f323404-6a30-4395-ac9a-71054a0b9e82</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('What is channel', &quot;'&quot;, 's name?')])[1]/following::div[10]</value>
+      <webElementGuid>f2535ff0-0f47-496d-9ea0-8c71bddf0313</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Only selected members and roles will be able to view this channel.'])[1]/preceding::div[1]</value>
+      <webElementGuid>5614191a-7dc4-48cd-9902-af9a0a83f3fd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/preceding::div[2]</value>
+      <webElementGuid>1330c499-11ce-413a-8a20-5ef86dc37912</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[4]/div/div[2]</value>
+      <webElementGuid>8e03ffcc-9b5d-4137-9085-1133a8113f0f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>

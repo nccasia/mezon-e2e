@@ -6,12 +6,12 @@
    <elementGuidId>b2330d0f-d748-4373-8fdf-b328770f5b75</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>img.clan</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[@id='menu']/a/div/div[2]/div/div/img</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>img.clan</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,7 +29,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>b1f79154-2c75-431e-a2b9-9a53b9193375</webElementGuid>
+      <webElementGuid>76dd5ea6-94a1-435f-9220-8ca318a3d7e1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -37,7 +37,7 @@
       <name>src</name>
       <type>Main</type>
       <value>/assets/images/icon-logo-mezon.svg</value>
-      <webElementGuid>dd1116b2-5917-4937-9595-3577e2a2fd1d</webElementGuid>
+      <webElementGuid>d0d273da-9b26-44c0-a8ff-69060f6695aa</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,7 +45,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>logoMezon</value>
-      <webElementGuid>c36d229c-9dbb-4a3b-831a-f40fc3857611</webElementGuid>
+      <webElementGuid>535e05a4-ff23-46a0-aef6-09f2e3f40f5f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -53,7 +53,7 @@
       <name>width</name>
       <type>Main</type>
       <value>48</value>
-      <webElementGuid>e6f1c815-dcf8-4f1f-aa3d-3235c286ece0</webElementGuid>
+      <webElementGuid>25d30105-7eae-42db-8def-ed3929dfc624</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -61,7 +61,7 @@
       <name>height</name>
       <type>Main</type>
       <value>48</value>
-      <webElementGuid>cacbf967-997a-44a3-a737-f1691839c818</webElementGuid>
+      <webElementGuid>6b87b027-53b3-4786-9bff-ce61a5c35d0c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -69,15 +69,15 @@
       <name>class</name>
       <type>Main</type>
       <value>clan</value>
-      <webElementGuid>38103905-a83c-48af-8079-bddb4cc7ac05</webElementGuid>
+      <webElementGuid>14a0ac8c-4c3e-4e12-ae67-43d9cd56049d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;menu&quot;)/a[@class=&quot;active&quot;]/div[@class=&quot;group block relative rounded-3xl&quot;]/div[@class=&quot;group-active:translate-y-px&quot;]/div[@class=&quot;rounded-xl bg-brand text-white bg-bgTertiary flex items-center justify-center w-12 h-12 transition-all duration-200 overflow-hidden&quot;]/div[1]/img[@class=&quot;clan&quot;]</value>
-      <webElementGuid>f5fbbb2a-a5ff-4f4b-95ed-c027abbd4c92</webElementGuid>
+      <value>id(&quot;menu&quot;)/a[1]/div[@class=&quot;group block relative rounded-3xl&quot;]/div[@class=&quot;group-active:translate-y-px&quot;]/div[@class=&quot;text-gray-100 group-hover:bg-brand group-hover:text-white group-hover:rounded-xl rounded-3xl dark:group-hover:bg-bgTertiary group-hover:bg-bgLightModeButton flex items-center justify-center w-12 h-12 transition-all duration-200 overflow-hidden&quot;]/div[1]/img[@class=&quot;clan&quot;]</value>
+      <webElementGuid>0febd31f-15b9-4dce-a988-6b4295dde89b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -85,7 +85,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='menu']/a/div/div[2]/div/div/img</value>
-      <webElementGuid>6ae0d940-8983-46ac-9b5c-48be922e45b7</webElementGuid>
+      <webElementGuid>831db152-231e-4811-8af9-b8497c134940</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -93,7 +93,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>//img[@alt='logoMezon']</value>
-      <webElementGuid>cf3713aa-c6c9-4639-a8a0-92abc3f0137d</webElementGuid>
+      <webElementGuid>4ab7f664-5888-4a43-8c10-b498a723e2da</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,7 +101,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//img</value>
-      <webElementGuid>ee637ed2-914e-4df0-8ffe-5bf5cc5526a5</webElementGuid>
+      <webElementGuid>7b79728a-4dcf-40a0-bcd0-d455a938c1fc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,6 +109,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = '/assets/images/icon-logo-mezon.svg' and @alt = 'logoMezon']</value>
-      <webElementGuid>bbacf912-76b1-42ba-8911-efa7166397ae</webElementGuid>
+      <webElementGuid>32d554c5-2e37-4738-a470-d42fb8a5cce2</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

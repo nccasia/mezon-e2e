@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_CLAN NAME_bg-bgPrimary font-400  px-1_0056bc</name>
+   <name>input_CLAN NAME_darkbg-bgTertiary bg-F0F0F0_55ae1b</name>
    <tag></tag>
-   <elementGuidId>d784843c-ee04-48e1-b67e-625da2b603d5</elementGuidId>
+   <elementGuidId>aad4dee7-0fc0-4647-b8e1-8bad8a0a1df6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -15,12 +15,6 @@
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
-   <smartLocatorCollection>
-      <entry>
-         <key>SMART_LOCATOR</key>
-         <value>internal:attr=[placeholder=&quot;rUvCGyFyir's clan&quot;i]</value>
-      </entry>
-   </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -29,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>88ac7aee-cb15-4f1c-8b1f-70447eb90060</webElementGuid>
+      <webElementGuid>39f29ff1-5e41-42ed-a919-a75db8505e6b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -37,31 +31,31 @@
       <name>type</name>
       <type>Main</type>
       <value>text</value>
-      <webElementGuid>c2e634f0-bb89-42ff-a0ac-56b425505001</webElementGuid>
+      <webElementGuid>99b909dc-74bc-4017-a5a3-3429fe2e795f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>bg-bgPrimary font-[400]  px-[16px] rounded w-full text-white outline-none bg-bgSurface mb-2 mt-4 py-2</value>
-      <webElementGuid>8e8cca22-2290-498c-91d7-46697eeab3ca</webElementGuid>
+      <value>dark:bg-bgTertiary bg-[#F0F0F0] font-[400]  px-[16px] rounded w-full dark:text-white text-black outline-none dark:bg-bgSurface bg-bgModifierHoverLight mb-2 mt-4 py-2</value>
+      <webElementGuid>db5581fe-4dc4-4fc5-b571-f4414aba831a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>placeholder</name>
       <type>Main</type>
-      <value>rUvCGyFyir's clan</value>
-      <webElementGuid>821b6c89-088b-42ad-8f05-2d810df7ed65</webElementGuid>
+      <value>geBXclVQui's clan</value>
+      <webElementGuid>8fc46b0a-20dc-494c-bff8-97d1a85b5250</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[@class=&quot;wf-notosans-n4-active wf-active&quot;]/body[1]/div[@class=&quot;justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-black bg-opacity-80 text-white&quot;]/div[@class=&quot;relative w-full max-w-[684px] sm:h-auto h-full&quot;]/div[@class=&quot;border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-[#151515] outline-none focus:outline-none h-full sm:h-auto&quot;]/div[@class=&quot;relative px-5 py-4 flex-auto bg-transparent&quot;]/div[@class=&quot;bg-[#323232] ounded-[5px] bg-transparent&quot;]/div[@class=&quot;flex items-center flex-col justify-center&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;w-full&quot;]/input[@class=&quot;bg-bgPrimary font-[400]  px-[16px] rounded w-full text-white outline-none bg-bgSurface mb-2 mt-4 py-2&quot;]</value>
-      <webElementGuid>74fd7313-597d-4b01-ba7a-5a0d8f202dde</webElementGuid>
+      <value>/html[@class=&quot;dark wf-ggsans-n4-active wf-active mdl-js&quot;]/body[1]/div[@class=&quot;justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-black bg-opacity-80 dark:text-white text-black&quot;]/div[@class=&quot;relative w-full max-w-[684px] sm:h-auto h-full&quot;]/div[@class=&quot;border-0 rounded-lg shadow-lg relative flex flex-col w-full dark:bg-bgPrimary bg-bgLightModeSecond  outline-none focus:outline-none h-full sm:h-auto&quot;]/div[@class=&quot;relative px-5 py-4 flex-auto bg-transparent&quot;]/div[@class=&quot;dark:bg-[#323232] bg-bgLightModeSecond rounded-[5px] bg-transparent&quot;]/div[@class=&quot;flex items-center flex-col justify-center&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;w-full&quot;]/input[@class=&quot;dark:bg-bgTertiary bg-[#F0F0F0] font-[400]  px-[16px] rounded w-full dark:text-white text-black outline-none dark:bg-bgSurface bg-bgModifierHoverLight mb-2 mt-4 py-2&quot;]</value>
+      <webElementGuid>470add3e-b16c-4f46-a677-45843bc60d42</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -69,7 +63,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>(//input[@type='text'])[3]</value>
-      <webElementGuid>125bcd8a-f232-4a86-8ba5-900a3684becb</webElementGuid>
+      <webElementGuid>72a0fb8f-51c9-46cf-beef-26deaf99ede8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -77,14 +71,14 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/div/div[2]/div/div/div/div/input</value>
-      <webElementGuid>b6c7b287-b17d-401c-ab3b-18ddc4cc2de7</webElementGuid>
+      <webElementGuid>0b671d40-a3b9-4a49-b0d6-76f68c2ebf77</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@type = 'text' and @placeholder = concat(&quot;rUvCGyFyir&quot; , &quot;'&quot; , &quot;s clan&quot;)]</value>
-      <webElementGuid>1d6544f7-ab4c-48aa-bcf2-3718040936bb</webElementGuid>
+      <value>//input[@type = 'text' and @placeholder = concat(&quot;geBXclVQui&quot; , &quot;'&quot; , &quot;s clan&quot;)]</value>
+      <webElementGuid>5ab4b9d0-8980-43b4-9ec4-7940bb86fa15</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

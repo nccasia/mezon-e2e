@@ -47,33 +47,33 @@ import mezon.TestParams
 
 class ClanManagement {
 
-    // When I create a clan with name "<clanName>"
-    @When('I create a clan with name "(.*)"')
-    def whenICreateAClanWithName(String clanName) {
-        WebUI.callTestCase(findTestCase('Definitions/I create a clan with name'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
-    }
+	// When I create a clan with name "<clanName>"
+	@When('I create a clan with name "(.*)"')
+	def whenICreateAClanWithName(String clanName) {
+		WebUI.callTestCase(findTestCase('Definitions/I create a clan with name'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
+	}
 
-    // Then I should see the clan "<clanName>" in my clan list
-    @Then('I should see the clan "(.*)" in my clan list')
-    def thenIShouldSeeTheClanInMyClanList(String clanName) {
-        WebUI.callTestCase(findTestCase('Definitions/I should see the clan in my clan list'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
-    }
+	// Then I should see the clan "<clanName>" in my clan list
+	@Then('I should see the clan "(.*)" in my clan list')
+	def thenIShouldSeeTheClanInMyClanList(String clanName) {
+		WebUI.callTestCase(findTestCase('Definitions/I should see the clan in my clan list'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
+	}
 
-    // And I should natigated to the clan "<clanName>" page
-    @And('I should natigated to the clan "(.*)" page')
-    def andIShouldNatigatedToTheClanPage(String clanName) {
-        WebUI.callTestCase(findTestCase('Definitions/I should natigated to the clan page'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
-    }
+	// And I should natigated to the clan "<clanName>" page
+	@And('I should natigated to the clan "(.*)" page')
+	def andIShouldNatigatedToTheClanPage(String clanName) {
+		WebUI.callTestCase(findTestCase('Definitions/I should natigated to the clan page'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
+	}
 
-    // When I select the clan "<clanName>"
-    @When('I select the clan "(.*)"')
-    def whenISelectTheClan(String clanName) {
-        WebUI.callTestCase(findTestCase('Definitions/I select the clan'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
-    }
+	// When I select the clan "<clanName>"
+	@When('I select the clan "(.*)"')
+	def whenISelectTheClan(String clanName) {
+		WebUI.callTestCase(findTestCase('Definitions/I select the clan'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
+	}
 
-    // Given I am on the clan "<clanName>" page
-    @Given('I am on the clan "(.*)" page')
-    def givenIAmOnTheClanPage(String clanName) {
-        WebUI.callTestCase(findTestCase('Definitions/I am on the clan page'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
-    }
+	// Given I am on the clan "<clanName>" page
+	@Given('I am on the clan "(.*)" page')
+	def givenIAmOnTheClanPage(String clanName) {
+		WebUI.callTestCase(findTestCase('Definitions/I am on the clan page'), [('clanName') : TestParams.getParam(clanName)], FailureHandling.STOP_ON_FAILURE)
+	}
 }

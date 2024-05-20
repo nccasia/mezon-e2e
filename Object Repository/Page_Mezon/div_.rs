@@ -29,15 +29,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>da0a6acb-9014-45e9-bfef-796a62116cc3</webElementGuid>
+      <webElementGuid>5cf9c614-af1a-4212-9829-46d369250026</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>size-12 bg-[#1E1E1E] flex justify-center items-center rounded-full cursor-pointer hover:rounded-xl hover:bg-slate-800 transition-all duration-200 </value>
-      <webElementGuid>0e1d8853-a490-4e5d-bfa3-b13533dc8785</webElementGuid>
+      <value>size-12 dark:bg-bgPrimary bg-[#E1E1E1] flex justify-center items-center rounded-full cursor-pointer hover:rounded-xl dark:hover:bg-slate-800 hover:bg-bgLightModeButton  transition-all duration-200 </value>
+      <webElementGuid>d9fb2543-14a2-480d-b131-25b6390701dd</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,15 +45,15 @@
       <name>text</name>
       <type>Main</type>
       <value>+</value>
-      <webElementGuid>e2367cab-4fcc-4d99-9f7d-f3db7fc335ca</webElementGuid>
+      <webElementGuid>2940aa3f-5282-492f-a5a3-78dcea1bf612</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;menu&quot;)/div[@class=&quot;relative py-2&quot;]/div[@class=&quot;size-12 bg-[#1E1E1E] flex justify-center items-center rounded-full cursor-pointer hover:rounded-xl hover:bg-slate-800 transition-all duration-200&quot;]</value>
-      <webElementGuid>bfe55aa8-2e3c-4e88-9d65-2bc77e2f572d</webElementGuid>
+      <value>id(&quot;menu&quot;)/div[@class=&quot;relative py-2&quot;]/div[@class=&quot;size-12 dark:bg-bgPrimary bg-[#E1E1E1] flex justify-center items-center rounded-full cursor-pointer hover:rounded-xl dark:hover:bg-slate-800 hover:bg-bgLightModeButton  transition-all duration-200&quot;]</value>
+      <webElementGuid>f89f38cb-cead-4eda-85f3-5843cbbbbbe1</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -61,7 +61,15 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='menu']/div[2]/div</value>
-      <webElementGuid>2b98af98-1164-4bd8-9f6d-6918dbc0b6fa</webElementGuid>
+      <webElementGuid>df25c1e6-c692-45d2-96d6-3e9089612b76</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='C'])[1]/following::div[2]</value>
+      <webElementGuid>e9f037e1-d1fe-494a-b8f4-d8caf638cf10</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -69,7 +77,55 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Friends'])[1]/preceding::div[7]</value>
-      <webElementGuid>059c7ded-e099-4cfa-b861-cb84a03616eb</webElementGuid>
+      <webElementGuid>369bfa09-cae8-4a1e-8a8a-1314b7ee3083</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='G'])[1]/preceding::div[12]</value>
+      <webElementGuid>5e3634b1-dbbe-4771-b522-81fdc2dcf099</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div/div/div/div[2]/div</value>
+      <webElementGuid>6e9e1913-a41b-426d-acc5-560426547832</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = '+' or . = '+')]</value>
+      <webElementGuid>f6b3584c-d2f8-49aa-b57e-9885b1c83c54</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='PUBLIC CHANNELS'])[1]/preceding::div[14]</value>
+      <webElementGuid>89273526-a199-4905-939b-793e15968555</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='thread1'])[1]/preceding::div[18]</value>
+      <webElementGuid>3c240c65-2b52-46bc-a841-109d43674ed6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Online'])[1]/preceding::div[16]</value>
+      <webElementGuid>a694d84c-3c9a-49ae-a478-d1dd96a089c3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -78,21 +134,5 @@
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='R'])[1]/preceding::div[12]</value>
       <webElementGuid>65ef364a-cb1c-4b88-9a7f-806c1addd9b8</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:position</name>
-      <type>Main</type>
-      <value>//div/div/div/div/div/div[2]/div</value>
-      <webElementGuid>c8acc442-76c8-41e4-9538-79626e5fa47d</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:customAttributes</name>
-      <type>Main</type>
-      <value>//div[(text() = '+' or . = '+')]</value>
-      <webElementGuid>7d23c297-c8b4-4e8a-b249-1d58b1daedaf</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

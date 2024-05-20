@@ -7,7 +7,7 @@
    <containsHeaders>true</containsHeaders>
    <csvSeperator>COMMA</csvSeperator>
    <dataFileGUID>40bd67fc-4398-41e5-8097-1458b59d1a2d</dataFileGUID>
-   <dataSourceUrl>D:\mezon\mezon-e2e\Data Files\Accounts.csv</dataSourceUrl>
+   <dataSourceUrl>E:\Data_Test\Account_TC_Login_by_emailAndPass.csv</dataSourceUrl>
    <driver>CSV</driver>
    <isInternalPath>false</isInternalPath>
    <query></query>
