@@ -21,39 +21,40 @@ WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, strick
 
 WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/span_Test Clan'))
 
-WebUI.uploadFile(findTestObject('Channel Message/Upload files'), Emoji1)
+'check rotaion between buttons'
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Emoji'))
 
-WebUI.uploadFile(findTestObject('Channel Message/Upload files'), Sticker1)
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Gifs'))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/textarea_'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Stickers'))
 
-WebUI.sendKeys(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/textarea_'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Emoji'))
 
-WebUI.uploadFile(findTestObject('Channel Message/Upload files'), GIF1)
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/emoji'))
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/textarea_1'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Emoji'))
 
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/emoji1'))
 
-WebUI.uploadFile(findTestObject('Channel Message/Upload files'), Emoji2)
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Emoji'))
 
-WebUI.uploadFile(findTestObject('Channel Message/Upload files'), Emoji3)
-
-WebUI.uploadFile(findTestObject('Channel Message/Upload files'), Emoji3)
-
-WebUI.click(findTestObject('Channel Message/Page_Mezon/textarea_1'))
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/emoji2'))
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/textarea_'), Keys.chord(Keys.ENTER))
 
 WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Stickers'))
 
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/Stickers'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Stickers'))
+
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/Sticker2'), FailureHandling.STOP_ON_FAILURE)
+
 WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Gifs'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Emoji'))
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/group_GIF'))
 
-WebUI.uploadFile(findTestObject('Channel Message/Upload files'), Emoji1)
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/GIF'))
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/textarea_1'))
-
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Channel Message/Send emoji, stricker, GIF/Page_Mezon/Emoji panel button'))
 

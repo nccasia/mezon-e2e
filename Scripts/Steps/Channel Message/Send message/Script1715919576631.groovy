@@ -23,9 +23,14 @@ WebUI.click(findTestObject('Object Repository/Channel Message/Page_Mezon/span_Te
 
 WebUI.uploadFile(findTestObject('Channel Message/Upload files'), PathToImage)
 
+'Capturing the file name after upload and storing it in variable'
+FilePath = WebUI.getAttribute(findTestObject('Channel Message/Upload files'), 'value')
+
 WebUI.click(findTestObject('Channel Message/Page_Mezon/textarea_1'))
 
 WebUI.setText(findTestObject('Object Repository/Channel Message/Page_Mezon/textarea_1'), Message)
+
+WebUI.getAttribute(findTestObject('Channel Message/Page_Mezon/textarea_1'), '')
 
 WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
 
