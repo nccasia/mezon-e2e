@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Automated testing</name>
+   <tag></tag>
+   <elementGuidId>943b1af2-0ae0-43c5-8aaa-1a58683b6011</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='scrollLoading']/div[10]/div/div/div[2]/div[2]/div[2]/div[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>770387e9-6489-4dfa-b86b-2addcb6b3061</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>justify-start items-center inline-flex w-full h-full pt-[2px] textChat</value>
+      <webElementGuid>e91d0ed3-b2c0-4d8c-9035-f7de28ff6574</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Automated testing  </value>
+      <webElementGuid>7dbed876-2c6b-4639-a956-dc27e844d513</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;scrollLoading&quot;)/div[@class=&quot;fullBoxText relative group&quot;]/div[@class=&quot;relative mt-2&quot;]/div[@class=&quot;dark:bg-bgPrimary bg-bgLightModeSecond relative rounded-sm  overflow-visible bg-[#26262b]&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3 py-[2px] dark:group-hover:bg-bgPrimary1 group-hover:bg-[#EAB3081A] pt-[2px]&quot;]/div[@class=&quot;justify-start gap-4 inline-flex w-full relative h-fit overflow-visible pr-12&quot;]/div[@class=&quot;w-full relative h-full&quot;]/div[@class=&quot;justify-start items-center inline-flex w-full h-full pt-[2px] textChat&quot;]</value>
+      <webElementGuid>b3ff7567-e77f-4407-9fb8-818400c29387</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='scrollLoading']/div[10]/div/div/div[2]/div[2]/div[2]/div[2]</value>
+      <webElementGuid>c68ce17b-923b-40d4-893f-775e7ae148f6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='nga.nguyenthi'])[9]/following::div[2]</value>
+      <webElementGuid>d7fe8cfa-0492-477f-a345-b94926e7da05</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='bốn'])[1]/following::div[24]</value>
+      <webElementGuid>c1bd3b61-d7fc-48aa-9bdb-420c116ec080</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[10]/div/div/div[2]/div[2]/div[2]/div[2]</value>
+      <webElementGuid>5b91f1b7-745d-4ec0-ad19-16983926c7f2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Automated testing  ' or . = 'Automated testing  ')]</value>
+      <webElementGuid>1f20bbaf-d4bc-4a79-b41a-8839964b910c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

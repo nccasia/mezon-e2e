@@ -17,6 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
+        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.click(findTestObject('Logout/Page_Mezon/svg_Online_ml-auto w-18px h-18px opacity-80_40011d'))
 
 WebUI.click(findTestObject('Logout/Page_Mezon/button_X'))

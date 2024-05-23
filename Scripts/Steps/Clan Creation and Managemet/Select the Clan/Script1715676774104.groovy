@@ -31,6 +31,8 @@ WebUI.click(findTestObject('Object Repository/Clan management/Page_Mezon/span_Te
 
 WebUI.setText(findTestObject('Object Repository/Clan management/Page_Mezon/textarea_helllo'), message)
 
+WebUI.sendKeys(findTestObject('Object Repository/Clan management/Page_Mezon/textarea_helllo'), Keys.chord(Keys.ENTER))
+
 WebUI.click(findTestObject('Object Repository/Clan management/Page_Mezon/div_'))
 
 WebUI.click(findTestObject('Object Repository/Clan management/Page_Mezon/span_NewClan'))

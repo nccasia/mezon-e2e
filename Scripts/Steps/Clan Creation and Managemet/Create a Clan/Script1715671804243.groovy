@@ -29,6 +29,8 @@ WebUI.uploadFile(findTestObject('Clan management/Page_Mezon/Upload a images'), p
 
 WebUI.click(findTestObject('Clan management/Page_Mezon/button_Create'))
 
+WebUI.verifyTextPresent('general', false)
+
 WebUI.click(findTestObject('Management Channel/Page_Mezon/textarea_h'))
 
 WebUI.setText(findTestObject('Management Channel/Page_Mezon/textarea_h'), 'Helllo')

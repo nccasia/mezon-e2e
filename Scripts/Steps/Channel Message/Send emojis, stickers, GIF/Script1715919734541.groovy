@@ -17,10 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/div_'))
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/span_Test Clan'))
-
 'check rotaion between buttons'
 WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, stricker, GIF/Page_Mezon/button_Emoji'))
 
