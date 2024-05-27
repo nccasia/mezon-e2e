@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_general</name>
+   <name>Username currently logged in</name>
    <tag></tag>
-   <elementGuidId>89ee7372-1f44-426d-86ea-99d156c5d164</elementGuidId>
+   <elementGuidId>1bae9ddc-c29d-424c-a347-a3f24f6bf156</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//span[@class='flex flex-row items-center px-2 mx-2 rounded relative p-1 dark:bg-bgModifierHover bg-bgLightModeButton']</value>
+         <value>//p[@class='text-base font-medium text-colorTextLightMode dark:text-white relative top-[-7px] nameMemberProfile']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

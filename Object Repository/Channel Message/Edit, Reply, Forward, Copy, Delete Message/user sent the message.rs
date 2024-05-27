@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_general</name>
+   <name>user sent the message</name>
    <tag></tag>
-   <elementGuidId>89ee7372-1f44-426d-86ea-99d156c5d164</elementGuidId>
+   <elementGuidId>96206be9-3d84-44a4-be38-9a36b8d1a47c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//span[@class='flex flex-row items-center px-2 mx-2 rounded relative p-1 dark:bg-bgModifierHover bg-bgLightModeButton']</value>
+         <value>//div[@class='text-base dark:text-white text-black font-medium tracking-wider cursor-pointer break-all username']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_general</name>
+   <name>icon Edit message</name>
    <tag></tag>
-   <elementGuidId>89ee7372-1f44-426d-86ea-99d156c5d164</elementGuidId>
+   <elementGuidId>e9089843-7657-450d-9a62-e21392d5a47d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//span[@class='flex flex-row items-center px-2 mx-2 rounded relative p-1 dark:bg-bgModifierHover bg-bgLightModeButton']</value>
+         <value>(//button[@class='h-full p-1 cursor-pointer'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
