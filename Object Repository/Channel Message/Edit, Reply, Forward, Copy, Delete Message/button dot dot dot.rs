@@ -6,12 +6,11 @@
    <elementGuidId>5366c42e-473b-488d-9512-e7ef9dbb9fd4</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//button[@class='h-full p-1 cursor-pointer']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

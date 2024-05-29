@@ -6,12 +6,11 @@
    <elementGuidId>e28389af-7b85-4876-bf60-a279dda6f857</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//button[@class='text-2xl  emoji-button  rounded-md  dark:hover:bg-[#41434A] hover:bg-bgLightModeButton hover:rounded-md w-10  p-1 flex items-center justify-center w-full'])[5]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@class='text-3xl emoji-button border rounded-md border-[#363A53] dark:hover:bg-[#41434A] hover:bg-bgLightModeButton hover:rounded-md w-10 h-10 p-1 flex items-center justify-center w-full'][5]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

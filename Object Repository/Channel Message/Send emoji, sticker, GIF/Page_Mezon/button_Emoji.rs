@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='cursor-pointer'][3]</value>
+         <value>//div[@class='cursor-pointer']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>348741f5-360a-4860-bc95-409e6df07e23</webElementGuid>
+      <webElementGuid>6bc68e54-4d9e-4544-8ed5-a7d934467011</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>relative px-2 mx-2 rounded-md  dark:text-gray-300 text-colorTextLightMode dark:hover:text-white hover:text-black </value>
-      <webElementGuid>e5945877-43d8-4295-9847-83ccc8ee37ba</webElementGuid>
+      <webElementGuid>f3eb0bb4-0077-4ea7-88b6-c6175298df85</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +38,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Emoji</value>
-      <webElementGuid>8d588d85-f8c2-4dbc-bf3b-26bf477f1b1b</webElementGuid>
+      <webElementGuid>08ae2868-8664-4001-ae3b-80dfb4f453d8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +46,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex h-heightWithoutTopBar flex-row&quot;]/div[@class=&quot;flex flex-col flex-1 w-widthMessageViewChat h-full false&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightModeSecond h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;fixed bottom-[66px] z-10 right-64&quot;]/div[@class=&quot;w-[370px] sbm:w-[500px] h-fit rounded-lg dark:bg-bgSecondary bg-bgLightMode shadow shadow-neutral-900 min-h-[500px]&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;flex justify-start flex-row mt-3 border-b border-blue-500 pb-1 pt-1&quot;]/button[@class=&quot;relative px-2 mx-2 rounded-md  dark:text-gray-300 text-colorTextLightMode dark:hover:text-white hover:text-black&quot;]</value>
-      <webElementGuid>4d10b817-6931-4f57-b19d-298622812e90</webElementGuid>
+      <webElementGuid>18b1cc3e-ecf8-41cd-b44a-18fe8d3bfe68</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +54,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='mainChat']/div/div/div[2]/div[2]/div/div/div/div/button[3]</value>
-      <webElementGuid>5f7ca1f2-b492-458b-85d3-edefc23d2f8c</webElementGuid>
+      <webElementGuid>704a193d-65f6-420b-8cbf-29d6d5ace453</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Stickers'])[1]/following::button[1]</value>
-      <webElementGuid>513b667f-8d00-4cee-8fbb-ded903ac3b62</webElementGuid>
+      <webElementGuid>2d2f724c-fc24-4094-bd29-9ecbb0a0476c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Gifs'])[1]/following::button[2]</value>
-      <webElementGuid>988bf833-c94c-4e5f-a077-48da47903e08</webElementGuid>
+      <webElementGuid>ee154c5e-b5c0-41d0-8944-ec6bc0533b3a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='😂'])[1]/preceding::button[1]</value>
-      <webElementGuid>96c541f8-06fd-4ed0-ae30-2dffd930757b</webElementGuid>
+      <webElementGuid>b09f7c47-a582-439b-9e50-37d7a5595154</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='😂'])[2]/preceding::button[1]</value>
-      <webElementGuid>2d1e4841-55a9-4823-acd4-baf7d4110e42</webElementGuid>
+      <webElementGuid>1acb9817-ac90-4329-a3ee-2ecd04396586</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +94,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Emoji']/parent::*</value>
-      <webElementGuid>38c8062e-9900-4358-a337-3e13c4a09dc5</webElementGuid>
+      <webElementGuid>0c11dd4e-fba8-4fd7-9d75-512827c8410b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +102,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div[2]/div/div/div/div/button[3]</value>
-      <webElementGuid>ef7bf2ba-c1cd-496c-a8f6-03cdf24d8519</webElementGuid>
+      <webElementGuid>a31333e1-ec26-49e9-b9f4-18dc045b73c8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,6 +110,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[(text() = 'Emoji' or . = 'Emoji')]</value>
-      <webElementGuid>f959fda1-0305-4e44-a2b9-c6b5b7c09d8d</webElementGuid>
+      <webElementGuid>d29e6e31-7cb3-47d4-b72d-24bae997ddb2</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
