@@ -6,12 +6,11 @@
    <elementGuidId>3e06384f-b6c8-4e91-943e-585a19612600</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='app-layout']/div/div/div/div/div/div/p</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//p[@class='text-base font-medium dark:text-[#cccccc] text-black leading-[150%] text-center']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>p</value>
-      <webElementGuid>bd06cffa-06db-460f-823b-6a30ddb4305e</webElementGuid>
+      <webElementGuid>e15f0446-be54-4155-9d4a-74aceebc76db</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>text-base font-medium dark:text-[#cccccc] text-black leading-[150%] text-center</value>
-      <webElementGuid>2d7f9546-8651-48ce-ad92-0ef17a5d24ba</webElementGuid>
+      <webElementGuid>c3e675df-8834-4ce9-ae4e-829c456ff5ae</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +38,7 @@
       <name>text</name>
       <type>Main</type>
       <value>So glad to meet you again!</value>
-      <webElementGuid>290638a4-3e2b-4034-bb3a-b62e66c3d859</webElementGuid>
+      <webElementGuid>132ead28-ca43-4365-961d-5ef9c5abd45c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +46,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;app-layout&quot;)/div[1]/div[@class=&quot;w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center&quot;]/div[@class=&quot;justify-center items-center flex w-full h-full sm:max-h-[580px] sm:h-9/10 sm:max-w-[450px] lg:min-w-[850px] lg:max-h-[620px]  rounded-none sm:rounded-2xl lg:p-12 px-0 dark:bg-[#0b0b0b] bg-[#F0F0F0] flex-col mx-auto&quot;]/div[@class=&quot;relative top-0 flex-col pb-0 lg:top-0 lg:pb-0 flex lg:flex-row lg:gap-x-12 items-center w-full overflow-y-auto hide-scrollbar lg:overflow-y-visible&quot;]/div[@class=&quot;flex-col justify-start items-center flex h-fit p-0 gap-2 pb-2 lg:pb-0 md:gap-4 w-9/10&quot;]/div[@class=&quot;flex flex-col justify-start items-center w-fit h-fit&quot;]/p[@class=&quot;text-base font-medium dark:text-[#cccccc] text-black leading-[150%] text-center&quot;]</value>
-      <webElementGuid>b2e80e8c-00af-4987-8ad1-818ad77cc8e7</webElementGuid>
+      <webElementGuid>f242e90d-1895-4ac0-9dfd-e07e24c129b8</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +54,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='app-layout']/div/div/div/div/div/div/p</value>
-      <webElementGuid>5e0c2582-fe02-4b57-a7fb-7bb74ee0802c</webElementGuid>
+      <webElementGuid>270f83eb-cc0e-4e5f-9448-9cdae88ab5de</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='WELCOME BACK'])[1]/following::p[1]</value>
-      <webElementGuid>84035346-c5c1-4807-b073-98d144732e94</webElementGuid>
+      <webElementGuid>2f39bd68-edbb-4a49-9cb4-ff74b7b77075</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/preceding::p[7]</value>
-      <webElementGuid>013a65e5-a16c-48e3-9385-54070efc4f46</webElementGuid>
+      <webElementGuid>11b59a06-f24a-43c1-adc4-652bcdde5dfc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign in'])[1]/preceding::p[8]</value>
-      <webElementGuid>29685fa3-e27e-4920-ab62-10494abde1f3</webElementGuid>
+      <webElementGuid>5ca0e2c3-de48-4cf9-ad09-df1c23781b87</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='So glad to meet you again!']/parent::*</value>
-      <webElementGuid>f39d52aa-5cbc-4e9f-a52f-01f57863187b</webElementGuid>
+      <webElementGuid>ea40c386-7c74-4db2-ae60-69f0fd2da70b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +94,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//p</value>
-      <webElementGuid>34b90df4-3f11-431c-8151-0a8cd6a80f72</webElementGuid>
+      <webElementGuid>e006587e-e73a-49f8-b348-692600f0f668</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +102,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//p[(text() = 'So glad to meet you again!' or . = 'So glad to meet you again!')]</value>
-      <webElementGuid>87271ac7-36a8-4edf-a094-b31fd14eaf02</webElementGuid>
+      <webElementGuid>5526b51b-efe1-42b0-8635-65e5e08f8149</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

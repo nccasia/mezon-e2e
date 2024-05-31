@@ -35,6 +35,12 @@
       <value></value>
       <variableId>e9d8e2a2-3566-4b4d-ba24-e4d73e326032</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>d99e3994-7de2-4388-911c-0a7fbcdf534b</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>'welcome to my channel'</defaultValue>
       <description></description>
@@ -69,5 +75,12 @@
       <id>e9d8e2a2-3566-4b4d-ba24-e4d73e326032</id>
       <masked>false</masked>
       <name>PathToImage1</name>
+   </variable>
+   <variable>
+      <defaultValue>'hello test don\'t send message'</defaultValue>
+      <description></description>
+      <id>d99e3994-7de2-4388-911c-0a7fbcdf534b</id>
+      <masked>false</masked>
+      <name>Message3</name>
    </variable>
 </TestCaseEntity>

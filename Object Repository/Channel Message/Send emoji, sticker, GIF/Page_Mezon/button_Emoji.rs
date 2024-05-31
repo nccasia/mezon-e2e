@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Gifs</name>
+   <name>button_Emoji</name>
    <tag></tag>
-   <elementGuidId>84f627d5-7f58-4dab-9ee7-214eaa73a64d</elementGuidId>
+   <elementGuidId>8c0d3cf6-8ac4-40ed-bff7-8e4643096efa</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='cursor-pointer'][1]</value>
+         <value>//div[@class='cursor-pointer']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>4906df3b-915d-48bf-895f-9f1f85e7b8b3</webElementGuid>
+      <webElementGuid>6bc68e54-4d9e-4544-8ed5-a7d934467011</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,15 +30,15 @@
       <name>class</name>
       <type>Main</type>
       <value>relative px-2 mx-2 rounded-md  dark:text-gray-300 text-colorTextLightMode dark:hover:text-white hover:text-black </value>
-      <webElementGuid>a987c02e-0bd4-4ff4-9951-50e194c83780</webElementGuid>
+      <webElementGuid>f3eb0bb4-0077-4ea7-88b6-c6175298df85</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Gifs</value>
-      <webElementGuid>5f1e4ef0-8887-40b1-a897-5c04255059f2</webElementGuid>
+      <value>Emoji</value>
+      <webElementGuid>08ae2868-8664-4001-ae3b-80dfb4f453d8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,70 +46,70 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex h-heightWithoutTopBar flex-row&quot;]/div[@class=&quot;flex flex-col flex-1 w-widthMessageViewChat h-full false&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightModeSecond h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;fixed bottom-[66px] z-10 right-64&quot;]/div[@class=&quot;w-[370px] sbm:w-[500px] h-fit rounded-lg dark:bg-bgSecondary bg-bgLightMode shadow shadow-neutral-900 min-h-[500px]&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;flex justify-start flex-row mt-3 border-b border-blue-500 pb-1 pt-1&quot;]/button[@class=&quot;relative px-2 mx-2 rounded-md  dark:text-gray-300 text-colorTextLightMode dark:hover:text-white hover:text-black&quot;]</value>
-      <webElementGuid>45259107-9690-42b7-89a1-32e21a38d02d</webElementGuid>
+      <webElementGuid>18b1cc3e-ecf8-41cd-b44a-18fe8d3bfe68</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='mainChat']/div/div/div[2]/div[2]/div/div/div/div/button</value>
-      <webElementGuid>ac767455-1267-4488-8cda-e824a00a5e11</webElementGuid>
+      <value>//div[@id='mainChat']/div/div/div[2]/div[2]/div/div/div/div/button[3]</value>
+      <webElementGuid>704a193d-65f6-420b-8cbf-29d6d5ace453</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='New'])[1]/following::button[1]</value>
-      <webElementGuid>a9f28779-b631-4901-80a2-ea94cfdc25e7</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Stickers'])[1]/following::button[1]</value>
+      <webElementGuid>2d2f724c-fc24-4094-bd29-9ecbb0a0476c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Today at 11:23'])[1]/following::button[7]</value>
-      <webElementGuid>666c5ec2-bb07-40ac-bafe-15c8fcdc94ed</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Gifs'])[1]/following::button[2]</value>
+      <webElementGuid>ee154c5e-b5c0-41d0-8944-ec6bc0533b3a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Stickers'])[1]/preceding::button[1]</value>
-      <webElementGuid>52365f15-4618-4415-a6c7-859df6a22b3d</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='😂'])[1]/preceding::button[1]</value>
+      <webElementGuid>b09f7c47-a582-439b-9e50-37d7a5595154</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Emoji'])[1]/preceding::button[2]</value>
-      <webElementGuid>507593e8-8df2-419f-80e9-feec31153235</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='😂'])[2]/preceding::button[1]</value>
+      <webElementGuid>1acb9817-ac90-4329-a3ee-2ecd04396586</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Gifs']/parent::*</value>
-      <webElementGuid>8b142879-64d1-4766-802a-06ee75089ab0</webElementGuid>
+      <value>//*/text()[normalize-space(.)='Emoji']/parent::*</value>
+      <webElementGuid>0c11dd4e-fba8-4fd7-9d75-512827c8410b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div[2]/div/div/div/div/button</value>
-      <webElementGuid>3362b077-0e52-487d-b20e-e06466b14407</webElementGuid>
+      <value>//div[2]/div[2]/div/div/div/div/button[3]</value>
+      <webElementGuid>a31333e1-ec26-49e9-b9f4-18dc045b73c8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//button[(text() = 'Gifs' or . = 'Gifs')]</value>
-      <webElementGuid>4ef12a4f-6391-4b41-a28e-a7ebe35c48d5</webElementGuid>
+      <value>//button[(text() = 'Emoji' or . = 'Emoji')]</value>
+      <webElementGuid>d29e6e31-7cb3-47d4-b72d-24bae997ddb2</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
