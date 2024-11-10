@@ -17,8 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
-        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : GlobalVariable.email
+        , ('password') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send message'), [('Message') : 'welcome to my channel'], FailureHandling.STOP_ON_FAILURE)
 

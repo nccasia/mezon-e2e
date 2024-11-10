@@ -9,9 +9,9 @@
    <freeLicense>true</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <modifiedEdition>FREE</modifiedEdition>
-   <modifiedVersion>9.4.0</modifiedVersion>
+   <modifiedVersion>10.0.0</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>E:\mezon-e2e\mezon-e2e\mezon-e2e.prj</projectFileLocation>
+   <projectFileLocation>/Users/thomas/Documents/Automation NCC/mezon-e2e/mezon-e2e.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
