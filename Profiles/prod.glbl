@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>dev</name>
+   <name>prod</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://dev-mezon.nccsoft.vn/desktop/login'</initValue>
+      <initValue>'https://mezon.ai/desktop/login'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,12 +16,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'E2E1762357@ncc.asia'</initValue>
+      <initValue>'mezontest345@gmail.com'</initValue>
       <name>email</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'E2E1762357'</initValue>
+      <initValue>'mezonncc123'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
