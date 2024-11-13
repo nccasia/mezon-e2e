@@ -38,17 +38,15 @@ WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Stickers'))
-
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Stickers'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Stickers'))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Sticker2'), FailureHandling.STOP_ON_FAILURE)
-
 WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Gifs'))
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/group_GIF'))
+
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Sticker2'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/GIF'))
 
