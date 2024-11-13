@@ -32,8 +32,6 @@ WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticke
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emoji'))
-
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji2'))
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'), Keys.chord(Keys.ENTER))
