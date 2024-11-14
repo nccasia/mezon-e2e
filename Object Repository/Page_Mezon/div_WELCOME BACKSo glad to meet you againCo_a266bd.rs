@@ -11,14 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app-layout']/div/div/div/div</value>
+         <value>//div[@id='app-layout']/div[2]/div/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value>#app-layout div >> internal:has-text=&quot;WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone numbe&quot;i >> nth=3</value>
+         <value>#app-layout div >> internal:has-text=&quot;WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone numbe&quot;i >> nth=2</value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
@@ -29,15 +29,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>e9f9ae83-17de-4dbf-9fb6-895b00006a82</webElementGuid>
+      <webElementGuid>2bd456c6-3c7e-417b-b687-df0bbb582fe4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>relative top-0 flex-col pb-0 lg:top-0 lg:pb-0 flex lg:flex-row lg:gap-x-12 items-center w-full overflow-y-auto hide-scrollbar lg:overflow-y-visible</value>
-      <webElementGuid>98615602-3f8d-4c3d-934d-0becba24e9ec</webElementGuid>
+      <value> justify-center items-center flex w-full h-full sm:max-h-[580px] sm:h-9/10 sm:max-w-[450px] lg:min-w-[850px] lg:max-h-[620px]  rounded-none sm:rounded-2xl lg:p-12 px-0 dark:bg-[#0b0b0b] bg-[#F0F0F0] flex-col mx-auto</value>
+      <webElementGuid>bf1b56be-ebd4-42ec-841e-ee559af73a28</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,31 +45,39 @@
       <name>text</name>
       <type>Main</type>
       <value>WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone number✱Password✱Forgot your password?Sign inNeed an account?Sign upSign in by QR codeUse Mezon on mobile to scan QR</value>
-      <webElementGuid>0f1c9274-750a-471e-85b4-8b66b92b0bd7</webElementGuid>
+      <webElementGuid>e92f8112-693b-4d48-95cf-dd705663b726</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;app-layout&quot;)/div[1]/div[@class=&quot;w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center&quot;]/div[@class=&quot;justify-center items-center flex w-full h-full sm:max-h-[580px] sm:h-9/10 sm:max-w-[450px] lg:min-w-[850px] lg:max-h-[620px]  rounded-none sm:rounded-2xl lg:p-12 px-0 bg-[#0b0b0b] flex-col mx-auto&quot;]/div[@class=&quot;relative top-0 flex-col pb-0 lg:top-0 lg:pb-0 flex lg:flex-row lg:gap-x-12 items-center w-full overflow-y-auto hide-scrollbar lg:overflow-y-visible&quot;]</value>
-      <webElementGuid>05918e4a-fd47-4004-bed7-34720d0f3479</webElementGuid>
+      <value>id(&quot;app-layout&quot;)/div[2]/div[@class=&quot;w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center&quot;]/div[@class=&quot;justify-center items-center flex w-full h-full sm:max-h-[580px] sm:h-9/10 sm:max-w-[450px] lg:min-w-[850px] lg:max-h-[620px]  rounded-none sm:rounded-2xl lg:p-12 px-0 dark:bg-[#0b0b0b] bg-[#F0F0F0] flex-col mx-auto&quot;]</value>
+      <webElementGuid>36bac91b-f0ad-4fa6-8dc3-8af22ec7922f</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='app-layout']/div/div/div/div</value>
-      <webElementGuid>def97004-d2c9-4c60-8048-566e407bcadc</webElementGuid>
+      <value>//div[@id='app-layout']/div[2]/div/div</value>
+      <webElementGuid>e7545388-0899-4e32-9007-a90eb6d8e2ce</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Loading ...'])[1]/following::div[6]</value>
+      <webElementGuid>c07ceffe-7ed8-4499-998e-1cc516cd7cb6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div/div/div/div/div/div</value>
-      <webElementGuid>53cb0919-e33c-42ea-a152-5ed9311cfff7</webElementGuid>
+      <value>//div/div[2]/div/div</value>
+      <webElementGuid>1aaa4fc2-7583-435d-a9a3-2914042b53c5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -77,22 +85,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = 'WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone number✱Password✱Forgot your password?Sign inNeed an account?Sign upSign in by QR codeUse Mezon on mobile to scan QR' or . = 'WELCOME BACKSo glad to meet you again!Continue with GoogleorEmail or Phone number✱Password✱Forgot your password?Sign inNeed an account?Sign upSign in by QR codeUse Mezon on mobile to scan QR')]</value>
-      <webElementGuid>9a60c843-2671-4c17-aa1a-e872aff5b2b4</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
-      <type>Main</type>
-      <value>//div[@id='app-layout']/div/div</value>
-      <webElementGuid>ba34d0f1-ffa5-4fe8-967b-539d3e6c5b39</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:position</name>
-      <type>Main</type>
-      <value>//div/div/div/div</value>
-      <webElementGuid>82e7ca9b-14fb-4d9c-908b-dbc35078bba8</webElementGuid>
+      <webElementGuid>e1d3a2e8-bd51-4b7c-893b-9809462278d7</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

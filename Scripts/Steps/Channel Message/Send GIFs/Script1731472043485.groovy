@@ -19,13 +19,23 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
+WebUI.navigateToUrl('https://dev-mezon.nccsoft.vn/')
+
 WebUI.maximizeWindow()
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+WebUI.click(findTestObject('Object Repository/Page_Mezon/a_Login'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
+WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), 'E2E1762357@ncc.asia')
 
-WebUI.setText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), password)
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), '9biZmnmyTHYoxEgCZK4szw==')
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
+WebUI.click(findTestObject('Object Repository/Page_Mezon/button_Sign in'))
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/div_T'))
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/path'))
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/div_awesome_absolute inset-0 border-2 borde_c631f2'))
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/img_Emoji_w-full h-auto'))
 
