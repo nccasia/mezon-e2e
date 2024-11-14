@@ -17,8 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/div_'))
-
 WebUI.click(findTestObject('Clan management/Page_Mezon/span_Test Clan'))
 
 WebUI.uploadFile(findTestObject('Object Repository/Channel Message/Upload files'), PathToImage)
