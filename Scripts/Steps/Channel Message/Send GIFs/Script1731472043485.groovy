@@ -37,5 +37,5 @@ WebUI.click(findTestObject('Object Repository/Page_Mezon/path'))
 
 WebUI.click(findTestObject('Object Repository/Page_Mezon/div_awesome_absolute inset-0 border-2 borde_c631f2'))
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/img_Emoji_w-full h-auto'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Mezon/img_Emoji_w-full h-auto'))
 
