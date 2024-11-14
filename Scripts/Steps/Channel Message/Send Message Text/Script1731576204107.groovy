@@ -19,11 +19,23 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://dev-mezon.nccsoft.vn/desktop/login')
+WebUI.navigateToUrl('https://dev-mezon.nccsoft.vn/')
 
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
+WebUI.click(findTestObject('Object Repository/Page_Mezon/a_Login'))
 
-WebUI.setEncryptedText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), '9biZmnmyTHYoxEgCZK4szw==')
+WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), 'E2E1762357@ncc.asia')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), '9biZmnmyTHYoxEgCZK4szw==')
 
 WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/div_0'))
+
+WebUI.click(findTestObject('Object Repository/Page_Mezon/div_T'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Mezon/textarea_Hi Nguyen Phuoc Nguyen'), 'Hi Nguyen Phuoc Nguyen')
+
+WebUI.sendKeys(findTestObject('Object Repository/Page_Mezon/textarea_Hi Nguyen Phuoc Nguyen'), Keys.chord(Keys.ENTER))
+
+WebUI.closeBrowser()
 
