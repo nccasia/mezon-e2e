@@ -17,23 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
-
-WebUI.navigateToUrl('https://dev-mezon.nccsoft.vn/')
-
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Object Repository/Page_Mezon/a_Login'))
-
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), 'E2E1762357@ncc.asia')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), '9biZmnmyTHYoxEgCZK4szw==')
-
-WebUI.click(findTestObject('Object Repository/Page_Mezon/button_Sign in'))
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
+        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Page_Mezon/div_T'))
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/path'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/gif'))
 
 WebUI.click(findTestObject('Object Repository/Page_Mezon/div_awesome_absolute inset-0 border-2 borde_c631f2'))
 
