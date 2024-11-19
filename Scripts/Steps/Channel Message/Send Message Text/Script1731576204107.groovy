@@ -19,15 +19,8 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://dev-mezon.nccsoft.vn/')
-
-WebUI.click(findTestObject('Object Repository/Page_Mezon/a_Login'))
-
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), 'E2E1762357@ncc.asia')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), '9biZmnmyTHYoxEgCZK4szw==')
-
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
+        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Page_Mezon/div_0'))
 
@@ -36,6 +29,8 @@ WebUI.click(findTestObject('Object Repository/Page_Mezon/div_T'))
 WebUI.setText(findTestObject('Object Repository/Page_Mezon/textarea_Hi Nguyen Phuoc Nguyen'), 'Hi Nguyen Phuoc Nguyen')
 
 WebUI.sendKeys(findTestObject('Object Repository/Page_Mezon/textarea_Hi Nguyen Phuoc Nguyen'), Keys.chord(Keys.ENTER))
+
+WebUI.verifyElementVisible(findTestObject('Channel Message/Select channel and send message/Page_Mezon/span_Hi Nguyen Phuoc Nguyen'))
 
 WebUI.closeBrowser()
 
