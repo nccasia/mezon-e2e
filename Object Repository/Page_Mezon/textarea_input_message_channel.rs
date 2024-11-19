@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>textarea_Daily</name>
+   <name>textarea_input_message_channel</name>
    <tag></tag>
-   <elementGuidId>e57750bf-186e-46dd-b9c0-aa9163b7715c</elementGuidId>
+   <elementGuidId>5851a58e-dcf9-4fa9-8239-9ac2b9eaee8b</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//textarea[@id='editorReactMention']</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>#editorReactMention</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//textarea[@id='editorReactMention']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,7 +29,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>textarea</value>
-      <webElementGuid>613dcdaf-9751-4c59-9108-0b6e6b950905</webElementGuid>
+      <webElementGuid>f4decc99-567e-4295-b678-2ead101d223f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -37,7 +37,7 @@
       <name>id</name>
       <type>Main</type>
       <value>editorReactMention</value>
-      <webElementGuid>2f5c3b2a-2009-4c5e-95e2-52e1e1398750</webElementGuid>
+      <webElementGuid>e9af9633-fcef-47ae-8a2a-ae980110051a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,7 +45,7 @@
       <name>placeholder</name>
       <type>Main</type>
       <value>Write your thoughts here...</value>
-      <webElementGuid>4d495f4e-ddef-471e-ba96-7aac8dc306bc</webElementGuid>
+      <webElementGuid>ce62ffc4-c777-4f42-8f19-87370fc15dc5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -53,15 +53,15 @@
       <name>class</name>
       <type>Main</type>
       <value>dark:bg-channelTextarea__input</value>
-      <webElementGuid>2353fbe8-fd43-42d3-bcbf-9aa055b078f6</webElementGuid>
+      <webElementGuid>b2923bec-9638-47b2-9060-9fb513284480</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>*Daily</value>
-      <webElementGuid>0f6b8258-7834-4e65-b083-d03339de7840</webElementGuid>
+      <value>Hi Nguyen Phuoc Nguyen</value>
+      <webElementGuid>8f10b6fc-d27f-46b7-b5b0-fee4b4400b69</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -69,7 +69,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;editorReactMention&quot;)</value>
-      <webElementGuid>58c31427-34c1-4733-8e74-d6c10b227d8b</webElementGuid>
+      <webElementGuid>4100e5f4-cc4f-4fa2-9ef9-3d36fd5646a7</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -77,7 +77,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//textarea[@id='editorReactMention']</value>
-      <webElementGuid>bcc55e84-7f75-4878-892a-64a6aa2a98de</webElementGuid>
+      <webElementGuid>399b163e-1fa2-4b07-87f0-17ace7235706</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,15 +85,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='mainChat']/div/div/div[2]/div/div[2]/div/div/div/div/div/div/textarea</value>
-      <webElementGuid>11158903-e8d3-41c9-9ee4-ca5f87e72152</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='*Daily'])[1]/following::textarea[1]</value>
-      <webElementGuid>70939d68-a2cb-43c8-97cc-2d060d5b2f2d</webElementGuid>
+      <webElementGuid>816e646e-1999-4a66-a8bb-369f4f7c758d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,7 +93,15 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi Nguyen Phuoc Nguyen'])[1]/following::textarea[1]</value>
-      <webElementGuid>138a1875-5b5f-488c-bcb6-0f8d1bb9bb68</webElementGuid>
+      <webElementGuid>2ae0a36e-87cc-4a9a-aaff-dcd76c5c6328</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[2]/following::textarea[1]</value>
+      <webElementGuid>049e9b53-c8e2-4d39-9e44-859df17a1e6c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,14 +109,14 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//textarea</value>
-      <webElementGuid>46d4aa91-d135-4cff-bc67-fd9c82e9aea1</webElementGuid>
+      <webElementGuid>e12e5455-11ea-4247-b361-42c19643a2f7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//textarea[@id = 'editorReactMention' and @placeholder = 'Write your thoughts here...' and (text() = '*Daily' or . = '*Daily')]</value>
-      <webElementGuid>0343c06d-3822-4814-92e0-31b94d20250d</webElementGuid>
+      <value>//textarea[@id = 'editorReactMention' and @placeholder = 'Write your thoughts here...' and (text() = 'Hi Nguyen Phuoc Nguyen' or . = 'Hi Nguyen Phuoc Nguyen')]</value>
+      <webElementGuid>31430e4b-bfd9-459e-a14d-d97ed3d47e7b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Hi Nguyen Phuoc Nguyen</name>
+   <name>span_text_message_channel</name>
    <tag></tag>
    <elementGuidId>9763e874-4a27-476e-acee-76ada03afd31</elementGuidId>
    <selectorCollection>

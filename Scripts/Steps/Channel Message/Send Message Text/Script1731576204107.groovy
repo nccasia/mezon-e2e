@@ -17,20 +17,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
-
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_0'))
+WebUI.click(findTestObject('Page_Mezon/channel_T'))
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_T'))
+WebUI.setText(findTestObject('Page_Mezon/textarea_input_message_channel'), 'Hi Nguyen Phuoc Nguyen')
 
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/textarea_Hi Nguyen Phuoc Nguyen'), 'Hi Nguyen Phuoc Nguyen')
+WebUI.sendKeys(findTestObject('Object Repository/Page_Mezon/textarea_input_message_channel'), Keys.chord(Keys.ENTER))
 
-WebUI.sendKeys(findTestObject('Object Repository/Page_Mezon/textarea_Hi Nguyen Phuoc Nguyen'), Keys.chord(Keys.ENTER))
-
-WebUI.verifyElementVisible(findTestObject('Channel Message/Select channel and send message/Page_Mezon/span_Hi Nguyen Phuoc Nguyen'))
+WebUI.verifyElementVisible(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/span_text_message_channel'))
 
 WebUI.closeBrowser()
 
