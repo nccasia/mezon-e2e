@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Nga nguyn</name>
+   <tag></tag>
+   <elementGuidId>d146c50c-7ef3-4d71-8f00-1631387cda28</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main-layout']/div/div[2]/div[3]/div/div/div/div/div</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>315c69b8-c50c-42f7-8dbf-fc73b92ecc74</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>group/itemListDm relative  text-[#AEAEAE] hover:text-white h-fit pl-2 rounded-[6px] dark:hover:bg-[rgba(30,30,30,0.4)] hover:bg-[#E1E1E1] py-2 w-full dark:focus:bg-bgTertiary focus:bg-[#c7c7c7] </value>
+      <webElementGuid>e4e71c29-63df-43ba-84ea-b60d9309e238</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Nga nguyễn</value>
+      <webElementGuid>0dd2b0dd-49a0-4e5c-bdbd-93fec858eea5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main-layout&quot;)/div[@class=&quot;flex h-screen min-[480px]:pl-[72px]  overflow-hidden text-gray-100 relative dark:bg-bgPrimary bg-bgLightModeSecond&quot;]/div[@class=&quot;flex-col  flex w-[272px] dark:bg-bgSecondary bg-bgLightMode relative min-w-widthMenuMobile  sbm:min-w-[272px]&quot;]/div[@class=&quot;flex-1 font-medium text-gray-300 px-2 h-2/3 thread-scroll&quot;]/div[@class=&quot;flex flex-col gap-1 text-[#AEAEAE] text-center relative&quot;]/div[@class=&quot;custom-member-list thread-scroll&quot;]/div[1]/div[1]/div[@class=&quot;group/itemListDm relative  text-[#AEAEAE] hover:text-white h-fit pl-2 rounded-[6px] dark:hover:bg-[rgba(30,30,30,0.4)] hover:bg-[#E1E1E1] py-2 w-full dark:focus:bg-bgTertiary focus:bg-[#c7c7c7]&quot;]</value>
+      <webElementGuid>1ed488dd-c383-44d1-869b-d3e6551f995c</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main-layout']/div/div[2]/div[3]/div/div/div/div/div</value>
+      <webElementGuid>0ad3daf0-9aca-48b1-9848-58a82579cde5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Create DM'])[1]/following::div[7]</value>
+      <webElementGuid>35875276-4297-4dd2-8966-968674b02041</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Friends'])[1]/following::div[12]</value>
+      <webElementGuid>7c91aa4f-f32c-4d49-878f-7d2a5e23dafe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Nga Nguyen Thi'])[1]/preceding::div[10]</value>
+      <webElementGuid>d40acfea-1b08-450b-aadd-2484003bdeab</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[3]/div/div/div/div/div</value>
+      <webElementGuid>f2769d34-589f-4762-b88e-b1275178b151</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Nga nguyễn' or . = 'Nga nguyễn')]</value>
+      <webElementGuid>c4149109-307e-469b-bcbc-71ae93bf5e4b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
