@@ -17,27 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
+        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_T'))
 
-WebUI.navigateToUrl('https://dev-mezon.nccsoft.vn/')
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/a_Login'))
-
-WebUI.setText(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/input_WELCOME BACK_userEmail'), 
-    'E2E1762357@ncc.asia')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/input_WELCOME BACK_password'), 
-    '9biZmnmyTHYoxEgCZK4szw==')
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/button_Sign in'))
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/div_T'))
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/p_general'))
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/p_general'))
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/svg__darkhovertext-white hovertext-black darktext-AEAEAE text-colorTextLightMode'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa'))
+
+WebUI.verifyElementVisibleInViewport(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji-on-the-thread'), 
+    0)
 
