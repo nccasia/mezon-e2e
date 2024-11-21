@@ -17,19 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.waitForElementPresent(findTestObject('Page_Mezon/input_WELCOME BACK_userEmail'), 0)
 
-WebUI.maximizeWindow()
+WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
-
-WebUI.click(findTestObject('Page_Mezon/a_Login'))
-
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), GlobalVariable.email)
-
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), GlobalVariable.password)
+WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_password'), password)
 
 WebUI.click(findTestObject('Object Repository/Page_Mezon/button_Sign in'))
 
-WebUI.verifyElementVisible(findTestObject('Page_Mezon/button_Add Friend'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Mezon/img_Friends_clan'), 0)
 
