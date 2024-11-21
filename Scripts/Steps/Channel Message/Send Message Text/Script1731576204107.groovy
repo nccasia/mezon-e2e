@@ -26,7 +26,7 @@ WebUI.setText(findTestObject('Page_Mezon/textarea_input_message_channel'), 'Hi N
 
 WebUI.sendKeys(findTestObject('Object Repository/Page_Mezon/textarea_input_message_channel'), Keys.chord(Keys.ENTER))
 
-WebUI.verifyElementVisible(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/span_text_message_channel'))
+WebUI.verifyElementVisible(findTestObject('Channel Message/Select channel and send message/span_text_message_channel'))
 
 WebUI.closeBrowser()
 
