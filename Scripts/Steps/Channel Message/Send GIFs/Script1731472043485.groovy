@@ -20,11 +20,17 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_T'))
+WebUI.click(findTestObject('Page_Mezon/div_T'))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/gif'))
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/gif'))
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_awesome_absolute inset-0 border-2 borde_c631f2'))
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/gifs_pannel'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Page_Mezon/img_Emoji_w-full h-auto'))
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/item_gif_in_gif_panal'))
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/item_msg_gif_after_sent'), 
+    0)
+
+WebUI.verifyElementVisible(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/item_msg_gif_after_sent'), 
+    FailureHandling.STOP_ON_FAILURE)
 
