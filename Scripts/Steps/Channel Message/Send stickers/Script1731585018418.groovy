@@ -28,6 +28,9 @@ WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa'))
 
-WebUI.verifyElementVisibleInViewport(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji-on-the-thread'), 
+WebUI.waitForElementVisible(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/sticker_after_sent_to_channel_chat'), 
     0)
+
+WebUI.verifyElementVisible(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/sticker_after_sent_to_channel_chat'), 
+    FailureHandling.STOP_ON_FAILURE)
 
