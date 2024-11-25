@@ -6,12 +6,11 @@
    <elementGuidId>8c0d3cf6-8ac4-40ed-bff7-8e4643096efa</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='main-layout']/div/div[3]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div/div[2]/div/div[4]/div/div/button[6]</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[@class='cursor-pointer']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,66 +22,94 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>34ef2fdc-c59f-43ce-9ce5-bb0c251cffb9</webElementGuid>
+      <webElementGuid>6bc68e54-4d9e-4544-8ed5-a7d934467011</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value> text-2xl  emoji-button  rounded-md  dark:hover:bg-[#41434A] hover:bg-bgLightModeButton hover:rounded-md  p-1 flex items-center justify-center w-full aspect-square</value>
-      <webElementGuid>141967a1-5ec3-430d-a572-3db9563c7450</webElementGuid>
+      <value>relative px-2 mx-2 rounded-md  dark:text-gray-300 text-colorTextLightMode dark:hover:text-white hover:text-black </value>
+      <webElementGuid>f3eb0bb4-0077-4ea7-88b6-c6175298df85</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Emoji</value>
+      <webElementGuid>08ae2868-8664-4001-ae3b-80dfb4f453d8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;main-layout&quot;)/div[@class=&quot;flex h-screen min-[480px]:pl-[72px]  overflow-hidden text-gray-100 relative dark:bg-bgPrimary bg-bgLightModeSecond&quot;]/div[@class=&quot;flex flex-col
-			 flex-1 shrink min-w-0 bg-transparent
-				h-[100%] overflow-visible&quot;]/div[@class=&quot;flex flex-row flex-1 w-full&quot;]/div[@class=&quot;flex-col flex-1 h-full max-h-messageViewChatDM w-full flex&quot;]/div[@class=&quot;flex-shrink-0 flex flex-col z-0 dark:bg-bgPrimary bg-bgLightPrimary h-auto relative&quot;]/div[@class=&quot;mx-2 relative&quot;]/div[@class=&quot;right-[2px] absolute z-10&quot;]/div[@class=&quot;w-[370px] max-sm:w-full max-sm:pt-0 max-sm:rounded-none max-sm:mt-[-0.5rem]
-			sbm:w-[500px] max-sbm:w-[312px] max-sbm:rounded-lg h-fit rounded-lg dark:bg-bgSecondary bg-bgLightMode shadow shadow-neutral-900 z-30
-			 min-h-[500px]&quot;]/div[@class=&quot;w-full min-h-[400px] text-center md:w-[500px]&quot;]/div[@class=&quot;flex h-full pr-2 w-full sbm:w-[312px] md:w-[500px]&quot;]/div[@class=&quot;outline-none flex max-h-full max-sm:h-32 max-sbm:h-full flex-row w-full md:w-[500px] max-sm:ml-1 undefined&quot;]/div[@class=&quot;flex flex-col w-[90%] pr-2&quot;]/div[@class=&quot;w-full  max-h-[352px] overflow-y-scroll pt-0 overflow-x-hidden hide-scrollbar dark: bg-transparent bg-bgLightMode&quot;]/div[@class=&quot;w-full&quot;]/div[1]/div[@class=&quot;grid grid-cols-9 ml-1 gap-1&quot;]/button[@class=&quot;text-2xl  emoji-button  rounded-md  dark:hover:bg-[#41434A] hover:bg-bgLightModeButton hover:rounded-md  p-1 flex items-center justify-center w-full aspect-square&quot;]</value>
-      <webElementGuid>f0313f1e-ece8-4d10-97f4-f82fad4d2895</webElementGuid>
+      <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex h-heightWithoutTopBar flex-row&quot;]/div[@class=&quot;flex flex-col flex-1 w-widthMessageViewChat h-full false&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightModeSecond h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;fixed bottom-[66px] z-10 right-64&quot;]/div[@class=&quot;w-[370px] sbm:w-[500px] h-fit rounded-lg dark:bg-bgSecondary bg-bgLightMode shadow shadow-neutral-900 min-h-[500px]&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;flex justify-start flex-row mt-3 border-b border-blue-500 pb-1 pt-1&quot;]/button[@class=&quot;relative px-2 mx-2 rounded-md  dark:text-gray-300 text-colorTextLightMode dark:hover:text-white hover:text-black&quot;]</value>
+      <webElementGuid>18b1cc3e-ecf8-41cd-b44a-18fe8d3bfe68</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='main-layout']/div/div[3]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div/div[2]/div/div[4]/div/div/button[6]</value>
-      <webElementGuid>d44ad626-fd55-434c-a281-6972132fa945</webElementGuid>
+      <value>//div[@id='mainChat']/div/div/div[2]/div[2]/div/div/div/div/button[3]</value>
+      <webElementGuid>704a193d-65f6-420b-8cbf-29d6d5ace453</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Emoji'])[1]/following::button[42]</value>
-      <webElementGuid>781f3b80-5b76-4b7b-96df-6887c2bb7e2c</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Stickers'])[1]/following::button[1]</value>
+      <webElementGuid>2d2f724c-fc24-4094-bd29-9ecbb0a0476c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Stickers'])[1]/following::button[43]</value>
-      <webElementGuid>a10bed3f-3549-4780-9321-1c70795f9452</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Gifs'])[1]/following::button[2]</value>
+      <webElementGuid>ee154c5e-b5c0-41d0-8944-ec6bc0533b3a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=':froge_fightt:'])[1]/preceding::button[148]</value>
-      <webElementGuid>e7d7bb3c-68c8-4890-bea3-95da296211a8</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='😂'])[1]/preceding::button[1]</value>
+      <webElementGuid>b09f7c47-a582-439b-9e50-37d7a5595154</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='😂'])[2]/preceding::button[1]</value>
+      <webElementGuid>1acb9817-ac90-4329-a3ee-2ecd04396586</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Emoji']/parent::*</value>
+      <webElementGuid>0c11dd4e-fba8-4fd7-9d75-512827c8410b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[4]/div/div/button[6]</value>
-      <webElementGuid>9c76a593-c87b-457b-a68a-04d245c2f175</webElementGuid>
+      <value>//div[2]/div[2]/div/div/div/div/button[3]</value>
+      <webElementGuid>a31333e1-ec26-49e9-b9f4-18dc045b73c8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[(text() = 'Emoji' or . = 'Emoji')]</value>
+      <webElementGuid>d29e6e31-7cb3-47d4-b72d-24bae997ddb2</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
