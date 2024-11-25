@@ -3,14 +3,10 @@
    <description></description>
    <name>gif</name>
    <tag></tag>
-   <elementGuidId>01b5ef56-b706-4134-92e6-9735748a233c</elementGuidId>
+   <elementGuidId>4eac1419-fa62-41d3-a88b-1528ee64a1cf</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -18,14 +14,8 @@
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
-   <smartLocatorCollection>
-      <entry>
-         <key>SMART_LOCATOR</key>
-         <value>internal:role=button[name=&quot;Write your thoughts here...&quot;i]</value>
-      </entry>
-   </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
-   <useRalativeImagePath>false</useRalativeImagePath>
+   <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
