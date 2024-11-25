@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Hi(edited)</name>
+   <tag></tag>
+   <elementGuidId>efaedba2-323b-43b6-b671-e45a7aa3548a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='msg-1840651252791250944']/div/div[2]/div/div[2]/div/div/div/div/div/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:text=&quot;Hi(edited)&quot;i</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>2cd8519e-d850-429f-b1e8-c237dd7aa35e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>text-[#4E5057] dark:text-[#DFDFE0]</value>
+      <webElementGuid>c0718f67-63e5-4532-8b1b-80193dd3727b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Hi(edited)</value>
+      <webElementGuid>2ce23931-39a3-447a-b0f7-dfd3f9e98f0a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;msg-1840651252791250944&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3&quot;]/div[@class=&quot;justify-start gap-4 inline-flex w-full relative h-fit overflow-visible pr-12&quot;]/div[@class=&quot;w-full relative h-full&quot;]/div[@class=&quot;justify-start items-center  inline-flex w-full h-full pt-[2px] textChat select-text&quot;]/div[@class=&quot;flex flex-col whitespace-pre-wrap text-base w-full cursor-text&quot;]/div[@class=&quot;flex w-full&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;&quot;]/div[@class=&quot;text-[#4E5057] dark:text-[#DFDFE0]&quot;]</value>
+      <webElementGuid>c4d61500-e518-4b9d-8bce-031fe23b6875</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='msg-1840651252791250944']/div/div[2]/div/div[2]/div/div/div/div/div/div</value>
+      <webElementGuid>78242258-8ed9-498d-aaa2-0c5fe78208ac</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi Nguyen Phuoc Nguyen'])[1]/following::div[20]</value>
+      <webElementGuid>e94a7872-d605-44d7-a877-556849ed8433</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[12]/following::div[61]</value>
+      <webElementGuid>0b6eb545-773e-4bb4-a566-b9d5a9719d3b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mon, 25 November 2024'])[1]/preceding::div[10]</value>
+      <webElementGuid>e1ffc816-732f-4ca6-8082-668793f89b6d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[9]/div/div/div/div/div[2]/div/div[2]/div/div/div/div/div/div</value>
+      <webElementGuid>d347473e-7110-4645-ba4d-140e24070937</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Hi(edited)' or . = 'Hi(edited)')]</value>
+      <webElementGuid>fc3638ab-d364-492c-9a17-0308e7ed1c80</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -20,14 +20,18 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.maximizeWindow()
+
 WebUI.click(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_clan_T'))
 
-WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/svg_Hi Nguyen Phuoc Nguyen vm_w-5 h-5 darkhovertext-white hovertext-black darktext-textSecondary text-colorTextLightMode'))
+WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/hover_obj_to_edit'))
 
-WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_Hi Nguyen Phuoc Nguyen vm_1_2'), 
-    '')
+WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/edit_btn'))
 
-WebUI.click(findTestObject('Channel Message/Select channel and send message/p_save'))
+WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), 'Hi')
 
-WebUI.verifyElementVisible(findTestObject('Channel Message/Select channel and send message/p_(edited)'))
+WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), Keys.chord(
+        Keys.ENTER))
+
+WebUI.verifyTextPresent('Hi', false)
 

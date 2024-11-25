@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_edit</name>
+   <tag></tag>
+   <elementGuidId>1259f2f4-7392-43ad-b40e-ad40c5528323</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='scrollLoading']/div[2]/div/div[15]/div/div/div[2]/div/div/button[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>#scrollLoading button >> nth=1</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>0e0b37d7-8f69-4189-b4ce-533382a9ac7c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>h-full p-1 cursor-pointer popup-btn</value>
+      <webElementGuid>eccda4ed-aaaa-4d04-b633-1de2e4cb198c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;scrollLoading&quot;)/div[2]/div[1]/div[15]/div[@class=&quot;fullBoxText relative group pt-3&quot;]/div[1]/div[@class=&quot;chooseForText z-[1] absolute h-8 p-0.5 rounded block -top-5  right-6 w-fit&quot;]/div[@class=&quot;flex justify-between dark:bg-bgDarkPopover bg-bgLightMode border border-bgSecondary rounded&quot;]/div[@class=&quot;w-fit h-full flex items-center justify-between&quot;]/button[@class=&quot;h-full p-1 cursor-pointer popup-btn&quot;]</value>
+      <webElementGuid>ad21fa4f-2463-4c5f-8d6b-d36ebdcf70a1</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='scrollLoading']/div[2]/div/div[15]/div/div/div[2]/div/div/button[2]</value>
+      <webElementGuid>9eafecd7-32d0-46d6-b388-4ed2eb0c50db</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='hí ae'])[5]/following::button[2]</value>
+      <webElementGuid>cafe47b4-26a7-4b1b-9449-8ee3f6e72a27</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Today at 09:14'])[1]/following::button[2]</value>
+      <webElementGuid>baa23626-b9af-4997-8454-e2aeb0e95185</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/button[2]</value>
+      <webElementGuid>7d986574-ec56-4541-8662-1ac3def122d1</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

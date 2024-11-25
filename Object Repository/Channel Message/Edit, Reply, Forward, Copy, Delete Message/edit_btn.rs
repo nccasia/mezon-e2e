@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>edit_btn</name>
+   <tag></tag>
+   <elementGuidId>6c77c46a-f615-48c8-a198-f3b04c4e2803</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='scrollLoading']/div[2]/div/div[9]/div/div/div[2]/div/div/button[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>#scrollLoading button >> nth=1</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>ce34a35c-51f2-4bf0-aa60-53995a6caac4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>h-full p-1 cursor-pointer popup-btn</value>
+      <webElementGuid>083c7e98-9d31-498f-a1d6-3c75a9def93b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;scrollLoading&quot;)/div[2]/div[1]/div[9]/div[@class=&quot;fullBoxText relative group&quot;]/div[1]/div[@class=&quot;chooseForText z-[1] absolute h-8 p-0.5 rounded block -top-5  right-6 w-fit&quot;]/div[@class=&quot;flex justify-between dark:bg-bgDarkPopover bg-bgLightMode border border-bgSecondary rounded&quot;]/div[@class=&quot;w-fit h-full flex items-center justify-between&quot;]/button[@class=&quot;h-full p-1 cursor-pointer popup-btn&quot;]</value>
+      <webElementGuid>5ae00b6c-a4ca-4b0a-8711-d5d1a6839706</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='scrollLoading']/div[2]/div/div[9]/div/div/div[2]/div/div/button[2]</value>
+      <webElementGuid>9eebbca0-30dd-4428-89eb-de89ea1c6280</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi'])[1]/following::button[2]</value>
+      <webElementGuid>52fcab21-f65a-420f-9a18-08e1f94f362c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi Nguyen Phuoc Nguyen'])[1]/following::button[2]</value>
+      <webElementGuid>0fed567c-2978-40ac-bd66-728628c5f4cd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mon, 25 November 2024'])[1]/preceding::button[4]</value>
+      <webElementGuid>e7db9493-a210-4147-b6ab-89a53028a5ab</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='geBXclVQui'])[3]/preceding::button[4]</value>
+      <webElementGuid>eed57252-85de-4688-9032-cfa05c527481</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/button[2]</value>
+      <webElementGuid>3bbcea17-e9eb-4b02-838f-87279d8d596d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
