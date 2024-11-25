@@ -17,15 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
+        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
+WebUI.click(findTestObject('Page_Mezon/channel_T'))
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+WebUI.setText(findTestObject('Page_Mezon/textarea_input_message_channel'), 'Hi Nguyen Phuoc Nguyen')
 
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
+WebUI.sendKeys(findTestObject('Object Repository/Page_Mezon/textarea_input_message_channel'), Keys.chord(Keys.ENTER))
 
-WebUI.setEncryptedText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), password)
+WebUI.waitForElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/msg_after_send'), 
+    0)
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
+WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/msg_after_send'))
+
+WebUI.closeBrowser()
 
