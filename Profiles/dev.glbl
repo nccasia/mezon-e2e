@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://dev-mezon.nccsoft.vn/desktop/login'</initValue>
+      <initValue>'https://dev-mezon.nccsoft.vn'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

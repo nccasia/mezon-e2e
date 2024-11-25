@@ -17,38 +17,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-'check rotaion between buttons'
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emoji'))
+WebUI.callTestCase(findTestCase('Steps/Login using email and password'), [('email') : 'e2euser1@ncc.asia', ('password') : 'e2euser1A@'], 
+    FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Gifs'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Nga nguyn'))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Stickers'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Button_Emojis'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emoji'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emoji'))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji'))
+WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emoji'))
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1'))
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emoji'))
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji2'))
-
-WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'), Keys.chord(Keys.ENTER))
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Stickers'))
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Stickers'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Stickers'))
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Sticker2'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Gifs'))
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/group_GIF'))
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/GIF'))
+WebUI.verifyElementVisible(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Message_emoji'))
 
