@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_private_replying to</name>
+   <tag></tag>
+   <elementGuidId>1d7b3042-1985-4b1b-a63b-16f9437aa3d3</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='mainChat']/div/div/div[2]/div/div[2]/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>ee546c4e-8728-4c4c-88ca-1c3f8b77ad8a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex flex-row items-center justify-between w-full dark:bg-[#2B2D31] bg-bgLightMode p-2 rounded-md text-[14px] pb-[15px]</value>
+      <webElementGuid>18b61e01-f588-490f-8791-dbcb4c92aad0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Replying to geBXclVQui</value>
+      <webElementGuid>6a97a0df-570f-4a65-abda-31cce2508a2d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex flex-row h-heightWithoutTopBar&quot;]/div[@class=&quot;flex flex-col flex-1 min-w-60 w-widthThumnailAttachment h-full false z-10&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightPrimary h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;relative z-1 pb-[4px]&quot;]/div[@class=&quot;flex flex-row items-center justify-between w-full dark:bg-[#2B2D31] bg-bgLightMode p-2 rounded-md text-[14px] pb-[15px]&quot;]</value>
+      <webElementGuid>2a9aba08-71b5-4133-9324-2a5b130bbdce</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='mainChat']/div/div/div[2]/div/div[2]/div</value>
+      <webElementGuid>6086d7f2-8414-4f1c-a94c-ed62304b5cd0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='a'])[1]/following::div[9]</value>
+      <webElementGuid>e636df42-3135-47a2-8510-a19b09cc6ea4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Today at 18:25'])[1]/following::div[15]</value>
+      <webElementGuid>5669d88c-f483-4173-aa9e-452e2dc322ff</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div/div[2]/div/div/div/div/div[2]/div/div[2]/div</value>
+      <webElementGuid>fa230b23-9723-4cbe-b786-6e9a49d65648</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Replying to geBXclVQui' or . = 'Replying to geBXclVQui')]</value>
+      <webElementGuid>84835662-4a20-4fd9-8730-c43bcf002ef2</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
