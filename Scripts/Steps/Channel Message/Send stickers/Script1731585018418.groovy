@@ -17,15 +17,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
+        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_T'))
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/p_general'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/svg__darkhovertext-white hovertext-black darktext-AEAEAE text-colorTextLightMode'))
 
-WebUI.setEncryptedText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), password)
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa'))
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
+WebUI.waitForElementVisible(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/sticker_after_sent_to_channel_chat'), 
+    0)
+
+WebUI.verifyElementVisible(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/sticker_after_sent_to_channel_chat'), 
+    FailureHandling.STOP_ON_FAILURE)
 

@@ -7,10 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//button[@class='flex-col justify-start items-center flex w-full h-[48px] pt-3 pr-4 pb-3 pl-4 rounded-[4px] bg-[#155eef] ']</value>
+         <value>//div[@id='app-layout']/div[2]/div/div/div/div/div[3]/div[2]/div[2]/button/div</value>
       </entry>
       <entry>
          <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,7 +29,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>7889d560-e79f-4198-9024-f9fbf005caea</webElementGuid>
+      <webElementGuid>87a72b83-1484-4d54-8a52-b990b3005200</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -36,7 +37,7 @@
       <name>class</name>
       <type>Main</type>
       <value>w-fit h-fit text-left text-base font-medium text-[#ffffff] leading-[150%] flex justify-center</value>
-      <webElementGuid>03ab8a5b-2cd9-4da7-9c5f-915d3d2fa265</webElementGuid>
+      <webElementGuid>9d17d635-f2e9-471d-b889-f44de3428b43</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -44,23 +45,23 @@
       <name>text</name>
       <type>Main</type>
       <value>Sign in</value>
-      <webElementGuid>83f5e498-c038-4b79-b34f-3c76b1308c4a</webElementGuid>
+      <webElementGuid>98b6d150-c64d-425e-a3f6-46c840b40002</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;app-layout&quot;)/div[1]/div[@class=&quot;w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center&quot;]/div[@class=&quot;justify-center items-center flex w-full h-full sm:max-h-[580px] sm:h-9/10 sm:max-w-[450px] lg:min-w-[850px] lg:max-h-[620px]  rounded-none sm:rounded-2xl lg:p-12 px-0 dark:bg-[#0b0b0b] bg-[#F0F0F0] flex-col mx-auto&quot;]/div[@class=&quot;relative top-0 flex-col pb-0 lg:top-0 lg:pb-0 flex lg:flex-row lg:gap-x-12 items-center w-full overflow-y-auto hide-scrollbar lg:overflow-y-visible&quot;]/div[@class=&quot;flex-col justify-start items-center flex h-fit p-0 gap-2 pb-2 lg:pb-0 md:gap-4 w-9/10&quot;]/div[@class=&quot;flex-col justify-start items-center flex lg:w-[496px] h-fit lg:px-0 w-450 max-w-full&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit gap-y-5&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit&quot;]/button[@class=&quot;flex-col justify-start items-center flex w-full h-[48px] pt-3 pr-4 pb-3 pl-4 rounded-[4px] bg-[#155eef]&quot;]/div[@class=&quot;w-fit h-fit text-left text-base font-medium text-[#ffffff] leading-[150%] flex justify-center&quot;]</value>
-      <webElementGuid>c475c417-05ac-47ee-8b8e-0ff865700baa</webElementGuid>
+      <value>id(&quot;app-layout&quot;)/div[2]/div[@class=&quot;w-screen h-screen  overflow-x-hidden overflow-y-scroll  scrollbar-hide flex items-center&quot;]/div[@class=&quot;justify-center items-center flex w-full h-full sm:max-h-[580px] sm:h-9/10 sm:max-w-[450px] lg:min-w-[850px] lg:max-h-[620px]  rounded-none sm:rounded-2xl lg:p-12 px-0 dark:bg-[#0b0b0b] bg-[#F0F0F0] flex-col mx-auto&quot;]/div[@class=&quot;relative top-0 flex-col pb-0 lg:top-0 lg:pb-0 flex lg:flex-row lg:gap-x-12 items-center w-full overflow-y-auto hide-scrollbar lg:overflow-y-visible&quot;]/div[@class=&quot;flex-col justify-start items-center flex h-fit p-0 gap-2 pb-2 lg:pb-0 md:gap-4 w-9/10&quot;]/div[@class=&quot;flex-col justify-start items-center flex lg:w-[496px] h-fit lg:px-0 w-450 max-w-full&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit gap-y-5&quot;]/div[@class=&quot;flex-col justify-start items-start flex w-full h-fit&quot;]/button[@class=&quot;flex-col justify-start items-center flex w-full h-[48px] pt-3 pr-4 pb-3 pl-4 rounded-[4px] bg-[#155eef]&quot;]/div[@class=&quot;w-fit h-fit text-left text-base font-medium text-[#ffffff] leading-[150%] flex justify-center&quot;]</value>
+      <webElementGuid>428b7947-2cce-4910-8106-2087d1ab6fc3</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='app-layout']/div/div/div/div/div/div[3]/div[2]/div[2]/button/div</value>
-      <webElementGuid>9106ff05-b46d-44c6-bc40-8ca4abffeb6b</webElementGuid>
+      <value>//div[@id='app-layout']/div[2]/div/div/div/div/div[3]/div[2]/div[2]/button/div</value>
+      <webElementGuid>3c185c76-f44a-493b-91f1-40c8914d7960</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -68,7 +69,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/following::div[2]</value>
-      <webElementGuid>ee58b3cd-9c8d-40c4-9486-5fdf9816a9e5</webElementGuid>
+      <webElementGuid>d006d4af-e2ba-416a-b12b-69ed6c00077e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -76,7 +77,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='WELCOME BACK'])[1]/following::div[15]</value>
-      <webElementGuid>a1926506-a0fc-4f8c-b7d9-db9b53362023</webElementGuid>
+      <webElementGuid>3643f8a1-77b7-4548-b828-02af4ea38181</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -84,7 +85,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign up'])[1]/preceding::div[1]</value>
-      <webElementGuid>1568d6f4-2bba-4a1e-b1c4-ea0db18f2e17</webElementGuid>
+      <webElementGuid>3f18413c-c51f-4496-955d-508faf689757</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -92,7 +93,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Sign in']/parent::*</value>
-      <webElementGuid>ffa758ee-52cc-400d-9d86-81b7ba9c9eb6</webElementGuid>
+      <webElementGuid>587a612c-43ac-498d-b994-bd823f324baa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -100,7 +101,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div[2]/button/div</value>
-      <webElementGuid>2f826320-7ff8-45c4-b3ca-23c1531c5534</webElementGuid>
+      <webElementGuid>1fa25f78-0bc3-4312-80f1-b465d329a509</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -108,6 +109,14 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = 'Sign in' or . = 'Sign in')]</value>
-      <webElementGuid>fee5c645-d7b2-4f87-bee3-ebeb68ab4b94</webElementGuid>
+      <webElementGuid>c03b9470-fb36-4d6f-9d18-648914012867</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='app-layout']/div/div/div/div/div/div[3]/div[2]/div[2]/button/div</value>
+      <webElementGuid>9106ff05-b46d-44c6-bc40-8ca4abffeb6b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

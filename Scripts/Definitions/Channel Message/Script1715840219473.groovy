@@ -29,7 +29,7 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Edit, Reply, Forward, Cop
 WebUI.callTestCase(findTestCase('Web UI/Channel message display'), [('PUBLIC_CHANNEL') : 'PUBLIC CHANNEL', ('general') : 'general'], 
     FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Steps/Channel Message/Send emojis, stickers, GIF'), [('Emoji1') : 'E:\\Data_Test\\Emoji-Sticker-GIF\\arrow_right.png'
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Send GIFs'), [('Emoji1') : 'E:\\Data_Test\\Emoji-Sticker-GIF\\arrow_right.png'
         , ('Emoji2') : 'E:\\Data_Test\\Emoji-Sticker-GIF\\fox_face.png', ('Emoji3') : 'E:\\Data_Test\\Emoji-Sticker-GIF\\monkey.png'
         , ('Sticker1') : 'E:\\Data_Test\\Emoji-Sticker-GIF\\Sticker-1.gif', ('Sticker2') : '', ('Sticker3') : '', ('GIF1') : 'E:\\Data_Test\\Emoji-Sticker-GIF\\goodbye-thank-you.gif'
         , ('GIF2') : '', ('GIF3') : ''], FailureHandling.STOP_ON_FAILURE)

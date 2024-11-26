@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>gif</name>
+   <name>svg__darkhovertext-white hovertext-black darktext-AEAEAE text-colorTextLightMode</name>
    <tag></tag>
-   <elementGuidId>01b5ef56-b706-4134-92e6-9735748a233c</elementGuidId>
+   <elementGuidId>d4096ed4-50d3-4501-abfe-1783e88cd8e0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
          <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[8]/following::*[name()='svg'][2]</value>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[8]/following::*[name()='svg'][3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -25,14 +22,14 @@
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
-   <useRalativeImagePath>false</useRalativeImagePath>
+   <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>svg</value>
-      <webElementGuid>761958d7-b7f2-4393-8834-11154e361a36</webElementGuid>
+      <webElementGuid>dab03bce-79d4-4228-912e-ca1a110a5e06</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -40,15 +37,15 @@
       <name>xmlns</name>
       <type>Main</type>
       <value>http://www.w3.org/2000/svg</value>
-      <webElementGuid>f0128b98-5303-4141-861c-b587ac5dd059</webElementGuid>
+      <webElementGuid>efc01097-df2c-45ca-8344-a0d73820a20f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xlink:href</name>
+      <name>xmlns:xlink</name>
       <type>Main</type>
       <value>http://www.w3.org/1999/xlink</value>
-      <webElementGuid>7e354310-f8f1-4ea8-95f7-3dd7fb812565</webElementGuid>
+      <webElementGuid>03eda6d2-8cf5-4a02-b1f9-1c3d71d25c7a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -56,7 +53,7 @@
       <name>viewBox</name>
       <type>Main</type>
       <value>0 0 24 24</value>
-      <webElementGuid>0266c626-0e2c-4883-a881-87d25517ada8</webElementGuid>
+      <webElementGuid>9df9c62c-a0a5-45b0-98c5-93597bc97fa3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -64,7 +61,7 @@
       <name>width</name>
       <type>Main</type>
       <value>24</value>
-      <webElementGuid>0821ff89-9476-4d6d-97af-3c59800a0a21</webElementGuid>
+      <webElementGuid>ee185e3c-2db7-4b46-8d13-29129d83c7e7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -72,7 +69,7 @@
       <name>height</name>
       <type>Main</type>
       <value>24</value>
-      <webElementGuid>cd69c52f-32ec-40a1-a44a-a93dfd41ae07</webElementGuid>
+      <webElementGuid>363f2dce-e76e-45e2-ae96-807356262279</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -80,7 +77,7 @@
       <name>preserveAspectRatio</name>
       <type>Main</type>
       <value>xMidYMid meet</value>
-      <webElementGuid>89dc5e0a-b915-4a8e-8d37-0c79dfba11e1</webElementGuid>
+      <webElementGuid>28419edb-743f-4659-adef-ffc95d9ed3cb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -88,7 +85,7 @@
       <name>class</name>
       <type>Main</type>
       <value>dark:hover:text-white hover:text-black dark:text-[#AEAEAE] text-colorTextLightMode</value>
-      <webElementGuid>b31513d4-1dbf-41dc-a1d3-43dfa4a067a1</webElementGuid>
+      <webElementGuid>e2e02e8b-5935-4e40-a9d8-56356e004a97</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -98,22 +95,22 @@
       <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex flex-row h-heightWithoutTopBar&quot;]/div[@class=&quot;flex flex-col flex-1 min-w-60 w-widthThumnailAttachment h-full false z-10&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightPrimary h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;relative max-sm:-pb-2&quot;]/div[@class=&quot;flex flex-inline items-start gap-2 box-content mb-4 max-sm:mb-0
 				 dark:bg-channelTextarea bg-channelTextareaLight rounded-lg relative rounded-t-lg
 				  w-wrappBoxChatView&quot;]/div[@class=&quot;w-full dark:bg-channelTextarea bg-channelTextareaLight gap-3 flex items-center rounded-e-md&quot;]/div[@class=&quot;w-full rounded-r-lg dark:bg-channelTextarea bg-channelTextareaLight gap-3 relative whitespace-pre-wrap&quot;]/div[@class=&quot;relative&quot;]/div[@class=&quot;flex flex-row absolute h-11 items-center gap-1 mr-3 top-0 right-0&quot;]/div[@class=&quot;block max-sm:hidden w-6 h-6&quot;]/svg[@class=&quot;dark:hover:text-white hover:text-black dark:text-[#AEAEAE] text-colorTextLightMode&quot;]</value>
-      <webElementGuid>04f4f9b4-5059-477e-982c-6d04852b9bc6</webElementGuid>
+      <webElementGuid>fb16a548-bb36-4dec-b658-0cba3a2de51b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[8]/following::*[name()='svg'][2]</value>
-      <webElementGuid>bc4de246-8cf0-483c-924d-008de0d3d21b</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[8]/following::*[name()='svg'][3]</value>
+      <webElementGuid>791391d4-6b32-470e-bf50-56be1c0e897b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[7]/following::*[name()='svg'][2]</value>
-      <webElementGuid>7b9697f6-49c5-4173-b144-844584684b20</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[7]/following::*[name()='svg'][3]</value>
+      <webElementGuid>4960c8d2-178f-4f9d-b95f-b2bba109d51c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
