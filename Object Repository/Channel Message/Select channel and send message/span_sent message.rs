@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_sent message</name>
+   <tag></tag>
+   <elementGuidId>b5acbb18-9595-42ba-b599-15e69be396f2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='msg-1840651252875137024']/div/div[2]/div/div/div[2]/div/div/div/div/div/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>eec00129-e9bd-43a8-b1df-ef6c60c2d104</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Hi ae</value>
+      <webElementGuid>abf5fbe3-77de-4151-b33b-d699d4b0fac3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;msg-1840651252875137024&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3 pt-[2px]&quot;]/div[@class=&quot;justify-start gap-4 inline-flex w-full relative h-fit overflow-visible pr-12&quot;]/div[@class=&quot;w-full relative h-full&quot;]/div[@class=&quot;justify-start items-center  inline-flex w-full h-full pt-[2px] textChat select-text&quot;]/div[@class=&quot;flex flex-col whitespace-pre-wrap text-base w-full cursor-text&quot;]/div[@class=&quot;flex w-full&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;&quot;]/div[@class=&quot;text-[#4E5057] dark:text-[#DFDFE0]&quot;]/span[1]</value>
+      <webElementGuid>7a3e3bf5-f7a8-4651-8ac8-42ba4f5e49aa</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='msg-1840651252875137024']/div/div[2]/div/div/div[2]/div/div/div/div/div/span</value>
+      <webElementGuid>4e2dfb34-d41a-4a5d-b041-363aea09243d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Today at 09:08'])[1]/following::span[1]</value>
+      <webElementGuid>141a847f-7db5-4f17-a4a6-41a04ad58878</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='geBXclVQui'])[13]/following::span[1]</value>
+      <webElementGuid>e1ae143e-5c00-4ac4-9ddf-d5137cdb6d53</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Hi ae']/parent::*</value>
+      <webElementGuid>b537cf38-85f7-4f35-9372-cab652970b99</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[13]/div/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/span</value>
+      <webElementGuid>e2f7e1b8-f9e6-4297-8392-4a5ad71c63e4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Hi ae' or . = 'Hi ae')]</value>
+      <webElementGuid>a04428e7-7a55-4750-a2c0-40e1d13e1b7c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

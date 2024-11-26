@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_channel Test</name>
+   <tag></tag>
+   <elementGuidId>aeb44a99-7da7-40d2-b008-511f826ee8fd</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='menu']/div/div[3]/div[5]/div/a/div/div[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>692a14b0-cf92-4e8a-88e2-6182a547e208</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>group-active:translate-y-px</value>
+      <webElementGuid>ac07543d-e7c0-4897-9d1b-ad28cc3330b2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;menu&quot;)/div[@class=&quot;top-0 left-0 right-0 flex flex-col items-center py-4 px-3 overflow-y-auto hide-scrollbar h-screen&quot;]/div[@class=&quot;flex flex-col gap-3&quot;]/div[@class=&quot;w-fit&quot;]/div[@class=&quot;relative&quot;]/a[@class=&quot;active&quot;]/div[@class=&quot;group block relative rounded-3xl&quot;]/div[@class=&quot;group-active:translate-y-px&quot;]</value>
+      <webElementGuid>9d4081fa-e439-4d33-ba67-cac1c6fcb25f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='menu']/div/div[3]/div[5]/div/a/div/div[2]</value>
+      <webElementGuid>27fcc1e4-a9e2-4717-b35e-77a49c62e2cf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='T'])[1]/following::div[10]</value>
+      <webElementGuid>dcfb0ff0-351b-4650-b06c-168001e33a82</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[5]/div/a/div/div[2]</value>
+      <webElementGuid>24b9f69f-7bff-4f90-9037-637d1e8ea670</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

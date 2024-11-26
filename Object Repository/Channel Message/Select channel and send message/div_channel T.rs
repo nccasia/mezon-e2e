@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_channel T</name>
+   <tag></tag>
+   <elementGuidId>d47efd39-d598-4d88-9c1e-4e91204b7e23</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='menu']/div/div[3]/div[3]/div/a/div/div[2]/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>30ae1d87-d124-41a4-a2ec-d257fca8bf94</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>text-gray-100 group-hover:bg-brand group-hover:text-white group-hover:rounded-xl rounded-3xl dark:group-hover:bg-bgTertiary group-hover:bg-bgLightModeButton flex items-center justify-center w-12 h-12 transition-all duration-200 overflow-hidden </value>
+      <webElementGuid>8d39e386-b71d-49b9-b838-d22539fe11a7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>T</value>
+      <webElementGuid>eaf460a9-5aa3-4864-9be2-dfa349ee7872</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;menu&quot;)/div[@class=&quot;top-0 left-0 right-0 flex flex-col items-center py-4 px-3 overflow-y-auto hide-scrollbar h-screen&quot;]/div[@class=&quot;flex flex-col gap-3&quot;]/div[@class=&quot;w-fit&quot;]/div[@class=&quot;relative&quot;]/a[1]/div[@class=&quot;group block relative rounded-3xl&quot;]/div[@class=&quot;group-active:translate-y-px&quot;]/div[@class=&quot;text-gray-100 group-hover:bg-brand group-hover:text-white group-hover:rounded-xl rounded-3xl dark:group-hover:bg-bgTertiary group-hover:bg-bgLightModeButton flex items-center justify-center w-12 h-12 transition-all duration-200 overflow-hidden&quot;]</value>
+      <webElementGuid>f4a8128f-974f-4e97-8d8d-7e61d7f35781</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='menu']/div/div[3]/div[3]/div/a/div/div[2]/div</value>
+      <webElementGuid>d0316c0b-9e2b-4b25-8ca1-ef95b372b72f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Loading ...'])[1]/following::div[40]</value>
+      <webElementGuid>8ab93b74-db48-4241-aa2f-088e510be095</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div/a/div/div[2]/div</value>
+      <webElementGuid>1020b2d4-11bf-4e5b-b7e8-d1b22940b675</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'T' or . = 'T')]</value>
+      <webElementGuid>14ca4273-b0e4-4cfa-9ee2-baca4cc4550b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

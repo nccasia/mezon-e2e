@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_sent message</name>
+   <tag></tag>
+   <elementGuidId>d9b51147-e386-49e2-918f-b42f949c37ad</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='msg-1840651252875137024']/div/div[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>9f84b193-9793-4adb-bd53-765f913aefdb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex h-15 flex-col w-auto px-3 pt-[2px]</value>
+      <webElementGuid>6a0e8de0-7601-48a6-a84c-dfd4387c4438</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>geBXclVQuiToday at 09:08Hi ae</value>
+      <webElementGuid>77c8c765-2b6a-4cc8-bb7b-27c3912f60b3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;msg-1840651252875137024&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3 pt-[2px]&quot;]</value>
+      <webElementGuid>8a85c41a-7fe9-44bd-9b24-45b221f132ac</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='msg-1840651252875137024']/div/div[2]</value>
+      <webElementGuid>b969b07c-c4b6-4d3d-b9f0-6b867640c57c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Tue, 26 November 2024'])[1]/following::div[6]</value>
+      <webElementGuid>11b6c26a-a49a-40c6-a265-a3715091bbdc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi Nguyen Phuoc Nguyen'])[3]/following::div[13]</value>
+      <webElementGuid>a67cd471-c93e-4dd8-b7ae-cd3ff03a3aee</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[13]/div/div[2]/div/div/div[2]</value>
+      <webElementGuid>b918235e-95b7-44fa-8e68-b56d0ed8a068</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'geBXclVQuiToday at 09:08Hi ae' or . = 'geBXclVQuiToday at 09:08Hi ae')]</value>
+      <webElementGuid>7a649855-dc54-4541-af90-c38d3411d44c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
