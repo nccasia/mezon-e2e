@@ -25,7 +25,7 @@ WebUI.navigateToUrl(GlobalVariable.baseUrl)
 
 WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
 
-WebUI.setEncryptedText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), password)
+WebUI.setText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), password)
 
 WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
 
