@@ -21,12 +21,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class BrowserUtils {
-    /**
-     * open new window using javascript
-     * @return void
-     */
-    @Keyword
-    def openNewWindow() {
-        WebUI.executeJavaScript('window.open();', null)
-    }
+	/**
+	 * open new window using javascript
+	 * @return void
+	 */
+	@Keyword
+	def openNewWindow() {
+		WebUI.executeJavaScript('window.open();', null)
+	}
 }
