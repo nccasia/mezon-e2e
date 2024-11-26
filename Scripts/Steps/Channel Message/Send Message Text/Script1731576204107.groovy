@@ -20,16 +20,12 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Page_Mezon/channel_T'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
 
-WebUI.setText(findTestObject('Page_Mezon/textarea_input_message_channel'), 'Hi Nguyen Phuoc Nguyen')
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
+    'he lo mn', Keys.chord(Keys.ENTER))
 
-WebUI.sendKeys(findTestObject('Object Repository/Page_Mezon/textarea_input_message_channel'), Keys.chord(Keys.ENTER))
+WebUI.waitForElementVisible(findTestObject('Channel Message/Select channel and send message/span_sent message'), 5)
 
-WebUI.waitForElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/msg_after_send'), 
-    0)
-
-WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/msg_after_send'))
-
-WebUI.closeBrowser()
+WebUI.verifyTextPresent('he lo mn', true)
 
