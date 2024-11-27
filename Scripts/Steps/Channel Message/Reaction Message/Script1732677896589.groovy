@@ -60,14 +60,20 @@ WebElement reactionList = WebUI.findWebElement(reactionObj, 0)
 
 List<WebElement> imgTags = reactionList.findElements(By.tagName('img'))
 
+boolean  flag = false
 
 for (WebElement img : imgTags) { 
 	String imgSrc = img.getAttribute('src')
 	if(reactionHref == imgSrc) {
-		KeywordUtil.markPassed("correct!")
-	} else {
-		KeywordUtil.markFailed("incorrect!")
+		flag = true
 	}
+}
+
+if (flag) {
+	KeywordUtil.markPassed("correct!")
+} else {
+	println('false')
+	KeywordUtil.markFailed("incorrect!")
 }
 
 
