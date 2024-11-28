@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;checkbox-item-1813129510904664064&quot;]</value>
+         <value>/html/body/div[3]/div/div/div/div/div[2]/div/div[1]/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>d70ff8a4-4543-443b-bc75-59b596041785</webElementGuid>
+      <webElementGuid>399ef765-f990-4b14-8f0c-9bc5875d8972</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>type</name>
       <type>Main</type>
       <value>checkbox</value>
-      <webElementGuid>ac1412d3-7461-416a-bd9d-7adc02521e43</webElementGuid>
+      <webElementGuid>b6afd84d-3987-40c2-ac0a-c354cb4a807a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>w-4 h-4 focus:ring-transparent</value>
-      <webElementGuid>2a835372-310a-4e45-8730-362741227d30</webElementGuid>
+      <webElementGuid>80a1ab85-179b-4241-92b9-8af9acbbd22e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>id</name>
       <type>Main</type>
       <value>checkbox-item-1810967355170230272</value>
-      <webElementGuid>6d53cb07-85b6-4473-a5c0-f49bfbc6fedd</webElementGuid>
+      <webElementGuid>81a35287-7aff-4ccb-bac7-c5ca03e91478</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;checkbox-item-1810967355170230272&quot;)</value>
-      <webElementGuid>57f02d99-f1bf-42da-8690-e70c8025109f</webElementGuid>
+      <webElementGuid>7d0698af-4ddb-47cf-8f42-814735ac5855</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='checkbox-item-1810967355170230272']</value>
-      <webElementGuid>8857e86c-37f2-46ce-9ab5-7d75755783b1</webElementGuid>
+      <webElementGuid>89d6cf65-0aee-4b60-8a52-bc2c5a53367d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id=':r2k:']/div/div/div[2]/div/div/input</value>
-      <webElementGuid>3b238a30-c71f-48ab-86ff-ac9b290a2926</webElementGuid>
+      <webElementGuid>c8969b00-27e5-48dc-bd61-8642476e5a55</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/div/input</value>
-      <webElementGuid>3179965f-b7f2-4d44-b2b9-226d7c57ba72</webElementGuid>
+      <webElementGuid>68d8cb30-c785-45fa-9046-989c646c2d73</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,6 +87,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@type = 'checkbox' and @id = 'checkbox-item-1810967355170230272']</value>
-      <webElementGuid>9e3263b7-a415-4596-9e3b-f8f9ee4dbd39</webElementGuid>
+      <webElementGuid>c4def5db-e3ff-4d27-b905-5e529a1b3cbe</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
