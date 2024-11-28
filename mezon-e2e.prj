@@ -6,12 +6,12 @@
    <UUID>34daaead-544c-42fa-9b08-0cdfaf371db0</UUID>
    <createdEdition>ENTERPRISE</createdEdition>
    <createdVersion>9.4.0</createdVersion>
-   <freeLicense>true</freeLicense>
+   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
-   <modifiedEdition>FREE</modifiedEdition>
+   <modifiedEdition>ENTERPRISE</modifiedEdition>
    <modifiedVersion>10.0.0</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>/Users/thomas/Documents/Automation NCC/mezon-e2e/mezon-e2e.prj</projectFileLocation>
+   <projectFileLocation>C:\Users\tien.caothicam\Desktop\Automation\mezone2e\mezon-e2e\mezon-e2e.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

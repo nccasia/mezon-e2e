@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Send emojis, stickers, GIF</name>
+   <name>Send GIFs</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>0ae5d89f-97e3-4206-9823-907f111a73b2</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

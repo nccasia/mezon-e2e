@@ -17,15 +17,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
+        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
+    'he lo mn', Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
+WebUI.waitForElementVisible(findTestObject('Channel Message/Select channel and send message/span_sent message'), 5)
 
-WebUI.setText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), password)
-
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
+WebUI.verifyTextPresent('he lo mn', true)
 

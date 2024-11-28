@@ -4,6 +4,7 @@
    <name>Send message</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>b20300eb-9441-4c3e-a36b-344c9932d2d6</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
