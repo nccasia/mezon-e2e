@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_latest message</name>
+   <tag></tag>
+   <elementGuidId>45e56040-47a7-4141-a24b-9dfa6905b65b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[last()]/div[1]/div/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>baa60747-7d7b-46ba-9700-598ed4906602</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex h-15 flex-col w-auto px-3 dark:bg-[#403D38] bg-[#EAB3081A]</value>
+      <webElementGuid>5b9e1424-7bd1-4870-94b0-872de50eda7e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot</value>
+      <webElementGuid>cb825b74-b302-49b9-9d7d-e96050720fbb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;msg-1840651253101629440&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3 dark:bg-[#403D38] bg-[#EAB3081A]&quot;]</value>
+      <webElementGuid>e817e79f-fd6e-4190-adec-1de5cce714b0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='msg-1840651253101629440']/div/div[2]</value>
+      <webElementGuid>0ca17c89-3e2d-41f3-8cc9-ae3597ec6758</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='he lo mn'])[13]/following::div[10]</value>
+      <webElementGuid>e2cb2d90-e584-49e1-b0da-8974b931d4f2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='toi la bot'])[4]/following::div[30]</value>
+      <webElementGuid>aab10947-4096-4d32-8e8f-e70144aa023c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[14]/div/div/div/div/div[2]</value>
+      <webElementGuid>04c77b0b-0d51-494b-9bff-aa4dc91457db</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot' or . = 'geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot')]</value>
+      <webElementGuid>934dd717-dbd2-41c2-9faf-b388c6351a2d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
