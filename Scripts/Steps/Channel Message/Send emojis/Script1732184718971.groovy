@@ -17,6 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import org.openqa.selenium.By as By
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
+
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
@@ -24,9 +27,23 @@ WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Button_Emojis pannel'))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji3'))
+TestObject emojiObj = findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji3')
+
+String emojiHref = WebUI.findWebElement(emojiObj, 0).findElement(By.tagName('img')).getAttribute('src')
+
+WebUI.click(emojiObj)
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
 
-WebUI.verifyElementVisible(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/span_Emojis mesage'))
+WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 5)
+
+String messageContainerXpath = '//*[@id=\'scrollLoading\']'
+
+messageContainerObj = getTestObjectWithXpath(messageContainerXpath)
+
+CustomKeywords.'mezon.VerifyHrefImgExists.verifyHrefImgExists'(messageContainerObj, emojiHref)
+
+static TestObject getTestObjectWithXpath(String xpath) {
+    return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
+}
 
