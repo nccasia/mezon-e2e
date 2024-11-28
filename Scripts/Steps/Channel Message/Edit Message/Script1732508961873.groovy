@@ -30,8 +30,6 @@ WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete M
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Edit Message'))
 
-WebUI.clearText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'))
-
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), 
     'hehe', Keys.chord(Keys.ENTER))
 
