@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Forward option</name>
+   <tag></tag>
+   <elementGuidId>0c16bc29-bf9b-4fe0-8460-0dfca9f8c33e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='mainChat']/div/div/div/div[2]/div[13]/div/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>dd104736-c33b-4623-a57a-9cfa3c256ffe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value> dark:text-[#ADB3B9] text-[#4E5058] hover:text-[#FFFFFF] dark:hover:text-[#FFFFFF]  p-1</value>
+      <webElementGuid>d2b57b33-fe6f-4f84-89fd-4b39ffbbd872</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Forward Message </value>
+      <webElementGuid>34b7c0c7-13be-4110-af6e-7946765945da</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex flex-row h-heightWithoutTopBar&quot;]/div[@class=&quot;flex flex-col flex-1 min-w-60 w-widthThumnailAttachment h-full false z-10&quot;]/div[@class=&quot;relative dark:bg-bgPrimary max-w-widthMessageViewChat bg-bgLightPrimary h-heightMessageViewChat&quot;]/div[@class=&quot;contexify z-50 contexify_willEnter-fade&quot;]/div[@class=&quot;contexify_item&quot;]/div[@class=&quot;contexify_itemContent&quot;]/div[@class=&quot;dark:text-[#ADB3B9] text-[#4E5058] hover:text-[#FFFFFF] dark:hover:text-[#FFFFFF]  p-1&quot;]</value>
+      <webElementGuid>166cc826-ea89-4091-825d-853f0664d539</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='mainChat']/div/div/div/div[2]/div[13]/div/div</value>
+      <webElementGuid>f367533d-25b5-4615-8cb5-025031fe89b0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Copy Message Link'])[1]/following::div[3]</value>
+      <webElementGuid>5d8a5380-7033-49b5-b1b4-586209b59eed</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mark Unread'])[1]/following::div[6]</value>
+      <webElementGuid>07d10467-9eb0-40fc-92fc-e499869136ce</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Speak Message'])[1]/preceding::div[1]</value>
+      <webElementGuid>17a9e344-ad37-4cda-b8cb-37cc26188fde</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[13]/div/div</value>
+      <webElementGuid>53b136aa-4938-4d8e-abf3-439f97125019</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Forward Message ' or . = 'Forward Message ')]</value>
+      <webElementGuid>1395945f-3964-4961-92ae-16031b277734</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
