@@ -6,19 +6,19 @@
    <elementGuidId>8961cfb4-d3df-4b8c-b331-0afe5cb37c5e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>textarea.w-full__input</value>
+         <key>XPATH</key>
+         <value>//div[@id='msg-1840651253567197184']/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/textarea</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='msg-1840651252791250944']/div/div[2]/div/div[2]/div/div/div/div/div/div/textarea</value>
+         <key>CSS</key>
+         <value>textarea.w-full__input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value>textarea >> internal:has-text=&quot;Hi Nguyen Phuoc Nguyen vằm&quot;i</value>
+         <value>textarea >> internal:has-text=&quot;lll&quot;i</value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
@@ -29,7 +29,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>textarea</value>
-      <webElementGuid>76fef354-cba7-41bb-b94e-707ae72becf0</webElementGuid>
+      <webElementGuid>cc8f871e-470b-41b7-b93d-84c5414ffe50</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -37,7 +37,7 @@
       <name>rows</name>
       <type>Main</type>
       <value>1</value>
-      <webElementGuid>d35922a8-b33b-4f20-aa0a-09c94f99f9fa</webElementGuid>
+      <webElementGuid>49f0f9b0-aed8-4e25-aab6-16f6bf364b85</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -45,63 +45,47 @@
       <name>class</name>
       <type>Main</type>
       <value>w-full__input</value>
-      <webElementGuid>d7938d33-3600-4d43-9c35-6cf2434db857</webElementGuid>
+      <webElementGuid>9d09f92f-bbf4-4d2e-b673-08218aa95e38</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Hi Nguyen Phuoc Nguyen vằm</value>
-      <webElementGuid>fad414c1-146b-445b-9fa0-fe897c92c0fb</webElementGuid>
+      <value>lll</value>
+      <webElementGuid>2360cf34-ebcf-4f95-ad80-e0d912c205f0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;msg-1840651252791250944&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3&quot;]/div[@class=&quot;justify-start gap-4 inline-flex w-full relative h-fit overflow-visible pr-12&quot;]/div[@class=&quot;w-full relative h-full&quot;]/div[@class=&quot;justify-start items-center  inline-flex w-full h-full pt-[2px] textChat select-text&quot;]/div[@class=&quot;flex flex-col whitespace-pre-wrap text-base w-full cursor-text&quot;]/div[@class=&quot;inputEdit w-full flex flex-col&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;w-full dark:bg-black bg-white border border-[#bebebe] dark:border-none rounded p-[10px] dark:text-white text-black customScrollLightMode mt-[5px] false w-full--multiLine&quot;]/div[@class=&quot;w-full__control&quot;]/textarea[@class=&quot;w-full__input&quot;]</value>
-      <webElementGuid>f0605685-caf9-487b-a610-ba0810c0b2fe</webElementGuid>
+      <value>id(&quot;msg-1840651253567197184&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3&quot;]/div[@class=&quot;justify-start gap-4 inline-flex w-full relative h-fit overflow-visible pr-12&quot;]/div[@class=&quot;w-full relative h-full&quot;]/div[@class=&quot;justify-start items-center  inline-flex w-full h-full pt-[2px] textChat select-text&quot;]/div[@class=&quot;flex flex-col whitespace-pre-wrap text-base w-full cursor-text&quot;]/div[@class=&quot;inputEdit w-full flex flex-col&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;w-full dark:bg-black bg-white border border-[#bebebe] dark:border-none rounded p-[10px] dark:text-white text-black customScrollLightMode mt-[5px] false w-full--multiLine&quot;]/div[@class=&quot;w-full__control&quot;]/textarea[@class=&quot;w-full__input&quot;]</value>
+      <webElementGuid>82836672-783f-4057-a36f-384f72fbf8c8</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='msg-1840651252791250944']/div/div[2]/div/div[2]/div/div/div/div/div/div/textarea</value>
-      <webElementGuid>a0d057f6-b757-4341-a9a0-7c6440f7c921</webElementGuid>
+      <value>//div[@id='msg-1840651253567197184']/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/textarea</value>
+      <webElementGuid>89a263e2-3a55-40fa-a2ea-67a5c91d9c56</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi Nguyen Phuoc Nguyen vằm'])[1]/following::textarea[1]</value>
-      <webElementGuid>5c201462-d163-4de7-a306-3444cdd47e5f</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='lll'])[1]/following::textarea[1]</value>
+      <webElementGuid>7d28470f-e32e-4899-9dd3-5edb154af5a8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi Nguyen Phuoc Nguyen'])[1]/following::textarea[1]</value>
-      <webElementGuid>bbd24c49-7a0d-47e6-9f68-3aaed29f2e62</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mon, 25 November 2024'])[1]/preceding::textarea[1]</value>
-      <webElementGuid>e655ea42-cbf0-4f39-9b2a-b9fe3b1536f9</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='geBXclVQui'])[3]/preceding::textarea[1]</value>
-      <webElementGuid>9d155b20-989d-4060-a5de-4a7fcea5bd8c</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='ai đó =))'])[1]/following::textarea[1]</value>
+      <webElementGuid>51f34e6c-ca69-4052-b0e7-b51b56580516</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -109,14 +93,14 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//textarea</value>
-      <webElementGuid>c9ff9a4f-e413-4fd3-9dd6-3c3b343c7845</webElementGuid>
+      <webElementGuid>7f2200ec-7fd4-40e2-ada1-a7e06a9e3742</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//textarea[(text() = 'Hi Nguyen Phuoc Nguyen vằm' or . = 'Hi Nguyen Phuoc Nguyen vằm')]</value>
-      <webElementGuid>4fd01dcf-7152-40dd-979d-298b8ba70080</webElementGuid>
+      <value>//textarea[(text() = 'lll' or . = 'lll')]</value>
+      <webElementGuid>21d88866-e163-43ee-b345-ed189e415a6e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

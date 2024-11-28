@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='scrollLoading']/div[2]/div/div[9]/div/div/div[2]/div/div/button[2]</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[last()]/div[1]/div/div[2]/div/div/button[last()]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -29,7 +28,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>ce34a35c-51f2-4bf0-aa60-53995a6caac4</webElementGuid>
+      <webElementGuid>17f14943-0fb3-48c9-a8d9-2b7a372a79c4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -37,7 +36,7 @@
       <name>class</name>
       <type>Main</type>
       <value>h-full p-1 cursor-pointer popup-btn</value>
-      <webElementGuid>083c7e98-9d31-498f-a1d6-3c75a9def93b</webElementGuid>
+      <webElementGuid>6852e337-e636-4408-863a-89f0908a3918</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -45,7 +44,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;scrollLoading&quot;)/div[2]/div[1]/div[9]/div[@class=&quot;fullBoxText relative group&quot;]/div[1]/div[@class=&quot;chooseForText z-[1] absolute h-8 p-0.5 rounded block -top-5  right-6 w-fit&quot;]/div[@class=&quot;flex justify-between dark:bg-bgDarkPopover bg-bgLightMode border border-bgSecondary rounded&quot;]/div[@class=&quot;w-fit h-full flex items-center justify-between&quot;]/button[@class=&quot;h-full p-1 cursor-pointer popup-btn&quot;]</value>
-      <webElementGuid>5ae00b6c-a4ca-4b0a-8711-d5d1a6839706</webElementGuid>
+      <webElementGuid>330bc000-fc93-49ff-b932-8658b0b77a8b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -53,7 +52,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='scrollLoading']/div[2]/div/div[9]/div/div/div[2]/div/div/button[2]</value>
-      <webElementGuid>9eebbca0-30dd-4428-89eb-de89ea1c6280</webElementGuid>
+      <webElementGuid>a0ce1886-000e-415b-9b4a-e01ca8a06c69</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -61,7 +60,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi'])[1]/following::button[2]</value>
-      <webElementGuid>52fcab21-f65a-420f-9a18-08e1f94f362c</webElementGuid>
+      <webElementGuid>53699cb2-5dcf-42c5-ba0d-33d14f067ced</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -69,7 +68,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Hi Nguyen Phuoc Nguyen'])[1]/following::button[2]</value>
-      <webElementGuid>0fed567c-2978-40ac-bd66-728628c5f4cd</webElementGuid>
+      <webElementGuid>4f24d6ef-0d79-4fa5-a0a9-a0b8dbda1590</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -77,7 +76,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Mon, 25 November 2024'])[1]/preceding::button[4]</value>
-      <webElementGuid>e7db9493-a210-4147-b6ab-89a53028a5ab</webElementGuid>
+      <webElementGuid>0151366d-992d-4b50-a132-c62e65cc9eb7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,7 +84,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='geBXclVQui'])[3]/preceding::button[4]</value>
-      <webElementGuid>eed57252-85de-4688-9032-cfa05c527481</webElementGuid>
+      <webElementGuid>437a74c3-9d0f-4dd4-aee5-62973908cbd5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -93,6 +92,6 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/div/button[2]</value>
-      <webElementGuid>3bbcea17-e9eb-4b02-838f-87279d8d596d</webElementGuid>
+      <webElementGuid>739d2b9e-d4cc-45d2-861a-fe76000535ad</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

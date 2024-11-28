@@ -28,10 +28,12 @@ WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Dele
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/edit_btn'))
 
-WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), 'Hi')
+WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Edit Message'))
 
-WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), Keys.chord(
-        Keys.ENTER))
+WebUI.clearText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'))
 
-WebUI.verifyTextPresent('Hi', false)
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), 
+    'hehe', Keys.chord(Keys.ENTER))
+
+WebUI.verifyTextPresent('hehe', true)
 
