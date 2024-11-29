@@ -52,7 +52,7 @@ for (WebElement thread : threads) {
 
     String value = aTag.getText()
 
-    if (value != threadName) {
+    if (value == threadName) {
         newThread = thread
     }
 }
