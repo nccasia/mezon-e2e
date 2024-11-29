@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_gif</name>
+   <tag></tag>
+   <elementGuidId>143a7a01-e6c3-4e44-9b14-cd628a457ca4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id=&quot;mainChat&quot;]/div/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>svg</value>
+      <webElementGuid>1cb2519f-8e06-4f00-a77a-ac22b004b9db</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xmlns</name>
+      <type>Main</type>
+      <value>http://www.w3.org/2000/svg</value>
+      <webElementGuid>9c9e78c5-ddc0-403b-ae23-134ac593207b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xlink:href</name>
+      <type>Main</type>
+      <value>http://www.w3.org/1999/xlink</value>
+      <webElementGuid>9879b802-cd4d-4c0c-96e3-1e2f60b2d355</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>viewBox</name>
+      <type>Main</type>
+      <value>0 0 24 24</value>
+      <webElementGuid>409eb587-2d86-4320-a676-6e64dc22559d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>width</name>
+      <type>Main</type>
+      <value>24</value>
+      <webElementGuid>84c492fb-4963-4c4d-b77a-97220258be39</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>height</name>
+      <type>Main</type>
+      <value>24</value>
+      <webElementGuid>6ca5f38a-557d-4eea-8c47-8d125e9ebc2b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>preserveAspectRatio</name>
+      <type>Main</type>
+      <value>xMidYMid meet</value>
+      <webElementGuid>ed15b3bc-3a96-457a-af1c-d81a5413628a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>dark:hover:text-white hover:text-black dark:text-[#AEAEAE] text-colorTextLightMode</value>
+      <webElementGuid>d16c50d3-88d5-41fa-9691-f50b856fd5c7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex flex-row h-heightWithoutTopBar&quot;]/div[@class=&quot;flex flex-col flex-1 min-w-60 w-widthThumnailAttachment h-full false z-10&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightPrimary h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;relative max-sm:-pb-2&quot;]/div[@class=&quot;flex flex-inline items-start gap-2 box-content mb-4 max-sm:mb-0
+				 dark:bg-channelTextarea bg-channelTextareaLight rounded-lg relative rounded-t-lg
+				  w-wrappBoxChatView&quot;]/div[@class=&quot;w-full dark:bg-channelTextarea bg-channelTextareaLight gap-3 flex items-center rounded-e-md&quot;]/div[@class=&quot;w-full rounded-r-lg dark:bg-channelTextarea bg-channelTextareaLight gap-3 relative whitespace-pre-wrap&quot;]/div[@class=&quot;relative&quot;]/div[@class=&quot;flex flex-row absolute h-11 items-center gap-1 mr-3 top-0 right-0&quot;]/div[@class=&quot;block max-sm:hidden w-6 h-6&quot;]/svg[@class=&quot;dark:hover:text-white hover:text-black dark:text-[#AEAEAE] text-colorTextLightMode&quot;]</value>
+      <webElementGuid>594bc3c4-b53c-49d6-85bf-fe8229aaaa4b</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

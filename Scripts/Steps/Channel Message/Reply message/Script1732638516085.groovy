@@ -17,13 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+WebUI.waitForElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 
+    5)
 
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
+WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
 
-WebUI.setText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), password)
+WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_more'))
 
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
+WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/buttion_more_reply'))
+
+WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Replying to'))
+
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
+    'toi la bot', Keys.chord(Keys.ENTER))
+
+WebUI.waitForElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 
+    5)
+
+WebUI.verifyTextPresent('toi la bot', true)
 

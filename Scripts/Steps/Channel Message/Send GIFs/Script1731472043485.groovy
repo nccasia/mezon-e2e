@@ -17,20 +17,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import org.openqa.selenium.By as By
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
+
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Page_Mezon/div_T'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/Page_Mezon/gif'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_gif'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/gifs_pannel'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Trending GIF'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/item_gif_in_gif_panal'))
+TestObject gifObj = findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_trending gif_1')
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/item_msg_gif_after_sent'), 
-    0)
+String gifHref = WebUI.findWebElement(gifObj, 0).findElement(By.tagName('img')).getAttribute('src')
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/item_msg_gif_after_sent'), 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.click(gifObj)
+
+String messageContainerXpath = '//*[@id=\'scrollLoading\']'
+
+messageContainerObj = getTestObjectWithXpath(messageContainerXpath)
+
+CustomKeywords.'mezon.VerifyHrefImgExists.verifyHrefImgExists'(messageContainerObj, gifHref)
+
+static TestObject getTestObjectWithXpath(String xpath) {
+    return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
+}
 
