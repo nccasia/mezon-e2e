@@ -16,6 +16,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -27,12 +32,36 @@ WebUI.click(findTestObject('Channel Message/Create thread from message item/butt
 
 WebUI.waitForElementPresent(findTestObject('Channel Message/Create thread from message item/div_create thread modal'), 5)
 
-WebUI.setText(findTestObject('Channel Message/Create thread from message item/input_name thread'), 'vp-qn')
+String threadName = 'vp-qn'
+
+WebUI.setText(findTestObject('Channel Message/Create thread from message item/input_name thread'), threadName)
 
 WebUI.check(findTestObject('Channel Message/Create thread from message item/input_check private thread'))
 
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create thread from message item/texarea_send message'), 
     'helo ae qn', Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementNotPresent(findTestObject('Channel Message/Create thread from message item/span_error'), 10)
+WebElement threadsOfGeneral = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/div_threads_ general'))
+
+List<WebElement> threads = threadsOfGeneral.findElements(By.tagName('div'))
+
+WebElement newThread
+
+for (WebElement thread : threads) {
+    WebElement aTag = thread.findElement(By.tagName('a'))
+
+    String value = aTag.getText()
+
+    if (value != threadName) {
+        newThread = thread
+    }
+}
+
+if (newThread) {
+    newThread.click()
+	KeywordUtil.markPassed("Passed")
+} else {
+	KeywordUtil.markFailed("Failed")
+}
+
 
