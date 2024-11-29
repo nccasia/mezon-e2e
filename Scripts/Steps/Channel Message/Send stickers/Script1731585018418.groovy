@@ -26,7 +26,7 @@ WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/
 
 WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/p_general'))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/svg__darkhovertext-white hovertext-black darktext-AEAEAE text-colorTextLightMode'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_sticker'))
 
 TestObject stickerObj = findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa')
 
