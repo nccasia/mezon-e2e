@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='msg-1840651252917080064']/div/div[2]/div/div[2]/div/div/div/div/div/div/span</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>6c1d75a1-8f24-40a8-b632-8850098db5ed</webElementGuid>
+      <webElementGuid>e0f65529-6f3f-43dc-9d93-36e9a33d4955</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +30,7 @@
       <name>text</name>
       <type>Main</type>
       <value>he lo mn</value>
-      <webElementGuid>2eb9ea53-0bd2-4b16-b41c-a81ba6cbbc17</webElementGuid>
+      <webElementGuid>6b44ffff-8f62-45ba-9486-7746d3930247</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +38,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;msg-1840651252917080064&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3&quot;]/div[@class=&quot;justify-start gap-4 inline-flex w-full relative h-fit overflow-visible pr-12&quot;]/div[@class=&quot;w-full relative h-full&quot;]/div[@class=&quot;justify-start items-center  inline-flex w-full h-full pt-[2px] textChat select-text&quot;]/div[@class=&quot;flex flex-col whitespace-pre-wrap text-base w-full cursor-text&quot;]/div[@class=&quot;flex w-full&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;&quot;]/div[@class=&quot;text-[#4E5057] dark:text-[#DFDFE0]&quot;]/span[1]</value>
-      <webElementGuid>884308f8-6d82-4c5b-8f66-7a9e4077457f</webElementGuid>
+      <webElementGuid>44a238a4-026f-4afa-af60-c18a81c64dd6</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -47,7 +46,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='msg-1840651252917080064']/div/div[2]/div/div[2]/div/div/div/div/div/div/span</value>
-      <webElementGuid>1bcf7bf5-12fe-4711-82bc-d93eec57d60f</webElementGuid>
+      <webElementGuid>e1e8325e-0dec-4b07-ba6a-2f9983ab4324</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -55,7 +54,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='he lo mn'])[7]/following::span[1]</value>
-      <webElementGuid>3ac8015b-8f71-4466-8b4a-52ee0fa119f3</webElementGuid>
+      <webElementGuid>10d6c008-597b-4cdc-9f1e-2c4f754a2baa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='he lo mn'])[6]/following::span[2]</value>
-      <webElementGuid>41b9698c-0f84-4267-a64b-9c4c426b788c</webElementGuid>
+      <webElementGuid>34704758-fcfe-481b-809b-3dbc5abbaef4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[20]/div/div/div/div/div[2]/div/div[2]/div/div/div/div/div/div/span</value>
-      <webElementGuid>6f05a247-6ff2-4a5e-a3d0-c9151f1edbdf</webElementGuid>
+      <webElementGuid>a007ce93-e753-430a-a495-25614ca6a992</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,6 +78,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//span[(text() = 'he lo mn' or . = 'he lo mn')]</value>
-      <webElementGuid>b1290c4a-94c4-4e16-930a-f0e4b1e5ecf1</webElementGuid>
+      <webElementGuid>73484399-3265-4800-b0b1-64c4b76b9c0e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
