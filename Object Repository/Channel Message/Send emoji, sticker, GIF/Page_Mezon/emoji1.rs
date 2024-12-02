@@ -6,14 +6,106 @@
    <elementGuidId>82b063e5-0c64-4968-9ac7-ad6d1e4dd338</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//button[@class='text-2xl  emoji-button  rounded-md  dark:hover:bg-[#41434A] hover:bg-bgLightModeButton hover:rounded-md w-10  p-1 flex items-center justify-center w-full'])[25]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//div[@id='mainChat']/div/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/button[2]/img</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=button[name=&quot;:froge_camera:&quot;i] >> nth=1</value>
+      </entry>
+   </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>img</value>
+      <webElementGuid>8556d4d1-071a-4b1e-ab1f-5a4041c1a7df</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>draggable</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>737ed95b-ea49-427c-977c-6a14f9661bc0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>https://cdn.mezon.vn/emojis/7228964047846020832.webp</value>
+      <webElementGuid>1f09c892-51af-4eb4-ac0f-64a337bd3001</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>alt</name>
+      <type>Main</type>
+      <value>:froge_camera:</value>
+      <webElementGuid>c8216013-1c36-4880-99e2-b8730a6b0d48</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>max-h-full max-w-full</value>
+      <webElementGuid>b2f33f56-48ed-42ac-b891-a6d71b271a32</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex flex-row h-heightWithoutTopBar&quot;]/div[@class=&quot;flex flex-col flex-1 min-w-60 w-widthThumnailAttachment h-full false z-10&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightPrimary h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;right-[2px] absolute z-10 origin-bottom-right&quot;]/div[@class=&quot;w-[370px] max-sm:w-full max-sm:pt-0 max-sm:rounded-none max-sm:mt-[-0.5rem]
+			sbm:w-[500px] max-sbm:w-[312px] max-sbm:rounded-lg h-fit rounded-lg dark:bg-bgSecondary bg-bgLightMode shadow shadow-neutral-900 z-30
+			 min-h-[500px]&quot;]/div[@class=&quot;w-full min-h-[400px] text-center md:w-[500px]&quot;]/div[@class=&quot;flex h-full pr-2 w-full sbm:w-[312px] md:w-[500px]&quot;]/div[@class=&quot;outline-none flex max-h-full max-sm:h-32 max-sbm:h-full flex-row w-full md:w-[500px] max-sm:ml-1 undefined&quot;]/div[@class=&quot;flex flex-col w-[90%] pr-2&quot;]/div[@class=&quot;w-full  max-h-[352px] overflow-y-scroll pt-0 overflow-x-hidden hide-scrollbar dark: bg-transparent bg-bgLightMode&quot;]/div[@class=&quot;w-full&quot;]/div[1]/div[@class=&quot;grid grid-cols-9 ml-1 gap-1&quot;]/button[@class=&quot;text-2xl  emoji-button  rounded-md  dark:hover:bg-[#41434A] hover:bg-bgLightModeButton hover:rounded-md  p-1 flex items-center justify-center w-full aspect-square&quot;]/img[@class=&quot;max-h-full max-w-full&quot;]</value>
+      <webElementGuid>0d397662-9caa-401d-b83c-774f0c3486b0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='mainChat']/div/div/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/button[2]/img</value>
+      <webElementGuid>fe0d7ab5-685e-43ae-b9b5-33c2c393494f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:img</name>
+      <type>Main</type>
+      <value>//img[@alt=':froge_camera:']</value>
+      <webElementGuid>8767c06a-aba6-4bc2-b524-35bf10c696e3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/button[2]/img</value>
+      <webElementGuid>5b55a36e-0294-47d3-9306-06b17fe65fd3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//img[@src = 'https://cdn.mezon.vn/emojis/7228964047846020832.webp' and @alt = ':froge_camera:']</value>
+      <webElementGuid>ebd241d7-57a6-40dd-b15a-d7c28ba7ba34</webElementGuid>
+   </webElementXpaths>
 </WebElementEntity>
