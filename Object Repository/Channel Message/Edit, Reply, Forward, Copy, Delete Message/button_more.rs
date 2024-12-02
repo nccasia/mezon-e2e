@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[last()]/div[1]/div/div[2]/div/div/button[last()]</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div[1]/div/div[2]/div/div/button[last()]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>svg</value>
-      <webElementGuid>2c0e5ba7-24b7-48a9-985f-ef5a943c5015</webElementGuid>
+      <webElementGuid>dfa762d9-f16d-4e4e-84d5-bb11c84f2b44</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>viewBox</name>
       <type>Main</type>
       <value>0 0 20 20</value>
-      <webElementGuid>2f27ddab-f67e-46ac-a246-5652b9378cb0</webElementGuid>
+      <webElementGuid>ec3793ff-066c-4cb2-a1ca-01e05888127e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +38,7 @@
       <name>fill</name>
       <type>Main</type>
       <value>none</value>
-      <webElementGuid>e45027f7-2be3-4d04-b0ee-320fe24ef41f</webElementGuid>
+      <webElementGuid>fd0ef76f-e21f-4678-b8a4-d66970db9d8c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +46,7 @@
       <name>xmlns</name>
       <type>Main</type>
       <value>http://www.w3.org/2000/svg</value>
-      <webElementGuid>3ee198a0-c6aa-438d-ab8c-a077088737a0</webElementGuid>
+      <webElementGuid>b031e10c-a90d-47ae-86ba-aea6c297cd4a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +54,7 @@
       <name>class</name>
       <type>Main</type>
       <value>w-5 h-5 dark:text-[#B5BAC1] text-colorTextLightMode dark:hover:text-white hover:text-black</value>
-      <webElementGuid>cac084cc-a335-4634-a490-fc23efa91117</webElementGuid>
+      <webElementGuid>74b67771-fc27-4634-8400-35c9fd9e1429</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;scrollLoading&quot;)/div[2]/div[1]/div[14]/div[@class=&quot;fullBoxText relative group pt-3&quot;]/div[1]/div[@class=&quot;chooseForText z-[1] absolute h-8 p-0.5 rounded block -top-5  right-6 w-fit&quot;]/div[@class=&quot;flex justify-between dark:bg-bgDarkPopover bg-bgLightMode border border-bgSecondary rounded&quot;]/div[@class=&quot;w-fit h-full flex items-center justify-between&quot;]/button[@class=&quot;h-full p-1 cursor-pointer popup-btn&quot;]/svg[@class=&quot;w-5 h-5 dark:text-[#B5BAC1] text-colorTextLightMode dark:hover:text-white hover:text-black&quot;]</value>
-      <webElementGuid>dd92661d-8947-4749-a749-84f712e4c533</webElementGuid>
+      <webElementGuid>3378c8a9-6444-4738-85bb-f91166f3f91c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='ae oiiiiii'])[5]/following::*[name()='svg'][5]</value>
-      <webElementGuid>82b0911b-3784-4b67-9e6e-64e9686a8ccc</webElementGuid>
+      <webElementGuid>e1f514de-ae33-4d8d-a537-83d3e6816f24</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Today at 23:01'])[1]/following::*[name()='svg'][5]</value>
-      <webElementGuid>e0306afa-5e9b-4e7a-9b87-440bfbb0b25d</webElementGuid>
+      <webElementGuid>d3a8ad73-83bd-427a-a9c3-5f1acc8b9951</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,6 +86,6 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='he lo mn'])[15]/preceding::*[name()='svg'][1]</value>
-      <webElementGuid>2fdfcd5a-0d4f-488e-8ac3-e7c7c6265b19</webElementGuid>
+      <webElementGuid>eb218a38-0380-45e1-9270-2d1099d66b98</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
