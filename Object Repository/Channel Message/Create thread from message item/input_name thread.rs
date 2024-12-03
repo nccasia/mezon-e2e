@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_more</name>
+   <name>input_name thread</name>
    <tag></tag>
-   <elementGuidId>7b134add-c65b-4755-8296-ffd5f2c9ae12</elementGuidId>
+   <elementGuidId>3826b56e-6644-439c-95bd-ca778b137b78</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[4]/div/div[2]/div[2]/div/div[1]/div/div[2]/input</value>
+      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div[1]/div/div[2]/div/div/button[last()]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

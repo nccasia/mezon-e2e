@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_more</name>
+   <name>span_error</name>
    <tag></tag>
-   <elementGuidId>7b134add-c65b-4755-8296-ffd5f2c9ae12</elementGuidId>
+   <elementGuidId>a0d30124-0b79-4764-8bcf-be396de63ea9</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[4]/div/div[2]/div[2]/div/div[1]/div/div[2]/span[2]</value>
+      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div[1]/div/div[2]/div/div/button[last()]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
