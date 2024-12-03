@@ -14,35 +14,35 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.By as By
-import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import com.kms.katalon.core.testobject.ConditionType as ConditionType
+
+import org.openqa.selenium.By
+import org.openqa.selenium.WebDriver
+import com.kms.katalon.core.util.KeywordUtil
 import org.openqa.selenium.WebElement as WebElement
-import org.openqa.selenium.WebDriver as WebDriver
+import com.kms.katalon.core.webui.driver.DriverFactory
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_lastest message'))
+WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_more'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_Forward option'))
 
-WebUI.waitForElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Forward_modal'), 
+WebUI.waitForElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_forward container'), 
     5)
 
-WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/input_forward modal_search'), 'channel')
+WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/input_forward modal_search'), '#')
 
-WebUI.check(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/input_general_checkbox-item to forward'))
+WebUI.check(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/checkBox_forward message to channel'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_Forward message_send'))
 
+WebUI.waitForElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_toast container_ forward message to chanel'), 
+    10)
+
 WebDriver driver = DriverFactory.getWebDriver()
 
-WebElement Toast = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_toast'), 5)
+toastSuccess =  driver.findElement(By.cssSelector(".Toastify__toast--success"))
 
-WebElement Toast_success = driver.findElement(By.className('Toastify__toast--success'))
-
-
+KeywordUtil.markPassed("Passed")
