@@ -24,14 +24,18 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_clan_T'))
 
-WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/hover_obj_to_edit'))
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), 
+    'chi Phuong xinh dep', Keys.chord(Keys.ENTER))
+
+WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/edit_btn'))
 
-WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Edit Message'))
+WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), Keys.chord(Keys.CONTROL, 'a'))
+WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), "hehe")
 
-CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), 
-    'hehe', Keys.chord(Keys.ENTER))
 
 WebUI.verifyTextPresent('hehe', true)
+
+
 

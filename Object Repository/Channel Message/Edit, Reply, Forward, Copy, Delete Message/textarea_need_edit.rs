@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='msg-1840651253567197184']/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/textarea</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div[1]/div/textarea</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -29,7 +29,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>textarea</value>
-      <webElementGuid>cc8f871e-470b-41b7-b93d-84c5414ffe50</webElementGuid>
+      <webElementGuid>d06dd6a0-3046-41fc-9199-1c4551ac6a24</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -37,7 +37,7 @@
       <name>rows</name>
       <type>Main</type>
       <value>1</value>
-      <webElementGuid>49f0f9b0-aed8-4e25-aab6-16f6bf364b85</webElementGuid>
+      <webElementGuid>97fa88a4-e1ff-42fd-8172-7480247457ba</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -45,7 +45,7 @@
       <name>class</name>
       <type>Main</type>
       <value>w-full__input</value>
-      <webElementGuid>9d09f92f-bbf4-4d2e-b673-08218aa95e38</webElementGuid>
+      <webElementGuid>a853e4c7-04b4-42d9-9e16-80c17b0dbbcb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -53,7 +53,7 @@
       <name>text</name>
       <type>Main</type>
       <value>lll</value>
-      <webElementGuid>2360cf34-ebcf-4f95-ad80-e0d912c205f0</webElementGuid>
+      <webElementGuid>13ae5adf-6c5e-4ba2-87ff-359fa0c99be0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -61,7 +61,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;msg-1840651253567197184&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3&quot;]/div[@class=&quot;justify-start gap-4 inline-flex w-full relative h-fit overflow-visible pr-12&quot;]/div[@class=&quot;w-full relative h-full&quot;]/div[@class=&quot;justify-start items-center  inline-flex w-full h-full pt-[2px] textChat select-text&quot;]/div[@class=&quot;flex flex-col whitespace-pre-wrap text-base w-full cursor-text&quot;]/div[@class=&quot;inputEdit w-full flex flex-col&quot;]/div[@class=&quot;w-full&quot;]/div[@class=&quot;w-full dark:bg-black bg-white border border-[#bebebe] dark:border-none rounded p-[10px] dark:text-white text-black customScrollLightMode mt-[5px] false w-full--multiLine&quot;]/div[@class=&quot;w-full__control&quot;]/textarea[@class=&quot;w-full__input&quot;]</value>
-      <webElementGuid>82836672-783f-4057-a36f-384f72fbf8c8</webElementGuid>
+      <webElementGuid>43b53abd-d3c4-4138-9e48-f171e258364a</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -69,7 +69,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='msg-1840651253567197184']/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/textarea</value>
-      <webElementGuid>89a263e2-3a55-40fa-a2ea-67a5c91d9c56</webElementGuid>
+      <webElementGuid>5b56629d-e82f-404c-bc12-3a261f8268e1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -77,7 +77,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='lll'])[1]/following::textarea[1]</value>
-      <webElementGuid>7d28470f-e32e-4899-9dd3-5edb154af5a8</webElementGuid>
+      <webElementGuid>57a6418c-863b-4464-a560-8c65f85c068e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,7 +85,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='ai đó =))'])[1]/following::textarea[1]</value>
-      <webElementGuid>51f34e6c-ca69-4052-b0e7-b51b56580516</webElementGuid>
+      <webElementGuid>fd9cceb3-4ab5-4790-aa2d-0eaa7f3df0e2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -93,7 +93,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//textarea</value>
-      <webElementGuid>7f2200ec-7fd4-40e2-ada1-a7e06a9e3742</webElementGuid>
+      <webElementGuid>b46b7da1-1e15-43d3-9048-8dc48cdb2543</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -101,6 +101,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//textarea[(text() = 'lll' or . = 'lll')]</value>
-      <webElementGuid>21d88866-e163-43ee-b345-ed189e415a6e</webElementGuid>
+      <webElementGuid>011039dc-d206-47d0-b1de-ba5db75e0db1</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
