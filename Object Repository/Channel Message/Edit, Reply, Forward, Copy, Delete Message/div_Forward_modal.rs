@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_more</name>
+   <name>div_Forward_modal</name>
    <tag></tag>
-   <elementGuidId>7b134add-c65b-4755-8296-ffd5f2c9ae12</elementGuidId>
+   <elementGuidId>4f613a82-7de3-43e7-ac63-c4eb85faf909</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div[1]/div/div[2]/div/div/button[last()]</value>
+         <value>//*[@id=&quot;:r2o:&quot;]/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
