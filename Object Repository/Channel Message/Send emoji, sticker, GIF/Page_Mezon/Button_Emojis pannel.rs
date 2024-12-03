@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[16]/following::*[name()='svg'][4]</value>
+         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[3]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>svg</value>
-      <webElementGuid>73b17419-5e26-42e5-9eae-eea7e330df91</webElementGuid>
+      <webElementGuid>13fd8fc9-3d56-4c50-b4c8-5d8a71ff311a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>dark:hover:text-white hover:text-black w-6 h-6 dark:text-[#B5BAC1] text-colorTextLightMode</value>
-      <webElementGuid>e43ad9e4-2be3-4a78-9a1d-b85fbfe984e0</webElementGuid>
+      <webElementGuid>b90a75be-afee-435e-862c-05ba27982cbd</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +38,7 @@
       <name>aria-hidden</name>
       <type>Main</type>
       <value>true</value>
-      <webElementGuid>0d419c6c-e123-43c8-8421-df11c4c82db1</webElementGuid>
+      <webElementGuid>0f8063f3-d216-4738-bf01-5b4a2ed85198</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +46,7 @@
       <name>role</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>84cc9005-ae26-4f51-be07-81f378d97d1d</webElementGuid>
+      <webElementGuid>f1ff6453-d8b2-40ab-84ce-e2e1a36fed01</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +54,7 @@
       <name>xmlns</name>
       <type>Main</type>
       <value>http://www.w3.org/2000/svg</value>
-      <webElementGuid>2a01dfc7-70a5-46f3-8aa1-867d0a780059</webElementGuid>
+      <webElementGuid>b049bb61-961e-4870-9e5b-fa8b7e8fa07d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>width</name>
       <type>Main</type>
       <value>24</value>
-      <webElementGuid>11afcc10-b7c4-4a41-b007-129ff248b03c</webElementGuid>
+      <webElementGuid>57dd16da-e5bb-48fb-ad10-904c379a52d6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +70,7 @@
       <name>height</name>
       <type>Main</type>
       <value>24</value>
-      <webElementGuid>3cd0a402-600e-4c14-8e7f-2c397043bc32</webElementGuid>
+      <webElementGuid>abbc8ef8-ceea-4a15-908a-f07c4375b31a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>viewBox</name>
       <type>Main</type>
       <value>0 0 24 24</value>
-      <webElementGuid>8c254cd5-3982-44cf-8388-0b0ad49d09fc</webElementGuid>
+      <webElementGuid>f6dc313d-e603-4810-aa35-bc7f792c854e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -89,7 +88,7 @@
       <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex flex-row h-heightWithoutTopBar&quot;]/div[@class=&quot;flex flex-col flex-1 min-w-60 w-widthThumnailAttachment h-full false z-10&quot;]/div[@class=&quot;flex-shrink flex flex-col dark:bg-bgPrimary bg-bgLightPrimary h-auto relative w-full&quot;]/div[@class=&quot;mx-4 relative&quot;]/div[@class=&quot;relative max-sm:-pb-2&quot;]/div[@class=&quot;flex flex-inline items-start gap-2 box-content mb-4 max-sm:mb-0
 				 dark:bg-channelTextarea bg-channelTextareaLight rounded-lg relative rounded-t-lg
 				  w-wrappBoxChatView&quot;]/div[@class=&quot;w-full dark:bg-channelTextarea bg-channelTextareaLight gap-3 flex items-center rounded-e-md&quot;]/div[@class=&quot;w-full rounded-r-lg dark:bg-channelTextarea bg-channelTextareaLight gap-3 relative whitespace-pre-wrap&quot;]/div[@class=&quot;relative&quot;]/div[@class=&quot;flex flex-row absolute h-11 items-center gap-1 mr-3 top-0 right-0&quot;]/div[@class=&quot;w-6 h-6&quot;]/svg[@class=&quot;dark:hover:text-white hover:text-black w-6 h-6 dark:text-[#B5BAC1] text-colorTextLightMode&quot;]</value>
-      <webElementGuid>5c193724-3a8d-449a-9cfe-658fc20d1413</webElementGuid>
+      <webElementGuid>b120e6e6-8708-4342-abde-cf1f971a6fc4</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -97,7 +96,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[16]/following::*[name()='svg'][4]</value>
-      <webElementGuid>fef149f9-dc14-4f0c-aac9-ef8c10a0d0cc</webElementGuid>
+      <webElementGuid>90188c63-15ab-4468-b4b0-f612ae50f392</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -105,6 +104,6 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='.'])[15]/following::*[name()='svg'][4]</value>
-      <webElementGuid>2fe583d1-3f1e-4748-a25f-669fbd3c2952</webElementGuid>
+      <webElementGuid>9129b63c-10a5-459d-8514-58270246de01</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

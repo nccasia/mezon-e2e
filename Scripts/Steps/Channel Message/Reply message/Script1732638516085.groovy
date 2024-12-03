@@ -16,31 +16,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.By as By
-import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
-        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
+WebUI.waitForElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 
+    5)
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/p_general'))
+WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_sticker'))
+WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_more'))
 
-TestObject stickerObj = findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa')
+WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/buttion_more_reply'))
 
-String stickerHref = WebUI.findWebElement(stickerObj, 0).getAttribute('src')
+WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Replying to'))
 
-WebUI.click(stickerObj)
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
+    'toi la bot', Keys.chord(Keys.ENTER))
 
-String messageContainerXpath = '//*[@id=\'scrollLoading\']'
+WebUI.waitForElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 
+    5)
 
-messageContainerObj = getTestObjectWithXpath(messageContainerXpath)
-
-CustomKeywords.'mezon.VerifyHrefImgExists.verifyHrefImgExists'(messageContainerObj, stickerHref)
-
-static TestObject getTestObjectWithXpath(String xpath) {
-    return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
-}
+WebUI.verifyTextPresent('toi la bot', true)
 
