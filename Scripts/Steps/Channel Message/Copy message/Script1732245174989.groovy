@@ -20,14 +20,20 @@ import org.openqa.selenium.Keys as Keys
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
-
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_T'))
 
 WebUI.click(findTestObject('Channel Message/Display/Page_Mezon/p_general'))
 
-WebUI.rightClick(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/Hi Nguyen Phuoc Nguyen - message in thread'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'))
+
+WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'), 'Hi, Nguyen Phuoc Nguyen - message in thread')
+
+WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'), Keys.chord(Keys.ENTER))
+
+WebUI.rightClick(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/last_message'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Copy Text'))
 
-WebUI.sendKeys(findTestObject(“textarea_”), Keys.chord(Keys.CONTROL, ‘v’))
+WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'), Keys.chord(Keys.CONTROL, 
+        'v'))
+
