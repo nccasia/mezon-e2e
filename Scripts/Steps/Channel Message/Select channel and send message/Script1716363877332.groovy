@@ -21,14 +21,14 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 'select channel general'
-WebUI.click(findTestObject('Channel Message/Page_Mezon/span_channel'))
+WebUI.click(findTestObject('Channel Message/Channel message - Pin message/span_channel'))
 
 WebUI.click(findTestObject('Channel Message/Select channel and send message/span_general'))
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/span_channel'))
+WebUI.click(findTestObject('Channel Message/Channel message - Pin message/span_channel'))
 
 // Find the list of WebElements
-List<WebElement> listMember = WebUI.findWebElements(findTestObject('Object Repository/Channel Message/Page_Mezon/quantity_members'), 
+List<WebElement> listMember = WebUI.findWebElements(findTestObject('Object Repository/Channel Message/Channel message - Pin message/quantity_members'), 
     0)
 
 // Get the count of found elements
@@ -37,21 +37,21 @@ int count = listMember.size()
 // Check if the count is greater than or equal to 2
 if (count >= 2) {
     // Click on the second member if the condition is true
-    WebUI.click(findTestObject('Object Repository/Channel Message/Page_Mezon/p_member2'))
+    WebUI.click(findTestObject('Object Repository/Channel Message/Channel message - Pin message/p_member2'))
 
-    WebUI.setText(findTestObject('Channel Message/Page_Mezon/Input_ROLES'), Message1)
+    WebUI.setText(findTestObject('Channel Message/Channel message - Pin message/Input_ROLES'), Message1)
 
-    WebUI.sendKeys(findTestObject('Object Repository/Channel Message/Page_Mezon/send_text'), Keys.chord(Keys.ENTER))
+    WebUI.sendKeys(findTestObject('Object Repository/Channel Message/Channel message - Pin message/send_text'), Keys.chord(Keys.ENTER))
 
     // Wait for a brief moment to ensure the message is sent and displayed
     WebUI.delay(2)
 
-    WebUI.click(findTestObject('Object Repository/Channel Message/Page_Mezon/img_DM_clan'))
+    WebUI.click(findTestObject('Object Repository/Channel Message/Channel message - Pin message/img_DM_clan'))
 
-    WebUI.click(findTestObject('Channel Message/Page_Mezon/DM_member_1'))
+    WebUI.click(findTestObject('Channel Message/Channel message - Pin message/DM_member_1'))
 
     // Find all div elements matching the class
-    List<WebElement> boxTextelements = WebUI.findWebElements(findTestObject('Object Repository/Channel Message/Page_Mezon/Box_text'), 
+    List<WebElement> boxTextelements = WebUI.findWebElements(findTestObject('Object Repository/Channel Message/Channel message - Pin message/Box_text'), 
         0)
 
     // Check if the list is not empty
