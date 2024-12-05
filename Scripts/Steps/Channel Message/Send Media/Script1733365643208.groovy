@@ -21,16 +21,24 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String filePath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\Test case - reaction message.mp4'
+String fileMediaPath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\Test case - reaction message.mp4'
+String fileImgPath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\logo NCC.png'
 
-List splitFilePath = filePath.split('\\\\')
+println RunConfiguration.getProjectDir()
+List splitFilePath = fileMediaPath.split('\\\\')
 
-WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), filePath)
+WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), fileMediaPath)
 
 WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
 
-TestObject spanSentMessageObj = findTestObject('Channel Message/Send Media/video_latest message')
+TestObject videoObj = findTestObject('Channel Message/Send Media/video_latest message')
 
-WebElement spanSentMessage = WebUI.findWebElement(spanSentMessageObj)
+WebElement videoElement = WebUI.findWebElement(videoObj)
 
+WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), fileImgPath)
 
+WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
+
+TestObject imgObj = findTestObject('Channel Message/Send Media/img_latest message')
+
+WebElement imgElement = WebUI.findWebElement(imgObj)
