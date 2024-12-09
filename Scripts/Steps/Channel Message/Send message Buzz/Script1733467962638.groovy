@@ -23,7 +23,8 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], Fa
 
 WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.CONTROL, 'b'))
 
-boolean isBuzzVisible = WebUI.waitForElementVisible(findTestObject('Channel Message/Send message Buzz/div_general buzz'), 5)
+boolean isBuzzVisible = WebUI.waitForElementVisible(findTestObject('Channel Message/Send message Buzz/div_general buzz'), 
+    5)
 
 WebElement spanMessageBuzz = WebUI.findWebElement(findTestObject('Channel Message/Send message Buzz/span_message buzz'))
 
@@ -31,6 +32,7 @@ String messageBuzz = spanMessageBuzz.getText()
 
 String colorText = spanMessageBuzz.getCssValue('color')
 
-if ( !isBuzzVisible || messageBuzz != 'Buzz!!' || colorText != 'rgba(239, 68, 68, 1)') {
-	KeywordUtil.markFailedAndStop("Failed!")
+if ((!(isBuzzVisible) || (messageBuzz != 'Buzz!!')) || (colorText != 'rgba(239, 68, 68, 1)')) {
+    KeywordUtil.markFailedAndStop('Failed!')
 }
+

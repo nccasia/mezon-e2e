@@ -22,7 +22,7 @@ WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email 
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send message'), [('Message') : 'welcome to my channel'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Steps/Channel Message/Edit, Reply, Forward, Copy, Delete message'), [('Message_1') : 'Test send message successfully'
+WebUI.callTestCase(findTestCase('null'), [('Message_1') : 'Test send message successfully'
         , ('Message_edit_1') : 'message after editing', ('Message_edit_2') : 'Edited messages are saved using the ENTER key'], 
     FailureHandling.STOP_ON_FAILURE)
 

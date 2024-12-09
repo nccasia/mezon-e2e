@@ -25,22 +25,22 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 public class VerifyHrefImgExists {
-	
+
 	@Keyword
 	def verifyHrefImgExists (TestObject object, String href) {
-		
+
 		List<WebElement> imgTags = WebUI.findWebElement(object).findElements(By.tagName('img'))
-		
+
 		Boolean flag = false
-		
+
 		for (WebElement img : imgTags) {
 			String imgHref = img.getAttribute('src')
-		
+
 			if (imgHref == href) {
 				flag = true
 			}
 		}
-		
+
 		if (flag) {
 			KeywordUtil.markPassed('Success!')
 		} else {

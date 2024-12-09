@@ -20,8 +20,8 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
-        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : GlobalVariable.email
+        , ('password') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.maximizeWindow()
 
@@ -57,9 +57,9 @@ TestObject spanLastedObj = getTestObjectWithXpath(spanLasted)
 WebElement spanLastedElm = WebUI.findWebElement(spanLastedObj)
 
 if (editMessage == spanLastedElm.getText()) {
-	KeywordUtil.markPassed("pass")
+    KeywordUtil.markPassed('pass')
 } else {
-    KeywordUtil.markFailed("fail")
+    KeywordUtil.markFailed('fail')
 }
 
 static TestObject getTestObjectWithXpath(String xpath) {
