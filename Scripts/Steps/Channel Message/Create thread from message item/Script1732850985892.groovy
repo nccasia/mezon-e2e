@@ -32,7 +32,9 @@ WebUI.click(findTestObject('Channel Message/Create thread from message item/butt
 
 WebUI.waitForElementPresent(findTestObject('Channel Message/Create thread from message item/div_create thread modal'), 5)
 
-String threadName = 'vp-qn'
+Random generator = new Random();
+
+String threadName = "vp-qn ${generator.nextInt()}"
 
 WebUI.setText(findTestObject('Channel Message/Create thread from message item/input_name thread'), threadName)
 
