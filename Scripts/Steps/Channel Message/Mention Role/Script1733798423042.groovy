@@ -45,30 +45,36 @@ String svgContentFromFile = new String(Files.readAllBytes(Paths.get(svgFilePath)
 
 for (WebElement liTag : liTagList) {
     String liId = liTag.getAttribute('id')
-	try {
-		String svgXpath = "//*[@id='$liId']/div/div/div"
-		 TestObject svgObj = CustomKeywords.'mezon.GetTestObject.withXpath'(svgXpath)
-		 WebElement svg = WebUI.findWebElement(svgObj)
-		 String svgContentFromWeb = svg.getAttribute("innerHTML")
-		 if (svgContentFromWeb == svgContentFromFile) {
-			 liTag.click()
-			 break
-		 }
-	} catch (error) {
-		println error.message
-	}
+
+    try {
+        String svgXpath = "//*[@id='$liId']/div/div/div"
+
+        TestObject svgObj = CustomKeywords.'mezon.GetTestObject.withXpath'(svgXpath)
+
+        WebElement svg = WebUI.findWebElement(svgObj)
+
+        String svgContentFromWeb = svg.getAttribute('innerHTML')
+
+        if (svgContentFromWeb == svgContentFromFile) {
+            liTag.click()
+
+            break
+        }
+    }
+    catch (def error) {
+        println(error.message)
+    } 
 }
 
 String textOfTextArea = textAreaElem.getText()
+
+WebUI.sendKeys(textAreaObj, Keys.chord(Keys.ENTER))
 
 WebElement latestMessageElem = WebUI.findWebElement(findTestObject('Channel Message/Send multiple file media/div_latest message'))
 
 String textLatestMessage = latestMessageElem.getText()
 
 if (textLatestMessage != textOfTextArea.trim()) {
-	KeywordUtil.markFailedAndStop("Verify fail message")
+    KeywordUtil.markFailedAndStop('Verify fail message')
 }
-
-
-
 
