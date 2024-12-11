@@ -16,7 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebElement
+import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
@@ -38,9 +38,9 @@ WebElement spanSentMessage = WebUI.findWebElement(spanSentMessageObj)
 
 String sentMessage = spanSentMessage.getText()
 
-if (sentMessage == fileName) {
-	KeywordUtil.markPassed("PASSED")
-} else {
-	KeywordUtil.markFailed("FAILED")
+if (sentMessage != fileName) {
+    KeywordUtil.markFailed('Error message')
+} else if(CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+    KeywordUtil.markFailed('Message sending failed')
 }
 

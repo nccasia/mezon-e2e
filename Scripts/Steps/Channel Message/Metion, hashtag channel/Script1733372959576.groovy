@@ -39,8 +39,10 @@ WebElement buttonMetionElement = WebUI.findWebElement(buttonMetionObj)
 
 String buttonMetionText = buttonMetionElement.getText().trim()
 
-if (buttonMetionText != mentionText) {
+if (buttonMetionText != mentionText ) {
     KeywordUtil.markFailed('Verify mention failed')
+} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+	KeywordUtil.markFailed('Message sending failed')
 }
 
 WebUI.click(buttonMetionObj)
@@ -63,10 +65,11 @@ TestObject spanLatestMessageObj = findTestObject('Channel Message/Mention, hasht
 
 WebElement spanLatestMessageElement = WebUI.findWebElement(spanLatestMessageObj)
 
-String LatestMessageText = spanLatestMessageElement.getText().trim()
+String LatestMessageText = spanLatestMessageElement.getText()
 
 if (LatestMessageText != hashtagWithMessage) {
     KeywordUtil.markFailed('Verify hashtag with message')
-
+} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+	KeywordUtil.markFailed('Message sending failed')
 }
 
