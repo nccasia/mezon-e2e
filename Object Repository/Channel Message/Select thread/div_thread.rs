@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_create thread</name>
+   <name>div_thread</name>
    <tag></tag>
-   <elementGuidId>b76c66d5-cb30-4be5-ba6e-1501275bdb00</elementGuidId>
+   <elementGuidId>2d409108-3fb9-45ff-bb40-55f4deda6349</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/div[1]/div[3]/button[1]</value>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[3]/div/div/div[2]/div/div[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

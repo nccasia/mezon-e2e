@@ -6,11 +6,11 @@
    <elementGuidId>46e4dd87-ed9e-42b2-b5d7-2d50bc279d0b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>/html/body/div[3]/div/div/div/div/div[3]/div[3]/button[2]</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>/html/body/div[@data-floating-ui-portal]/div/div/div/div/div[3]/div[3]/button[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>a9b61e68-7620-4b3a-8e79-b95c4aa833e2</webElementGuid>
+      <webElementGuid>096f1a2a-9d1f-4f24-830b-6afc93510fad</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -30,7 +30,7 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>75eedb34-afb0-433a-a060-6f6b3494d662</webElementGuid>
+      <webElementGuid>0e831a75-9304-4147-b98a-6a751dbcae8c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -38,7 +38,7 @@
       <name>class</name>
       <type>Main</type>
       <value>group relative flex items-stretch justify-center p-0.5 text-center font-medium transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none border border-transparent text-white focus:ring-4 enabled:hover:bg-cyan-800 dark:focus:ring-cyan-800 dark:enabled:hover:bg-cyan-700 h-10 px-4 rounded dark:bg-bgSelectItem bg-bgSelectItem hover:!bg-bgSelectItemHover focus:ring-transparent</value>
-      <webElementGuid>1244bcf1-5042-49c3-b7f8-805402b19ec2</webElementGuid>
+      <webElementGuid>0bb8039e-fa36-407c-a800-b509bb1b53af</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -46,7 +46,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Send</value>
-      <webElementGuid>cd521e6e-7b69-4a99-8e82-cc970cbdf769</webElementGuid>
+      <webElementGuid>c036b497-44a7-4418-b99c-111028fd78cf</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -54,7 +54,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;:r2k:&quot;)/div[@class=&quot;relative flex max-h-[90dvh] flex-col rounded-lg bg-white shadow dark:bg-gray-700&quot;]/div[@class=&quot;dark:bg-bgSecondary bg-bgLightMode pt-4 rounded&quot;]/div[@class=&quot;px-4&quot;]/div[@class=&quot;flex justify-end p-4 rounded-b gap-4&quot;]/button[@class=&quot;group relative flex items-stretch justify-center p-0.5 text-center font-medium transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none border border-transparent text-white focus:ring-4 enabled:hover:bg-cyan-800 dark:focus:ring-cyan-800 dark:enabled:hover:bg-cyan-700 h-10 px-4 rounded dark:bg-bgSelectItem bg-bgSelectItem hover:!bg-bgSelectItemHover focus:ring-transparent&quot;]</value>
-      <webElementGuid>7c088f3d-60b8-4840-895e-b4381461607b</webElementGuid>
+      <webElementGuid>640da7f3-7aa4-40bd-814a-db7cf70fa230</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -62,7 +62,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>(//button[@type='button'])[2]</value>
-      <webElementGuid>9804822f-9ccb-4c53-8894-252348dd77c1</webElementGuid>
+      <webElementGuid>e0376045-eb85-4f8c-a65f-bdcd455fa200</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -70,7 +70,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id=':r2k:']/div/div/div[3]/div[3]/button[2]</value>
-      <webElementGuid>ec57b154-e773-4c41-8fdc-4df536289ea5</webElementGuid>
+      <webElementGuid>9dcb0988-3b5e-428b-994d-3586372b27d2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -78,7 +78,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/following::button[1]</value>
-      <webElementGuid>ede2fc27-e48e-4979-ad0f-d5e18ac47e55</webElementGuid>
+      <webElementGuid>4e97559e-1cfd-48a1-8924-e7f1638c6ae5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -86,7 +86,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='a'])[2]/following::button[2]</value>
-      <webElementGuid>2b9c426d-03ca-4095-b55e-8851370492ea</webElementGuid>
+      <webElementGuid>67ed79d8-6352-436d-b1ad-1143d35b220d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -94,7 +94,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/button[2]</value>
-      <webElementGuid>1ca9457b-32fd-4e80-b51d-88823d303599</webElementGuid>
+      <webElementGuid>06b875c5-430f-40fb-a49a-370fb797bd12</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -102,6 +102,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//button[@type = 'button' and (text() = 'Send' or . = 'Send')]</value>
-      <webElementGuid>8e462729-caab-4b23-8b2c-97b85a1c69aa</webElementGuid>
+      <webElementGuid>5a4e61db-be65-4faf-abc8-f5234e367ed5</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

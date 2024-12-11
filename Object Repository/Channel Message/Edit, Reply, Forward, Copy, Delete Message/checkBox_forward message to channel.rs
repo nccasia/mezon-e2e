@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/div[3]/div/div/div/div/div[2]/div/div[1]/input</value>
+         <value>/html/body/div[@data-floating-ui-portal]/div/div/div/div/div[2]/div/div[1]/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -29,9 +29,6 @@ WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete M
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_Forward option'))
 
-WebUI.waitForElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_forward container'), 
-    5)
-
 WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/input_forward modal_search'), '#')
 
 WebUI.check(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/checkBox_forward message to channel'))
@@ -43,6 +40,4 @@ WebUI.waitForElementPresent(findTestObject('Channel Message/Edit, Reply, Forward
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-toastSuccess =  driver.findElement(By.cssSelector(".Toastify__toast--success"))
-
-KeywordUtil.markPassed("Passed")
+WebElement toastSuccess =  driver.findElement(By.cssSelector(".Toastify__toast--success"))

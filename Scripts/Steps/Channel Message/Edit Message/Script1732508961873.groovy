@@ -20,12 +20,7 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : GlobalVariable.email
-        , ('password') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_clan_T'))
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), 
     'chi Phuong xinh dep', Keys.chord(Keys.ENTER))
@@ -36,7 +31,7 @@ WebElement divLastedElm = WebUI.findWebElement(divLastedObj)
 
 String idMessage = divLastedElm.getAttribute('id')
 
-String spanLasted = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/span/span"
+String spanLasted = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/span"
 
 WebUI.mouseOver(divLastedObj)
 
@@ -52,7 +47,7 @@ WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delet
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), Keys.chord(
         Keys.ENTER))
 
-TestObject spanLastedObj = getTestObjectWithXpath(spanLasted)
+TestObject spanLastedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(spanLasted)
 
 WebElement spanLastedElm = WebUI.findWebElement(spanLastedObj)
 
@@ -62,7 +57,4 @@ if (editMessage == spanLastedElm.getText()) {
     KeywordUtil.markFailed('fail')
 }
 
-static TestObject getTestObjectWithXpath(String xpath) {
-    return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
-}
 

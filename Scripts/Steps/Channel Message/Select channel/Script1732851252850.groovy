@@ -16,11 +16,37 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
 
-WebUI.click(findTestObject('Channel Message/Select channel and send message/div_channel'))
+if (GlobalVariable.isThread) {
+	WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
+	
+	WebElement channel = WebUI.findWebElement(GlobalVariable.channel)
+	
+	GlobalVariable.channelID = channel.getAttribute("id")
+	
+	channel.click()
+	
+	if(GlobalVariable.isThreadPrivate) {
+		WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel - private'))
+
+		WebUI.click(findTestObject('Channel Message/Select thread/div_thread private'))
+	} else {
+		WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel'))
+
+		WebUI.click(findTestObject('Channel Message/Select thread/div_thread'))
+	}
+
+} else {	
+	WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
+	
+	WebElement channel = WebUI.findWebElement(GlobalVariable.channel)
+	
+	GlobalVariable.channelID = channel.getAttribute("id")
+	
+}
 

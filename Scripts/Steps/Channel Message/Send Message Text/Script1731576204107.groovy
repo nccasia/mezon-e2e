@@ -19,10 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
-        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String message = 'mezon day'
 
@@ -34,8 +31,7 @@ WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Mes
 String sentMessage = sentMessageElement.getAttribute('innerText')
 
 if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-	KeywordUtil.markFailedAndStop("Message sending failed")
+    KeywordUtil.markFailedAndStop('Message sending failed')
 } else if (sentMessage != message) {
-	KeywordUtil.markFailedAndStop("Error message")
+    KeywordUtil.markFailedAndStop('Error message')
 }
-

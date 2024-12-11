@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>dev</name>
+   <name>dev - Thread Private</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
@@ -26,13 +26,23 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>false</initValue>
+      <initValue>findTestObject('Channel Message/Select channel and send message/div_vp qn private')</initValue>
+      <name>channel</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>true</initValue>
       <name>isThread</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>findTestObject('Channel Message/Select channel and send message/div_channel')</initValue>
-      <name>channel</name>
+      <initValue>findTestObject('Channel Message/Select thread/button_thread pannel - private')</initValue>
+      <name>threadPannel</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>true</initValue>
+      <name>isThreadPrivate</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

@@ -23,7 +23,17 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], Fa
 
 WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.CONTROL, 'b'))
 
-boolean isBuzzVisible = WebUI.waitForElementVisible(findTestObject('Channel Message/Send message Buzz/div_general buzz'), 
+String BuzzXpath = ''
+
+if (GlobalVariable.isThread) {
+    BuzzXpath = "//*[@id='$GlobalVariable.channelID']/following-sibling::div[1]/div/div/div"
+} else {
+    BuzzXpath = "//*[@id='$GlobalVariable.channelID']/a/div/div"
+}
+
+TestObject buzzElement = CustomKeywords.'mezon.GetTestObject.withXpath'(BuzzXpath)
+
+boolean isBuzzVisible = WebUI.waitForElementVisible(buzzElement, 
     5)
 
 WebElement spanMessageBuzz = WebUI.findWebElement(findTestObject('Channel Message/Send message Buzz/span_message buzz'))
@@ -35,6 +45,6 @@ String colorText = spanMessageBuzz.getCssValue('color')
 if ((!(isBuzzVisible) || (messageBuzz != 'Buzz!!')) || (colorText != 'rgba(239, 68, 68, 1)')) {
     KeywordUtil.markFailedAndStop('Failed!')
 } else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-	KeywordUtil.markFailedAndStop('Buzz message sending failed')
+    KeywordUtil.markFailedAndStop('Buzz message sending failed')
 }
 

@@ -22,11 +22,21 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Create thread from message item/div_button thread'))
+if (GlobalVariable.isThread) {
+    String buttonThreadXpath = '//*[@id=\'main-layout\']/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[2]'
+
+    TestObject buttonThreadObj = CustomKeywords.'mezon.GetTestObject.withXpath'(buttonThreadXpath)
+
+    WebElement buttonThreadElement = WebUI.findWebElement(buttonThreadObj)
+
+    buttonThreadElement.click()
+} else {
+    WebUI.click(findTestObject('Channel Message/Create thread from message item/div_button thread'))
+}
 
 WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread'))
 
-Random generator = new Random();
+Random generator = new Random()
 
 String threadName = "vp-qn ${generator.nextInt()}"
 
@@ -37,7 +47,16 @@ WebUI.check(findTestObject('Channel Message/Create thread from message item/inpu
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create thread from message item/texarea_send message'), 
     'helo ae qn', Keys.chord(Keys.ENTER))
 
-WebElement threadsOfGeneral = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/div_threads_ general'))
+WebElement threadsOfGeneral
+
+if (GlobalVariable.isThread) {
+    String threadContainerXpath = "//*[@id='${GlobalVariable.channelID}']/following-sibling::div[1]"
+	
+	TestObject threadContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(threadContainerXpath)
+	threadsOfGeneral = WebUI.findWebElement(threadContainerObj)
+} else {
+	threadsOfGeneral = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/div_threads_ general'))
+}
 
 List<WebElement> threads = threadsOfGeneral.findElements(By.tagName('div'))
 
@@ -52,8 +71,9 @@ for (WebElement thread : threads) {
         newThread = thread
     }
 }
-if (!newThread) {
-	KeywordUtil.markFailedAndStop("Thread doesn't exist!")
+
+if (!(newThread)) {
+    KeywordUtil.markFailedAndStop('Thread doesn\'t exist!')
 }
 
 newThread.click()
@@ -63,8 +83,7 @@ WebElement threadBreadCrumb = WebUI.findWebElement(findTestObject('Channel Messa
 String threadBreadCrumbText = threadBreadCrumb.getText()
 
 if (threadBreadCrumbText != threadName) {
-	KeywordUtil.markFailed("Failed")
+    KeywordUtil.markFailed('Failed')
+
 }
-
-
 

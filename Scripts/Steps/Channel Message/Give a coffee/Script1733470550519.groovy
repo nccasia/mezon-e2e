@@ -27,33 +27,33 @@ WebUI.click(findTestObject('Channel Message/Give a coffee/div_Clan T'))
 WebUI.click(findTestObject('Channel Message/Give a coffee/div_Clan T_ test give a coffee channel'))
 
 try {
-	WebUI.verifyElementPresent(findTestObject('Channel Message/Give a coffee/div_react give a coffee'), 0)
-	
-	TestObject reactGiveACoffeeObj = findTestObject('Channel Message/Give a coffee/div_react give a coffee')
-	
-	Number reactGiveACoffeeQuantity = Integer.valueOf(WebUI.findWebElement(reactGiveACoffeeObj).getText())
-		
-	WebUI.rightClick(findTestObject('Channel Message/Give a coffee/div_message'))
-		
-	WebUI.click(findTestObject('Channel Message/Give a coffee/div_give a coffee'))
-		
-	Number reactGiveACoffeeQuantityCurrent = Integer.valueOf(WebUI.findWebElement(reactGiveACoffeeObj).getText())
-		
-	if (reactGiveACoffeeQuantityCurrent - reactGiveACoffeeQuantity <= 0) {
-		KeywordUtil.markFailedAndStop("Failed")
-	}
-} catch (error) {
-	WebUI.rightClick(findTestObject('Channel Message/Give a coffee/div_message'))
-	
-	WebUI.click(findTestObject('Channel Message/Give a coffee/div_give a coffee'))
-	
-	TestObject reactGiveACoffeeObj = findTestObject('Channel Message/Give a coffee/div_react give a coffee')
-	
-	Number reactGiveACoffeeQuantity = Integer.valueOf(WebUI.findWebElement(reactGiveACoffeeObj).getText())
-	
-	if ( reactGiveACoffeeQuantity != 1) {
-		KeywordUtil.markFailedAndStop("Failed")
-	}
-}
+    WebUI.verifyElementPresent(findTestObject('Channel Message/Give a coffee/div_react give a coffee'), 0)
 
+    TestObject reactGiveACoffeeObj = findTestObject('Channel Message/Give a coffee/div_react give a coffee')
+
+    Number reactGiveACoffeeQuantity = Integer.valueOf(WebUI.findWebElement(reactGiveACoffeeObj).getText())
+
+    WebUI.rightClick(findTestObject('Channel Message/Give a coffee/div_message'))
+
+    WebUI.click(findTestObject('Channel Message/Give a coffee/div_give a coffee'))
+
+    Number reactGiveACoffeeQuantityCurrent = Integer.valueOf(WebUI.findWebElement(reactGiveACoffeeObj).getText())
+
+    if ((reactGiveACoffeeQuantityCurrent - reactGiveACoffeeQuantity) <= 0) {
+        KeywordUtil.markFailedAndStop('Failed')
+    }
+}
+catch (def error) {
+    WebUI.rightClick(findTestObject('Channel Message/Give a coffee/div_message'))
+
+    WebUI.click(findTestObject('Channel Message/Give a coffee/div_give a coffee'))
+
+    TestObject reactGiveACoffeeObj = findTestObject('Channel Message/Give a coffee/div_react give a coffee')
+
+    Number reactGiveACoffeeQuantity = Integer.valueOf(WebUI.findWebElement(reactGiveACoffeeObj).getText())
+
+    if (reactGiveACoffeeQuantity != 1) {
+        KeywordUtil.markFailedAndStop('Failed')
+    }
+} 
 

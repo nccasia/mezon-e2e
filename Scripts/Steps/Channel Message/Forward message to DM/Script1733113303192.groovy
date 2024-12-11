@@ -31,8 +31,6 @@ WebUI.click(findTestObject('Channel Message/Forward message to DM/button_more'))
 
 WebUI.click(findTestObject('Channel Message/Forward message to DM/button_forward'))
 
-WebUI.waitForElementVisible(findTestObject('Channel Message/Forward message to DM/div_forward_container'), 5)
-
 TestObject forwardContainerObj = findTestObject('Channel Message/Forward message to DM/div_forward_container')
 
 List<WebElement> forwardList = WebUI.findWebElement(forwardContainerObj).findElements(By.tagName('div'))
@@ -40,16 +38,16 @@ List<WebElement> forwardList = WebUI.findWebElement(forwardContainerObj).findEle
 for (int i = 1; i <= forwardList.size(); i++) {
     WebElement forward = forwardList.get(i)
 
-    String spanUsernameXpath = "/html/body/div[3]/div/div/div/div/div[2]/div/div[$i]/div/div/span"
+    String spanUsernameXpath = "/html/body/div[@data-floating-ui-portal]/div/div/div/div/div[2]/div/div[$i]/div/div/span"
 
-    TestObject spanUsernameObj = getTestObjectWithXpath(spanUsernameXpath)
+    TestObject spanUsernameObj =  CustomKeywords.'mezon.GetTestObject.withXpath'(spanUsernameXpath)
 
     String spanUsernameValue = WebUI.findWebElement(spanUsernameObj).getText()
 
     if (spanUsernameValue !== '') {
-        String checkBoxXpath = "/html/body/div[3]/div/div/div/div/div[2]/div/div[$i]/input"
+        String checkBoxXpath = "/html/body/div[@data-floating-ui-portal]/div/div/div/div/div[2]/div/div[$i]/input"
 
-        TestObject checkBoxObj = getTestObjectWithXpath(checkBoxXpath)
+        TestObject checkBoxObj = CustomKeywords.'mezon.GetTestObject.withXpath'(checkBoxXpath)
 
         WebUI.check(checkBoxObj)
 
@@ -59,9 +57,8 @@ for (int i = 1; i <= forwardList.size(); i++) {
 
 WebUI.click(findTestObject('Channel Message/Forward message to DM/button_send_forward_message'))
 
-WebUI.waitForElementPresent(findTestObject('Channel Message/Forward message to DM/div_toast_success'), 5)
+WebDriver driver = DriverFactory.getWebDriver()
 
-static TestObject getTestObjectWithXpath(String xpath) {
-    return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
-}
+WebElement toastSuccess = driver.findElement(By.cssSelector('.Toastify__toast--success'))
+
 

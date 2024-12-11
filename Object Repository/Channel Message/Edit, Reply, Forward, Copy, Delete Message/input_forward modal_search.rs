@@ -6,12 +6,11 @@
    <elementGuidId>fdefe42e-77c3-49ab-9ba5-bbde22edb649</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>/html/body/div[3]/div/div/div/div/div[2]/input</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>/html/body/div[@data-floating-ui-portal]/div/div/div/div/div[2]/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

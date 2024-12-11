@@ -14,15 +14,15 @@
    <testCaseLink>
       <guid>df347de4-4042-4694-a99c-1844cb34d01d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Steps/Channel Message/Create thread from message item</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>4f1e8259-aa2f-4ea5-a1a7-871d32f38fb1</guid>
+      <guid>75b8e615-809f-4fa7-a2d4-90fe7bb84e16</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Steps/Channel Message/Delete Message</testCaseId>
+      <testCaseId>Test Cases/Steps/Channel Message/Give a coffee</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -47,10 +47,10 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>75b8e615-809f-4fa7-a2d4-90fe7bb84e16</guid>
+      <guid>4f1e8259-aa2f-4ea5-a1a7-871d32f38fb1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Steps/Channel Message/Give a coffee</testCaseId>
+      <testCaseId>Test Cases/Steps/Channel Message/Delete Message</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
