@@ -35,11 +35,13 @@ WebUI.verifyElementPresent(findTestObject('Channel Message/Send emoji, sticker, 
 
 TestObject img_emoji_object = findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1')
 
-WebElement emoji1 = WebUI.findWebElement(img_emoji_object)
+WebElement emoji1Button = WebUI.findWebElement(img_emoji_object)
 
-String srcImg_emoji = emoji1.getAttribute('src')
+WebElement emojiImg = emoji1Button.findElement(By.tagName('img'))
 
-WebUI.click(img_emoji_object)
+String srcImg_emoji = emojiImg.getAttribute('src')
+
+emoji1Button.click()
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
 

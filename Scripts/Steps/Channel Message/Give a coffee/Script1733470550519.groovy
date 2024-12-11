@@ -40,7 +40,7 @@ try {
     Number reactGiveACoffeeQuantityCurrent = Integer.valueOf(WebUI.findWebElement(reactGiveACoffeeObj).getText())
 
     if ((reactGiveACoffeeQuantityCurrent - reactGiveACoffeeQuantity) <= 0) {
-        KeywordUtil.markFailedAndStop('Failed')
+        KeywordUtil.markFailedAndStop('No increase')
     }
 }
 catch (def error) {
@@ -53,7 +53,7 @@ catch (def error) {
     Number reactGiveACoffeeQuantity = Integer.valueOf(WebUI.findWebElement(reactGiveACoffeeObj).getText())
 
     if (reactGiveACoffeeQuantity != 1) {
-        KeywordUtil.markFailedAndStop('Failed')
+        KeywordUtil.markFailedAndStop('error increased')
     }
 } 
 

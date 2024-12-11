@@ -30,11 +30,19 @@ if (GlobalVariable.isThread) {
     WebElement buttonThreadElement = WebUI.findWebElement(buttonThreadObj)
 
     buttonThreadElement.click()
+
+    String buttonCreateThreadXpath = '//*[@id=\'main-layout\']/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/div[1]/div[3]/button[1]'
+
+    TestObject buttonCreateThreadObj = CustomKeywords.'mezon.GetTestObject.withXpath'(buttonCreateThreadXpath)
+	
+	WebElement buttonCreateThreadElement = WebUI.findWebElement(buttonCreateThreadObj)
+	
+	buttonCreateThreadElement.click()
 } else {
     WebUI.click(findTestObject('Channel Message/Create thread from message item/div_button thread'))
-}
 
-WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread'))
+    WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread'))
+}
 
 Random generator = new Random()
 
@@ -50,12 +58,13 @@ CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create 
 WebElement threadsOfGeneral
 
 if (GlobalVariable.isThread) {
-    String threadContainerXpath = "//*[@id='${GlobalVariable.channelID}']/following-sibling::div[1]"
-	
-	TestObject threadContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(threadContainerXpath)
-	threadsOfGeneral = WebUI.findWebElement(threadContainerObj)
+    String threadContainerXpath = "//*[@id='$GlobalVariable.channelID']/following-sibling::div[1]"
+
+    TestObject threadContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(threadContainerXpath)
+
+    threadsOfGeneral = WebUI.findWebElement(threadContainerObj)
 } else {
-	threadsOfGeneral = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/div_threads_ general'))
+    threadsOfGeneral = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/div_threads_ general'))
 }
 
 List<WebElement> threads = threadsOfGeneral.findElements(By.tagName('div'))
@@ -65,7 +74,7 @@ WebElement newThread
 for (WebElement thread : threads) {
     WebElement aTag = thread.findElement(By.tagName('a'))
 
-    String value = aTag.getText()
+    String value = aTag.getText().trim()
 
     if (value == threadName) {
         newThread = thread
@@ -84,6 +93,5 @@ String threadBreadCrumbText = threadBreadCrumb.getText()
 
 if (threadBreadCrumbText != threadName) {
     KeywordUtil.markFailed('Failed')
-
 }
 
