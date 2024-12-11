@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_create thread</name>
+   <name>textarea_Clan T_general</name>
    <tag></tag>
-   <elementGuidId>b76c66d5-cb30-4be5-ba6e-1501275bdb00</elementGuidId>
+   <elementGuidId>8a814ec4-2709-4686-8366-7fbef6023036</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>/html/body/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div/div/div/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div/textarea</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[3]/div/div/div[1]/div[3]/button[1]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

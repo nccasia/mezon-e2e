@@ -19,11 +19,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
-import com.kms.katalon.core.testobject.ConditionType as ConditionType
+import org.openqa.selenium.WebElement as WebElement
 
-public class GetTestObject {
+public class SendingMessage {
+
 	@Keyword
-	def withXpath(String xpath) {
-		return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
+	def isSendingMessage () {
+		WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Page_Mezon/div_sent message'))
+
+		String classNameSentMessageElement = sentMessageElement.getAttribute('class')
+
+		if(classNameSentMessageElement.contains('is-sending')) {
+			for (int i = 0; i < 15; i++) {
+				WebUI.delay(1)
+				classNameSentMessageElement = sentMessageElement.getAttribute('class')
+				if (!classNameSentMessageElement.contains('is-sending')) {
+					return false
+				}
+			}
+			return true
+		} else {
+			return false
+		}
 	}
 }

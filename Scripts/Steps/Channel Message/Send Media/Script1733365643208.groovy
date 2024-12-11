@@ -17,19 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String fileMediaPath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\Test case - reaction message.mp4'
+
 String fileImgPath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\logo NCC.png'
 
-println RunConfiguration.getProjectDir()
 List splitFilePath = fileMediaPath.split('\\\\')
 
 WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), fileMediaPath)
 
 WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
+
+if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+	KeywordUtil.markFailed('Media sending failed')
+}
 
 TestObject videoObj = findTestObject('Channel Message/Send Media/video_latest message')
 
@@ -42,3 +47,8 @@ WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_genera
 TestObject imgObj = findTestObject('Channel Message/Send Media/img_latest message')
 
 WebElement imgElement = WebUI.findWebElement(imgObj)
+
+if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+	KeywordUtil.markFailed('Image sending failed')
+}
+

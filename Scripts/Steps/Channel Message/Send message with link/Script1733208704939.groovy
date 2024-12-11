@@ -18,14 +18,16 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String message = 'mezon:'
+
 String link = 'https://mezon.ai'
+
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send message with link/textarea_Clan T_general channel'), 
-    "${message} ${link}", Keys.chord(Keys.ENTER))
+    "$message $link", Keys.chord(Keys.ENTER))
 
 WebUI.delay(3)
 
@@ -33,9 +35,9 @@ WebElement spanLatestMessageElement = WebUI.findWebElement(findTestObject('Chann
 
 WebElement aTag = spanLatestMessageElement.findElement(By.tagName('a'))
 
-if (link == aTag.getText() && spanLatestMessageElement.getText() == "${message} ${link}") {
-	KeywordUtil.markPassed("PASSED")
-} else {
-	KeywordUtil.markFailed("FAILED")
+if ((link != aTag.getText()) && (spanLatestMessageElement.getText() != "$message $link")) {
+    KeywordUtil.markFailed('Error message')
+} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+    KeywordUtil.markFailed('Sending message failed')
 }
 

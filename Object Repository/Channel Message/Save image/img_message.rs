@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_thread_box</name>
+   <name>img_message</name>
    <tag></tag>
-   <elementGuidId>1038336e-ff9d-4cbc-93af-5d00389aa1cf</elementGuidId>
+   <elementGuidId>b08c2a34-8409-4fae-9d2f-91659c93ae5c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div[2]/img</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

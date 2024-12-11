@@ -16,31 +16,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.By as By
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import java.nio.file.Files as Files
+import java.nio.file.Paths as Paths
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
-        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
+String imagePath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Image\\logo NCC.png'
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_gif'))
+String home = System.getProperty('user.home')
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Trending GIF'))
+String userDownloads = new File(home + '/Downloads/')
 
-TestObject gifObj = findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_trending gif_1')
+WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), imagePath)
 
-String gifHref = WebUI.findWebElement(gifObj, 0).findElement(By.tagName('img')).getAttribute('src')
+WebUI.sendKeys(findTestObject('Channel Message/Send message with link/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
 
-WebUI.click(gifObj)
+WebUI.rightClick(findTestObject('Channel Message/Save image/img_message'))
 
-String messageContainerXpath = '//*[@id=\'scrollLoading\']'
+WebUI.click(findTestObject('Channel Message/Save image/div_save image'))
 
-messageContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(messageContainerXpath)
-
-CustomKeywords.'mezon.VerifyHrefImgExists.verifyHrefImgExists'(messageContainerObj, gifHref)
-
-if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-	KeywordUtil.markFailed('Message sending failed')
-}
+CustomKeywords.'mezon.VerifySaveImage.verifySaveImage'(userDownloads, 'image')
 

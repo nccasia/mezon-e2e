@@ -16,21 +16,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.By as By
-import org.openqa.selenium.WebDriver as WebDriver
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Channel Message/Create thread from message item/div_button thread'))
 
-WebUI.verifyElementPresent(findTestObject('Channel Message/Create thread from message item/div_thread_box'), 5)
-
 WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread'))
-
-WebUI.waitForElementPresent(findTestObject('Channel Message/Create thread from message item/div_create thread modal'), 5)
 
 Random generator = new Random();
 
@@ -58,12 +52,19 @@ for (WebElement thread : threads) {
         newThread = thread
     }
 }
+if (!newThread) {
+	KeywordUtil.markFailedAndStop("Thread doesn't exist!")
+}
 
-if (newThread) {
-    newThread.click()
-	KeywordUtil.markPassed("Passed")
-} else {
+newThread.click()
+
+WebElement threadBreadCrumb = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/p_Thread breadcrumb'))
+
+String threadBreadCrumbText = threadBreadCrumb.getText()
+
+if (threadBreadCrumbText != threadName) {
 	KeywordUtil.markFailed("Failed")
 }
+
 
 

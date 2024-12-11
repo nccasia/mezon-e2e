@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_create thread modal</name>
+   <name>div_save image</name>
    <tag></tag>
-   <elementGuidId>a89d861d-f30f-4b9f-83ef-a24bfaace030</elementGuidId>
+   <elementGuidId>2ec09b9e-863b-458f-9c8c-8c1675c06a10</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;main-layout&quot;]/div/div[4]</value>
+         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[1]/div[2]/div[@class='contexify_item'][17]</value>
       </entry>
       <entry>
          <key>BASIC</key>
