@@ -16,9 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import org.openqa.selenium.By as By
-import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
@@ -35,15 +34,16 @@ WebUI.click(emojiObj)
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
 
-WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 5)
+WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 
+    5)
 
 String messageContainerXpath = '//*[@id=\'scrollLoading\']'
 
-messageContainerObj = getTestObjectWithXpath(messageContainerXpath)
+messageContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(messageContainerXpath)
 
 CustomKeywords.'mezon.VerifyHrefImgExists.verifyHrefImgExists'(messageContainerObj, emojiHref)
 
-static TestObject getTestObjectWithXpath(String xpath) {
-    return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
+if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+    KeywordUtil.markFailed('Message sending failed')
 }
 

@@ -34,5 +34,7 @@ String colorText = spanMessageBuzz.getCssValue('color')
 
 if ((!(isBuzzVisible) || (messageBuzz != 'Buzz!!')) || (colorText != 'rgba(239, 68, 68, 1)')) {
     KeywordUtil.markFailedAndStop('Failed!')
+} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+	KeywordUtil.markFailedAndStop('Buzz message sending failed')
 }
 

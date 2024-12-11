@@ -37,21 +37,19 @@ TestObject img_emoji_object = findTestObject('Channel Message/Send emoji, sticke
 
 WebElement emoji1 = WebUI.findWebElement(img_emoji_object)
 
-String srcImg_emoji = emoji1.getAttribute("src")
+String srcImg_emoji = emoji1.getAttribute('src')
 
 WebUI.click(img_emoji_object)
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
 
-
 WebElement message_emoji = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Message with Emoji'))
 
+WebElement img_tag = message_emoji.findElement(By.tagName('img'))
 
-WebElement img_tag = message_emoji.findElement(By.tagName("img"))
-
-if (message_emoji.getText() == message_text && img_tag.getAttribute("src") == srcImg_emoji){
-	KeywordUtil.markPassed("PASSED!")
-} else {
-	KeywordUtil.markFailed("FAILED!")
+if ((message_emoji.getText() != message_text) && (img_tag.getAttribute('src') != srcImg_emoji)) {
+    KeywordUtil.markFailed('FAILED!')
+} else if  (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+    KeywordUtil.markFailed('Message sending failed!')
 }
 

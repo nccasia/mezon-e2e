@@ -16,16 +16,26 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
         , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
 
+String message = 'mezon day'
+
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
-    'he lo mn', Keys.chord(Keys.ENTER))
+    message, Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementVisible(findTestObject('Channel Message/Select channel and send message/span_sent message'), 5)
+WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Page_Mezon/div_sent message'))
 
-WebUI.verifyTextPresent('he lo mn', true)
+String sentMessage = sentMessageElement.getAttribute('innerText')
+
+if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+	KeywordUtil.markFailedAndStop("Message sending failed")
+} else if (sentMessage != message) {
+	KeywordUtil.markFailedAndStop("Error message")
+}
 

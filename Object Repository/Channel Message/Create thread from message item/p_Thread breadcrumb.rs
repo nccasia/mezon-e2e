@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_thread_box</name>
+   <name>p_Thread breadcrumb</name>
    <tag></tag>
-   <elementGuidId>1038336e-ff9d-4cbc-93af-5d00389aa1cf</elementGuidId>
+   <elementGuidId>f93bceb3-d3fd-415a-9cb3-2fa1170fe49b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[1]/div/div[2]/p</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
