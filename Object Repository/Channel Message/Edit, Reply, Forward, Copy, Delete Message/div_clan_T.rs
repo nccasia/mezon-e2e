@@ -6,11 +6,11 @@
    <elementGuidId>c06d6309-0b44-451e-a597-7a843d5b06c3</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;menu&quot;]/div/div[3]/div[2]</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;menu&quot;]/div/div[3]/div[2]/div/a/div/div[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,7 +28,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>343758d2-00bf-43a9-99f1-e23660e12371</webElementGuid>
+      <webElementGuid>0a72c4a0-1e72-4301-8f1f-c77b0a8bd667</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -36,7 +36,7 @@
       <name>class</name>
       <type>Main</type>
       <value>w-[48px] h-[48px] dark:bg-bgTertiary bg-bgLightMode rounded-full flex justify-center items-center dark:text-contentSecondary text-textLightTheme text-[20px] clan</value>
-      <webElementGuid>e40451ef-caa1-44d3-bc4c-6901e065b725</webElementGuid>
+      <webElementGuid>8d364536-d77f-47a7-87e6-29e00fd9952a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -44,7 +44,7 @@
       <name>text</name>
       <type>Main</type>
       <value>T</value>
-      <webElementGuid>c1a9b24b-1003-4334-8c8b-813b1dff2a64</webElementGuid>
+      <webElementGuid>48084c14-6ae6-4ab0-8d6e-0f7615386ad6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -52,7 +52,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;menu&quot;)/div[@class=&quot;top-0 left-0 right-0 flex flex-col items-center py-4 px-3 overflow-y-auto hide-scrollbar h-screen&quot;]/div[@class=&quot;flex flex-col gap-3&quot;]/div[@class=&quot;w-fit&quot;]/div[@class=&quot;relative&quot;]/a[1]/div[@class=&quot;group block relative rounded-3xl&quot;]/div[@class=&quot;group-active:translate-y-px&quot;]/div[@class=&quot;text-gray-100 group-hover:bg-brand group-hover:text-white group-hover:rounded-xl rounded-3xl dark:group-hover:bg-bgTertiary group-hover:bg-bgLightModeButton flex items-center justify-center w-12 h-12 transition-all duration-200 overflow-hidden&quot;]/div[@class=&quot;w-[48px] h-[48px] dark:bg-bgTertiary bg-bgLightMode rounded-full flex justify-center items-center dark:text-contentSecondary text-textLightTheme text-[20px] clan&quot;]</value>
-      <webElementGuid>ca38914c-f410-45f3-b289-4feec091d6ae</webElementGuid>
+      <webElementGuid>7506a9ca-e4b5-4d31-8e00-355cffd710b2</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -60,7 +60,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='menu']/div/div[3]/div[3]/div/a/div/div[2]/div/div</value>
-      <webElementGuid>e29b8c80-a5a3-4f5a-b5ba-9edc626cecc0</webElementGuid>
+      <webElementGuid>f44b1a8f-0cad-45d3-ba2e-fc06e7b25277</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -68,7 +68,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Loading ...'])[1]/following::div[41]</value>
-      <webElementGuid>653aeb07-a4b4-4eda-b6da-db09897901da</webElementGuid>
+      <webElementGuid>ff5b9e19-9e6f-4bf0-a02e-53e168090d74</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -76,7 +76,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='T']/parent::*</value>
-      <webElementGuid>bd3dbefe-b2e2-4747-a50e-2fa7b4b636f8</webElementGuid>
+      <webElementGuid>49a6afad-9be7-4d0e-ae96-b7e0240e915d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -84,7 +84,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/div/a/div/div[2]/div/div</value>
-      <webElementGuid>db67b9f9-a0e1-4cab-bc91-8818788e5ebe</webElementGuid>
+      <webElementGuid>96d1a5f1-1233-47eb-8b8c-8aede16ad5d0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -92,6 +92,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = 'T' or . = 'T')]</value>
-      <webElementGuid>c93b36bf-bc9c-4e94-a383-9f6a163775ad</webElementGuid>
+      <webElementGuid>5a1053fc-3341-4dd8-99c0-42b2dcaf918d</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
