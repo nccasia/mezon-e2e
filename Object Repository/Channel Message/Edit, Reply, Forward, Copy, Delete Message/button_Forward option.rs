@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='mainChat']/div/div/div/div[2]/div[13]/div/div</value>
+         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[1]/div[2]/div[14]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>dd104736-c33b-4623-a57a-9cfa3c256ffe</webElementGuid>
+      <webElementGuid>ec0d9c8a-274c-40ac-8e93-c9fd57e39bbb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value> dark:text-[#ADB3B9] text-[#4E5058] hover:text-[#FFFFFF] dark:hover:text-[#FFFFFF]  p-1</value>
-      <webElementGuid>d2b57b33-fe6f-4f84-89fd-4b39ffbbd872</webElementGuid>
+      <webElementGuid>946daf40-f4b4-42b8-a0bd-88ba26a05e8f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +38,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Forward Message </value>
-      <webElementGuid>34b7c0c7-13be-4110-af6e-7946765945da</webElementGuid>
+      <webElementGuid>3f5a8fc3-2e0a-453a-9bc5-61cc664aadbb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +46,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;mainChat&quot;)/div[@class=&quot;flex flex-row h-heightWithoutTopBar&quot;]/div[@class=&quot;flex flex-col flex-1 min-w-60 w-widthThumnailAttachment h-full false z-10&quot;]/div[@class=&quot;relative dark:bg-bgPrimary max-w-widthMessageViewChat bg-bgLightPrimary h-heightMessageViewChat&quot;]/div[@class=&quot;contexify z-50 contexify_willEnter-fade&quot;]/div[@class=&quot;contexify_item&quot;]/div[@class=&quot;contexify_itemContent&quot;]/div[@class=&quot;dark:text-[#ADB3B9] text-[#4E5058] hover:text-[#FFFFFF] dark:hover:text-[#FFFFFF]  p-1&quot;]</value>
-      <webElementGuid>166cc826-ea89-4091-825d-853f0664d539</webElementGuid>
+      <webElementGuid>260e4d91-8ed6-42b9-ad1b-81895ffbdae8</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +54,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='mainChat']/div/div/div/div[2]/div[13]/div/div</value>
-      <webElementGuid>f367533d-25b5-4615-8cb5-025031fe89b0</webElementGuid>
+      <webElementGuid>0d80f98d-467e-4100-8195-efd1b33e5dba</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Copy Message Link'])[1]/following::div[3]</value>
-      <webElementGuid>5d8a5380-7033-49b5-b1b4-586209b59eed</webElementGuid>
+      <webElementGuid>8aedceb9-282b-4c8c-95b9-9a85d567b062</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Mark Unread'])[1]/following::div[6]</value>
-      <webElementGuid>07d10467-9eb0-40fc-92fc-e499869136ce</webElementGuid>
+      <webElementGuid>f52b1ba2-146f-48cd-bc92-f1a613812480</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Speak Message'])[1]/preceding::div[1]</value>
-      <webElementGuid>17a9e344-ad37-4cda-b8cb-37cc26188fde</webElementGuid>
+      <webElementGuid>b0fc20e2-e606-4c81-9638-53a9a7adfaed</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div[13]/div/div</value>
-      <webElementGuid>53b136aa-4938-4d8e-abf3-439f97125019</webElementGuid>
+      <webElementGuid>e2918717-0121-454e-a72a-12ae56b1ca12</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +94,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = 'Forward Message ' or . = 'Forward Message ')]</value>
-      <webElementGuid>1395945f-3964-4961-92ae-16031b277734</webElementGuid>
+      <webElementGuid>422d5d62-6e82-4af4-9c97-5c8cf3e29235</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

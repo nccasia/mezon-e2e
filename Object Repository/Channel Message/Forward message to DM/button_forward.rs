@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[1]/div[2]/div[13]</value>
+         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[1]/div[2]/div[@class='contexify_item'][12]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

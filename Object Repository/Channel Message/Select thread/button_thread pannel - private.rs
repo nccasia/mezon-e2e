@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_toast_success</name>
+   <name>button_thread pannel - private</name>
    <tag></tag>
-   <elementGuidId>a74dba85-3c32-410d-8bf3-595e87e4f219</elementGuidId>
+   <elementGuidId>4ef5fbe1-5fe0-4752-a42b-1b490db2d9a3</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/div[2]/div[2]/div[1]/div/div[@class='Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify__toast--close-on-click']</value>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[4]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
