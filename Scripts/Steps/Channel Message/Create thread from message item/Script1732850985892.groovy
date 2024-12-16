@@ -22,25 +22,13 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
+
 if (GlobalVariable.isThread) {
-    String buttonThreadXpath = '//*[@id=\'main-layout\']/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[2]'
-
-    TestObject buttonThreadObj = CustomKeywords.'mezon.GetTestObject.withXpath'(buttonThreadXpath)
-
-    WebElement buttonThreadElement = WebUI.findWebElement(buttonThreadObj)
-
-    buttonThreadElement.click()
-
-    String buttonCreateThreadXpath = '//*[@id=\'main-layout\']/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[2]/div/div/div[1]/div[3]/button[1]'
-
-    TestObject buttonCreateThreadObj = CustomKeywords.'mezon.GetTestObject.withXpath'(buttonCreateThreadXpath)
+	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread panel - private'))
+	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_ create thread - private'))
 	
-	WebElement buttonCreateThreadElement = WebUI.findWebElement(buttonCreateThreadObj)
-	
-	buttonCreateThreadElement.click()
 } else {
     WebUI.click(findTestObject('Channel Message/Create thread from message item/div_button thread'))
-
     WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread'))
 }
 
@@ -67,25 +55,13 @@ if (GlobalVariable.isThread) {
     threadsOfGeneral = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/div_threads_ general'))
 }
 
-List<WebElement> threads = threadsOfGeneral.findElements(By.tagName('div'))
+WebElement newThread = checkNewThreadPresent(threadsOfGeneral, threadName, 3, 1)
 
-WebElement newThread
-
-for (WebElement thread : threads) {
-    WebElement aTag = thread.findElement(By.tagName('a'))
-
-    String value = aTag.getText().trim()
-
-    if (value == threadName) {
-        newThread = thread
-    }
+if (newThread) {
+	newThread.click()
+} else {
+	KeywordUtil.markFailedAndStop('New thread not present!')
 }
-
-if (!(newThread)) {
-    KeywordUtil.markFailedAndStop('Thread doesn\'t exist!')
-}
-
-newThread.click()
 
 WebElement threadBreadCrumb = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/p_Thread breadcrumb'))
 
@@ -93,5 +69,28 @@ String threadBreadCrumbText = threadBreadCrumb.getText()
 
 if (threadBreadCrumbText != threadName) {
     KeywordUtil.markFailed('Failed')
+}
+
+def checkNewThreadPresent(WebElement threadsContainer, String threadName, int timeout, int interval) {
+	int waited = 0;
+	WebElement newThread
+	while (waited < timeout) {
+		List<WebElement> threads = threadsContainer.findElements(By.tagName('div'))
+		for (WebElement thread : threads) {
+			String value = thread.getAttribute("innerText")
+			println value
+			println threadName
+			if (value == threadName) {
+				return thread
+			}
+		}
+		try {
+			Thread.sleep(interval * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		waited += interval;
+	}
+	return newThread;
 }
 

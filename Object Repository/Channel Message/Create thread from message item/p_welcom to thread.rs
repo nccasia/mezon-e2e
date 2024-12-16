@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_hashtag_message</name>
+   <name>p_welcom to thread</name>
    <tag></tag>
-   <elementGuidId>ebe1a9eb-554d-4b92-b4a6-0fcaabd0de03</elementGuidId>
+   <elementGuidId>cb1168ee-36f1-48e7-816c-3c5a995d3d91</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/div</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[1]/div/div/div[2]/p</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

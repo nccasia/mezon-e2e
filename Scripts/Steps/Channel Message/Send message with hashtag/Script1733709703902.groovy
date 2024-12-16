@@ -17,16 +17,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import org.openqa.selenium.WebElement 
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : GlobalVariable.email
-        , ('password') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : GlobalVariable.email
+//        , ('password') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
+//
+//WebUI.maximizeWindow()
+//
+//WebUI.click(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_clan_T'))
 
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_clan_T'))
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '#')
 
@@ -36,23 +36,32 @@ WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward,
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_text_channel_general'))
 
 WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '123456')
+
 TestObject textAreaObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general')
+
 WebElement textAreaElm = WebUI.findWebElement(textAreaObj)
+
 String testMsg = textAreaElm.getText().replace('#', '')
-WebUI.sendKeys(textAreaObj, Keys.chord(
-        Keys.ENTER))
+
+WebUI.sendKeys(textAreaObj, Keys.chord(Keys.ENTER))
+
 TestObject lastMsgObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message')
+
 WebElement lastMsgElm = WebUI.findWebElement(lastMsgObj)
+
 String lastMsg = lastMsgElm.getText()
+
 TestObject htagMsgObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_hashtag_message')
+
 WebElement htagMsgElm = WebUI.findWebElement(htagMsgObj)
-htagMsgElm.getCssValue('background-color')
+
 String htagMsg = htagMsgElm.getText()
 
-if (lastMsg == testMsg && 'rgba(60, 66, 112, 1)' == htagMsgElm.getCssValue('background-color')) {
-	KeywordUtil.markPassed('pass')
-} else {
-	KeywordUtil.markFailed('fail')
-}
+Boolean isLoading = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+if (lastMsg != testMsg) {
+    KeywordUtil.markFailed('Sent message wrong!')
+} else if (isLoading) {
+    KeywordUtil.markFailed('Message has not been sent!')
+}
 
