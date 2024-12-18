@@ -21,7 +21,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.CONTROL, 'b'))
+WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.CONTROL, 'g'))
 
 String BuzzXpath = ''
 

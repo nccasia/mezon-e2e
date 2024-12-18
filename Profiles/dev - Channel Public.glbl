@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>dev - Thread Public</name>
+   <name>dev - Channel Public</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
@@ -26,27 +26,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>findTestObject('Channel Message/Select channel and send message/div_vp qn')</initValue>
-      <name>channel</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>true</initValue>
+      <initValue>false</initValue>
       <name>isThread</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>findTestObject('Channel Message/Select thread/button_thread pannel')</initValue>
-      <name>threadPannel</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>false</initValue>
-      <name>isThreadPrivate</name>
+      <initValue>findTestObject('Channel Message/Select channel and send message/Channel Public')</initValue>
+      <name>channel</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
       <name>channelID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>isChannelPrivate</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
