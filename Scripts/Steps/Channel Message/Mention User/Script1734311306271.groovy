@@ -20,12 +20,7 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : GlobalVariable.email
-        , ('password') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_clan_T'))
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '@')
 
@@ -57,12 +52,6 @@ mentionUserElm.getCssValue('background-color')
 
 String mentionUserMsg = mentionUserElm.getText()
 
-println(mentionUserElm.getCssValue('background-color'))
-
-println(lastMsg)
-
-println(testMsg)
-
 if ((lastMsg == testMsg) && ('rgba(0, 0, 0, 0)' == mentionUserElm.getCssValue('background-color'))) {
     KeywordUtil.markPassed('pass')
 } else {
@@ -71,5 +60,8 @@ if ((lastMsg == testMsg) && ('rgba(0, 0, 0, 0)' == mentionUserElm.getCssValue('b
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_show_user'))
 
-WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_show_user_profile'))
+Boolean flag = WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_show_user_profile'), 10)
 
+if (!flag) {
+	KeywordUtil.markFailed("User profile isn't present")
+}

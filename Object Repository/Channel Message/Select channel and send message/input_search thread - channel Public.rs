@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_channel</name>
+   <name>input_search thread - channel Public</name>
    <tag></tag>
-   <elementGuidId>f53e050e-52aa-4a38-a6b5-5e5eb1ef85b1</elementGuidId>
+   <elementGuidId>8965f6a0-741a-4ba7-af6a-bad0d5713525</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;channelList&quot;]/div/div/div[1]/div[2]/div/div/div/div/div/div[3]/div/div/div/div[2]/div</value>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[3]/div/div/div[1]/div[2]/div[1]/input</value>
       </entry>
       <entry>
          <key>BASIC</key>
