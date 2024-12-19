@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#editorReactMention</value>
+         <value>#editorReactMentionChannel</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//textarea[@id='editorReactMention']</value>
+         <value>//textarea[@id='editorReactMentionChannel']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>editorReactMention</value>
+      <value>editorReactMentionChannel</value>
       <webElementGuid>e9af9633-fcef-47ae-8a2a-ae980110051a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
@@ -68,7 +68,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;editorReactMention&quot;)</value>
+      <value>id(&quot;editorReactMentionChannel&quot;)</value>
       <webElementGuid>4100e5f4-cc4f-4fa2-9ef9-3d36fd5646a7</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
@@ -76,7 +76,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//textarea[@id='editorReactMention']</value>
+      <value>//textarea[@id='editorReactMentionChannel']</value>
       <webElementGuid>399b163e-1fa2-4b07-87f0-17ace7235706</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
@@ -116,7 +116,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//textarea[@id = 'editorReactMention' and @placeholder = 'Write your thoughts here...' and (text() = 'Hi Nguyen Phuoc Nguyen' or . = 'Hi Nguyen Phuoc Nguyen')]</value>
+      <value>//textarea[@id = 'editorReactMentionChannel' and @placeholder = 'Write your thoughts here...' and (text() = 'Hi Nguyen Phuoc Nguyen' or . = 'Hi Nguyen Phuoc Nguyen')]</value>
       <webElementGuid>31430e4b-bfd9-459e-a14d-d97ed3d47e7b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

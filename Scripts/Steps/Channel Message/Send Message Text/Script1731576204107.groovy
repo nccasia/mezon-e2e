@@ -30,8 +30,14 @@ WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Mes
 
 String sentMessage = sentMessageElement.getAttribute('innerText')
 
-if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
+print(sentMessage);
+print(sentMessage != message);
+
+Boolean isMessageSendFail = CustomKeywords.'mezon.SendingMessage.isSendingMessage'();
+
+if (isMessageSendFail) {
     KeywordUtil.markFailedAndStop('Message sending failed')
 } else if (sentMessage != message) {
     KeywordUtil.markFailedAndStop('Error message')
 }
+
