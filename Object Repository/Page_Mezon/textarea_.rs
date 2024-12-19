@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//textarea[@id='editorReactMention']</value>
+         <value>//textarea[@id='editorReactMentionChannel']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#editorReactMention</value>
+         <value>#editorReactMentionChannel</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>editorReactMention</value>
+      <value>editorReactMentionChannel</value>
       <webElementGuid>40ed21fa-703d-4b1c-be86-039ac374b92a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
@@ -68,7 +68,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;editorReactMention&quot;)</value>
+      <value>id(&quot;editorReactMentionChannel&quot;)</value>
       <webElementGuid>a8f5cdfc-413d-4e91-987a-8cf719f40195</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
@@ -76,7 +76,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//textarea[@id='editorReactMention']</value>
+      <value>//textarea[@id='editorReactMentionChannel']</value>
       <webElementGuid>20069a97-8ea1-43cc-ae22-3668aaf8e43e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
@@ -116,7 +116,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//textarea[@id = 'editorReactMention' and @placeholder = 'Write your thoughts here...' and (text() = '*' or . = '*')]</value>
+      <value>//textarea[@id = 'editorReactMentionChannel' and @placeholder = 'Write your thoughts here...' and (text() = '*' or . = '*')]</value>
       <webElementGuid>d4c2ab67-cf76-43b2-a8cf-a949e6db8dbd</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

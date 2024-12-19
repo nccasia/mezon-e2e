@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>textarea__editorReactMention</name>
+   <name>textarea__editorReactMentionChannel</name>
    <tag></tag>
    <elementGuidId>e504dfef-9733-4a9e-9cb1-317c6b22a825</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//textarea[@id='editorReactMention']</value>
+         <value>//textarea[@id='editorReactMentionChannel']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#editorReactMention</value>
+         <value>#editorReactMentionChannel</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -36,7 +36,7 @@
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>editorReactMention</value>
+      <value>editorReactMentionChannel</value>
       <webElementGuid>8e4a4c9f-451a-4ada-8377-a226551b6ead</webElementGuid>
    </webElementProperties>
    <webElementProperties>
@@ -60,7 +60,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;editorReactMention&quot;)</value>
+      <value>id(&quot;editorReactMentionChannel&quot;)</value>
       <webElementGuid>85836418-3a5c-4f30-bdf6-37cd4a3f8218</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
@@ -68,7 +68,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//textarea[@id='editorReactMention']</value>
+      <value>//textarea[@id='editorReactMentionChannel']</value>
       <webElementGuid>05f416bb-a9a7-4bcf-9382-6b7790dca957</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
@@ -92,7 +92,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//textarea[@id = 'editorReactMention' and @placeholder = 'Write your thoughts here...']</value>
+      <value>//textarea[@id = 'editorReactMentionChannel' and @placeholder = 'Write your thoughts here...']</value>
       <webElementGuid>9d27348e-f00e-4fa8-9e46-6b382d663be9</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
