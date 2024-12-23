@@ -15,12 +15,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
-import org.openqa.selenium.By
-import org.openqa.selenium.WebDriver
-import com.kms.katalon.core.util.KeywordUtil
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory
-
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
@@ -38,6 +32,4 @@ WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete M
 WebUI.waitForElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_toast container_ forward message to chanel'), 
     10)
 
-WebDriver driver = DriverFactory.getWebDriver()
-
-WebElement toastSuccess =  driver.findElement(By.cssSelector(".Toastify__toast--success"))
+WebUI.verifyElementPresent(findTestObject('Channel Message/Forward message to DM/Toast success'), 10)

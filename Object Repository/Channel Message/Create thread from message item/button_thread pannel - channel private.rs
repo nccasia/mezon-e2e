@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_button thread</name>
+   <name>button_thread pannel - channel private</name>
    <tag></tag>
-   <elementGuidId>f97e2791-0a2d-495f-9b16-385ddae3cf19</elementGuidId>
+   <elementGuidId>3ac0c5fb-027a-49a4-a1d3-74dd199a8eeb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>

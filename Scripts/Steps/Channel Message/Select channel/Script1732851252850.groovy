@@ -29,16 +29,24 @@ channel.click()
 	
 GlobalVariable.channelID = channel.getAttribute('id')
 
-if(GlobalVariable.isThread) {
-	if (GlobalVariable.isThreadPrivate) {
-		WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel - private'))
+if (GlobalVariable.isChannelPrivate && GlobalVariable.isThread) {
+	
+	WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel - private'))
 
-		WebUI.click(findTestObject('Channel Message/Select thread/div_thread private'))
+	if(GlobalVariable.isThreadPrivate) {
+		WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_ search thread - Channel Private'), 'Private Thread')
 	} else {
-		WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel'))
-
-		WebUI.click(findTestObject('Channel Message/Select thread/div_thread'))
-		
+		WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_ search thread - Channel Private'), 'Public Thread')
 	}
-}
 
+	WebUI.click(findTestObject('Channel Message/Select thread/div_thread private'))
+
+} else if (!GlobalVariable.isChannelPrivate && GlobalVariable.isThread) {
+	WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel'))
+	if(GlobalVariable.isThreadPrivate) {
+		WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_search thread - channel Public'), 'Private Thread')
+	} else {
+		WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_search thread - channel Public'), 'Public Thread')
+	}
+	WebUI.click(findTestObject('Channel Message/Select thread/div_thread'))
+}

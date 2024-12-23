@@ -24,12 +24,18 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], Fa
 
 
 if (GlobalVariable.isThread) {
-	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread panel - private'))
-	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_ create thread - private'))
+	
+	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread pannel - thread'))
+	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread -thread'))
 	
 } else {
-    WebUI.click(findTestObject('Channel Message/Create thread from message item/div_button thread'))
-    WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread'))
+	if(GlobalVariable.isChannelPrivate) {
+		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread pannel - channel private'))
+		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread - channel private'))
+	} else {
+		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread pannel - channel public'))
+		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread - channel public'))
+	}
 }
 
 Random generator = new Random()
@@ -45,15 +51,11 @@ CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create 
 
 WebElement threadsOfGeneral
 
-if (GlobalVariable.isThread) {
-    String threadContainerXpath = "//*[@id='$GlobalVariable.channelID']/following-sibling::div[1]"
+String threadContainerXpath = "//*[@id='$GlobalVariable.channelID']/following-sibling::div[1]"
 
-    TestObject threadContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(threadContainerXpath)
+TestObject threadContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(threadContainerXpath)
 
-    threadsOfGeneral = WebUI.findWebElement(threadContainerObj)
-} else {
-    threadsOfGeneral = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/div_threads_ general'))
-}
+threadsOfGeneral = WebUI.findWebElement(threadContainerObj)
 
 WebElement newThread = checkNewThreadPresent(threadsOfGeneral, threadName, 3, 1)
 
@@ -78,8 +80,6 @@ def checkNewThreadPresent(WebElement threadsContainer, String threadName, int ti
 		List<WebElement> threads = threadsContainer.findElements(By.tagName('div'))
 		for (WebElement thread : threads) {
 			String value = thread.getAttribute("innerText")
-			println value
-			println threadName
 			if (value == threadName) {
 				return thread
 			}
