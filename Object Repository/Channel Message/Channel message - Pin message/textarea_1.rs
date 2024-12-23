@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#editorReactMention</value>
+         <value>#editorReactMentionChannel</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//textarea[@id='editorReactMention']</value>
+         <value>//textarea[@id='editorReactMentionChannel']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -30,7 +30,7 @@
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>editorReactMention</value>
+      <value>editorReactMentionChannel</value>
       <webElementGuid>be8af840-2a49-4d3e-b38c-3339dadc2fbb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
@@ -62,7 +62,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;editorReactMention&quot;)</value>
+      <value>id(&quot;editorReactMentionChannel&quot;)</value>
       <webElementGuid>08fb315f-627b-4ba4-affe-fceb2d87bb79</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
@@ -70,7 +70,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//textarea[@id='editorReactMention']</value>
+      <value>//textarea[@id='editorReactMentionChannel']</value>
       <webElementGuid>40fd31cf-7657-4680-9e42-c4b55db49cd9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
@@ -102,7 +102,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'editorReactMention', '&quot;', ')')])[1]/preceding::textarea[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'editorReactMentionChannel', '&quot;', ')')])[1]/preceding::textarea[1]</value>
       <webElementGuid>f96bd17b-f487-4571-9f51-dc392df8f698</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
@@ -118,7 +118,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//textarea[@id = 'editorReactMention' and @placeholder = 'Write your thoughs here...' and (text() = '1' or . = '1')]</value>
+      <value>//textarea[@id = 'editorReactMentionChannel' and @placeholder = 'Write your thoughs here...' and (text() = '1' or . = '1')]</value>
       <webElementGuid>fc505fd4-ad97-437c-8897-b598a7c75638</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

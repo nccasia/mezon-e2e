@@ -17,8 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+<<<<<<< HEAD
 WebUI.click(findTestObject('Channel Message/Channel message - Pin message/div_'))
 
+=======
+>>>>>>> 088bc0e7f305fd2c6b2fad243e86279b5e104ccf
 WebUI.click(findTestObject('Clan management/Page_Mezon/span_Test Clan'))
 
 WebUI.uploadFile(findTestObject('Object Repository/Channel Message/Upload files'), PathToImage)

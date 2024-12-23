@@ -16,19 +16,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
-        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Channel message - Pin message/Clan_T'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'))
 
-WebUI.click(findTestObject('Channel Message/Channel message - Pin message/p_general'))
+WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 'Hi, Nguyen Phuoc Nguyen - message in thread')
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'))
-
-WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'), 'Hi, Nguyen Phuoc Nguyen - message in thread')
-
-WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea_'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
 
 WebUI.rightClick(findTestObject('Channel Message/Channel message - Pin message/Last-msg'))
 
@@ -36,7 +32,20 @@ WebUI.click(findTestObject('Channel Message/Channel message - Pin message/div_Pi
 
 WebUI.click(findTestObject('Channel Message/Channel message - Pin message/button_Oh yeah. Pin it'))
 
-WebUI.click(findTestObject('Channel Message/Channel message - Pin message/Header - Pin message btn'))
 
-WebUI.waitForAlert(0)
-
+if (GlobalVariable.isChannelPrivate) {
+	
+	TestObject buttonPinMsgObj = CustomKeywords.'mezon.GetTestObject.withXpath'('//*[@id="main-layout"]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[6]')
+	
+	WebElement buttonPinMsgElement = WebUI.findWebElement(buttonPinMsgObj)
+	
+	buttonPinMsgElement.click()
+	
+} 
+else {
+	TestObject buttonPinMsgObj = CustomKeywords.'mezon.GetTestObject.withXpath'('//*[@id="main-layout"]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[5]')
+	 
+	 WebElement buttonPinMsgElement = WebUI.findWebElement(buttonPinMsgObj)
+	 
+	 buttonPinMsgElement.click()
+}

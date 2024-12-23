@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_text_channel_general</name>
+   <tag></tag>
+   <elementGuidId>efe90a15-7f95-4877-a76b-1f4e4a72c2b2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div/div/div/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div[2]/div/div/ul/li[1]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+</WebElementEntity>
