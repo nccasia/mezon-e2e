@@ -24,49 +24,49 @@ WebUI.uploadFile(findTestObject('Object Repository/Channel Message/Upload files'
 'Capturing the file name after upload and storing it in variable'
 FilePath = WebUI.getAttribute(findTestObject('Object Repository/Channel Message/Upload files'), 'value')
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/textarea_1'))
+WebUI.click(findTestObject('Channel Message/Channel message - Pin message/textarea_1'))
 
-WebUI.setText(findTestObject('Channel Message/Page_Mezon/textarea_1'), Message)
+WebUI.setText(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Message)
 
-WebUI.getAttribute(findTestObject('Channel Message/Page_Mezon/textarea_1'), '')
+WebUI.getAttribute(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), '')
 
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Channel Message/Page_Mezon/textarea_1'), Message2)
+WebUI.setText(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Message2)
 
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Keys.chord(Keys.ENTER))
 
 WebUI.uploadFile(findTestObject('Object Repository/Channel Message/Upload files'), PathToFile)
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/textarea_1'))
+WebUI.click(findTestObject('Channel Message/Channel message - Pin message/textarea_1'))
 
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Keys.chord(Keys.ENTER))
 
 WebUI.uploadFile(findTestObject('Object Repository/Channel Message/Upload files'), PathToImage1)
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/textarea_1'))
+WebUI.click(findTestObject('Channel Message/Channel message - Pin message/textarea_1'))
 
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Channel Message/Page_Mezon/textarea_1'), Message)
+WebUI.setText(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Message)
 
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Channel Message/Page_Mezon/textarea_1'), Message2)
+WebUI.setText(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Message2)
 
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Channel Message/Page_Mezon/textarea_1'), Message)
+WebUI.setText(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Message)
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/span_channel'))
+WebUI.click(findTestObject('Channel Message/Channel message - Pin message/span_channel'))
 
-WebUI.setText(findTestObject('Channel Message/Page_Mezon/textarea_1'), Message3)
+WebUI.setText(findTestObject('Channel Message/Channel message - Pin message/textarea_1'), Message3)
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/span_channel'))
+WebUI.click(findTestObject('Channel Message/Channel message - Pin message/span_channel'))
 
 WebUI.click(findTestObject('Channel Message/Select channel and send message/span_general'))
 
-WebUI.click(findTestObject('Channel Message/Page_Mezon/span_channel'))
+WebUI.click(findTestObject('Channel Message/Channel message - Pin message/span_channel'))
 
 WebUI.click(findTestObject('Channel Message/Select channel and send message/span_general'))
 
@@ -75,5 +75,5 @@ result = WebUI.getText(findTestObject('Management Channel/Page_Mezon/textarea_h'
 'check the display of unset messages when trasitioning '
 WebUI.verifyTextPresent(Message3, false)
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Page_Mezon/p_general'))
+WebUI.click(findTestObject('Object Repository/Channel Message/Channel message - Pin message/p_general'))
 
