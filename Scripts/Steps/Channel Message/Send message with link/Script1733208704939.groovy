@@ -22,22 +22,30 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String message = 'mezon:'
+String text = 'mezon:'
 
 String link = 'https://mezon.ai'
 
-CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send message with link/textarea_Clan T_general channel'), 
-    "$message $link", Keys.chord(Keys.ENTER))
+String message = "$text $link"
 
-WebUI.delay(3)
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send message with link/textarea_Clan T_general channel'), 
+    message, Keys.chord(Keys.ENTER))
+
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending message failed")
+}
 
 WebElement spanLatestMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Send message with link/span_latest message'))
 
+String sentMessage = spanLatestMessageElement.getText()
+
 WebElement aTag = spanLatestMessageElement.findElement(By.tagName('a'))
 
-if ((link != aTag.getText()) && (spanLatestMessageElement.getText() != "$message $link")) {
-    KeywordUtil.markFailed('Error message')
-} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-    KeywordUtil.markFailed('Sending message failed')
+String sentLink = aTag.getText()
+
+if ((link != sentLink) && ( sentMessage!= message)) {
+    KeywordUtil.markFailed("Error message! - link: '$link'; sentLink: '$sentLink'; sentMessage: '$sentMessage'; message: '$message'")
 }
 

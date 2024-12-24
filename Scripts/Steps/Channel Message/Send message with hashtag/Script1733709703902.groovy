@@ -37,31 +37,27 @@ WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete M
 
 WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '123456')
 
-TestObject textAreaObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general')
-
-WebElement textAreaElm = WebUI.findWebElement(textAreaObj)
+WebElement textAreaElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'))
 
 String testMsg = textAreaElm.getText().replace('#', '')
 
-WebUI.sendKeys(textAreaObj, Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), Keys.chord(Keys.ENTER))
 
-TestObject lastMsgObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message')
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebElement lastMsgElm = WebUI.findWebElement(lastMsgObj)
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending message failed")
+}
+
+WebElement lastMsgElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
 
 String lastMsg = lastMsgElm.getText()
 
-TestObject htagMsgObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_hashtag_message')
-
-WebElement htagMsgElm = WebUI.findWebElement(htagMsgObj)
+WebElement htagMsgElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_hashtag_message'))
 
 String htagMsg = htagMsgElm.getText()
 
-Boolean isLoading = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
-
 if (lastMsg != testMsg) {
-    KeywordUtil.markFailed('Sent message wrong!')
-} else if (isLoading) {
-    KeywordUtil.markFailed('Message has not been sent!')
+    KeywordUtil.markFailed("Sent message wrong! - lastMsg: '${lastMsg}'; testMsg: '${testMsg}'")
 }
 

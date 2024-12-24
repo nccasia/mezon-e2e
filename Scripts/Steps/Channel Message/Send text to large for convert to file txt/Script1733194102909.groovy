@@ -43,6 +43,12 @@ if(largeMessage.size() < 4092*2 && fileName) {
 WebUI.sendKeys(findTestObject('Channel Message/Send text to large for convert to file txt/textarea_Clan T_general channel'), 
     Keys.chord(Keys.ENTER))
 
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending message failed")
+}
+
 Boolean check = fileName.endsWith('.txt')
 
 WebElement p_fileName = WebUI.findWebElement(findTestObject('Channel Message/Send text to large for convert to file txt/div_latest message'))
@@ -50,8 +56,6 @@ WebElement p_fileName = WebUI.findWebElement(findTestObject('Channel Message/Sen
 String sentFileName = p_fileName.getText()
 
 if ((sentFileName != fileName) || !check) {
-    KeywordUtil.markFailed('Error message')
-} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-    KeywordUtil.markFailed('Sending message failed')
+    KeywordUtil.markFailed("Error message! - sentFileName: '$sentFileName'; fileName: '$fileName'")
 }
 

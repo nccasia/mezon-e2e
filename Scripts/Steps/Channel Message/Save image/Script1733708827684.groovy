@@ -16,6 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.nio.file.Files as Files
 import java.nio.file.Paths as Paths
@@ -31,6 +32,12 @@ String userDownloads = new File(home + '/Downloads/')
 WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), imagePath)
 
 WebUI.sendKeys(findTestObject('Channel Message/Send message with link/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
+
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending message failed")
+}
 
 WebUI.rightClick(findTestObject('Channel Message/Save image/img_message'))
 

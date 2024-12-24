@@ -25,17 +25,13 @@ import java.nio.file.Paths as Paths
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-TestObject textAreaObj = findTestObject('Channel Message/Send file/textarea_Clan T_general channel')
+WebElement textAreaElem = WebUI.findWebElement(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'))
 
-WebElement textAreaElem = WebUI.findWebElement(textAreaObj)
+WebUI.setText(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), '@')
 
-WebUI.setText(textAreaObj, '@')
+WebUI.verifyElementPresent(findTestObject('Channel Message/Mention Role/div_mention box'), 5)
 
-TestObject mentionBoxObj = findTestObject('Channel Message/Mention Role/div_mention box')
-
-WebUI.verifyElementPresent(mentionBoxObj, 5)
-
-WebElement mentionBoxElem = WebUI.findWebElement(mentionBoxObj)
+WebElement mentionBoxElem = WebUI.findWebElement(findTestObject('Channel Message/Mention Role/div_mention box'))
 
 List<WebElement> liTagList = mentionBoxElem.findElements(By.tagName('li'))
 
@@ -61,20 +57,26 @@ for (WebElement liTag : liTagList) {
             break
         }
     }
-    catch (def error) {
+    catch (error) {
         println(error.message)
     } 
 }
 
-String textOfTextArea = textAreaElem.getText()
+String textOfTextArea = textAreaElem.getText().trim()
 
-WebUI.sendKeys(textAreaObj, Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
+
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending message failed")
+}
 
 WebElement latestMessageElem = WebUI.findWebElement(findTestObject('Channel Message/Send multiple file media/div_latest message'))
 
 String textLatestMessage = latestMessageElem.getText()
 
-if (textLatestMessage != textOfTextArea.trim()) {
-    KeywordUtil.markFailedAndStop('Verify fail message')
+if (textLatestMessage != textOfTextArea) {
+    KeywordUtil.markFailedAndStop("Error message! - textLatestMessage: '${textLatestMessage}'; textOfTextArea: '${textOfTextArea}'")
 }
 

@@ -33,9 +33,7 @@ WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Emojis Pannel'), 3)
 
-TestObject img_emoji_object = findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1')
-
-WebElement emoji1Button = WebUI.findWebElement(img_emoji_object)
+WebElement emoji1Button = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1'))
 
 WebElement emojiImg = emoji1Button.findElement(By.tagName('img'))
 
@@ -45,13 +43,21 @@ emoji1Button.click()
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
 
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending message failed")
+}
+
 WebElement message_emoji = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Message with Emoji'))
+
+String sentMess = message_emoji.getText()
 
 WebElement img_tag = message_emoji.findElement(By.tagName('img'))
 
-if ((message_emoji.getText() != message_text) && (img_tag.getAttribute('src') != srcImg_emoji)) {
-    KeywordUtil.markFailed('FAILED!')
-} else if  (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-    KeywordUtil.markFailed('Message sending failed!')
+String hrefImg = img_tag.getAttribute('src')
+
+if ((sentMess != message_text) && (hrefImg != srcImg_emoji)) {
+    KeywordUtil.markFailed("Error message - sentMess: '$sentMess'; message_text: '$message_text'; hrefImg: '$hrefImg'; srcImg_emoji: '$srcImg_emoji'")
 }
 

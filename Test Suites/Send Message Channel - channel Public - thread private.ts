@@ -49,7 +49,7 @@
    <testCaseLink>
       <guid>75b8e615-809f-4fa7-a2d4-90fe7bb84e16</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Steps/Channel Message/Give a coffee</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>

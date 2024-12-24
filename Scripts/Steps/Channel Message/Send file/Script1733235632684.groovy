@@ -32,15 +32,17 @@ WebUI.uploadFile(findTestObject('Channel Message/Send file/input_upload file'), 
 
 WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
 
-TestObject spanSentMessageObj = findTestObject('Channel Message/Send file/span_sent message')
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebElement spanSentMessage = WebUI.findWebElement(spanSentMessageObj)
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending file failed")
+}
+
+WebElement spanSentMessage = WebUI.findWebElement(findTestObject('Channel Message/Send file/span_sent message'))
 
 String sentMessage = spanSentMessage.getText()
 
 if (sentMessage != fileName) {
-    KeywordUtil.markFailed('Error message')
-} else if(CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-    KeywordUtil.markFailed('Message sending failed')
+    KeywordUtil.markFailed("Error message - sentMessage: '$sentMessage'; fileName: '$fileName'")
 }
 

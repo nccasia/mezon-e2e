@@ -25,7 +25,7 @@ public class SendingMessage {
 
 	@Keyword
 	def isSendingMessage () {
-		WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Page_Mezon/div_sent message'))
+		WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_isSending'))
 
 		String classNameSentMessageElement = sentMessageElement.getAttribute('class')
 

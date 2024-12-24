@@ -70,7 +70,7 @@ WebElement threadBreadCrumb = WebUI.findWebElement(findTestObject('Channel Messa
 String threadBreadCrumbText = threadBreadCrumb.getText()
 
 if (threadBreadCrumbText != threadName) {
-    KeywordUtil.markFailed('Failed')
+    KeywordUtil.markFailed("Error thread! - threadName: '$threadName'; threadBreadCrumbText: '$threadBreadCrumbText'")
 }
 
 def checkNewThreadPresent(WebElement threadsContainer, String threadName, int timeout, int interval) {

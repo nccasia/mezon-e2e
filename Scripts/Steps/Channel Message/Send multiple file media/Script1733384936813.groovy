@@ -35,17 +35,17 @@ WebUI.uploadFile(findTestObject('Channel Message/Send file/input_upload file'), 
 
 WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
 
-WebUI.delay(3)
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-TestObject latestMessageObj = findTestObject('Channel Message/Send multiple file media/div_latest message')
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending files failed")
+}
 
-WebElement latestMessageElement = WebUI.findWebElement(latestMessageObj)
+WebElement latestMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Send multiple file media/div_latest message'))
 
 List<WebElement> videoTagList = latestMessageElement.findElements(By.tagName('video'))
 
 if (filePaths.size() != videoTagList.size()) {
-    KeywordUtil.markFailed('Miss file media')
-} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-	KeywordUtil.markFailed('Sending message failed')
+    KeywordUtil.markFailed('Miss file media!')
 }
 

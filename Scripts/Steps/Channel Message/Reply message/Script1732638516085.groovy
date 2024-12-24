@@ -16,6 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -30,11 +32,24 @@ WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete M
 
 WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Replying to'))
 
+String replyMessage = 'toi la bot'
+
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
-    'toi la bot', Keys.chord(Keys.ENTER))
+    replyMessage, Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 
-    5)
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.verifyTextPresent('toi la bot', true)
+if(isSending) {
+	KeywordUtil.markFailedAndStop('Sending message failed')
+}
+
+WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_repy message'), 10)
+
+WebElement repyMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_reply message'))
+
+String sentMessage = repyMessageElement.getText()
+
+if(replyMessage != sentMessage) {
+	KeywordUtil.markFailed("Error message - replyMessage: '$replyMessage'; sentMessage: '$sentMessage'")
+}
 

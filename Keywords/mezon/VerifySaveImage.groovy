@@ -40,7 +40,7 @@ public class VerifySaveImage {
 			KeywordUtil.markFailedAndStop("Download failed")
 		}
 	}
-	
+
 	public static boolean waitForSaveImage(String downloadPath, String fileName, int timeout, int interval) {
 		int waited = 0;
 		while (waited < timeout) {
