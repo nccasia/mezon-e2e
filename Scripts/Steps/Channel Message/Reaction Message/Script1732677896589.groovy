@@ -3,7 +3,6 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
-
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -15,44 +14,30 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable
-
-import org.openqa.selenium.By
+import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.By as By
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
-import com.kms.katalon.core.util.KeywordUtil
-import org.openqa.selenium.WebElement
-import com.kms.katalon.core.util.KeywordUtil
-
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
-TestObject object = findTestObject('Channel Message/Reaction Message/div_latest message')
-
-WebUI.mouseOver(object)
+WebUI.mouseOver(findTestObject('Channel Message/Reaction Message/div_latest message'))
 
 WebUI.click(findTestObject('Channel Message/Reaction Message/button_reaction_pannel'))
 
-TestObject button_reaction_Obj = findTestObject('Channel Message/Reaction Message/button_reaction')
+String reactionHref = WebUI.findWebElement(findTestObject('Channel Message/Reaction Message/button_reaction')).findElement(By.tagName('img')).getAttribute('src')
 
-String reactionHref = WebUI.findWebElement(button_reaction_Obj).findElement(By.tagName("img")).getAttribute("src")
-
-WebUI.click(button_reaction_Obj)
+WebUI.click(findTestObject('Channel Message/Reaction Message/button_reaction'))
 
 WebUI.waitForElementVisible(findTestObject('Channel Message/Reaction Message/div_reacted'), 3)
 
-message = WebUI.findWebElements(object, 3)
+String messageId = WebUI.getAttribute(findTestObject('Channel Message/Reaction Message/div_latest message'), 'id')
 
-messageId = WebUI.getAttribute(object, 'id')
+String reactionXpath = "//*[@id='$messageId']/div[2]/div/div"
 
-reactionXpath = "//*[@id='${messageId}']/div[2]/div/div"
-
-
-public static TestObject getTestObjectWithXpath(String xpath) {
-	return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
-}
-
-reactionObj = getTestObjectWithXpath(reactionXpath)
+TestObject reactionObj = CustomKeywords.'mezon.GetTestObject.withXpath'(reactionXpath)
 
 WebUI.verifyElementVisible(reactionObj)
 
@@ -60,27 +45,18 @@ WebElement reactionList = WebUI.findWebElement(reactionObj, 0)
 
 List<WebElement> imgTags = reactionList.findElements(By.tagName('img'))
 
-boolean  flag = false
+boolean flag = false
 
-for (WebElement img : imgTags) { 
-	String imgSrc = img.getAttribute('src')
-	if(reactionHref == imgSrc) {
-		flag = true
-	}
+for (WebElement img : imgTags) {
+    String imgSrc = img.getAttribute('src')
+
+    if (reactionHref == imgSrc) {
+        flag = true
+    }
 }
 
-if (flag) {
-	KeywordUtil.markPassed("correct!")
-} else {
-	println('false')
-	KeywordUtil.markFailed("incorrect!")
+if (!flag) {
+    KeywordUtil.markFailed('Reaction don\'t present')
 }
-
-
-
-
-
-
-
 
 

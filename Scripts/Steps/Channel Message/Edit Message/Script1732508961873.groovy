@@ -25,15 +25,13 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], Fa
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), 
     'chi Phuong xinh dep', Keys.chord(Keys.ENTER))
 
-TestObject divLastedObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_lasted')
-
-WebElement divLastedElm = WebUI.findWebElement(divLastedObj)
+WebElement divLastedElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_lasted'))
 
 String idMessage = divLastedElm.getAttribute('id')
 
 String spanLasted = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/span"
 
-WebUI.mouseOver(divLastedObj)
+WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_lasted'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/edit_btn'))
 
@@ -51,10 +49,24 @@ TestObject spanLastedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(spanLa
 
 WebElement spanLastedElm = WebUI.findWebElement(spanLastedObj)
 
-if (editMessage == spanLastedElm.getText()) {
-    KeywordUtil.markPassed('pass')
-} else {
-    KeywordUtil.markFailed('fail')
-}
+String editedMessage =  spanLastedElm.getText()
 
+verifyEditMessage(idMessage, editMessage, editedMessage)
+
+def verifyEditMessage(String idMessage, String editMessage, String editedMessage) {
+	Boolean isEdited = false
+	for(int i = 0; i < 15; i++) {
+		String spanEditedXpath = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/p"
+				
+		TestObject spanEditedObj =  CustomKeywords.'mezon.GetTestObject.withXpath'(spanEditedXpath)
+				
+		isEdited = WebUI.findWebElement(spanEditedObj).getText().contains('edited')
+		if ((editMessage == editedMessage) && isEdited) {
+			return true
+		}
+		WebUI.delay(1)
+	}
+	KeywordUtil.markFailed("Message editing failed - editMessage: '$editMessage'; editedMessage: '$editedMessage'; isEdited: $isEdited")
+	return false
+}
 

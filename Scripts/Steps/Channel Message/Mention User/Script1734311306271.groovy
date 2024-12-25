@@ -30,38 +30,40 @@ WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete M
 
 WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), 'Are you OK?')
 
-TestObject textAreaObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general')
-
-WebElement textAreaElm = WebUI.findWebElement(textAreaObj)
+WebElement textAreaElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'))
 
 String testMsg = textAreaElm.getText()
 
-WebUI.sendKeys(textAreaObj, Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), Keys.chord(Keys.ENTER))
 
-TestObject lastMsgObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message')
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebElement lastMsgElm = WebUI.findWebElement(lastMsgObj)
+if(isSending) {
+	KeywordUtil.markFailedAndStop('Sending message failed')
+}
+
+WebElement lastMsgElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
 
 String lastMsg = lastMsgElm.getText()
 
-TestObject mentionUserObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_mention_user_message')
+WebElement mentionUserElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_mention_user_message'))
 
-WebElement mentionUserElm = WebUI.findWebElement(mentionUserObj)
-
-mentionUserElm.getCssValue('background-color')
+String metionBg = mentionUserElm.getCssValue('background-color')
 
 String mentionUserMsg = mentionUserElm.getText()
 
-if ((lastMsg == testMsg) && ('rgba(0, 0, 0, 0)' == mentionUserElm.getCssValue('background-color'))) {
-    KeywordUtil.markPassed('pass')
-} else {
-    KeywordUtil.markFailed('fail')
+if ((lastMsg != testMsg) && ('rgba(60, 66, 112, 1)' != metionBg)) {
+    KeywordUtil.markFailed("Error message - lastMsg: '$lastMsg'; testMsg: '$testMsg'; metionBackgroud: $metionBg")
 }
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_show_user'))
 
-Boolean flag = WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_show_user_profile'), 10)
+Boolean flag = WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_show_user_profile'), 
+    10)
 
-if (!flag) {
-	KeywordUtil.markFailed("User profile isn't present")
+if (!(flag)) {
+    KeywordUtil.markFailed('User profile isn\'t present')
 }
+
+
+

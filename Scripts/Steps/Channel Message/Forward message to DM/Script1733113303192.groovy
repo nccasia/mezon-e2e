@@ -19,9 +19,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
-import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -57,8 +55,6 @@ for (int i = 1; i <= forwardList.size(); i++) {
 
 WebUI.click(findTestObject('Channel Message/Forward message to DM/button_send_forward_message'))
 
-WebDriver driver = DriverFactory.getWebDriver()
-
-WebElement toastSuccess = driver.findElement(By.cssSelector('.Toastify__toast--success'))
+WebUI.verifyElementPresent(findTestObject('Channel Message/Forward message to DM/Toast success'), 10)
 
 

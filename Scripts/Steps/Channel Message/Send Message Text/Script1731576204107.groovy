@@ -26,18 +26,17 @@ String message = 'mezon day'
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
     message, Keys.chord(Keys.ENTER))
 
-WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Page_Mezon/div_sent message'))
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-String sentMessage = sentMessageElement.getAttribute('innerText')
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending message failed")
+}
 
-print(sentMessage);
-print(sentMessage != message);
+WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_latest mes'))
 
-Boolean isMessageSendFail = CustomKeywords.'mezon.SendingMessage.isSendingMessage'();
+String sentMessage = sentMessageElement.getText()
 
-if (isMessageSendFail) {
-    KeywordUtil.markFailedAndStop('Message sending failed')
-} else if (sentMessage != message) {
-    KeywordUtil.markFailedAndStop('Error message')
+if (sentMessage != message) {
+    KeywordUtil.markFailedAndStop("Error message - sentMessage: '$sentMessage'; message: '$message'")
 }
 

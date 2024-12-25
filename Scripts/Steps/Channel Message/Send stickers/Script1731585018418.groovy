@@ -23,19 +23,14 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], Fa
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_sticker'))
 
-TestObject stickerObj = findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa')
+String stickerHref = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa'), 0).getAttribute('src')
 
-String stickerHref = WebUI.findWebElement(stickerObj, 0).getAttribute('src')
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa'))
 
-WebUI.click(stickerObj)
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-String messageContainerXpath = '//*[@id=\'scrollLoading\']'
-
-messageContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(messageContainerXpath)
-
-CustomKeywords.'mezon.VerifyHrefImgExists.verifyHrefImgExists'(messageContainerObj, stickerHref)
-
-if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-    KeywordUtil.markFailed('Sending message failed')
+if (isSending) {
+	KeywordUtil.markFailedAndStop("Sending sticker failed")
 }
 
+CustomKeywords.'mezon.VerifyHrefImgExists.verifyHrefImgExists'(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_lasted'), stickerHref)

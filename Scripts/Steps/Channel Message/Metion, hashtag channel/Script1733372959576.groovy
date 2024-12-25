@@ -27,25 +27,25 @@ WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_
 
 WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_mention'))
 
-TestObject textareaObj = findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general')
+String mentionText = WebUI.findWebElement(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general')).getText().trim()
 
-String mentionText = WebUI.findWebElement(textareaObj).getText().trim()
+WebUI.sendKeys(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), Keys.chord(Keys.ENTER))
 
-WebUI.sendKeys(textareaObj, Keys.chord(Keys.ENTER))
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-TestObject buttonMetionObj = findTestObject('Channel Message/Mention, hashtag/button_mention')
+if(isSending) {
+	KeywordUtil.markFailedAndStop('Sending message failed')
+}
 
-WebElement buttonMetionElement = WebUI.findWebElement(buttonMetionObj)
+WebElement buttonMetionElement = WebUI.findWebElement(findTestObject('Channel Message/Mention, hashtag/button_mention'))
 
 String buttonMetionText = buttonMetionElement.getText().trim()
 
-if (buttonMetionText != mentionText ) {
-    KeywordUtil.markFailed('Verify mention failed')
-} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-	KeywordUtil.markFailed('Message sending failed')
+if (buttonMetionText != mentionText) {
+    KeywordUtil.markFailed("buttonMetionText: '${buttonMetionText}'; mentionText: '${mentionText}'")
 }
 
-WebUI.click(buttonMetionObj)
+WebUI.click(findTestObject('Channel Message/Mention, hashtag/button_mention'))
 
 WebUI.waitForElementPresent(findTestObject('Channel Message/Mention, hashtag/div_popup'), 5)
 
@@ -57,19 +57,21 @@ WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_hashtag'))
 
 WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), 'mezon')
 
-String hashtagWithMessage = WebUI.findWebElement(textareaObj).getText().replace('#', '').trim()
+String hashtagWithMessage = WebUI.findWebElement(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general')).getText().replace('#', '').trim()
 
-WebUI.sendKeys(textareaObj, Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), Keys.chord(Keys.ENTER))
 
-TestObject spanLatestMessageObj = findTestObject('Channel Message/Mention, hashtag/span_message')
+isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebElement spanLatestMessageElement = WebUI.findWebElement(spanLatestMessageObj)
+if(isSending) {
+	KeywordUtil.markFailedAndStop('Sending message failed')
+}
+
+WebElement spanLatestMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Mention, hashtag/span_message'))
 
 String LatestMessageText = spanLatestMessageElement.getText()
 
 if (LatestMessageText != hashtagWithMessage) {
-    KeywordUtil.markFailed('Verify hashtag with message')
-} else if (CustomKeywords.'mezon.SendingMessage.isSendingMessage'()) {
-	KeywordUtil.markFailed('Message sending failed')
+    KeywordUtil.markFailed("LatestMessageText: '${LatestMessageText}'; hashtagWithMessage: '${hashtagWithMessage}'")
 }
 

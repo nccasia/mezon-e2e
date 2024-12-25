@@ -41,7 +41,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>true</initValue>
+      <initValue>false</initValue>
       <name>isChannelPrivate</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
