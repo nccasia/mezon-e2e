@@ -25,6 +25,8 @@ WebElement messageElement = WebUI.findWebElement(findTestObject('Channel Message
 
 String messageId = messageElement.getAttribute('id')
 
+WebUI.mouseOver(findTestObject('Channel Message/Jump to pin message/div_message need to pin'))
+
 WebUI.rightClick(findTestObject('Channel Message/Jump to pin message/div_message need to pin'))
 
 WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin message'))
@@ -78,6 +80,8 @@ String messageJumpedXpath  = "//*[@id='scrollLoading']/div[2]//div[contains(@cla
 TestObject messageJumpedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(messageJumpedXpath)
 
 WebUI.verifyElementPresent(messageJumpedObj, 10)
+
+WebUI.verifyElementInViewport(messageJumpedObj, 10)
 
 WebElement messageJumpedElement = WebUI.findWebElement(messageJumpedObj)
 
