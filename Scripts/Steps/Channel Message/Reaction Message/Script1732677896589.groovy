@@ -31,13 +31,17 @@ String reactionHref = WebUI.findWebElement(findTestObject('Channel Message/React
 
 WebUI.click(findTestObject('Channel Message/Reaction Message/button_reaction'))
 
-WebUI.waitForElementVisible(findTestObject('Channel Message/Reaction Message/div_reacted'), 3)
+WebUI.takeScreenshot()
+
+WebUI.verifyElementPresent(findTestObject('Channel Message/Reaction Message/div_reacted'), 10)
 
 String messageId = WebUI.getAttribute(findTestObject('Channel Message/Reaction Message/div_latest message'), 'id')
 
 String reactionXpath = "//*[@id='$messageId']/div[2]/div/div"
 
 TestObject reactionObj = CustomKeywords.'mezon.GetTestObject.withXpath'(reactionXpath)
+
+WebUI.takeScreenshot()
 
 WebUI.verifyElementVisible(reactionObj)
 
@@ -54,6 +58,8 @@ for (WebElement img : imgTags) {
         flag = true
     }
 }
+
+WebUI.takeScreenshot()
 
 if (!flag) {
     KeywordUtil.markFailed('Reaction don\'t present')

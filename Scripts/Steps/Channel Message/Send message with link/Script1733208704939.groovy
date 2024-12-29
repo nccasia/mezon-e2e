@@ -33,6 +33,8 @@ CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send me
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+WebUI.takeScreenshot()
+
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }

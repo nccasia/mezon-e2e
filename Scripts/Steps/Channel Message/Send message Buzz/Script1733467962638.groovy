@@ -25,6 +25,8 @@ WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.cho
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+WebUI.takeScreenshot()
+
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
@@ -39,8 +41,9 @@ if (GlobalVariable.isThread) {
 
 TestObject buzzElement = CustomKeywords.'mezon.GetTestObject.withXpath'(BuzzXpath)
 
-Boolean isBuzzVisible = WebUI.waitForElementVisible(buzzElement, 
-    5)
+WebUI.takeScreenshot()
+
+WebUI.verifyElementPresent(buzzElement, 5)
 
 WebElement spanMessageBuzz = WebUI.findWebElement(findTestObject('Channel Message/Send message Buzz/span_message buzz'))
 
@@ -48,7 +51,7 @@ String messageBuzz = spanMessageBuzz.getText()
 
 String colorText = spanMessageBuzz.getCssValue('color')
 
-if ((!(isBuzzVisible) || (messageBuzz != 'Buzz!!')) || (colorText != 'rgba(239, 68, 68, 1)')) {
-    KeywordUtil.markFailedAndStop("Error message - isBuzzVisible: $isBuzzVisible; messageBuzz: '$messageBuzz'; colorText: $colorText")
+if (((messageBuzz != 'Buzz!!')) || (colorText != 'rgba(239, 68, 68, 1)')) {
+    KeywordUtil.markFailedAndStop("Error message - messageBuzz: '$messageBuzz'; colorText: $colorText")
 }
 

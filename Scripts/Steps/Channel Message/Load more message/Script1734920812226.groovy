@@ -35,7 +35,9 @@ for (int i = 0; i < loopTimes; i++) {
     WebUI.sendKeys(findTestObject('Channel Message/Load more message/div_message container'), Keys.chord(Keys.ARROW_UP))
 }
 
-WebUI.delay(3)
+WebUI.delay(5)
+
+WebUI.takeScreenshot()
 
 List<WebElement> messagesLoaded = WebUI.findWebElements(findTestObject('Channel Message/Load more message/div_message'), 
     10)

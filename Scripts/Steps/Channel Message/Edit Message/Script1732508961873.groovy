@@ -42,6 +42,8 @@ String editMessage = 'hehe'
 
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), editMessage)
 
+WebUI.takeScreenshot()
+
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), Keys.chord(
         Keys.ENTER))
 
@@ -50,6 +52,8 @@ TestObject spanLastedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(spanLa
 WebElement spanLastedElm = WebUI.findWebElement(spanLastedObj)
 
 String editedMessage =  spanLastedElm.getText()
+
+WebUI.takeScreenshot()
 
 verifyEditMessage(idMessage, editMessage, editedMessage)
 

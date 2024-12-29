@@ -21,13 +21,15 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_sticker'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_sticker pannel'))
 
-String stickerHref = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa'), 0).getAttribute('src')
+String stickerHref = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Sticker'), 0).getAttribute('src')
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Emoji_w-full h-full aspect-square objec_3400aa'))
+WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Sticker'))
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+WebUI.takeScreenshot()
 
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending sticker failed")

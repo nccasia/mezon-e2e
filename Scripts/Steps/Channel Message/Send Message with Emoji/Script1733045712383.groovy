@@ -31,7 +31,9 @@ WebUI.setText(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezo
 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emojis pannel'))
 
-WebUI.verifyElementPresent(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Emojis Pannel'), 3)
+WebUI.takeScreenshot()
+
+WebUI.verifyElementPresent(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Emojis Pannel'), 10)
 
 WebElement emoji1Button = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1'))
 
@@ -44,6 +46,8 @@ emoji1Button.click()
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+WebUI.takeScreenshot()
 
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed")

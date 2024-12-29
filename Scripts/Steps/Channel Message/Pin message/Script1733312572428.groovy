@@ -16,36 +16,43 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebElement
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'))
+WebElement messageElement = WebUI.findWebElement(findTestObject('Channel Message/Jump to pin message/div_message need to pin'))
 
-WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 'Hi, Nguyen Phuoc Nguyen - message in thread')
+String messageId = messageElement.getAttribute('id')
 
-WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
+WebUI.mouseOver(findTestObject('Channel Message/Jump to pin message/div_message need to pin'))
 
-WebUI.rightClick(findTestObject('Channel Message/Channel message - Pin message/Last-msg'))
+WebUI.click(findTestObject('Object Repository/Channel Message/Forward message to DM/button_more'))
 
-WebUI.click(findTestObject('Channel Message/Channel message - Pin message/div_Pin Message'))
+WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin message'))
 
-WebUI.click(findTestObject('Channel Message/Channel message - Pin message/button_Oh yeah. Pin it'))
+if (GlobalVariable.isThread) {
+    WebUI.click(findTestObject('Object Repository/Channel Message/Jump to pin message/button_create pin _thread'))
+} else {
+    WebUI.click(findTestObject('Channel Message/Jump to pin message/button_create pin'))
+}
 
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-if (GlobalVariable.isChannelPrivate) {
-	
-	TestObject buttonPinMsgObj = CustomKeywords.'mezon.GetTestObject.withXpath'('//*[@id="main-layout"]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[6]')
-	
-	WebElement buttonPinMsgElement = WebUI.findWebElement(buttonPinMsgObj)
-	
-	buttonPinMsgElement.click()
-	
-} 
-else {
-	TestObject buttonPinMsgObj = CustomKeywords.'mezon.GetTestObject.withXpath'('//*[@id="main-layout"]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[5]')
-	 
-	 WebElement buttonPinMsgElement = WebUI.findWebElement(buttonPinMsgObj)
-	 
-	 buttonPinMsgElement.click()
+WebUI.takeScreenshot()
+
+if (isSending) {
+    KeywordUtil.markFailedAndStop('pin message failed')
+}
+
+WebElement pinMessageContainer = WebUI.findWebElement(findTestObject('Channel Message/Jump to pin message/div_pin message icon container'))
+
+String pinMessageSVGElemt = pinMessageContainer.getAttribute('innerHTML')
+
+String pinMessageSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\pin message.svg')
+
+WebUI.takeScreenshot()
+
+if (pinMessageSVGElemt != pinMessageSVG) {
+    KeywordUtil.markFailedAndStop('Pin message icon not present')
 }

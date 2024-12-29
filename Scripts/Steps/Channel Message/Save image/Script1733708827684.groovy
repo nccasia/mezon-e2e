@@ -35,6 +35,8 @@ WebUI.sendKeys(findTestObject('Channel Message/Send message with link/textarea_C
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+WebUI.takeScreenshot()
+
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }

@@ -24,6 +24,8 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], Fa
 
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '@')
 
+WebUI.takeScreenshot()
+
 WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_members'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_first_member'))
@@ -37,6 +39,8 @@ String testMsg = textAreaElm.getText()
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), Keys.chord(Keys.ENTER))
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+WebUI.takeScreenshot()
 
 if(isSending) {
 	KeywordUtil.markFailedAndStop('Sending message failed')
@@ -52,11 +56,15 @@ String metionBg = mentionUserElm.getCssValue('background-color')
 
 String mentionUserMsg = mentionUserElm.getText()
 
+WebUI.takeScreenshot()
+
 if ((lastMsg != testMsg) && ('rgba(60, 66, 112, 1)' != metionBg)) {
     KeywordUtil.markFailed("Error message - lastMsg: '$lastMsg'; testMsg: '$testMsg'; metionBackgroud: $metionBg")
 }
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_show_user'))
+
+WebUI.takeScreenshot()
 
 Boolean flag = WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_show_user_profile'), 
     10)
