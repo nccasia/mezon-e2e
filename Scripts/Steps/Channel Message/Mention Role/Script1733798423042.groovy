@@ -29,6 +29,8 @@ WebElement textAreaElem = WebUI.findWebElement(findTestObject('Channel Message/S
 
 WebUI.setText(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), '@')
 
+WebUI.takeScreenshot()
+
 WebUI.verifyElementPresent(findTestObject('Channel Message/Mention Role/div_mention box'), 5)
 
 WebElement mentionBoxElem = WebUI.findWebElement(findTestObject('Channel Message/Mention Role/div_mention box'))
@@ -53,7 +55,6 @@ for (WebElement liTag : liTagList) {
 
         if (svgContentFromWeb == svgContentFromFile) {
             liTag.click()
-
             break
         }
     }
@@ -68,13 +69,17 @@ WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+WebUI.takeScreenshot()
+
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 
-WebElement latestMessageElem = WebUI.findWebElement(findTestObject('Channel Message/Send multiple file media/div_latest message'))
+WebElement latestMessageElem = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Mention Role/span_metion role message'))
 
 String textLatestMessage = latestMessageElem.getText()
+
+WebUI.takeScreenshot()
 
 if (textLatestMessage != textOfTextArea) {
     KeywordUtil.markFailedAndStop("Error message! - textLatestMessage: '${textLatestMessage}'; textOfTextArea: '${textOfTextArea}'")

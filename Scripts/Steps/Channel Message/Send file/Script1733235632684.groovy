@@ -34,6 +34,8 @@ WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+WebUI.takeScreenshot()
+
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending file failed")
 }

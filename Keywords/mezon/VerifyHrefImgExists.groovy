@@ -32,7 +32,7 @@ public class VerifyHrefImgExists {
 		List<WebElement> imgTags = WebUI.findWebElement(object).findElements(By.tagName('img'))
 
 		Boolean flag = false
-
+		
 		for (WebElement img : imgTags) {
 			String imgHref = img.getAttribute('src')
 
@@ -44,7 +44,7 @@ public class VerifyHrefImgExists {
 		if (flag) {
 			KeywordUtil.markPassed('Success!')
 		} else {
-			KeywordUtil.markFailed('FAILED!')
+			KeywordUtil.markFailed("FAILED! - unlike href: '$href'")
 		}
 	}
 }

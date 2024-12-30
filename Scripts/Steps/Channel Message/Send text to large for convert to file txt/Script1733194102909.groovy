@@ -32,7 +32,9 @@ Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, nu
 WebUI.sendKeys(findTestObject('Channel Message/Send text to large for convert to file txt/textarea_Clan T_general channel'), 
     Keys.chord(Keys.CONTROL, 'v'))
 
-WebUI.waitForElementPresent(findTestObject('Channel Message/Send text to large for convert to file txt/p_file name'), 10)
+WebUI.takeScreenshot()
+
+WebUI.verifyElementPresent(findTestObject('Channel Message/Send text to large for convert to file txt/p_file name'), 10)
 
 String fileName = WebUI.getText(findTestObject('Channel Message/Send text to large for convert to file txt/p_file name'))
 
@@ -44,6 +46,8 @@ WebUI.sendKeys(findTestObject('Channel Message/Send text to large for convert to
     Keys.chord(Keys.ENTER))
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+WebUI.takeScreenshot()
 
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed")

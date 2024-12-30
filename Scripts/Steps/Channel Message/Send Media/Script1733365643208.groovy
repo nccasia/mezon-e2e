@@ -34,9 +34,13 @@ WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_genera
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+WebUI.takeScreenshot()
+
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending media failed")
 }
+
+WebUI.takeScreenshot()
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/video_latest message'), 0)
 
@@ -46,10 +50,14 @@ WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_genera
 
 isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+WebUI.takeScreenshot()
+
 if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 
-WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest message'), 0)
+WebUI.takeScreenshot()
+
+WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest message'), 10)
 
 

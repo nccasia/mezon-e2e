@@ -55,6 +55,8 @@ for (int i = 1; i <= forwardList.size(); i++) {
 
 WebUI.click(findTestObject('Channel Message/Forward message to DM/button_send_forward_message'))
 
+WebUI.takeScreenshot()
+
 WebUI.verifyElementPresent(findTestObject('Channel Message/Forward message to DM/Toast success'), 10)
 
 

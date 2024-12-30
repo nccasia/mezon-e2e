@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>img_Emoji_w-full h-full aspect-square objec_3400aa</name>
+   <name>img_Sticker</name>
    <tag></tag>
    <elementGuidId>38f9faaa-e9a2-4746-b41b-fae692274d79</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='mainChat']/div/div/div[2]/div/div/div/div[2]/div/div/div[2]/div[2]/div/div/div/img</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//div[@id='mainChat']/div/div/div[2]/div/div/div/div[2]/div/div/div[2]/div[2]/div/div/div/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

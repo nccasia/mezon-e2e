@@ -19,80 +19,50 @@ import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Pin message'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebElement messageElement = WebUI.findWebElement(findTestObject('Channel Message/Jump to pin message/div_message need to pin'))
-
-String messageId = messageElement.getAttribute('id')
-
-WebUI.mouseOver(findTestObject('Channel Message/Jump to pin message/div_message need to pin'))
-
-WebUI.rightClick(findTestObject('Channel Message/Jump to pin message/div_message need to pin'))
-
-WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin message'))
-
-if (GlobalVariable.isThread) {
-    WebUI.click(findTestObject('Object Repository/Channel Message/Jump to pin message/button_create pin _thread'))
-} else {
-    WebUI.click(findTestObject('Channel Message/Jump to pin message/button_create pin'))
-}
-
-Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
-
-if (isSending) {
-    KeywordUtil.markFailedAndStop('pin message failed')
-}
-
-WebElement pinMessageContainer = WebUI.findWebElement(findTestObject('Channel Message/Jump to pin message/div_pin message icon container'))
-
-String pinMessageSVGElemt = pinMessageContainer.getAttribute('innerHTML')
-
-String pinMessageSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\pin message.svg')
-
-if (pinMessageSVGElemt != pinMessageSVG) {
-    KeywordUtil.markFailedAndStop('Pin message icon not present')
-}
-
-String textPinMessage = "" 
+String textPinMessage = ''
 
 if (GlobalVariable.isThread) {
     WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel_Thread'))
-	
-	textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_thread'))
-	
+
+    textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_thread'))
+
     WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_thread'))
 } else if (GlobalVariable.isChannelPrivate) {
     WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel channel Private'))
-	
-	textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel private'))
-	
+
+    textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel private'))
+
     WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_channel private'))
 } else {
     WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel channel Public'))
 
-	textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel public'))
-	
+    textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel public'))
+
     WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_channel public'))
 }
 
-String messageJumpedXpath  = "//*[@id='scrollLoading']/div[2]//div[contains(@class, 'dark:bg-[#383B47]')]"
+WebUI.takeScreenshot()
 
-TestObject messageJumpedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(messageJumpedXpath)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Jump to pin message/div_message jumped'), 10)
 
-WebUI.verifyElementPresent(messageJumpedObj, 10)
+WebElement messageJumpedElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Jump to pin message/div_message jumped'))
 
-WebUI.verifyElementInViewport(messageJumpedObj, 10)
+String textMessage = messageJumpedElement.getAttribute('innerText')
 
-WebElement messageJumpedElement = WebUI.findWebElement(messageJumpedObj)
+WebUI.takeScreenshot()
 
-String textMessage = messageJumpedElement.getAttribute("innerText")
-
-if(!textMessage.contains(textPinMessage)) {
-	KeywordUtil.markFailed("Error jump to pin message! - textMessage: '$textMessage'; textPinMessage: '$textPinMessage'")
+if (!(textMessage.contains(textPinMessage))) {
+    KeywordUtil.markFailed("Error jump to pin message! - textMessage: '$textMessage'; textPinMessage: '$textPinMessage'")
 }
 
+println "Error jump to pin message! - textMessage: '$textMessage'; textPinMessage: '$textPinMessage'"
 def getTextPinMessage(TestObject pinMessageObj) {
-	WebElement pinMessageElement = WebUI.findWebElement(pinMessageObj)
-	String text = pinMessageElement.getAttribute("innerText")
-	return text
+    WebElement pinMessageElement = WebUI.findWebElement(pinMessageObj)
+
+    String text = pinMessageElement.getAttribute('innerText')
+
+    return text
 }
+

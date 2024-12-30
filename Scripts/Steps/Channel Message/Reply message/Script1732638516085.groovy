@@ -21,14 +21,13 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'), 
-    5)
-
 WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_more'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/buttion_more_reply'))
+
+WebUI.takeScreenshot()
 
 WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Replying to'))
 
@@ -39,15 +38,21 @@ CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send em
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
+WebUI.takeScreenshot()
+
 if(isSending) {
 	KeywordUtil.markFailedAndStop('Sending message failed')
 }
+
+WebUI.takeScreenshot()
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_repy message'), 10)
 
 WebElement repyMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_reply message'))
 
 String sentMessage = repyMessageElement.getText()
+
+WebUI.takeScreenshot()
 
 if(replyMessage != sentMessage) {
 	KeywordUtil.markFailed("Error message - replyMessage: '$replyMessage'; sentMessage: '$sentMessage'")
