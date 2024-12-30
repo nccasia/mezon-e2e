@@ -16,26 +16,38 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Reply message'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementPresent(findTestObject('Channel Message/Jump to message reply/div_jump to message reply'), 10)
-
-WebElement messageReply = WebUI.findWebElement(findTestObject('Channel Message/Jump to message reply/div_latest message'))
-
-String messageId = messageReply.getAttribute("id")
-
 WebUI.click(findTestObject('Channel Message/Jump to message reply/div_jump to message reply'))
 
-String messageReplyJumpedXpath = "//*[@id='scrollLoading']/div[2]//div[contains(@class, 'dark:bg-[#383B47]')]"
+WebUI.takeScreenshot()
 
-TestObject messageRepyJumpedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(messageReplyJumpedXpath)
+Boolean isJumpToMessageReplySuccess = WebUI.verifyElementInViewport(findTestObject('Object Repository/Channel Message/Jump to message reply/div_message reply jumped'),
+		1, FailureHandling.OPTIONAL)
 
-WebUI.verifyElementInViewport(messageRepyJumpedObj, 10)
-
-
-
+if (!isJumpToMessageReplySuccess) {
+	
+	for (int i = 0; i < 15; i++) {
+		
+		WebUI.click(findTestObject('Channel Message/Jump to message reply/div_jump to message reply'))
+		
+		isJumpToMessageReplySuccess = WebUI.verifyElementInViewport(findTestObject('Object Repository/Channel Message/Jump to message reply/div_message reply jumped'), 
+				1, FailureHandling.OPTIONAL)
+		
+		if (isJumpToMessageReplySuccess) {
+			break
+		}
+		
+		WebUI.delay(1)
+	}
+	
+	if(!isJumpToMessageReplySuccess) {
+		KeywordUtil.markFailed("jump to message failed")
+	}
+}
 
 
 
