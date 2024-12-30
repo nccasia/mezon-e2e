@@ -24,14 +24,13 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], Fa
 
 WebElement messageContainer = WebUI.findWebElement(findTestObject('Channel Message/Load more message/div_message container'))
 
-List<WebElement> messagesCurrent = WebUI.findWebElements(findTestObject('Channel Message/Load more message/div_message'), 
-    10)
+messageContainer.click()
 
-int messagesCurrentQuantity = messagesCurrent.size()
+WebElement message = WebUI.findWebElement(findTestObject('Channel Message/Load more message/div_message'))
 
-WebUI.click(findTestObject('Channel Message/Load more message/div_message container'))
+String firstMessageId = message.getAttribute("id")
 
-int loopTimes = 10
+int loopTimes = 20
 	
 for (int i = 0; i < loopTimes; i++) {
     WebUI.sendKeys(findTestObject('Channel Message/Load more message/div_message container'), Keys.chord(Keys.ARROW_UP))
@@ -42,19 +41,19 @@ WebUI.takeScreenshot()
 Boolean isLoadMoreSuccess = false
 
 for (int i = 0; i < 15; i++) {
-	List<WebElement> messagesLoaded = WebUI.findWebElements(findTestObject('Channel Message/Load more message/div_message'), 10)
+	message = WebUI.findWebElement(findTestObject('Channel Message/Load more message/div_message'))
 	
-	int messagesLoadedQuatity = messagesLoaded.size()
+	String firstMessageLoadedId= message.getAttribute("id")
 	
-	if(messagesLoadedQuatity > messagesCurrentQuantity) {
+	if (firstMessageLoadedId != firstMessageId) {
 		isLoadMoreSuccess = true
 		break
 	}
+
 	WebUI.delay(1)
 }
 
 if (!isLoadMoreSuccess) {
-	println isLoadMoreSuccess
     KeywordUtil.markFailed('Loading messages failed')
 }
 
