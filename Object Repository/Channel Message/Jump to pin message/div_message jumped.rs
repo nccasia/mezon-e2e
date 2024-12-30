@@ -6,12 +6,11 @@
    <elementGuidId>a52ae68f-079a-428c-9eba-6397fd03caff</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id='scrollLoading']/div[2]//div[contains(@class, 'dark:bg-[#383B47]')]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@id='scrollLoading']/div[2]/div/div[@data-index]//div[contains(@class, 'dark:bg-[#383B47]')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
