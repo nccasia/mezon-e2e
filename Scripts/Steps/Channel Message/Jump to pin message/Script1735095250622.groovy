@@ -45,7 +45,7 @@ if (GlobalVariable.isThread) {
 
 WebUI.takeScreenshot()
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Jump to pin message/div_message jumped'), 10)
+WebUI.verifyElementInViewport(findTestObject('Object Repository/Channel Message/Jump to pin message/div_message jumped'), 2, FailureHandling.STOP_ON_FAILURE)
 
 WebElement messageJumpedElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Jump to pin message/div_message jumped'))
 
@@ -57,7 +57,6 @@ if (!(textMessage.contains(textPinMessage))) {
     KeywordUtil.markFailed("Error jump to pin message! - textMessage: '$textMessage'; textPinMessage: '$textPinMessage'")
 }
 
-println "Error jump to pin message! - textMessage: '$textMessage'; textPinMessage: '$textPinMessage'"
 def getTextPinMessage(TestObject pinMessageObj) {
     WebElement pinMessageElement = WebUI.findWebElement(pinMessageObj)
 
