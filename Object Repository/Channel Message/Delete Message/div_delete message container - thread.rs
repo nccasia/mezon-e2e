@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_latest_message</name>
+   <name>div_delete message container - thread</name>
    <tag></tag>
-   <elementGuidId>6c838b6a-a7bc-461c-b6fa-549eeb2f4bd1</elementGuidId>
+   <elementGuidId>2e3e0175-1471-49cb-83fe-7389d4fef5bc</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div//div[contains(@id, 'msg')]</value>
+         <value>/html/body/div[4]/div/div/div[2]/div/div[contains(@class, 'message-container')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
