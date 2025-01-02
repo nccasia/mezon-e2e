@@ -24,7 +24,9 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Send image'), [:], Failur
 
 WebElement image = WebUI.findWebElement(findTestObject('Channel Message/Send Media/img_latest message'))
 
-String imageSrc = cutUrl( "/plain/", image.getAttribute("src"))
+String HOST = "https://cdn.mezon.vn"
+
+String imageSrc = cutUrl( HOST, image.getAttribute("src"))
 
 image.click()
 
@@ -34,11 +36,11 @@ WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest
 
 WebElement imageOfImageDetailModal = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Open image detail/modal_image detail'))
 
-String imageOfImageDetailModalSrc = cutUrl( "/plain/", imageOfImageDetailModal.getAttribute("src"))
+String imageOfImageDetailModalSrc = cutUrl( HOST, imageOfImageDetailModal.getAttribute("src"))
 
 WebElement selectedImage = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Open image detail/image selected'))
 
-String selectedImageSrc = cutUrl( "/plain/", selectedImage.getAttribute("src"))
+String selectedImageSrc = cutUrl( HOST, selectedImage.getAttribute("src"))
 
 WebUI.takeScreenshot()
 
@@ -50,11 +52,11 @@ WebElement divNotSelectedImg =  WebUI.findWebElement(findTestObject('Object Repo
 
 WebElement notSelectedImg  = divNotSelectedImg.findElement(By.xpath('./div/img'))
 
-String notSelectedImgSrc = cutUrl( "/plain/", notSelectedImg.getAttribute('src')) 
+String notSelectedImgSrc = cutUrl( HOST, notSelectedImg.getAttribute('src')) 
 
 divNotSelectedImg.click()
 
-imageOfImageDetailModalSrc = cutUrl( "/plain/", imageOfImageDetailModal.getAttribute("src"))
+imageOfImageDetailModalSrc = cutUrl( HOST, imageOfImageDetailModal.getAttribute("src"))
 
 if (notSelectedImgSrc != imageOfImageDetailModalSrc) {
 	KeywordUtil.markFailed("Error image selected")
@@ -66,7 +68,7 @@ def cutUrl(String keyword, String url) {
 		KeywordUtil.markFailedAndStop("keyword not inside URL");
 		return "";
 	} else {
-		String result = url.substring(index + keyword.length());
+		String result = url.substring(index);
 		return result
 	}
 }
