@@ -62,12 +62,12 @@ if (notSelectedImgSrc != imageOfImageDetailModalSrc) {
 
 def cutUrl(String keyword, String url) {
 	int index = url.indexOf(keyword);
-	if (index != -1) {
+	if (index == -1) {
+		KeywordUtil.markFailedAndStop("keyword not inside URL");
+		return "";
+	} else {
 		String result = url.substring(index + keyword.length());
 		return result
-	} else {
-		println "keyword not inside URL";
-		return "";
 	}
 }
 
