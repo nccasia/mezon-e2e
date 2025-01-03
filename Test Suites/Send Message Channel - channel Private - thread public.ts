@@ -12,6 +12,20 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>8c35585f-0a7e-4ab6-af12-f1747c525d5a</testSuiteGuid>
    <testCaseLink>
+      <guid>73a63f79-ffdf-4cd1-9719-8b356265ab2a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Steps/Channel Message/Copy message</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>605adcef-6711-40d4-b835-2a8fc29bac0d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Steps/Channel Message/Create and send msg to topic</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>df347de4-4042-4694-a99c-1844cb34d01d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -54,6 +68,13 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>8726f65c-527d-4fa3-86b2-722fbda0fc41</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Steps/Channel Message/Jump to message reply</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>67e3ae02-1e44-455f-82e3-8dc943c64438</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -86,6 +107,13 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Steps/Channel Message/Metion, hashtag channel</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1b1608cf-8c59-40a2-aafc-d757311740ba</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Steps/Channel Message/Open image detail</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -142,6 +170,13 @@
          <value></value>
          <variableId>2ca22d73-eae2-438c-a1cb-3b032cdd44e5</variableId>
       </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2a13e47b-402a-4bd9-8b3b-65561112635c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Steps/Channel Message/Send image</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>f0ca8f88-d380-4588-8b98-16f6bc4a32f3</guid>
