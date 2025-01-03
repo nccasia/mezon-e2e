@@ -26,7 +26,7 @@ WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delet
 
 WebUI.takeScreenshot()
 
-WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_members'), FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_first_member'))
 

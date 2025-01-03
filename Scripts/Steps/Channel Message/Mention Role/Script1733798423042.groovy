@@ -29,6 +29,8 @@ WebElement textAreaElem = WebUI.findWebElement(findTestObject('Channel Message/S
 
 WebUI.setText(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), '@')
 
+WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
+
 WebUI.takeScreenshot()
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Mention Role/div_mention box'), 5)
