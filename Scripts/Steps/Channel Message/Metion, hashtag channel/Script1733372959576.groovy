@@ -25,6 +25,8 @@ WebUI.maximizeWindow()
 
 WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), '@')
 
+WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
+
 WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_mention'))
 
 String mentionText = WebUI.findWebElement(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general')).getText().trim()
@@ -58,6 +60,8 @@ WebUI.verifyElementPresent(findTestObject('Channel Message/Mention, hashtag/div_
 WebUI.click(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'))
 
 WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), '#')
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
 
 WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_hashtag'))
 

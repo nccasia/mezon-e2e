@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_text pin message_channel private</name>
+   <name>div_suggestions display</name>
    <tag></tag>
-   <elementGuidId>e2146a6a-ee14-4b35-a588-d52e673e6623</elementGuidId>
+   <elementGuidId>a49390f3-9c79-4de8-a3b5-e8703c21b4cc</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[5]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/div[2]/div/div&#xd;
-</value>
+         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[2]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
