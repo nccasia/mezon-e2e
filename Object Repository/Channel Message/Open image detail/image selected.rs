@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_thread pannel</name>
+   <name>image selected</name>
    <tag></tag>
-   <elementGuidId>0a295fbe-8f44-4856-a947-da190c70ff8f</elementGuidId>
+   <elementGuidId>fc7c1077-0023-4d1c-8150-2c9d418e0479</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div/div[1]/div[2]/div/div[1]/div[1]/div[3]</value>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[7]/div[2]/div[2]/div/div[not(descendant::div[@class='absolute'])]/div[2]/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
