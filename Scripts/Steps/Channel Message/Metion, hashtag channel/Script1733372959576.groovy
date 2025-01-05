@@ -25,9 +25,16 @@ WebUI.maximizeWindow()
 
 WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), '@')
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
+if(GlobalVariable.isDirectMessage) {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
+	
+	WebUI.click(findTestObject('Object Repository/Direact Message/Mention Role/li_suggestion'))
+} else {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)	
+	
+	WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_mention'))
+}
 
-WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_mention'))
 
 String mentionText = WebUI.findWebElement(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general')).getText().trim()
 
@@ -61,9 +68,15 @@ WebUI.click(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_ge
 
 WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), '#')
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
-
-WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_hashtag'))
+if (GlobalVariable.isDirectMessage) {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
+	
+	WebUI.click(findTestObject('Object Repository/Direact Message/Mention Role/li_suggestion'))
+} else {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
+	
+	WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_hashtag'))
+}
 
 WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), 'mezon')
 

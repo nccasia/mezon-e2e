@@ -29,7 +29,11 @@ WebUI.mouseOver(findTestObject('Object Repository/Channel Message/Send message w
 
 WebUI.rightClick(findTestObject('Object Repository/Channel Message/Send message with link/span_latest message'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Copy message/button_copy text'))
+if (GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Copy message/button_copy text'))
+} else {
+	WebUI.click(findTestObject('Object Repository/Channel Message/Copy message/button_copy text'))	
+}
 
 WebUI.sendKeys(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), 
     Keys.chord(Keys.CONTROL + 'v'))

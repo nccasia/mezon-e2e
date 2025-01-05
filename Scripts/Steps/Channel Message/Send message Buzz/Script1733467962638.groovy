@@ -21,29 +21,26 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.CONTROL, 'g'))
-
-Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
-
-WebUI.takeScreenshot()
-
-if (isSending) {
-	KeywordUtil.markFailedAndStop("Sending message failed")
+if(GlobalVariable.isDirectMessage) {
+	sendMessageBuzz()
+	
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Send message Buzz/div_buzz'), 5)
+} else {	
+	String BuzzXpath = ''
+	
+	if (GlobalVariable.isThread) {
+		BuzzXpath = "//*[@id='$GlobalVariable.channelID']/following-sibling::div[1]/div/div/div"
+	} else {
+		BuzzXpath = "//*[@id='$GlobalVariable.channelID']/a/div/div"
+	}
+	
+	TestObject buzzElement = CustomKeywords.'mezon.GetTestObject.withXpath'(BuzzXpath)
+	
+	sendMessageBuzz()
+	
+	WebUI.verifyElementPresent(buzzElement, 15)
 }
 
-String BuzzXpath = ''
-
-if (GlobalVariable.isThread) {
-    BuzzXpath = "//*[@id='$GlobalVariable.channelID']/following-sibling::div[1]/div/div/div"
-} else {
-    BuzzXpath = "//*[@id='$GlobalVariable.channelID']/a/div/div"
-}
-
-TestObject buzzElement = CustomKeywords.'mezon.GetTestObject.withXpath'(BuzzXpath)
-
-WebUI.takeScreenshot()
-
-WebUI.verifyElementPresent(buzzElement, 5)
 
 WebElement spanMessageBuzz = WebUI.findWebElement(findTestObject('Channel Message/Send message Buzz/span_message buzz'))
 
@@ -55,3 +52,15 @@ if (((messageBuzz != 'Buzz!!')) || (colorText != 'rgba(239, 68, 68, 1)')) {
     KeywordUtil.markFailedAndStop("Error message - messageBuzz: '$messageBuzz'; colorText: $colorText")
 }
 
+
+def sendMessageBuzz() {
+	WebUI.sendKeys(findTestObject('Channel Message/Page_Mezon/textarea_1'), Keys.chord(Keys.CONTROL, 'g'))
+	
+	Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+	
+	WebUI.takeScreenshot()
+	
+	if (isSending) {
+		KeywordUtil.markFailedAndStop("Sending message failed")
+	}
+}

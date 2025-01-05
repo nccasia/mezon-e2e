@@ -26,9 +26,14 @@ WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delet
 
 WebUI.takeScreenshot()
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
+if(GlobalVariable.isDirectMessage) {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
+	WebUI.click(findTestObject('Object Repository/Direact Message/Mention Role/li_suggestion'))
+} else {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)	
+	WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_first_member'))
+}
 
-WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_first_member'))
 
 WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), 'Are you OK?')
 
@@ -64,14 +69,8 @@ if ((lastMsg != testMsg) && ('rgba(60, 66, 112, 1)' != metionBg)) {
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_show_user'))
 
-WebUI.takeScreenshot()
+WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_show_user_profile'), 10)
 
-Boolean flag = WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_show_user_profile'), 
-    10)
-
-if (!(flag)) {
-    KeywordUtil.markFailed('User profile isn\'t present')
-}
 
 
 

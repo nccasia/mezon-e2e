@@ -30,10 +30,18 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], Fa
 
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '#')
 
-WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_text_channel'), 
-    FailureHandling.STOP_ON_FAILURE)
+if (GlobalVariable.isDirectMessage) {
+	WebUI.verifyElementVisible(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'),
+		FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_text_channel_general'))
+	WebUI.click(findTestObject('Object Repository/Direact Message/Mention Role/li_suggestion'))
+
+} else {
+	WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_text_channel'), 
+			FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_text_channel_general'))
+}
 
 WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '123456')
 

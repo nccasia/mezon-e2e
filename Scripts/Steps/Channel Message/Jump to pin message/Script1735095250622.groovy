@@ -23,25 +23,35 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Pin message'), [:], Failu
 
 String textPinMessage = ''
 
-if (GlobalVariable.isThread) {
-    WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel_Thread'))
-
-    textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_thread'))
-
-    WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_thread'))
-} else if (GlobalVariable.isChannelPrivate) {
-    WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel channel Private'))
-
-    textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel private'))
-
-    WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_channel private'))
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Jump to pin message/button_pin message pannel'))
+	
+	textPinMessage = getTextPinMessage(findTestObject('Object Repository/Direact Message/Jump to pin message/span_ pin message'))
+	
+	WebUI.click(findTestObject('Object Repository/Direact Message/Jump to pin message/button_jump'))
 } else {
-    WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel channel Public'))
-
-    textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel public'))
-
-    WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_channel public'))
+	
+	if (GlobalVariable.isThread) {
+		WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel_Thread'))
+		
+		textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_thread'))
+		
+		WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_thread'))
+	} else if (GlobalVariable.isChannelPrivate) {
+		WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel channel Private'))
+		
+		textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel private'))
+		
+		WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_channel private'))
+	} else {
+		WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel channel Public'))
+		
+		textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel public'))
+		
+		WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_channel public'))
+	}
 }
+
 
 WebUI.takeScreenshot()
 

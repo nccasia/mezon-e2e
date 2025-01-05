@@ -18,35 +18,46 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
-        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
+if (GlobalVariable.isDirectMessage) {
+	WebUI.callTestCase(findTestCase('Steps/Direct Message/Select conversation'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebElement channel = WebUI.findWebElement(GlobalVariable.channel)
+} else {
+	WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
+		, ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 	
-channel.click()
-	
-GlobalVariable.channelID = channel.getAttribute('id')
+    WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
 
-if (GlobalVariable.isChannelPrivate && GlobalVariable.isThread) {
-	
-	WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel - private'))
+    WebElement channel = WebUI.findWebElement(GlobalVariable.channel)
 
-	if(GlobalVariable.isThreadPrivate) {
-		WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_ search thread - Channel Private'), 'Private Thread')
-	} else {
-		WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_ search thread - Channel Private'), 'Public Thread')
-	}
+    channel.click()
 
-	WebUI.click(findTestObject('Channel Message/Select thread/div_thread private'))
+    GlobalVariable.channelID = channel.getAttribute('id')
 
-} else if (!GlobalVariable.isChannelPrivate && GlobalVariable.isThread) {
-	WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel'))
-	if(GlobalVariable.isThreadPrivate) {
-		WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_search thread - channel Public'), 'Private Thread')
-	} else {
-		WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_search thread - channel Public'), 'Public Thread')
-	}
-	WebUI.click(findTestObject('Channel Message/Select thread/div_thread'))
+    if (GlobalVariable.isChannelPrivate && GlobalVariable.isThread) {
+        WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel - private'))
+
+        if (GlobalVariable.isThreadPrivate) {
+            WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_ search thread - Channel Private'), 
+                'Private Thread')
+        } else {
+            WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_ search thread - Channel Private'), 
+                'Public Thread')
+        }
+        
+        WebUI.click(findTestObject('Channel Message/Select thread/div_thread private'))
+    } else if (!(GlobalVariable.isChannelPrivate) && GlobalVariable.isThread) {
+        WebUI.click(findTestObject('Channel Message/Select thread/button_thread pannel'))
+
+        if (GlobalVariable.isThreadPrivate) {
+            WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_search thread - channel Public'), 
+                'Private Thread')
+        } else {
+            WebUI.setText(findTestObject('Channel Message/Select channel and send message/input_search thread - channel Public'), 
+                'Public Thread')
+        }
+        
+        WebUI.click(findTestObject('Channel Message/Select thread/div_thread'))
+    }
 }
+

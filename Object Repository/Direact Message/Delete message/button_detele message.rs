@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_message</name>
+   <name>button_detele message</name>
    <tag></tag>
-   <elementGuidId>1b4f5b0f-6bc4-4cc6-86c5-b7cd77b91b22</elementGuidId>
+   <elementGuidId>d73569e0-cbf4-46e5-8389-21ae22c89b5a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/span</value>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div[2]/div[1]/div[1]/div[2]/div[@class='contexify_item'][11]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

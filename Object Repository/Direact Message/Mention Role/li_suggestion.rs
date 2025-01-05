@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_more</name>
+   <name>li_suggestion</name>
    <tag></tag>
-   <elementGuidId>22607f66-071e-42ad-a22a-4fe9dca8cbb3</elementGuidId>
+   <elementGuidId>087ad1e4-1ef7-4bb4-b9ec-f8313e72c510</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div[1]/div/div[2]/div/div/button[last()]</value>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div/div/div/div[1]/div[2]/div/div/ul/li</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

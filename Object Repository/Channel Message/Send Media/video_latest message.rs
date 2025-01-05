@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div/div/div/div[1]/div/div/div[2]/div/div[@data-index][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/video</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div/div//div[1]/div[2]/div/div[2]/div[2]/div/div[2]/div/div/video</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

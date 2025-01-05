@@ -32,11 +32,18 @@ Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, nu
 WebUI.sendKeys(findTestObject('Channel Message/Send text to large for convert to file txt/textarea_Clan T_general channel'), 
     Keys.chord(Keys.CONTROL, 'v'))
 
-WebUI.takeScreenshot()
+String fileName
 
-WebUI.verifyElementPresent(findTestObject('Channel Message/Send text to large for convert to file txt/p_file name'), 10)
+if(GlobalVariable.isDirectMessage) {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Send text to large for convert to file txt/p_convertion file name'), 10)
+	
+	fileName = WebUI.getText(findTestObject('Object Repository/Direact Message/Send text to large for convert to file txt/p_convertion file name'))
+} else {
+	WebUI.verifyElementPresent(findTestObject('Channel Message/Send text to large for convert to file txt/p_file name'), 10)	
 
-String fileName = WebUI.getText(findTestObject('Channel Message/Send text to large for convert to file txt/p_file name'))
+	fileName = WebUI.getText(findTestObject('Channel Message/Send text to large for convert to file txt/p_file name'))
+}
+
 
 if(largeMessage.size() < 4092*2 && fileName) {
 	KeywordUtil.markFailedAndStop('Error: small text converted to file')

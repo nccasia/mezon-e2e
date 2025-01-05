@@ -29,13 +29,17 @@ WebElement textAreaElem = WebUI.findWebElement(findTestObject('Channel Message/S
 
 WebUI.setText(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), '@')
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)
+WebElement mentionBoxElem
 
-WebUI.takeScreenshot()
+if(GlobalVariable.isDirectMessage) {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
 
-WebUI.verifyElementPresent(findTestObject('Channel Message/Mention Role/div_mention box'), 5)
-
-WebElement mentionBoxElem = WebUI.findWebElement(findTestObject('Channel Message/Mention Role/div_mention box'))
+	mentionBoxElem = WebUI.findWebElement(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'))
+} else {
+	WebUI.verifyElementPresent(findTestObject('Channel Message/Mention Role/div_mention box'), 15)
+	
+	mentionBoxElem = WebUI.findWebElement(findTestObject('Channel Message/Mention Role/div_mention box'))
+}
 
 List<WebElement> liTagList = mentionBoxElem.findElements(By.tagName('li'))
 

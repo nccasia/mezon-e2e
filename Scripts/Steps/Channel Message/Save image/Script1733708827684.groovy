@@ -43,7 +43,11 @@ if (isSending) {
 
 WebUI.rightClick(findTestObject('Channel Message/Save image/img_message'))
 
-WebUI.click(findTestObject('Channel Message/Save image/div_save image'))
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Save image/Button_save image'))
+} else {
+	WebUI.click(findTestObject('Channel Message/Save image/div_save image'))
+}
 
 CustomKeywords.'mezon.VerifySaveImage.verifySaveImage'(userDownloads, 'image')
 

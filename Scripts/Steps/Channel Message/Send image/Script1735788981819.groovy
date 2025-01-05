@@ -30,7 +30,6 @@ WebUI.sendKeys(findTestObject('Channel Message/Send text to large for convert to
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-
 if(isSending) {
 	WebUI.takeScreenshot()
 	KeywordUtil.markFailedAndStop("Sending image failed!")

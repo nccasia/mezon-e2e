@@ -26,7 +26,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>false</initValue>
+      <initValue>true</initValue>
       <name>isDirectMessage</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>true</initValue>
+      <name>isGroupMessage</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

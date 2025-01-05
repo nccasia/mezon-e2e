@@ -22,7 +22,7 @@ WebUI.callTestCase(findTestCase('Steps/Direct Message/Select conversation'), [:]
 
 String message = 'xin chao';
 
-CustomKeywords.'mezon.SendText.sendText'(findTestObject('Direact Message/main chat_textarea'), message, Keys.chord(Keys.ENTER));
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Direact Message/usual/main chat_textarea'), message, Keys.chord(Keys.ENTER));
 
 Boolean isSending =  CustomKeywords.'mezon.SendingMessage.isSendingMessage'();
 
@@ -32,7 +32,7 @@ if(isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed");
 }
 
-String sentMessage =  WebUI.findWebElement(findTestObject('Object Repository/Direact Message/span_message')).getText()
+String sentMessage =  WebUI.findWebElement(findTestObject('Object Repository/Direact Message/usual/span_message')).getText()
 
 if(sentMessage != message) {
 	KeywordUtil.markFailed("Error message! - message: '$message'; sentMessage: '$sentMessage'");

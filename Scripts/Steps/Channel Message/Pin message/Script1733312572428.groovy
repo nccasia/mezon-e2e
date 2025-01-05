@@ -29,7 +29,11 @@ WebUI.mouseOver(findTestObject('Channel Message/Jump to pin message/div_message 
 
 WebUI.click(findTestObject('Object Repository/Channel Message/Forward message to DM/button_more'))
 
-WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin message'))
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Pin message/buttton_pin message'))
+} else {
+	WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin message'))
+}
 
 if (GlobalVariable.isThread) {
     WebUI.click(findTestObject('Object Repository/Channel Message/Jump to pin message/button_create pin _thread'))
