@@ -28,7 +28,15 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 public class ConvertFile {
 	@Keyword
 	def toString(String path) {
-		String filePath = RunConfiguration.getProjectDir().replace('/', '\\') + path
+		String os = System.getProperty("os.name").toLowerCase()
+		
+		String filePath = RunConfiguration.getProjectDir() + path
+		
+		if(os.contains('mac')) {
+			filePath = filePath.replace('\\', '/')
+		} else if (os.contains("win")) {
+			filePath = filePath.replace('/', '\\')		
+		}
 		
 		String result = new String(Files.readAllBytes(Paths.get(filePath)))
 		return result
