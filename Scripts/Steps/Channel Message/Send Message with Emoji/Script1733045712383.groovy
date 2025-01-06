@@ -20,22 +20,28 @@ import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
-        , ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 String message_text = 'siuuu'
 
 WebUI.setText(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), message_text)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emojis pannel'))
+WebElement emoji1Button
 
-WebUI.takeScreenshot()
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Send emoji/button_emoji pannel'))
+	
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Send emoji/div_emojis display'), 10)
+	
+	emoji1Button = WebUI.findWebElement(findTestObject('Object Repository/Direact Message/Send emoji/img_emoji'))
+} else {
+	WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_Emojis pannel'))	
 
-WebUI.verifyElementPresent(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Emojis Pannel'), 10)
+	WebUI.verifyElementPresent(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Emojis Pannel'), 10)
 
-WebElement emoji1Button = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1'))
+	emoji1Button = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1'))
+}
+
 
 WebElement emojiImg = emoji1Button.findElement(By.tagName('img'))
 
@@ -50,7 +56,7 @@ Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 WebUI.takeScreenshot()
 
 if (isSending) {
-	KeywordUtil.markFailedAndStop("Sending message failed")
+    KeywordUtil.markFailedAndStop('Sending message failed')
 }
 
 WebElement message_emoji = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Message with Emoji'))

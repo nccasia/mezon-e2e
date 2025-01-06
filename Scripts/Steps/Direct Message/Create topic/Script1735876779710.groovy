@@ -19,9 +19,9 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('Steps/Direct Message/Send message'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.mouseOver(findTestObject('Direact Message/div_message'))
+WebUI.mouseOver(findTestObject('Direact Message/usual/div_message'))
 
-WebUI.click(findTestObject('Direact Message/button_more'))
+WebUI.click(findTestObject('Direact Message/usual/button_more'))
 
 WebUI.click(findTestObject('Direact Message/Create topic/button_ topic discussion'))
 

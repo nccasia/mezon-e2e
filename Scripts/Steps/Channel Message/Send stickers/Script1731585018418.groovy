@@ -21,11 +21,26 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_sticker pannel'))
+String stickerHref
 
-String stickerHref = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Sticker'), 0).getAttribute('src')
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Send Sticker/button_Sticker pannel'))
+	
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Send emoji/div_emojis display'), 15)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Sticker'))
+	stickerHref = WebUI.findWebElement(findTestObject('Object Repository/Direact Message/Send Sticker/img_sticker')).getAttribute('src')
+	
+	WebUI.click(findTestObject('Object Repository/Direact Message/Send Sticker/img_sticker'))
+} else {
+	WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/button_sticker pannel'))	
+
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_gif, emoji sticker display'), 15)
+	
+	stickerHref = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Sticker')).getAttribute('src')
+	
+	WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Sticker'))
+}
+
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 

@@ -27,7 +27,11 @@ WebUI.mouseOver(findTestObject('Channel Message/Forward message to DM/div_latest
 
 WebUI.click(findTestObject('Channel Message/Forward message to DM/button_more'))
 
-WebUI.click(findTestObject('Channel Message/Forward message to DM/button_forward'))
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Forward message/button_forward message'))	
+} else {
+	WebUI.click(findTestObject('Channel Message/Forward message to DM/button_forward'))
+}
 
 TestObject forwardContainerObj = findTestObject('Channel Message/Forward message to DM/div_forward_container')
 

@@ -25,11 +25,15 @@ WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Dele
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_more'))
 
-WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/buttion_more_reply'))
-
-WebUI.takeScreenshot()
-
-WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Replying to'))
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Reply message/button_reply'))
+	
+	WebUI.verifyElementVisible(findTestObject('Object Repository/Direact Message/Reply message/div_replying to'))
+} else {
+	WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/buttion_more_reply'))
+	
+	WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_Replying to'))
+}
 
 String replyMessage = 'toi la bot'
 
@@ -43,8 +47,6 @@ WebUI.takeScreenshot()
 if(isSending) {
 	KeywordUtil.markFailedAndStop('Sending message failed')
 }
-
-WebUI.takeScreenshot()
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_repy message'), 10)
 

@@ -122,6 +122,12 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Steps/Channel Message/Pin message</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ddd8f8c0-600b-46f6-95e3-7ef51808a8bc</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>385cb576-ac44-4f63-a53c-aea991ed8946</guid>

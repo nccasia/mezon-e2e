@@ -25,7 +25,12 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:],
 
 WebUI.mouseOver(findTestObject('Channel Message/Reaction Message/div_latest message'))
 
-WebUI.click(findTestObject('Channel Message/Reaction Message/button_reaction_pannel'))
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Reaction Message/Button_reaction pannel'))
+} else {
+	
+	WebUI.click(findTestObject('Channel Message/Reaction Message/button_reaction_pannel'))
+}
 
 String reactionHref = WebUI.findWebElement(findTestObject('Channel Message/Reaction Message/button_reaction')).findElement(By.tagName('img')).getAttribute('src')
 

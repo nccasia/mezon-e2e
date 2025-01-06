@@ -29,7 +29,11 @@ WebUI.mouseOver(findTestObject('Channel Message/Forward message to DM/div_latest
 
 WebUI.rightClick(findTestObject('Channel Message/Forward message to DM/div_latest_message'))
 
-WebUI.click(findTestObject('Object Repository/Channel Message/Delete Message/button_delete message'))
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Delete message/button_detele message'))
+} else {
+	WebUI.click(findTestObject('Object Repository/Channel Message/Delete Message/button_delete message'))	
+}
 
 WebUI.takeScreenshot()
 

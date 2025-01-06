@@ -21,17 +21,30 @@ import org.openqa.selenium.By as By
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Button_Emojis pannel'))
+String emojiHref
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_emojis list display'), 15)
+if(GlobalVariable.isDirectMessage) {
+	WebUI.click(findTestObject('Object Repository/Direact Message/Send emoji/button_emoji pannel'))
+	
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Send emoji/div_emojis display'), 15)
+	
+	emojiHref = WebUI.findWebElement(findTestObject('Object Repository/Direact Message/Send emoji/img_emoji')).getAttribute('src')
 
-String emojiHref = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji3')).findElement(By.tagName('img')).getAttribute('src')
-
-WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji3'))
+	WebUI.click(findTestObject('Object Repository/Direact Message/Send emoji/img_emoji'))
+} else {
+	WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/Button_Emojis pannel'))	
+	
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_emojis list display'), 15)
+	
+	emojiHref = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji3')).findElement(By.tagName('img')).getAttribute('src')
+	
+	WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji3'))
+}
 
 WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), Keys.chord(Keys.ENTER))
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
 WebUI.takeScreenshot()
 
 if (isSending) {

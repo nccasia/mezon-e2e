@@ -29,4 +29,9 @@
       <initValue>true</initValue>
       <name>isDirectMessage</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>isGroupMessage</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

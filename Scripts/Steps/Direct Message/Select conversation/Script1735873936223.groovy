@@ -27,10 +27,10 @@ WebUI.click(findTestObject('Direact Message/Select conversation/input_search con
 WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Select conversation/input_search'), 
 	15, FailureHandling.STOP_ON_FAILURE)
 
-if (GlobalVariable.isDirectMessage) {
-	WebUI.setText(findTestObject('Object Repository/Direact Message/Select conversation/input_search'), '@')
-} else {
+if (GlobalVariable.isGroupMessage) {
 	WebUI.setText(findTestObject('Object Repository/Direact Message/Select conversation/input_search'), 'Group test')
+} else {
+	WebUI.setText(findTestObject('Object Repository/Direact Message/Select conversation/input_search'), '@')
 }
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Select conversation/span_conversation'),
