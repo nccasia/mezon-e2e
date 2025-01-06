@@ -26,7 +26,7 @@ if (GlobalVariable.isDirectMessage) {
 	WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
 		, ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)
 	
-    WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_channel T'))
+    WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Clan T'))
 
     WebElement channel = WebUI.findWebElement(GlobalVariable.channel)
 
