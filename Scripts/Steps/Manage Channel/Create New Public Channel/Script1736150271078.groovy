@@ -54,7 +54,7 @@ for (int i = 0; i < 15; i++) {
 			verifyCreateNewChannelFail = false
 			break
 		} else {
-			KeywordUtil.markFailedAndStop("channel Icon is wrong!")
+			KeywordUtil.markFailedAndStop("Channel Icon is wrong!")
 		}
 	}
 	WebUI.delay(1)
@@ -71,7 +71,7 @@ String titleNewChannelText = titleNewChannelElement.getText()
 WebUI.takeScreenshot()
 
 if (titleNewChannelText != newChannelName) {
-	KeywordUtil.markFailedAndStop("Title New Channel is wrong!")
+	KeywordUtil.markFailedAndStop("New Channel Title is wrong!")
 }
 
 
