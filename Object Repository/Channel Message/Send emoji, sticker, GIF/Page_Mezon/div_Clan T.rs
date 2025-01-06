@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_channel T</name>
+   <name>div_Clan T</name>
    <tag></tag>
    <elementGuidId>d0869863-170e-4d33-89fe-e82de106d863</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='menu']/div/div[3]/div[2]/div/a/div/div[2]/div</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//div[@id='menu']/div/div[3]/div[2]/div/a/div/div[2]/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
