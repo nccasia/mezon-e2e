@@ -59,11 +59,11 @@ threadsOfGeneral = WebUI.findWebElement(threadContainerObj)
 
 WebElement newThread = checkNewThreadPresent(threadsOfGeneral, threadName, 3, 1)
 
-WebUI.takeScreenshot()
-
 if (newThread) {
 	newThread.click()
 } else {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop('New thread not present!')
 }
 
@@ -71,9 +71,9 @@ WebElement threadBreadCrumb = WebUI.findWebElement(findTestObject('Channel Messa
 
 String threadBreadCrumbText = threadBreadCrumb.getText()
 
-WebUI.takeScreenshot()
-
 if (threadBreadCrumbText != threadName) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("Error thread! - threadName: '$threadName'; threadBreadCrumbText: '$threadBreadCrumbText'")
 }
 

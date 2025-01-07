@@ -45,9 +45,10 @@ WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mez
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
 
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 

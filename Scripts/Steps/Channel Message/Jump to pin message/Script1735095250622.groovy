@@ -52,18 +52,15 @@ if(GlobalVariable.isDirectMessage) {
 	}
 }
 
-
-WebUI.takeScreenshot()
-
 WebUI.verifyElementInViewport(findTestObject('Object Repository/Channel Message/Jump to pin message/div_message jumped'), 2, FailureHandling.STOP_ON_FAILURE)
 
 WebElement messageJumpedElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Jump to pin message/div_message jumped'))
 
 String textMessage = messageJumpedElement.getAttribute('innerText')
 
-WebUI.takeScreenshot()
-
 if (!(textMessage.contains(textPinMessage))) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("Error jump to pin message! - textMessage: '$textMessage'; textPinMessage: '$textPinMessage'")
 }
 

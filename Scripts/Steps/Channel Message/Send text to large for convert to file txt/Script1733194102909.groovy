@@ -54,9 +54,10 @@ WebUI.sendKeys(findTestObject('Channel Message/Send text to large for convert to
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
 
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 
@@ -67,6 +68,8 @@ WebElement p_fileName = WebUI.findWebElement(findTestObject('Channel Message/Sen
 String sentFileName = p_fileName.getText()
 
 if ((sentFileName != fileName) || !check) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("Error message! - sentFileName: '$sentFileName'; fileName: '$fileName'")
 }
 

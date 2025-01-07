@@ -21,13 +21,13 @@ import org.openqa.selenium.WebElement as WebElement
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Send message with link/span_latest message'))
+WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_latest mes'))
 
 String sentMessageText = sentMessageElement.getText()
 
-WebUI.mouseOver(findTestObject('Object Repository/Channel Message/Send message with link/span_latest message'))
+WebUI.mouseOver(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_latest mes'))
 
-WebUI.rightClick(findTestObject('Object Repository/Channel Message/Send message with link/span_latest message'))
+WebUI.rightClick(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_latest mes'))
 
 if (GlobalVariable.isDirectMessage) {
 	WebUI.click(findTestObject('Object Repository/Direact Message/Copy message/button_copy text'))

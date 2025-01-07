@@ -33,9 +33,9 @@ CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send me
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 
@@ -48,6 +48,8 @@ WebElement aTag = spanLatestMessageElement.findElement(By.tagName('a'))
 String sentLink = aTag.getText()
 
 if ((link != sentLink) && ( sentMessage!= message)) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("Error message! - link: '$link'; sentLink: '$sentLink'; sentMessage: '$sentMessage'; message: '$message'")
 }
 

@@ -42,7 +42,6 @@ if(GlobalVariable.isDirectMessage) {
 	emoji1Button = WebUI.findWebElement(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/emoji1'))
 }
 
-
 WebElement emojiImg = emoji1Button.findElement(By.tagName('img'))
 
 String srcImg_emoji = emojiImg.getAttribute('src')
@@ -53,9 +52,9 @@ WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mez
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if (isSending) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailedAndStop('Sending message failed')
 }
 
@@ -68,6 +67,8 @@ WebElement img_tag = message_emoji.findElement(By.tagName('img'))
 String hrefImg = img_tag.getAttribute('src')
 
 if ((sentMess != message_text) && (hrefImg != srcImg_emoji)) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("Error message - sentMess: '$sentMess'; message_text: '$message_text'; hrefImg: '$hrefImg'; srcImg_emoji: '$srcImg_emoji'")
 }
 

@@ -49,6 +49,8 @@ String messageBuzz = spanMessageBuzz.getText()
 String colorText = spanMessageBuzz.getCssValue('color')
 
 if (((messageBuzz != 'Buzz!!')) || (colorText != 'rgba(239, 68, 68, 1)')) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailedAndStop("Error message - messageBuzz: '$messageBuzz'; colorText: $colorText")
 }
 

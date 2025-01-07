@@ -30,13 +30,15 @@ String fileName = splitFilePath[(splitFilePath.size() - 1)]
 
 WebUI.uploadFile(findTestObject('Channel Message/Send file/input_upload file'), filePath)
 
+WebUI.verifyElementPresent(findTestObject("Object Repository/Channel Message/Send text to large for convert to file txt/p_file name"), 15)
+
 WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending file failed")
 }
 
@@ -45,6 +47,8 @@ WebElement spanSentMessage = WebUI.findWebElement(findTestObject('Channel Messag
 String sentMessage = spanSentMessage.getText()
 
 if (sentMessage != fileName) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("Error message - sentMessage: '$sentMessage'; fileName: '$fileName'")
 }
 

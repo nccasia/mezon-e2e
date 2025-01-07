@@ -6,12 +6,11 @@
    <elementGuidId>1f292ff0-7960-4468-b638-d0b1a2073d39</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div/div/div[1]/div[2]/div[2]/div[2]/div[2]/div/div/div/div/div/div/span/span</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[@class=&quot;message-list-item&quot;][last()]/div/div/div/div[1]/div[2]/div[2]/div[2]/div[2]/div/div/div/div/div/div/span/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

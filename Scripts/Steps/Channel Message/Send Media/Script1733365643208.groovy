@@ -32,32 +32,24 @@ WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), file
 
 WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
 
-Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+verifySendMessage("Sending media failed")
 
-WebUI.takeScreenshot()
-
-if (isSending) {
-	KeywordUtil.markFailedAndStop("Sending media failed")
-}
-
-WebUI.takeScreenshot()
-
-WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/video_latest message'), 0)
+WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/video_latest message'), 15)
 
 WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), fileImgPath)
 
 WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
 
-isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
-
-WebUI.takeScreenshot()
-
-if (isSending) {
-	KeywordUtil.markFailedAndStop("Sending message failed")
-}
-
-WebUI.takeScreenshot()
+verifySendMessage("Sending message failed")
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest message'), 10)
 
+def verifySendMessage(String errorMessage) {
+	Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+	if (isSending) {
+		WebUI.takeScreenshot()
+		
+		KeywordUtil.markFailedAndStop(errorMessage)
+	}
+}
 

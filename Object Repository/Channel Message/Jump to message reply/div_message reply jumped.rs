@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id='scrollLoading']/div[2]/div/div[@data-index]//div[contains(@class, 'dark:bg-[#383B47]')]</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[@class=&quot;message-list-item&quot;]//div/div/div/div[contains(@class, 'dark:bg-[#383B47]')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

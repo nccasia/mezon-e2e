@@ -19,26 +19,16 @@ import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-//WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : GlobalVariable.email
-//        , ('password') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
-//
-//WebUI.maximizeWindow()
-//
-//WebUI.click(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_clan_T'))
-
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '#')
 
 if (GlobalVariable.isDirectMessage) {
-	WebUI.verifyElementVisible(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'),
-		FailureHandling.STOP_ON_FAILURE)
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
 
 	WebUI.click(findTestObject('Object Repository/Direact Message/Mention Role/li_suggestion'))
-
 } else {
-	WebUI.verifyElementVisible(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_text_channel'), 
-			FailureHandling.STOP_ON_FAILURE)
+	WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_text_channel'), 15)
 	
 	WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_text_channel_general'))
 }
@@ -53,9 +43,10 @@ WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delet
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
 
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 
@@ -68,6 +59,8 @@ WebElement htagMsgElm = WebUI.findWebElement(findTestObject('Channel Message/Edi
 String htagMsg = htagMsgElm.getText()
 
 if (lastMsg != testMsg) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("Sent message wrong! - lastMsg: '${lastMsg}'; testMsg: '${testMsg}'")
 }
 

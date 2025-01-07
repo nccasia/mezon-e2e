@@ -30,8 +30,6 @@ String imageSrc = cutUrl( HOST, image.getAttribute("src"))
 
 image.click()
 
-WebUI.takeScreenshot()
-
 WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest message'), 10)
 
 WebElement imageOfImageDetailModal = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Open image detail/modal_image detail'))
@@ -42,9 +40,9 @@ WebElement selectedImage = WebUI.findWebElement(findTestObject('Object Repositor
 
 String selectedImageSrc = cutUrl( HOST, selectedImage.getAttribute("src"))
 
-WebUI.takeScreenshot()
-
 if (imageSrc != imageOfImageDetailModalSrc || imageSrc != selectedImageSrc) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Error message - imageSrc: '$imageSrc'; imageOfImageDetailModalSrc: '$imageOfImageDetailModalSrc'; selectedImageSrc: '$selectedImageSrc'")
 }
 
@@ -59,6 +57,8 @@ divNotSelectedImg.click()
 imageOfImageDetailModalSrc = cutUrl( HOST, imageOfImageDetailModal.getAttribute("src"))
 
 if (notSelectedImgSrc != imageOfImageDetailModalSrc) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailed("Error image selected")
 }
 

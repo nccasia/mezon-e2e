@@ -42,9 +42,9 @@ CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send em
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if(isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop('Sending message failed')
 }
 
@@ -54,9 +54,9 @@ WebElement repyMessageElement = WebUI.findWebElement(findTestObject('Channel Mes
 
 String sentMessage = repyMessageElement.getText()
 
-WebUI.takeScreenshot()
-
 if(replyMessage != sentMessage) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailed("Error message - replyMessage: '$replyMessage'; sentMessage: '$sentMessage'")
 }
 
