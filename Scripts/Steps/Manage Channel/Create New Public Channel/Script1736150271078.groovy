@@ -17,6 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.WebDriver as WebDriver
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
@@ -25,8 +27,7 @@ WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Clan T'))
 
 WebUI.click(findTestObject('Object Repository/Manage Channel/Create New Public Channel/button_Add Channel'))
-
-WebUI.check(findTestObject('Object Repository/Manage Channel/Create New Public Channel/radio_Channel Type_Text'))
+if (channelType.equals("voice")) {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Voice Type'))} else if (channelType.equals("stream")) { 	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Stream Type'))} else if (channelType.equals("apps")) {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Apps Type'))} else {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create New Public Channel/radio_Channel Type_Text'))}
 
 Random generator = new Random()
 
@@ -36,24 +37,43 @@ String newChannelName = "New $randomNumber"
 
 WebUI.setText(findTestObject('Manage Channel/Create New Public Channel/input_Enter The Channel Name'), newChannelName)
 
+if (channelType.equals("apps")) { 
+	WebUI.setText(findTestObject('Object Repository/Manage Channel/Create New Public Channel/input_App URL'), "https://mezon.ai")
+}
+
+WebUI.delay(1)
+
 WebUI.click(findTestObject("Object Repository/Manage Channel/Create New Public Channel/button_Create Channel"))
 
 Boolean verifyCreateNewChannelFail = true
 
+WebElement newChannelElement
+
 for (int i = 0; i < 15; i++) {
-	WebElement newChannelElement = WebUI.findWebElement(findTestObject('Object Repository/Manage Channel/Create New Public Channel/div_New Channel'))
+	newChannelElement = WebUI.findWebElement(findTestObject('Object Repository/Manage Channel/Create New Public Channel/div_New Channel'))
 	
 	String newChannelElementText = newChannelElement.getText()
 	
 	if(newChannelElementText == newChannelName) {
 		String newChannelElementInnerHTML = newChannelElement.getAttribute('innerHTML')
 		
-		String publicChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Public Channel.svg')
+		String ChannelSVG
 		
-		if(newChannelElementInnerHTML.contains(publicChannelSVG)) {
+		if (channelType.equals("voice")) {
+			ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Voice.svg')
+		} else if (channelType.equals("stream")) {
+			ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Stream.svg')
+		} else if (channelType.equals("apps")) {
+			ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Apps.svg')
+		} else {
+			ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Public Channel.svg')
+		}
+		
+		if(newChannelElementInnerHTML.contains(ChannelSVG)) {
 			verifyCreateNewChannelFail = false
 			break
 		} else {
+			WebUI.takeScreenshot()
 			KeywordUtil.markFailedAndStop("Channel Icon is wrong!")
 		}
 	}
@@ -64,14 +84,44 @@ if (verifyCreateNewChannelFail) {
 	KeywordUtil.markFailedAndStop("New Channel not present!")
 }
 
-WebElement titleNewChannelElement = WebUI.findWebElement(findTestObject("Object Repository/Manage Channel/Create New Public Channel/p_title new channel"))
-
-String titleNewChannelText = titleNewChannelElement.getText()
-
-WebUI.takeScreenshot()
-
-if (titleNewChannelText != newChannelName) {
-	KeywordUtil.markFailedAndStop("New Channel Title is wrong!")
+if(channelType.equals("voice")) {
+	WebDriver driver = DriverFactory.getWebDriver()
+	
+	WebUI.delay(5)
+	
+	newChannelElement.click()
+	
+	Set<String> windowHandles = driver.getWindowHandles()
+	String currentWindow = driver.getWindowHandle()
+	
+	for (String window : windowHandles) {
+		if (!window.equals(currentWindow)) {
+			driver.switchTo().window(window)
+			break
+		}
+	}
+	String expectedUrl = "https://meet.google.com"
+	
+	String actualUrl = driver.getCurrentUrl()
+	
+	if(!actualUrl.contains(expectedUrl)) {
+		WebUI.takeScreenshot()
+		
+		KeywordUtil.markFailedAndStop("Link is wrong!")
+	}
+	
+} else {
+	if (channelType.equals("stream")) {
+		newChannelElement.click()
+	}
+	WebElement titleNewChannelElement = WebUI.findWebElement(findTestObject("Object Repository/Manage Channel/Create New Public Channel/p_title new channel"))
+			
+	String titleNewChannelText = titleNewChannelElement.getText()
+	
+	if (titleNewChannelText != newChannelName) {
+		WebUI.takeScreenshot()
+		KeywordUtil.markFailedAndStop("New Channel Title is wrong!")
+	}
 }
 
 
