@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_New Channel</name>
+   <name>button_Mark Favorite</name>
    <tag></tag>
-   <elementGuidId>ffc980ef-dbe4-4040-9b2d-ea84d7f4a59b</elementGuidId>
+   <elementGuidId>0f125170-e92e-4518-8535-7f5f61d6ee39</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;channelList&quot;]/div/div/div/div[2]/div/div/div/div/div/div[@data-index=2]/div/div/div/div[2]/div[contains(@class, &quot;group&quot;)][last()]</value>
+         <value>/html/body/div[3]/div[3]/button</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
