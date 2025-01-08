@@ -37,9 +37,9 @@ WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending files failed")
 }
 
@@ -47,9 +47,10 @@ WebElement latestMessageElement = WebUI.findWebElement(findTestObject('Channel M
 
 List<WebElement> videoTagList = latestMessageElement.findElements(By.tagName('video'))
 
-WebUI.takeScreenshot()
 
 if (filePaths.size() != videoTagList.size()) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed('Miss file media!')
 }
 

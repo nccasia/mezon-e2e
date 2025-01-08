@@ -75,9 +75,9 @@ WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 
@@ -85,9 +85,9 @@ WebElement latestMessageElem = WebUI.findWebElement(findTestObject('Object Repos
 
 String textLatestMessage = latestMessageElem.getText()
 
-WebUI.takeScreenshot()
-
 if (textLatestMessage != textOfTextArea) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailedAndStop("Error message! - textLatestMessage: '${textLatestMessage}'; textOfTextArea: '${textOfTextArea}'")
 }
 

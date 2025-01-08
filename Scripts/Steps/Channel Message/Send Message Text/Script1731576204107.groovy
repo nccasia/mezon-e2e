@@ -34,7 +34,7 @@ if (isSending) {
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 
-WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_latest mes'))
+WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_latest mes'))
 
 String sentMessage = sentMessageElement.getText()
 

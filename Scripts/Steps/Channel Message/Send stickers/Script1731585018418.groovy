@@ -44,9 +44,9 @@ if(GlobalVariable.isDirectMessage) {
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending sticker failed")
 }
 

@@ -25,7 +25,7 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:],
 
 WebUI.mouseOver(findTestObject('Channel Message/Forward message to DM/div_latest_message'))
 
-WebUI.click(findTestObject('Channel Message/Forward message to DM/button_more'))
+WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_more'))
 
 if(GlobalVariable.isDirectMessage) {
 	WebUI.click(findTestObject('Object Repository/Direact Message/Forward message/button_forward message'))	
@@ -58,8 +58,6 @@ for (int i = 1; i <= forwardList.size(); i++) {
 }
 
 WebUI.click(findTestObject('Channel Message/Forward message to DM/button_send_forward_message'))
-
-WebUI.takeScreenshot()
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Forward message to DM/Toast success'), 10)
 

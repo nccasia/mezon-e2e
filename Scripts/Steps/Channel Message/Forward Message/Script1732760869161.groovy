@@ -37,6 +37,4 @@ WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete M
 WebUI.waitForElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_toast container_ forward message to chanel'), 
     10)
 
-WebUI.takeScreenshot()
-
 WebUI.verifyElementPresent(findTestObject('Channel Message/Forward message to DM/Toast success'), 10)

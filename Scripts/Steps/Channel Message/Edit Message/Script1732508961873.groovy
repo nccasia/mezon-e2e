@@ -29,8 +29,6 @@ WebElement divLastedElm = WebUI.findWebElement(findTestObject('Channel Message/E
 
 String idMessage = divLastedElm.getAttribute('id')
 
-String spanLasted = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/span"
-
 WebUI.mouseOver(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_lasted'))
 
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_more'))
@@ -41,25 +39,29 @@ if(GlobalVariable.isDirectMessage) {
 	WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/edit_btn'))	
 }
 
-WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), Keys.chord(
+String textareaEditMessageXpath = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div[1]/div/textarea"
+
+TestObject textareaEditMessageElement = CustomKeywords.'mezon.GetTestObject.withXpath'(textareaEditMessageXpath)
+
+WebUI.sendKeys(textareaEditMessageElement, Keys.chord(
         Keys.CONTROL, 'a'))
 
 String editMessage = 'hehe'
 
-WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), editMessage)
+WebUI.sendKeys(textareaEditMessageElement, editMessage)
 
 WebUI.takeScreenshot()
 
-WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_need_edit'), Keys.chord(
+WebUI.sendKeys(textareaEditMessageElement, Keys.chord(
         Keys.ENTER))
+
+String spanLasted = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/span"
 
 TestObject spanLastedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(spanLasted)
 
 WebElement spanLastedElm = WebUI.findWebElement(spanLastedObj)
 
 String editedMessage =  spanLastedElm.getText()
-
-WebUI.takeScreenshot()
 
 verifyEditMessage(idMessage, editMessage, editedMessage)
 
@@ -76,6 +78,7 @@ def verifyEditMessage(String idMessage, String editMessage, String editedMessage
 		}
 		WebUI.delay(1)
 	}
+	WebUI.takeScreenshot()
 	KeywordUtil.markFailed("Message editing failed - editMessage: '$editMessage'; editedMessage: '$editedMessage'; isEdited: $isEdited")
 	return false
 }

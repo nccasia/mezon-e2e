@@ -6,12 +6,12 @@
    <elementGuidId>45c9f96b-b4af-4011-8737-a44a0c178cb4</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div[1]/div/div[2]/div/div/button[2]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>button.h-full.p-1.cursor-pointer.popup-btn</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[@class=&quot;message-list-item&quot;][last()]/div[1]/div/div[2]/div/div/button[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>4efdf54f-9f48-40d0-aa60-7ac032499c32</webElementGuid>
+      <webElementGuid>904b7e20-21bd-4fc6-87b0-aac570bb26f6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>h-full p-1 cursor-pointer popup-btn</value>
-      <webElementGuid>4530d30e-82a1-478e-9257-4236a3af7357</webElementGuid>
+      <webElementGuid>e5adaff6-28d9-471f-84da-a59c241b00f8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;scrollLoading&quot;)/div[2]/div[1]/div[14]/div[@class=&quot;fullBoxText relative group pt-3&quot;]/div[1]/div[@class=&quot;chooseForText z-[1] absolute h-8 p-0.5 rounded block -top-5  right-6 w-fit&quot;]/div[@class=&quot;flex justify-between dark:bg-bgDarkPopover bg-bgLightMode border border-bgSecondary rounded&quot;]/div[@class=&quot;w-fit h-full flex items-center justify-between&quot;]/button[@class=&quot;h-full p-1 cursor-pointer popup-btn&quot;]</value>
-      <webElementGuid>dab25453-ddbb-4b33-82f0-82b3758f2baf</webElementGuid>
+      <webElementGuid>21bc0927-0110-491c-9778-3cb7d7ffe323</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='scrollLoading']/div[2]/div/div[14]/div/div/div[2]/div/div/button</value>
-      <webElementGuid>f3fee7ea-ef64-4e76-8dc4-789bed36904e</webElementGuid>
+      <webElementGuid>28c82d89-acc8-456f-a0d3-b5856585b77c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='toi la bot'])[5]/following::button[1]</value>
-      <webElementGuid>6f92218d-3460-4fef-b626-83a68bb7f0a5</webElementGuid>
+      <webElementGuid>78257584-9f96-417a-abb6-b801f6d8bbca</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Today at 09:44'])[3]/following::button[1]</value>
-      <webElementGuid>66a3a59e-04da-4bd6-80cd-9126cebb881d</webElementGuid>
+      <webElementGuid>ea6c5be8-89ec-4b4d-8852-89eaacf01a91</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,6 +71,6 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[14]/div/div/div[2]/div/div/button</value>
-      <webElementGuid>183c620c-272e-42cc-905f-1bf6b2d8969c</webElementGuid>
+      <webElementGuid>358e7c34-4d35-46f9-bb57-1349c80b1c24</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

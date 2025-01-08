@@ -28,15 +28,12 @@ WebUI.mouseOver(findTestObject('Channel Message/Reaction Message/div_latest mess
 if(GlobalVariable.isDirectMessage) {
 	WebUI.click(findTestObject('Object Repository/Direact Message/Reaction Message/Button_reaction pannel'))
 } else {
-	
 	WebUI.click(findTestObject('Channel Message/Reaction Message/button_reaction_pannel'))
 }
 
 String reactionHref = WebUI.findWebElement(findTestObject('Channel Message/Reaction Message/button_reaction')).findElement(By.tagName('img')).getAttribute('src')
 
 WebUI.click(findTestObject('Channel Message/Reaction Message/button_reaction'))
-
-WebUI.takeScreenshot()
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Reaction Message/div_reacted'), 10)
 
@@ -46,11 +43,9 @@ String reactionXpath = "//*[@id='$messageId']/div[2]/div/div"
 
 TestObject reactionObj = CustomKeywords.'mezon.GetTestObject.withXpath'(reactionXpath)
 
-WebUI.takeScreenshot()
+WebUI.verifyElementPresent(reactionObj, 15)
 
-WebUI.verifyElementVisible(reactionObj)
-
-WebElement reactionList = WebUI.findWebElement(reactionObj, 0)
+WebElement reactionList = WebUI.findWebElement(reactionObj)
 
 List<WebElement> imgTags = reactionList.findElements(By.tagName('img'))
 
@@ -64,9 +59,9 @@ for (WebElement img : imgTags) {
     }
 }
 
-WebUI.takeScreenshot()
-
 if (!flag) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed('Reaction don\'t present')
 }
 

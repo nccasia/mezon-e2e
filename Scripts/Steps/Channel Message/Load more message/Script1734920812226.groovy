@@ -36,8 +36,6 @@ for (int i = 0; i < loopTimes; i++) {
     WebUI.sendKeys(findTestObject('Channel Message/Load more message/div_message container'), Keys.chord(Keys.ARROW_UP))
 }
 
-WebUI.takeScreenshot()
-
 Boolean isLoadMoreSuccess = false
 
 for (int i = 0; i < 15; i++) {
@@ -54,6 +52,8 @@ for (int i = 0; i < 15; i++) {
 }
 
 if (!isLoadMoreSuccess) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed('Loading messages failed')
 }
 

@@ -21,6 +21,8 @@ import org.openqa.selenium.By as By
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.click(findTestObject('Object Repository/Channel Message/Send text to large for convert to file txt/textarea_Clan T_general channel'))
+
 String emojiHref
 
 if(GlobalVariable.isDirectMessage) {
@@ -45,9 +47,10 @@ WebUI.sendKeys(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mez
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
 
 if (isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 

@@ -35,11 +35,9 @@ if(GlobalVariable.isDirectMessage) {
 	WebUI.click(findTestObject('Object Repository/Channel Message/Delete Message/button_delete message'))	
 }
 
-WebUI.takeScreenshot()
-
 if(GlobalVariable.isThread) {
 	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Delete Message/div_delete message container - thread'),
-		10, FailureHandling.STOP_ON_FAILURE)
+		10)
 
 	WebElement deleteMessageContainer = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Delete Message/div_delete message container - thread'))
 
@@ -54,7 +52,7 @@ if(GlobalVariable.isThread) {
 	WebUI.click(findTestObject('Object Repository/Channel Message/Delete Message/button_delete - thread'))
 } else {
 	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Delete Message/div_delete message container'), 
-		10, FailureHandling.STOP_ON_FAILURE)
+		10)
 	
 	WebElement deleteMessageContainer = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Delete Message/div_delete message container'))
 	
@@ -68,18 +66,10 @@ if(GlobalVariable.isThread) {
 	
 	WebUI.click(findTestObject('Object Repository/Channel Message/Delete Message/button_delete'))
 }
-	
-WebUI.takeScreenshot()
 
-String messageDeletedXpath = "//*[@id='scrollLoading'']/div[2]/div/div[@data-index][last()]/div/div//div[contains(@id, 'msg-$messageId')]"
+String messageDeletedXpath = "//*[@id='$messageId']"
 
 TestObject messageDeletedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(messageDeletedXpath)
 
-Boolean isDeteleFail = WebUI.verifyElementNotVisible(messageDeletedObj, FailureHandling.OPTIONAL)
-
-if(isDeteleFail) {
-	KeywordUtil.markFailed("delete message failed")
-} else {
-	KeywordUtil.markPassed("delete message successful")
-}
+WebUI.verifyElementNotPresent(messageDeletedObj, 15)
 

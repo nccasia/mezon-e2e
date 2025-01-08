@@ -32,11 +32,10 @@ Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
 if(isSending) {
 	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop("Sending image failed!")
 }
 
-WebUI.takeScreenshot()
-
-WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest message'), 10)
+WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest message'), 15)
 
 

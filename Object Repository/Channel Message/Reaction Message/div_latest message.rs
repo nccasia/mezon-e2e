@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[2]/div/div[@data-index][last()]/div/div/div</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div[@class=&quot;message-list-item&quot;][last()]/div/div/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>b482ded4-bc9f-45e5-b1c3-1309783e26ff</webElementGuid>
+      <webElementGuid>7ef42e79-9a7b-49e3-83ef-396ec9693d0d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>flex h-15 flex-col w-auto px-3 dark:bg-[#403D38] bg-[#EAB3081A]</value>
-      <webElementGuid>0d1d25d0-551f-4e11-a582-766f41f80dad</webElementGuid>
+      <webElementGuid>7eb1a873-643e-47b2-95a3-566a19ffbb1a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -38,7 +38,7 @@
       <name>text</name>
       <type>Main</type>
       <value>geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot</value>
-      <webElementGuid>0678ba55-3c33-4055-8755-d0806f515b0a</webElementGuid>
+      <webElementGuid>3f474fa4-01ee-452c-8379-4a3e693b16c1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -46,7 +46,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;msg-1840651253101629440&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3 dark:bg-[#403D38] bg-[#EAB3081A]&quot;]</value>
-      <webElementGuid>5e679e23-021e-46e2-8540-2bba7bb9841c</webElementGuid>
+      <webElementGuid>efb13d7e-d13c-4506-9eef-4384c34a157b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -54,7 +54,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='msg-1840651253101629440']/div/div[2]</value>
-      <webElementGuid>a0d3a5ca-d25b-4def-9df7-5e1d0f708514</webElementGuid>
+      <webElementGuid>2ee73906-9123-448a-9e19-8a8e6c03b869</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -62,7 +62,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='he lo mn'])[13]/following::div[10]</value>
-      <webElementGuid>142d27fe-6b60-4a60-b31d-0efc07574b29</webElementGuid>
+      <webElementGuid>fd799479-ac33-40be-9586-7347f581a3f4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -70,7 +70,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='toi la bot'])[4]/following::div[30]</value>
-      <webElementGuid>6f5f7bac-258b-43e6-baac-f7f602dc4e10</webElementGuid>
+      <webElementGuid>b63ccd5a-0907-4b88-84ac-c64db78dd7c1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -78,7 +78,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[14]/div/div/div/div/div[2]</value>
-      <webElementGuid>38b4bcba-747e-4619-b6e5-95963ea72184</webElementGuid>
+      <webElementGuid>dfe5fd3a-009f-4f2a-bf93-0023b3e8eac6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -86,6 +86,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = 'geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot' or . = 'geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot')]</value>
-      <webElementGuid>c220d0fd-1dcc-4ceb-a9e2-b18adeb6a1a5</webElementGuid>
+      <webElementGuid>65bf1040-74e7-4940-b3fb-9f9e58623840</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

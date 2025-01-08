@@ -42,9 +42,9 @@ WebUI.sendKeys(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if(isSending) {
+	WebUI.takeScreenshot()
+
 	KeywordUtil.markFailedAndStop('Sending message failed')
 }
 
@@ -52,15 +52,13 @@ WebElement buttonMetionElement = WebUI.findWebElement(findTestObject('Channel Me
 
 String buttonMetionText = buttonMetionElement.getText().trim()
 
-WebUI.takeScreenshot()
-
 if (buttonMetionText != mentionText) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("buttonMetionText: '${buttonMetionText}'; mentionText: '${mentionText}'")
 }
 
 WebUI.click(findTestObject('Channel Message/Mention, hashtag/button_mention'))
-
-WebUI.takeScreenshot()
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Mention, hashtag/div_popup'), 10)
 
@@ -86,9 +84,10 @@ WebUI.sendKeys(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T
 
 isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
 
 if(isSending) {
+	WebUI.takeScreenshot()
+	
 	KeywordUtil.markFailedAndStop('Sending message failed')
 }
 
@@ -96,9 +95,9 @@ WebElement spanLatestMessageElement = WebUI.findWebElement(findTestObject('Chann
 
 String LatestMessageText = spanLatestMessageElement.getText()
 
-WebUI.takeScreenshot()
-
 if (LatestMessageText != hashtagWithMessage) {
+	WebUI.takeScreenshot()
+	
     KeywordUtil.markFailed("LatestMessageText: '${LatestMessageText}'; hashtagWithMessage: '${hashtagWithMessage}'")
 }
 
