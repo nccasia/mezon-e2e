@@ -25,7 +25,12 @@ WebUI.callTestCase(findTestCase('Steps/Manage Channel/Create New Private Channel
 WebElement ChannelElement = WebUI.findWebElement(findTestObject('Object Repository/Manage Channel/Create New Public Channel/div_New Channel'), 
     15)
 
+WebElement ChannelSVGContainerElement = WebUI.findWebElement(findTestObject('Object Repository/Manage Channel/Mark Favorite Channel/div_new Channel SVG Container'),
+	15)
+
 String ChannelName = ChannelElement.getText()
+
+String ChannelSVG = ChannelSVGContainerElement.getAttribute('innerHTML')
 
 WebUI.rightClick(findTestObject('Manage Channel/Create New Public Channel/div_New Channel'))
 
@@ -37,8 +42,14 @@ for (int i = 0; i < 15; i++) {
 	try {
 		WebElement newFavoriteChannelElement = WebUI.findWebElement(findTestObject('Object Repository/Manage Channel/Mark Favorite Channel/div_New Favorite Channel'), 
 			1)
+		
+		WebElement newFavoriteChannelSVGContainerElement = WebUI.findWebElement(findTestObject('Object Repository/Manage Channel/Mark Favorite Channel/div_New Favorite Channel SVG Container'),
+			1)
+		
 		String favoriteChannelName = newFavoriteChannelElement.getText()
-		if (favoriteChannelName.equals(ChannelName)) {
+		
+		String newFavoriteChannelSVG = newFavoriteChannelSVGContainerElement.getAttribute("innerHTML")
+		if (favoriteChannelName.equals(ChannelName) && newFavoriteChannelSVG.equals(ChannelSVG)) {
 			verifyMarkFavoriteChannel = true
 			break
 		}
