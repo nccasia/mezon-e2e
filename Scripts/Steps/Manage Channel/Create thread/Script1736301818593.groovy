@@ -22,7 +22,6 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-
 if (GlobalVariable.isThread) {
 	
 	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread pannel - thread'))
@@ -51,21 +50,41 @@ WebUI.check(findTestObject('Channel Message/Create thread from message item/inpu
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create thread from message item/texarea_send message'), 
     'helo ae qn', Keys.chord(Keys.ENTER))
 
-WebElement threadsOfGeneral
+WebElement threadTitleElement = WebUI.findWebElement(findTestObject("Object Repository/Manage Channel/Create Thread/span_Thread Title"))
 
-String threadContainerXpath = "//*[@id='$GlobalVariable.channelID']/following-sibling::div[1]"
+String threadTitle = threadTitleElement.getText()
 
-TestObject threadContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(threadContainerXpath)
-
-threadsOfGeneral = WebUI.findWebElement(threadContainerObj)
-
-WebElement newThread = checkNewThreadPresent(threadsOfGeneral, threadName, 3, 1)
-
-if (newThread) {
-	newThread.click()
-} else {
+if(!threadTitle.equalsIgnoreCase(threadName)) {
 	WebUI.takeScreenshot()
 	
+	KeywordUtil.markFailedAndStop('New Thread Title is wrong!')
+}
+
+String newthreadXpath = "//*[@id='$GlobalVariable.channelID']/following-sibling::div[1]/div[last()]"
+
+TestObject newthreadObj = CustomKeywords.'mezon.GetTestObject.withXpath'(newthreadXpath)
+
+Boolean verifyNewThreadPresent = false
+
+WebElement newthreadElement
+
+for(int i = 0; i < 15; i++ ) {
+	newthreadElement = WebUI.findWebElement(newthreadObj)
+	
+	String newThreadName = newthreadElement.getText()
+	
+	if (newThreadName.equals(threadName)) {
+		verifyNewThreadPresent = true
+		break
+	}
+	WebUI.delay(1)
+}
+
+if (verifyNewThreadPresent) {
+	newthreadElement.click()
+} else {
+	WebUI.takeScreenshot()
+		
 	KeywordUtil.markFailedAndStop('New thread not present!')
 }
 
@@ -78,25 +97,3 @@ if (threadBreadCrumbText != threadName) {
 	
     KeywordUtil.markFailed("Error thread! - threadName: '$threadName'; threadBreadCrumbText: '$threadBreadCrumbText'")
 }
-
-def checkNewThreadPresent(WebElement threadsContainer, String threadName, int timeout, int interval) {
-	int waited = 0;
-	WebElement newThread
-	while (waited < timeout) {
-		List<WebElement> threads = threadsContainer.findElements(By.tagName('div'))
-		for (WebElement thread : threads) {
-			String value = thread.getAttribute("innerText")
-			if (value == threadName) {
-				return thread
-			}
-		}
-		try {
-			Thread.sleep(interval * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		waited += interval;
-	}
-	return newThread;
-}
-
