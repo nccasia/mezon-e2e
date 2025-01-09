@@ -35,6 +35,8 @@ WebUI.sendKeys(findTestObject('Object Repository/Channel Message/Send text to la
 WebUI.sendKeys(findTestObject('Object Repository/Channel Message/Send text to large for convert to file txt/textarea_Clan T_general channel'),
 	Keys.chord(Keys.ENTER))
 
+WebUI.delay(2)
+
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
 if (isSending) {
@@ -46,24 +48,23 @@ Boolean verifySendMessageWithMarkdown = false
 
 if (markdownType.equals("```")) {
 	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Send Message With Markdown/div_triple markdown'),
-			15)	
+			1)	
 } else {
 	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Send Message With Markdown/span_single markdown'),
-		15)
+			1)
 }
 
-for (int i = 0; i < 15; i++) {
-	WebElement MessageWithMarkdownElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Send Message With Markdown/div_Message'))
+WebElement MessageWithMarkdownElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Send Message With Markdown/div_Message'))
 
-	String message = MessageWithMarkdownElement.getText()
+String message = MessageWithMarkdownElement.getText()
 
-	if (message.equals(text)) {
-		verifySendMessageWithMarkdown = true
-		break
-	}
-	
-	WebUI.delay(1)
+if (message.equals(text)) {
+	verifySendMessageWithMarkdown = true
+	break
 }
+
+WebUI.delay(1)
+
 
 if (!verifySendMessageWithMarkdown) {
 	WebUI.takeScreenshot()
