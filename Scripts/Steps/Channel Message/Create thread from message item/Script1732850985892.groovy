@@ -20,34 +20,32 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.rightClick(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_latest message'))
 
-if (GlobalVariable.isThread) {
-	
-	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread pannel - thread'))
-	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread -thread'))
-	
-} else {
-	if(GlobalVariable.isChannelPrivate) {
-		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread pannel - channel private'))
-		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread - channel private'))
-	} else {
-		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread pannel - channel public'))
-		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread - channel public'))
-	}
-}
+WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread option'))
 
 Random generator = new Random()
 
-String threadName = "vp-qn ${generator.nextInt()}"
+int randomNumber = generator.nextInt()
+
+String threadName = "vp-qn $randomNumber"
 
 WebUI.setText(findTestObject('Channel Message/Create thread from message item/input_name thread'), threadName)
 
-WebUI.check(findTestObject('Channel Message/Create thread from message item/input_check private thread'))
-
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create thread from message item/texarea_send message'), 
     'helo ae qn', Keys.chord(Keys.ENTER))
+
+WebElement threadTitleElement = WebUI.findWebElement(findTestObject("Object Repository/Channel Message/Create thread from message item/span_Thread Title"))
+
+String threadTitle = threadTitleElement.getText()
+
+if(!threadTitle.equals(threadName)) {
+	WebUI.takeScreenshot()
+	
+	KeywordUtil.markFailedAndStop('Thread Title is wrong!')
+}
 
 WebElement threadsOfGeneral
 
@@ -57,14 +55,14 @@ TestObject threadContainerObj = CustomKeywords.'mezon.GetTestObject.withXpath'(t
 
 threadsOfGeneral = WebUI.findWebElement(threadContainerObj)
 
-WebElement newThread = checkNewThreadPresent(threadsOfGeneral, threadName, 3, 1)
+WebElement newThread = checkNewThreadPresent(threadsOfGeneral, threadName)
 
 if (newThread) {
-	newThread.click()
+    newThread.click()
 } else {
-	WebUI.takeScreenshot()
-	
-	KeywordUtil.markFailedAndStop('New thread not present!')
+    WebUI.takeScreenshot()
+
+    KeywordUtil.markFailedAndStop('New thread not present!')
 }
 
 WebElement threadBreadCrumb = WebUI.findWebElement(findTestObject('Channel Message/Create thread from message item/p_Thread breadcrumb'))
@@ -72,29 +70,27 @@ WebElement threadBreadCrumb = WebUI.findWebElement(findTestObject('Channel Messa
 String threadBreadCrumbText = threadBreadCrumb.getText()
 
 if (threadBreadCrumbText != threadName) {
-	WebUI.takeScreenshot()
-	
+    WebUI.takeScreenshot()
+
     KeywordUtil.markFailed("Error thread! - threadName: '$threadName'; threadBreadCrumbText: '$threadBreadCrumbText'")
 }
 
-def checkNewThreadPresent(WebElement threadsContainer, String threadName, int timeout, int interval) {
-	int waited = 0;
-	WebElement newThread
-	while (waited < timeout) {
-		List<WebElement> threads = threadsContainer.findElements(By.tagName('div'))
-		for (WebElement thread : threads) {
-			String value = thread.getAttribute("innerText")
-			if (value == threadName) {
-				return thread
-			}
-		}
-		try {
-			Thread.sleep(interval * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		waited += interval;
-	}
-	return newThread;
+def checkNewThreadPresent(WebElement threadsContainer, String threadName) {
+    WebElement newThread
+
+    for (int i = 0; i < 15; i++) {
+        List<WebElement> threads = threadsContainer.findElements(By.tagName('div'))
+
+        for (WebElement thread : threads) {
+            String value = thread.getAttribute('innerText')
+
+            if (value == threadName) {
+                return thread
+            }
+        }
+		WebUI.delay(1)
+    }
+    
+    return newThread
 }
 
