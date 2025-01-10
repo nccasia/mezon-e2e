@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Add Channel</name>
+   <name>div_Role Name</name>
    <tag></tag>
-   <elementGuidId>7b91cb8c-1b03-4f3a-8791-8eeb7f89acfc</elementGuidId>
+   <elementGuidId>659f5c85-7d32-452d-ae0a-146f05b9be84</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;channelList&quot;]/div/div/div/div/div[3]/div/div/div/div[1]/button[3]</value>
+         <value>/html/body/div[3]/div/div[4]/div/div[2]/div[2]/div[2]/div/div[last()]/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
