@@ -6,4 +6,17 @@
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>c5772d43-16d7-471c-b353-d69a8a40de09</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>607a2fc9-e684-4c4f-8a35-f0dea45a0ff9</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>607a2fc9-e684-4c4f-8a35-f0dea45a0ff9</id>
+      <masked>false</masked>
+      <name>channelType</name>
+   </variable>
 </TestCaseEntity>
