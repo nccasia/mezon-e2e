@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;channelList&quot;]/div/div/div/div[2]/div/div/div/div/div/div[@data-index=2]/div/div/div/div[2]/div[contains(@class, &quot;group&quot;)][last()]</value>
+         <value>//*[@id=&quot;channelList&quot;]/div/div/div/div/div[3]/div/div/div/div[2]/div[contains(@class,&quot;group&quot;)][last()]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
