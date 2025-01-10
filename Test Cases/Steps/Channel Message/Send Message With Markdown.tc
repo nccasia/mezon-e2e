@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Create New Public Channel</name>
+   <name>Send Message With Markdown</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>c5772d43-16d7-471c-b353-d69a8a40de09</testCaseGuid>
+   <testCaseGuid>8322b422-ca3a-412e-b307-eb21d627b3f0</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>607a2fc9-e684-4c4f-8a35-f0dea45a0ff9</variableId>
+      <variableId>7b748ba7-fa91-4308-9b71-b5fac3e1fa64</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'`'</defaultValue>
       <description></description>
-      <id>607a2fc9-e684-4c4f-8a35-f0dea45a0ff9</id>
+      <id>7b748ba7-fa91-4308-9b71-b5fac3e1fa64</id>
       <masked>false</masked>
-      <name>channelType</name>
+      <name>markdownType</name>
    </variable>
 </TestCaseEntity>
