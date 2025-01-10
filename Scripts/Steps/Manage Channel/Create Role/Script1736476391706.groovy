@@ -42,6 +42,15 @@ String role = "New $randomNumber"
 
 WebUI.setText(findTestObject("Object Repository/Manage Channel/Create Role/input_Enter New Role"), role)
 
+WebElement newRolechild =  WebUI.findWebElement(findTestObject("Object Repository/Manage Channel/Create Role/span_New Role in Roles"))
+
+String newRolechildText = newRolechild.getText()
+
+ if(!newRolechildText.equals(role)) {
+	WebUI.takeScreenshot()
+	KeywordUtil.markFailedAndStop("Error new role!")
+}
+
 WebUI.click(findTestObject("Object Repository/Manage Channel/Create Role/button_Save Changes"))
 
 WebUI.verifyElementNotPresent(findTestObject("Object Repository/Manage Channel/Create Role/div_Toast Error"), 3)
