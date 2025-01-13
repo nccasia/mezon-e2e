@@ -27,7 +27,9 @@ WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email 
 WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/div_Clan T'))
 
 WebUI.click(findTestObject('Object Repository/Manage Channel/Create New Public Channel/button_Add Channel'))
-if (channelType.equals("voice")) {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Voice Type'))} else if (channelType.equals("stream")) { 	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Stream Type'))} else if (channelType.equals("apps")) {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Apps Type'))} else {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create New Public Channel/radio_Channel Type_Text'))}
+if (channelType.equals("voice")) {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Voice Type'))} else if (channelType.equals("stream")) { 	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Stream Type'))} else if (channelType.equals("app")) {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create Channel With Type Voice, Stream, App/radio_Apps Type'))} else if (channelType.equals("text")) {	WebUI.check(findTestObject('Object Repository/Manage Channel/Create New Public Channel/radio_Channel Type_Text'))} else {
+	KeywordUtil.markFailedAndStop("Channel Type invalid")
+}
 
 Random generator = new Random()
 
@@ -37,8 +39,12 @@ String newChannelName = "New $randomNumber"
 
 WebUI.setText(findTestObject('Manage Channel/Create New Public Channel/input_Enter The Channel Name'), newChannelName)
 
-if (channelType.equals("apps")) { 
+if (channelType.equals("app")) { 
 	WebUI.setText(findTestObject('Object Repository/Manage Channel/Create New Public Channel/input_App URL'), "https://mezon.ai")
+} else if (channelType.equals("text")) {
+	if(isPrivateChannel) {
+		WebUI.click(findTestObject('Object Repository/Manage Channel/Create New Private Channel/switch_Is private channel'))
+	}
 }
 
 WebUI.delay(1)
@@ -63,10 +69,14 @@ for (int i = 0; i < 15; i++) {
 			ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Voice.svg')
 		} else if (channelType.equals("stream")) {
 			ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Stream.svg')
-		} else if (channelType.equals("apps")) {
+		} else if (channelType.equals("app")) {
 			ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Apps.svg')
 		} else {
-			ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Public Channel.svg')
+			if(isPrivateChannel) {
+				ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Private Channel.svg')
+			} else {				
+				ChannelSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Public Channel.svg')
+			}
 		}
 		
 		if(newChannelElementInnerHTML.contains(ChannelSVG)) {
@@ -87,7 +97,7 @@ if (verifyCreateNewChannelFail) {
 if(channelType.equals("voice")) {
 	WebDriver driver = DriverFactory.getWebDriver()
 	
-	WebUI.delay(5)
+	WebUI.delay(3)
 	
 	newChannelElement.click()
 	
@@ -109,6 +119,7 @@ if(channelType.equals("voice")) {
 		
 		KeywordUtil.markFailedAndStop("Link is wrong!")
 	}
+	driver.switchTo().window(currentWindow)
 	
 } else {
 	if (channelType.equals("stream")) {
@@ -123,5 +134,37 @@ if(channelType.equals("voice")) {
 		KeywordUtil.markFailedAndStop("New Channel Title is wrong!")
 	}
 }
+
+String newChannelId = newChannelElement.getAttribute("id")
+
+WebUI.rightClick(findTestObject('Object Repository/Manage Channel/Create New Public Channel/div_New Channel'))
+
+if (channelType.equals("voice")) {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Manage Channel/Delete Channel/button_Delete Voice Channel'), 15)
+	WebUI.click(findTestObject('Object Repository/Manage Channel/Delete Channel/button_Delete Voice Channel'))
+} else if (channelType.equals("stream") || channelType.equals("app")) {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Manage Channel/Delete Channel/button_Delete Stream Channel'), 15)
+	WebUI.click(findTestObject('Object Repository/Manage Channel/Delete Channel/button_Delete Stream Channel'))
+}  else {
+	WebUI.verifyElementPresent(findTestObject('Object Repository/Manage Channel/Delete Channel/button_delete'), 15)
+	WebUI.click(findTestObject('Object Repository/Manage Channel/Delete Channel/button_delete'))
+}
+
+if(channelType.equals("text")) {
+	WebUI.click(findTestObject('Object Repository/Manage Channel/Delete Channel/button_confirm delete'))
+} else {
+	WebUI.click(findTestObject('Object Repository/Manage Channel/Delete Channel/button_confirm delete app'))
+}
+
+String channelDeletedXpath = "//*[@id='$newChannelId']"
+
+TestObject channelDeletedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(channelDeletedXpath)
+
+WebUI.verifyElementNotPresent(channelDeletedObj, 15)
+
+
+
+
+
 
 
