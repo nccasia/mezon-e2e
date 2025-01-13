@@ -13,6 +13,7 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
@@ -50,7 +51,7 @@ WebUI.check(findTestObject('Channel Message/Create thread from message item/inpu
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create thread from message item/texarea_send message'), 
     'helo ae qn', Keys.chord(Keys.ENTER))
 
-WebElement threadTitleElement = WebUI.findWebElement(findTestObject("Object Repository/Manage Channel/Create Thread/span_Thread Title"))
+WebElement threadTitleElement = WebUI.findWebElement(findTestObject("Object Repository/Manage Channel/Create and Delete a Thread/span_Thread Title"))
 
 String threadTitle = threadTitleElement.getText()
 
@@ -97,3 +98,18 @@ if (threadBreadCrumbText != threadName) {
 	
     KeywordUtil.markFailed("Error thread! - threadName: '$threadName'; threadBreadCrumbText: '$threadBreadCrumbText'")
 }
+
+String threadId = newthreadElement.getAttribute("id")
+
+String deleteleThreadXpath = "//*[@id='$threadId']"
+
+TestObject deleteleThreadObj = CustomKeywords.'mezon.GetTestObject.withXpath'(deleteleThreadXpath)
+
+WebUI.rightClick(newthreadObj)
+
+WebUI.click(findTestObject("Object Repository/Manage Channel/Create and Delete a Thread/button_Delete Thread Option"))
+
+WebUI.click(findTestObject("Object Repository/Manage Channel/Create and Delete a Thread/button_Delete Thread"))
+
+WebUI.verifyElementNotPresent(deleteleThreadObj, 15)
+
