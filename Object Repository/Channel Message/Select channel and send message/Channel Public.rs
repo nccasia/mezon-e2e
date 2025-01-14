@@ -6,11 +6,11 @@
    <elementGuidId>f53e050e-52aa-4a38-a6b5-5e5eb1ef85b1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;channelList&quot;]/div/div/div[1]/div[2]/div/div/div/div/div/div[3]/div/div/div/div[2]/div[contains(@class, 'group')][2]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;channelList&quot;]/div/div/div/div/div[3]/div/div/div/div[2]/div[contains(@class, 'group')][1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
