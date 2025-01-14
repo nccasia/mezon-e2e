@@ -17,15 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
-
-WebUI.setText(findTestObject('Object Repository/Page_Mezon/input_WELCOME BACK_userEmail'), email)
-
-WebUI.setText(findTestObject('Page_Mezon/input_WELCOME BACK_password'), password)
-
-WebUI.click(findTestObject('Object Repository/Page_Mezon/div_Sign in'))
+WebUI.callTestCase(findTestCase('Steps/Manage Channel/Create and Delete New Channel'), [('channelType') : 'app', ('isPrivateChannel') : false], 
+    FailureHandling.STOP_ON_FAILURE)
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Create New Public Channel</name>
+   <name>Create and Delete New Channel</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
@@ -12,11 +12,24 @@
       <value></value>
       <variableId>607a2fc9-e684-4c4f-8a35-f0dea45a0ff9</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>d78c6b88-9644-4996-a3da-63e3154cb021</variableId>
+   </variableLinks>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'text'</defaultValue>
       <description></description>
       <id>607a2fc9-e684-4c4f-8a35-f0dea45a0ff9</id>
       <masked>false</masked>
       <name>channelType</name>
+   </variable>
+   <variable>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>d78c6b88-9644-4996-a3da-63e3154cb021</id>
+      <masked>false</masked>
+      <name>isPrivateChannel</name>
    </variable>
 </TestCaseEntity>
