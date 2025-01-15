@@ -18,7 +18,9 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 
-WebUI.callTestCase(findTestCase('Steps/Manage Clan/Create a Clan'), [:], FailureHandling.STOP_ON_FAILURE)
+if(isCreateClan) {
+	WebUI.callTestCase(findTestCase('Steps/Manage Clan/Create a Clan'), [:], FailureHandling.STOP_ON_FAILURE)	
+}
 
 WebUI.click(findTestObject('Object Repository/Manage Clan/Delete Clan/div_Clan Title'))
 
