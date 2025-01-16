@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/div[2]/div[2]/div[2]/div/div[4]/div/div[2]/div/div[3]/div/div[@data-index][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span</value>
+         <value>/html/body/div[2]/div[2]/div[2]/div/div[4]/div/div[2]/div/div/div/div[@class='message-list-item'][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/span/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

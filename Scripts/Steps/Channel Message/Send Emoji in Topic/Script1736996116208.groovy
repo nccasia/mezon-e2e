@@ -16,23 +16,21 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Create and send msg to topic'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.mouseOver(findTestObject('Channel Message/Forward message to DM/div_latest_message'))
+WebUI.click(findTestObject('Channel Message/Send Emoji in Topic/button_Emoji Pannel'))
 
-WebUI.click(findTestObject('Channel Message/Forward message to DM/button_more'))
+WebElement emojiElement = WebUI.findWebElement(findTestObject('Channel Message/Send Emoji in Topic/img_Emoji'))
 
-WebUI.click(findTestObject('Channel Message/Create and send msg to topic/button_Topic discussion'))
+String emojiSrc = emojiElement.getAttribute('src')
 
-String message =  "topic discussion"
+emojiElement.click()
 
-CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create and send msg to topic/textarea_topic discussion'), 
-    message, Keys.chord(Keys.ENTER))
-
-WebUI.verifyElementPresent(findTestObject("Object Repository/Channel Message/Create and send msg to topic/div_View Topic Message"), 15)
+WebUI.sendKeys(findTestObject('Channel Message/Send Emoji in Topic/textarea_Topic'), Keys.chord(Keys.ENTER))
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'(findTestObject('Object Repository/Channel Message/Send Emoji in Topic/div_latest message'))
 
@@ -41,12 +39,11 @@ if(isSending) {
 	KeywordUtil.markFailedAndStop("Message is sending!")
 }
 
-WebElement spanLatestMessageElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Create and send msg to topic/span_latest message'))
+WebElement emojiMessageElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Send Emoji in Topic/img_Emoji Message'))
 
-String spanLatestMessage = spanLatestMessageElement.getText()
+String emojiMessageSrc = emojiMessageElement.getAttribute("src")
 
-if (spanLatestMessage != message) {
+if (!emojiMessageSrc.equals(emojiSrc)) {
 	WebUI.takeScreenshot()
-	KeywordUtil.markFailed("Error message - spanLatestMessage: '$spanLatestMessage'; message: '$message'")
+	KeywordUtil.markFailed("Error emoji!")
 }
-
