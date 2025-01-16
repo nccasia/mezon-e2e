@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_latest mes</name>
+   <name>img_Emoji</name>
    <tag></tag>
-   <elementGuidId>5b193023-7007-447f-a0ea-1f38beede18f</elementGuidId>
+   <elementGuidId>ae2141a3-84f0-42ca-a559-148d104a226c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div/div[@class=&quot;message-list-item&quot;][last()]/div/div/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/span/span</value>
+         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[2]/div[1]/div[1]/div/div[2]/div/div/div[2]/div[1]/div[2]/div/div/button[9]/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

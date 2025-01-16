@@ -24,8 +24,8 @@ import org.openqa.selenium.WebElement as WebElement
 public class SendingMessage {
 
 	@Keyword
-	def isSendingMessage () {
-		WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_isSending'))
+	def isSendingMessage (TestObject messageObj = findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_isSending')) {
+		WebElement sentMessageElement = WebUI.findWebElement(messageObj)
 
 		String classNameSentMessageElement = sentMessageElement.getAttribute('class')
 
