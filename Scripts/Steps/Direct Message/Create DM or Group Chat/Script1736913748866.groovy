@@ -24,20 +24,17 @@ WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email 
 
 WebUI.click(findTestObject('Object Repository/Direact Message/Create DM or Group Chat/button_create DM'))
 
-String username = 'huy.lyquang'
+String username1 = 'huy.lyquang'
 
-String conversation = selectUsername(username)
+String displayName1 = selectUsername(username1)
 
+String username2 = 'nga.nguyenthi'
+
+String displayName2
 
 if (isCreateGroupChat) {
-    username = 'nga.nguyenthi'
-
-    String displayName = selectUsername(username)
-	
-	conversation = conversation + ',' + displayName
+    displayName2 = selectUsername(username2)
 }
-
-
 
 WebUI.click(findTestObject('Object Repository/Direact Message/Create DM or Group Chat/button_create DM or Group Chat'))
 
@@ -48,17 +45,30 @@ String conversationName = conversationNameElement.getText()
 Boolean verifyCreateDMorGroup = false
 
 for (int i = 0; i < 15; i++) {
-    if (conversationName.equals(conversation)) {
-        verifyCreateDMorGroup = true
-        break
-    }
-    
-    WebUI.delay(1)
+	if(isCreateGroupChat) {
+		if (conversationName.contains(displayName1) && conversationName.contains(displayName2)) {
+			verifyCreateDMorGroup = true
+			break
+		}
+		WebUI.delay(1)
+	} else {
+		println conversationName
+		println displayName1
+		if (conversationName.equals(displayName1)) {
+			verifyCreateDMorGroup = true
+			break
+		}
+		WebUI.delay(1)
+	}
 }
 
 if (!(verifyCreateDMorGroup)) {
     WebUI.takeScreenshot()
     KeywordUtil.markFailed('Create DM or Group chat failed!')
+}
+
+if(isCreateGroupChat) {
+	WebUI.callTestCase(findTestCase('Steps/Direct Message/Leave Group'), [('isCalled') : true], FailureHandling.STOP_ON_FAILURE)
 }
 
 def selectUsername(String username) {

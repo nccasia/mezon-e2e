@@ -13,7 +13,7 @@
       <variableId>9b3024aa-ea92-485e-a0ec-38a83860772d</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>false</defaultValue>
+      <defaultValue>true</defaultValue>
       <description></description>
       <id>9b3024aa-ea92-485e-a0ec-38a83860772d</id>
       <masked>false</masked>
