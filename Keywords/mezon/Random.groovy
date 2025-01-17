@@ -24,9 +24,9 @@ public class Random {
 	@Keyword
 	def text(String text = "text") {
 		double random = Math.random();
-		
-		String newText = "$text $random"
-		
+
+		String newText = "$text$random"
+
 		return newText.replace('.', '')
 	}
 }

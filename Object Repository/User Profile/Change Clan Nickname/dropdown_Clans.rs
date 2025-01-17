@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_latest message</name>
+   <name>dropdown_Clans</name>
    <tag></tag>
-   <elementGuidId>e9296b76-f693-4942-8711-102b9bca8167</elementGuidId>
+   <elementGuidId>b4497c1c-f7e3-4ded-b6bc-73d8bdb2e4b0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div/div[@class=&quot;message-list-item&quot;][last()]</value>
+         <value>//*[@id=&quot;main-layout&quot;]/div/div[4]/div/div/div[2]/div[2]/div/select</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
-   <useRalativeImagePath>true</useRalativeImagePath>
+   <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>
