@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_latest message</name>
+   <name>button_Setting</name>
    <tag></tag>
-   <elementGuidId>e9296b76-f693-4942-8711-102b9bca8167</elementGuidId>
+   <elementGuidId>9a786711-cbd3-4afc-9f69-b14fa23dd5c0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div/div[@class=&quot;message-list-item&quot;][last()]</value>
+         <value>//*[@id=&quot;clan-footer&quot;]/div/div/div[2]/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
-   <useRalativeImagePath>true</useRalativeImagePath>
+   <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>
