@@ -18,28 +18,26 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String filePath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Files Upload\\File test.txt'
+String fileName = 'File test.txt'
 
-List splitFilePath = filePath.split('\\\\')
-
-String fileName = splitFilePath[(splitFilePath.size() - 1)]
+String filePath = CustomKeywords.'mezon.File.getPath'('\\Data Files\\Files Upload\\') + fileName
 
 WebUI.uploadFile(findTestObject('Channel Message/Send file/input_upload file'), filePath)
 
-WebUI.verifyElementPresent(findTestObject("Object Repository/Channel Message/Send text to large for convert to file txt/p_file name"), 15)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Send text to large for convert to file txt/p_file name'), 
+    15)
 
-WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send file/textarea_Clan T_general channel'), ' ')
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
 if (isSending) {
-	WebUI.takeScreenshot()
-	
-	KeywordUtil.markFailedAndStop("Sending file failed")
+    WebUI.takeScreenshot()
+
+    KeywordUtil.markFailedAndStop('Sending file failed')
 }
 
 WebElement spanSentMessage = WebUI.findWebElement(findTestObject('Channel Message/Send file/span_sent message'))
@@ -47,8 +45,10 @@ WebElement spanSentMessage = WebUI.findWebElement(findTestObject('Channel Messag
 String sentMessage = spanSentMessage.getText()
 
 if (sentMessage != fileName) {
-	WebUI.takeScreenshot()
-	
+    WebUI.takeScreenshot()
+
     KeywordUtil.markFailed("Error message - sentMessage: '$sentMessage'; fileName: '$fileName'")
 }
+
+
 

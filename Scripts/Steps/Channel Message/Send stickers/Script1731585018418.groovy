@@ -41,12 +41,10 @@ if(GlobalVariable.isDirectMessage) {
 	WebUI.click(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/img_Sticker'))
 }
 
-
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
 if (isSending) {
 	WebUI.takeScreenshot()
-	
 	KeywordUtil.markFailedAndStop("Sending sticker failed")
 }
 

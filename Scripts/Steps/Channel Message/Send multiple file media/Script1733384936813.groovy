@@ -19,15 +19,12 @@ import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String fileMediaPath1 = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\Video1.mp4'
+String fileMediaPath = CustomKeywords.'mezon.File.getPath'('\\Data Files\\Media Upload\\Video1.mp4') 
 
-String fileMediaPath2 = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\Video1.mp4'
-
-List<String> filePaths = [fileMediaPath1, fileMediaPath2]
+List<String> filePaths = [fileMediaPath, fileMediaPath]
 
 String combinedFilePaths = filePaths.join('\n')
 
@@ -39,7 +36,6 @@ Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
 if (isSending) {
 	WebUI.takeScreenshot()
-	
 	KeywordUtil.markFailedAndStop("Sending files failed")
 }
 
@@ -50,7 +46,6 @@ List<WebElement> videoTagList = latestMessageElement.findElements(By.tagName('vi
 
 if (filePaths.size() != videoTagList.size()) {
 	WebUI.takeScreenshot()
-	
     KeywordUtil.markFailed('Miss file media!')
 }
 

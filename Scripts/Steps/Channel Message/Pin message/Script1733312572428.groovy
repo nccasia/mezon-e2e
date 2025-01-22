@@ -43,9 +43,8 @@ if (GlobalVariable.isThread) {
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
-
 if (isSending) {
+	WebUI.takeScreenshot()
     KeywordUtil.markFailedAndStop('pin message failed')
 }
 
@@ -55,8 +54,7 @@ String pinMessageSVGElemt = pinMessageContainer.getAttribute('innerHTML')
 
 String pinMessageSVG = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\pin message.svg')
 
-WebUI.takeScreenshot()
-
 if (pinMessageSVGElemt != pinMessageSVG) {
+	WebUI.takeScreenshot()
     KeywordUtil.markFailedAndStop('Pin message icon not present')
 }

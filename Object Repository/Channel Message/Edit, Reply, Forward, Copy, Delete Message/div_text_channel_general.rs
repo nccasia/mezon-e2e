@@ -6,11 +6,11 @@
    <elementGuidId>efe90a15-7f95-4877-a76b-1f4e4a72c2b2</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>/html/body/div[2]/div[2]/div[2]/div/div[3]/div/div[2]/div/div/div/div/div[2]/div[1]/div[2]/div/div/div/div/div[1]/div[2]/div/div/ul/li[1]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[2]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div/div/ul/li</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -30,7 +30,7 @@ WebElement message = WebUI.findWebElement(findTestObject('Channel Message/Load m
 
 String firstMessageId = message.getAttribute("id")
 
-int loopTimes = 20
+int loopTimes = 50
 	
 for (int i = 0; i < loopTimes; i++) {
     WebUI.sendKeys(findTestObject('Channel Message/Load more message/div_message container'), Keys.chord(Keys.ARROW_UP))
@@ -42,8 +42,9 @@ for (int i = 0; i < 15; i++) {
 	message = WebUI.findWebElement(findTestObject('Channel Message/Load more message/div_message'))
 	
 	String firstMessageLoadedId= message.getAttribute("id")
-	
-	if (firstMessageLoadedId != firstMessageId) {
+	println firstMessageId
+	println firstMessageLoadedId
+	if (!firstMessageLoadedId.equals(firstMessageId)) {
 		isLoadMoreSuccess = true
 		break
 	}

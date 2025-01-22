@@ -41,7 +41,6 @@ if(GlobalVariable.isDirectMessage) {
 	WebUI.verifyElementPresent(buzzElement, 15)
 }
 
-
 WebElement spanMessageBuzz = WebUI.findWebElement(findTestObject('Channel Message/Send message Buzz/span_message buzz'))
 
 String messageBuzz = spanMessageBuzz.getText()
@@ -50,7 +49,6 @@ String colorText = spanMessageBuzz.getCssValue('color')
 
 if (((messageBuzz != 'Buzz!!')) || (colorText != 'rgba(239, 68, 68, 1)')) {
 	WebUI.takeScreenshot()
-	
     KeywordUtil.markFailedAndStop("Error message - messageBuzz: '$messageBuzz'; colorText: $colorText")
 }
 
@@ -60,9 +58,8 @@ def sendMessageBuzz() {
 	
 	Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 	
-	WebUI.takeScreenshot()
-	
 	if (isSending) {
+		WebUI.takeScreenshot()
 		KeywordUtil.markFailedAndStop("Sending message failed")
 	}
 }

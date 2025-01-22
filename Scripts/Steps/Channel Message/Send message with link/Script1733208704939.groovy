@@ -29,7 +29,7 @@ String link = 'https://mezon.ai'
 String message = "$text $link"
 
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send message with link/textarea_Clan T_general channel'), 
-    message, Keys.chord(Keys.ENTER))
+    message)
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 

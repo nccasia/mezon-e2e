@@ -26,25 +26,20 @@ WebUI.rightClick(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Del
 
 WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread option'))
 
-Random generator = new Random()
-
-int randomNumber = generator.nextInt()
-
-String threadName = "vp-qn $randomNumber"
+String threadName = CustomKeywords.'mezon.Random.text'('vp-qn')
 
 WebUI.setText(findTestObject('Channel Message/Create thread from message item/input_name thread'), threadName)
 
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create thread from message item/texarea_send message'), 
-    'helo ae qn', Keys.chord(Keys.ENTER))
+    'helo ae qn')
 
-WebElement threadTitleElement = WebUI.findWebElement(findTestObject("Object Repository/Channel Message/Create thread from message item/span_Thread Title"))
+WebElement threadTitleElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Create thread from message item/span_Thread Title'))
 
 String threadTitle = threadTitleElement.getText()
 
-if(!threadTitle.equals(threadName)) {
-	WebUI.takeScreenshot()
-	
-	KeywordUtil.markFailedAndStop('Thread Title is wrong!')
+if (!(threadTitle.equals(threadName))) {
+    WebUI.takeScreenshot()
+    KeywordUtil.markFailedAndStop('Thread Title is wrong!')
 }
 
 WebElement threadsOfGeneral
@@ -75,6 +70,7 @@ if (threadBreadCrumbText != threadName) {
     KeywordUtil.markFailed("Error thread! - threadName: '$threadName'; threadBreadCrumbText: '$threadBreadCrumbText'")
 }
 
+
 def checkNewThreadPresent(WebElement threadsContainer, String threadName) {
     WebElement newThread
 
@@ -88,7 +84,8 @@ def checkNewThreadPresent(WebElement threadsContainer, String threadName) {
                 return thread
             }
         }
-		WebUI.delay(1)
+        
+        WebUI.delay(1)
     }
     
     return newThread

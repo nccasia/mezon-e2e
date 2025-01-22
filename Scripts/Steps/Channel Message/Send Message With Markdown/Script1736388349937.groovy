@@ -60,11 +60,7 @@ String message = MessageWithMarkdownElement.getText()
 
 if (message.equals(text)) {
 	verifySendMessageWithMarkdown = true
-	break
 }
-
-WebUI.delay(1)
-
 
 if (!verifySendMessageWithMarkdown) {
 	WebUI.takeScreenshot()

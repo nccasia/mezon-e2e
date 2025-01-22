@@ -30,7 +30,7 @@ WebUI.click(findTestObject('Channel Message/Create and send msg to topic/button_
 String message =  "topic discussion"
 
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Create and send msg to topic/textarea_topic discussion'), 
-    message, Keys.chord(Keys.ENTER))
+    message)
 
 WebUI.verifyElementPresent(findTestObject("Object Repository/Channel Message/Create and send msg to topic/div_View Topic Message"), 15)
 

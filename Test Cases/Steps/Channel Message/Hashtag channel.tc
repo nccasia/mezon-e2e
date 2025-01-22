@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Forward Message</name>
+   <name>Hashtag channel</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>e2c28efc-99d3-42b7-b7bd-8aaa494bae53</testCaseGuid>
+   <testCaseGuid>302f0403-29ab-4756-8936-c8ecad7100f8</testCaseGuid>
 </TestCaseEntity>
