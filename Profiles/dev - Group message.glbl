@@ -6,6 +6,11 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'https://dev-mezon.nccsoft.vn'</initValue>
+      <name>host</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'https://dev-mezon.nccsoft.vn/desktop/login'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>

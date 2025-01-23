@@ -21,7 +21,7 @@ import org.openqa.selenium.WebElement as WebElement
 
 if (GlobalVariable.isDirectMessage) {
 	WebUI.callTestCase(findTestCase('Steps/Direct Message/Select conversation'), [:], FailureHandling.STOP_ON_FAILURE)
-
+	
 } else {
 	WebUI.callTestCase(findTestCase('Steps/Login_Logout and SignUp/Login with email and password'), [('email') : 'E2E1762357@ncc.asia'
 		, ('password') : 'E2E1762357'], FailureHandling.STOP_ON_FAILURE)

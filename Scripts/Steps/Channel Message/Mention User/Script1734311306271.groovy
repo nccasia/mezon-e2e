@@ -17,14 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), '@')
-
-WebUI.takeScreenshot()
 
 if(GlobalVariable.isDirectMessage) {
 	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
@@ -33,7 +30,6 @@ if(GlobalVariable.isDirectMessage) {
 	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)	
 	WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_first_member'))
 }
-
 
 WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), 'Are you OK?')
 
@@ -45,9 +41,9 @@ WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delet
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-WebUI.takeScreenshot()
 
 if(isSending) {
+	WebUI.takeScreenshot()
 	KeywordUtil.markFailedAndStop('Sending message failed')
 }
 
@@ -61,13 +57,13 @@ String metionBg = mentionUserElm.getCssValue('background-color')
 
 String mentionUserMsg = mentionUserElm.getText()
 
-WebUI.takeScreenshot()
 
 if ((lastMsg != testMsg) && ('rgba(60, 66, 112, 1)' != metionBg)) {
+	WebUI.takeScreenshot()
     KeywordUtil.markFailed("Error message - lastMsg: '$lastMsg'; testMsg: '$testMsg'; metionBackgroud: $metionBg")
 }
 
-WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_show_user'))
+WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_mention_user_message'))
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_show_user_profile'), 10)
 

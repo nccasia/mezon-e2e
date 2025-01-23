@@ -18,47 +18,67 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.By as By
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
+if (GlobalVariable.isDirectMessage) {
+	WebUI.callTestCase(findTestCase('Steps/Direct Message/Select conversation'), [:], FailureHandling.STOP_ON_FAILURE)
+    WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [('isCalled') : true], FailureHandling.STOP_ON_FAILURE)
+} else {
+    WebUI.callTestCase(findTestCase('Steps/Channel Message/Send Message Text'), [:], FailureHandling.STOP_ON_FAILURE)
+}
 
 WebUI.mouseOver(findTestObject('Channel Message/Forward message to DM/div_latest_message'))
-
 WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/button_more'))
 
-if(GlobalVariable.isDirectMessage) {
-	WebUI.click(findTestObject('Object Repository/Direact Message/Forward message/button_forward message'))	
+if (GlobalVariable.isDirectMessage) {
+    WebUI.click(findTestObject('Object Repository/Direact Message/Forward message/button_forward message'))
 } else {
-	WebUI.click(findTestObject('Channel Message/Forward message to DM/button_forward'))
+    WebUI.click(findTestObject('Channel Message/Forward message to DM/button_forward'))
 }
 
-TestObject forwardContainerObj = findTestObject('Channel Message/Forward message to DM/div_forward_container')
-
-List<WebElement> forwardList = WebUI.findWebElement(forwardContainerObj).findElements(By.tagName('div'))
-
-for (int i = 1; i <= forwardList.size(); i++) {
-    WebElement forward = forwardList.get(i)
-
-    String spanUsernameXpath = "/html/body/div[@data-floating-ui-portal]/div/div/div/div/div[2]/div/div[$i]/div/div/span"
-
-    TestObject spanUsernameObj =  CustomKeywords.'mezon.GetTestObject.withXpath'(spanUsernameXpath)
-
-    String spanUsernameValue = WebUI.findWebElement(spanUsernameObj).getText()
-
-    if (spanUsernameValue !== '') {
-        String checkBoxXpath = "/html/body/div[@data-floating-ui-portal]/div/div/div/div/div[2]/div/div[$i]/input"
-
-        TestObject checkBoxObj = CustomKeywords.'mezon.GetTestObject.withXpath'(checkBoxXpath)
-
-        WebUI.check(checkBoxObj)
-
-        break
-    }
+if(isForwardToChannel) {
+	WebUI.setText(findTestObject('Object Repository/Channel Message/Forward message to DM/input_Search'), '#forward channel')
+} else {	
+	WebUI.setText(findTestObject('Object Repository/Channel Message/Forward message to DM/input_Search'), '@')
 }
+
+WebElement checkboxSearchResultElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Forward message to DM/checkbox_Search Result'))
+
+String checkboxSearchResultId = checkboxSearchResultElement.getAttribute('id')
+
+String[] splitID = checkboxSearchResultId.split('-')
+
+String conversationId = splitID[(splitID.size() - 1)]
+
+checkboxSearchResultElement.click()
+
+WebElement forwardMessageElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Forward message to DM/span_Forward Message'))
+
+String forwardMessage = forwardMessageElement.getText()
 
 WebUI.click(findTestObject('Channel Message/Forward message to DM/button_send_forward_message'))
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Forward message to DM/Toast success'), 10)
 
+String navigateToUrl
+
+if (isForwardToChannel) {
+	String clanId = "1840652023322644480"
+	navigateToUrl = "$GlobalVariable.host/chat/clans/$clanId/channels/$conversationId"
+} else {
+	navigateToUrl = "$GlobalVariable.host/chat/direct/message/$conversationId/3"
+}
+
+WebUI.navigateToUrl(navigateToUrl)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Forward message to DM/div_Forward Tag'), 10)
+
+WebElement forwardedMessageElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Forward message to DM/span_Message Forwarded'))
+
+String forwardedMessage = forwardedMessageElement.getText()
+
+if (!(forwardedMessage.equals(forwardMessage))) {
+    WebUI.takeScreenshot()
+    KeywordUtil.markFailed("Error forward message - forwardedMessage: $forwardedMessage; forwardMessage: $forwardMessage")
+}
 

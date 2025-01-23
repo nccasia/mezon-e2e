@@ -15,32 +15,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-if(!isCalled) {
-	WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)	
-}
-
-String message = 'mezon day'
-
-CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
-    message)
-
-Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
-
-WebUI.takeScreenshot()
-
-if (isSending) {
-	KeywordUtil.markFailedAndStop("Sending message failed")
-}
-
-WebElement sentMessageElement = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Edit, Reply, Forward, Copy, Delete Message/span_latest mes'))
-
-String sentMessage = sentMessageElement.getText()
-
-if (sentMessage != message) {
-    KeywordUtil.markFailedAndStop("Error message - sentMessage: '$sentMessage'; message: '$message'")
-}
+WebUI.callTestCase(findTestCase('Steps/Channel Message/Forward message to DM'), [('isForwardToChannel') : true], FailureHandling.STOP_ON_FAILURE)
 

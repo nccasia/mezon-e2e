@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_latest_message</name>
+   <name>checkbox_Search Result</name>
    <tag></tag>
-   <elementGuidId>6c838b6a-a7bc-461c-b6fa-549eeb2f4bd1</elementGuidId>
+   <elementGuidId>13ae6645-db16-40b5-afe7-252e5ac6faec</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div/div[@class=&quot;message-list-item&quot;][last()]/div/div[last()]/div</value>
+         <value>/html/body/div[@data-floating-ui-portal]/div/div/div/div/div[2]/div/div[1]/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

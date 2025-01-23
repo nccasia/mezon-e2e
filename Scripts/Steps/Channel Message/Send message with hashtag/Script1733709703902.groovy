@@ -37,16 +37,14 @@ WebUI.setText(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete
 
 WebElement textAreaElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'))
 
-String testMsg = textAreaElm.getText().replace('#', '')
+String hashTag = textAreaElm.getText().replace('#', '')
 
 WebUI.sendKeys(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), Keys.chord(Keys.ENTER))
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-
 if (isSending) {
 	WebUI.takeScreenshot()
-	
 	KeywordUtil.markFailedAndStop("Sending message failed")
 }
 
@@ -54,13 +52,8 @@ WebElement lastMsgElm = WebUI.findWebElement(findTestObject('Channel Message/Edi
 
 String lastMsg = lastMsgElm.getText()
 
-WebElement htagMsgElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_hashtag_message'))
-
-String htagMsg = htagMsgElm.getText()
-
-if (lastMsg != testMsg) {
+if (!lastMsg.equals(hashTag)) {
 	WebUI.takeScreenshot()
-	
-    KeywordUtil.markFailed("Sent message wrong! - lastMsg: '${lastMsg}'; testMsg: '${testMsg}'")
+    KeywordUtil.markFailed("Sent message wrong! - lastMsg: '${lastMsg}'; testMsg: '${hashTag}'")
 }
 

@@ -19,9 +19,6 @@ import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.By as By
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
-import java.nio.file.Files as Files
-import java.nio.file.Paths as Paths
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -31,21 +28,19 @@ WebUI.setText(findTestObject('Channel Message/Send file/textarea_Clan T_general 
 
 WebElement mentionBoxElem
 
-if(GlobalVariable.isDirectMessage) {
-	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
+if (GlobalVariable.isDirectMessage) {
+    WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
 
-	mentionBoxElem = WebUI.findWebElement(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'))
+    mentionBoxElem = WebUI.findWebElement(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'))
 } else {
-	WebUI.verifyElementPresent(findTestObject('Channel Message/Mention Role/div_mention box'), 15)
-	
-	mentionBoxElem = WebUI.findWebElement(findTestObject('Channel Message/Mention Role/div_mention box'))
+    WebUI.verifyElementPresent(findTestObject('Channel Message/Mention Role/div_mention box'), 15)
+
+    mentionBoxElem = WebUI.findWebElement(findTestObject('Channel Message/Mention Role/div_mention box'))
 }
 
 List<WebElement> liTagList = mentionBoxElem.findElements(By.tagName('li'))
 
-String svgFilePath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Svg\\Role image.svg'
-
-String svgContentFromFile = new String(Files.readAllBytes(Paths.get(svgFilePath)))
+String svgContentFromFile = CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Svg\\Role image.svg')
 
 for (WebElement liTag : liTagList) {
     String liId = liTag.getAttribute('id')
@@ -61,10 +56,11 @@ for (WebElement liTag : liTagList) {
 
         if (svgContentFromWeb == svgContentFromFile) {
             liTag.click()
+
             break
         }
     }
-    catch (error) {
+    catch (def error) {
         println(error.message)
     } 
 }
@@ -76,9 +72,9 @@ WebUI.sendKeys(findTestObject('Channel Message/Send file/textarea_Clan T_general
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
 if (isSending) {
-	WebUI.takeScreenshot()
-	
-	KeywordUtil.markFailedAndStop("Sending message failed")
+    WebUI.takeScreenshot()
+
+    KeywordUtil.markFailedAndStop('Sending message failed')
 }
 
 WebElement latestMessageElem = WebUI.findWebElement(findTestObject('Object Repository/Channel Message/Mention Role/span_metion role message'))
@@ -86,8 +82,10 @@ WebElement latestMessageElem = WebUI.findWebElement(findTestObject('Object Repos
 String textLatestMessage = latestMessageElem.getText()
 
 if (textLatestMessage != textOfTextArea) {
-	WebUI.takeScreenshot()
-	
-    KeywordUtil.markFailedAndStop("Error message! - textLatestMessage: '${textLatestMessage}'; textOfTextArea: '${textOfTextArea}'")
+    WebUI.takeScreenshot()
+
+    KeywordUtil.markFailedAndStop("Error message! - textLatestMessage: '$textLatestMessage'; textOfTextArea: '$textOfTextArea'")
 }
+
+
 

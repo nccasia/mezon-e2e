@@ -47,6 +47,7 @@ def verifySearchEmoji (TestObject emojiItem, String emojiKeyword) {
 	for (WebElement result : results) {
 		String alt = result.getDomAttribute("alt")
 		if(!alt.contains(emojiKeyword)) {
+			println alt
 			isSuccess = false
 		}
 	}

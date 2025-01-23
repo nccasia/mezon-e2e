@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;main-layout&quot;]/div/div[3]/div[2]/div/div[2]/div[2]/div[1]/div/div[2]/div/div/div[2]/div[1]/div//button/img</value>
+         <value>//*[@id=&quot;mainChat&quot;]/div/div/div[2]/div[1]/div[1]/div/div[2]/div/div/div[2]/div[1]/div/button/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

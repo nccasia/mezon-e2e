@@ -22,34 +22,32 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String fileMediaPath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\Test case - reaction message.mp4'
+String fileMediaPath = CustomKeywords.'mezon.File.getPath'('\\Data Files\\Media Upload\\Test case - reaction message.mp4')
 
-String fileImgPath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Media Upload\\logo NCC.png'
-
-List splitFilePath = fileMediaPath.split('\\\\')
+String fileImgPath = CustomKeywords.'mezon.File.getPath'('\\Data Files\\Media Upload\\logo NCC.png')
 
 WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), fileMediaPath)
 
-WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), ' ')
 
-verifySendMessage("Sending media failed")
+verifySendMessage('Sending media failed')
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/video_latest message'), 15)
 
 WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), fileImgPath)
 
-WebUI.sendKeys(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send Media/textarea_Clan T_general channel'), ' ')
 
-verifySendMessage("Sending message failed")
+verifySendMessage('Sending message failed')
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest message'), 10)
 
 def verifySendMessage(String errorMessage) {
-	Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
-	if (isSending) {
-		WebUI.takeScreenshot()
-		
-		KeywordUtil.markFailedAndStop(errorMessage)
-	}
+    Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+    if (isSending) {
+        WebUI.takeScreenshot()
+        KeywordUtil.markFailedAndStop(errorMessage)
+    }
 }
 

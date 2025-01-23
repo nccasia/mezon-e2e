@@ -23,31 +23,32 @@ import java.nio.file.Paths as Paths
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String imagePath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Image\\logo NCC.png'
+String imagePath = CustomKeywords.'mezon.File.getPath'('\\Data Files\\Image\\logo NCC.png')
+
+WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), imagePath)
+
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send message with link/textarea_Clan T_general channel'), ' ')
+
+Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
+
+if (isSending) {
+    WebUI.takeScreenshot()
+    KeywordUtil.markFailedAndStop('Sending message failed')
+}
+
+WebUI.rightClick(findTestObject('Channel Message/Save image/img_message'))
+
+if (GlobalVariable.isDirectMessage) {
+    WebUI.click(findTestObject('Object Repository/Direact Message/Save image/Button_save image'))
+} else {
+    WebUI.click(findTestObject('Channel Message/Save image/div_save image'))
+}
 
 String home = System.getProperty('user.home')
 
 String userDownloads = new File(home + '/Downloads/')
 
-WebUI.uploadFile(findTestObject('Channel Message/Send Media/input_upload'), imagePath)
-
-WebUI.sendKeys(findTestObject('Channel Message/Send message with link/textarea_Clan T_general channel'), Keys.chord(Keys.ENTER))
-
-Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
-
-if (isSending) {
-	WebUI.takeScreenshot()
-	
-	KeywordUtil.markFailedAndStop("Sending message failed")
-}
-
-WebUI.rightClick(findTestObject('Channel Message/Save image/img_message'))
-
-if(GlobalVariable.isDirectMessage) {
-	WebUI.click(findTestObject('Object Repository/Direact Message/Save image/Button_save image'))
-} else {
-	WebUI.click(findTestObject('Channel Message/Save image/div_save image'))
-}
-
 CustomKeywords.'mezon.VerifySaveImage.verifySaveImage'(userDownloads, 'image')
+
+
 

@@ -23,7 +23,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/textarea_clanT_general'), 
-    'chi Phuong xinh dep', Keys.chord(Keys.ENTER))
+    'chi Phuong xinh dep')
 
 WebElement divLastedElm = WebUI.findWebElement(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/div_lasted'))
 
@@ -39,7 +39,7 @@ if(GlobalVariable.isDirectMessage) {
 	WebUI.click(findTestObject('Channel Message/Edit, Reply, Forward, Copy, Delete Message/edit_btn'))	
 }
 
-String textareaEditMessageXpath = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div[1]/div/textarea"
+String textareaEditMessageXpath = "//*[@id='$idMessage']/div/div[last()]/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div[1]/div/textarea"
 
 TestObject textareaEditMessageElement = CustomKeywords.'mezon.GetTestObject.withXpath'(textareaEditMessageXpath)
 
@@ -55,7 +55,7 @@ WebUI.takeScreenshot()
 WebUI.sendKeys(textareaEditMessageElement, Keys.chord(
         Keys.ENTER))
 
-String spanLasted = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/span"
+String spanLasted = "//*[@id='$idMessage']/div/div[last()]/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/div/span/span"
 
 TestObject spanLastedObj = CustomKeywords.'mezon.GetTestObject.withXpath'(spanLasted)
 
@@ -63,23 +63,28 @@ WebElement spanLastedElm = WebUI.findWebElement(spanLastedObj)
 
 String editedMessage =  spanLastedElm.getText()
 
-verifyEditMessage(idMessage, editMessage, editedMessage)
+verifyEditMessage(idMessage)
 
-def verifyEditMessage(String idMessage, String editMessage, String editedMessage) {
+if (!editedMessage.equals(editMessage)) {
+	WebUI.takeScreenshot()
+	KeywordUtil.markFailed("Error edited message - editMessage: $editMessage; editedMessage: $editedMessage")
+}
+
+def verifyEditMessage(String idMessage) {
 	Boolean isEdited = false
 	for(int i = 0; i < 15; i++) {
-		String spanEditedXpath = "//*[@id='$idMessage']/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/span/p"
+		String spanEditedXpath = "//*[@id='$idMessage']/div/div[last()]/div/div[1]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/div/span/p"
 				
 		TestObject spanEditedObj =  CustomKeywords.'mezon.GetTestObject.withXpath'(spanEditedXpath)
 				
 		isEdited = WebUI.findWebElement(spanEditedObj).getText().contains('edited')
-		if ((editMessage == editedMessage) && isEdited) {
+		if (isEdited) {
 			return true
 		}
 		WebUI.delay(1)
 	}
 	WebUI.takeScreenshot()
-	KeywordUtil.markFailed("Message editing failed - editMessage: '$editMessage'; editedMessage: '$editedMessage'; isEdited: $isEdited")
+	KeywordUtil.markFailed("Not present edited")
 	return false
 }
 

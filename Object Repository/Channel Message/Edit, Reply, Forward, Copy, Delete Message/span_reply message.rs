@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div/div[@class=&quot;message-list-item&quot;][last()]/div/div/div/div[1]/div[2]/div[2]/div[2]/div[2]/div/div/div/div/div/span/span</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div/div[@class=&quot;message-list-item&quot;][last()]/div/div[last()]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/span/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

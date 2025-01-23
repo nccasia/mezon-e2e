@@ -40,7 +40,7 @@ if(GlobalVariable.isDirectMessage) {
 String replyMessage = 'toi la bot'
 
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea__channel T'), 
-    replyMessage, Keys.chord(Keys.ENTER))
+    replyMessage)
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
