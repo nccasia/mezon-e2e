@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Forward Message</name>
+   <name>Remove Avatar Profile</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>e2c28efc-99d3-42b7-b7bd-8aaa494bae53</testCaseGuid>
+   <testCaseGuid>290dda48-4ef4-497f-ae50-9fa48ceac11d</testCaseGuid>
 </TestCaseEntity>

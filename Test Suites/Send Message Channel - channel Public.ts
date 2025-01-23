@@ -33,10 +33,10 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>8bd7f524-22ea-4925-a7b5-a55749effa62</guid>
+      <guid>ec54e239-75e3-43b4-84fa-a198e7e7b440</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Steps/Channel Message/Forward Message</testCaseId>
+      <testCaseId>Test Cases/Steps/Channel Message/Forward Message To Channel</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -92,7 +92,7 @@
       <guid>19bd73e3-f2e7-41c5-9c1b-839a3dec6c48</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Steps/Channel Message/Metion, hashtag channel</testCaseId>
+      <testCaseId>Test Cases/Steps/Channel Message/Hashtag channel</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -210,6 +210,12 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Steps/Channel Message/Send Message Text</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>af8fa156-3398-482d-b06c-54fcb7572c4a</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>4a29745b-6827-4f67-af18-2acefa398161</guid>

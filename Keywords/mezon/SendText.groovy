@@ -22,16 +22,14 @@ import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.ui.Select
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.By
-
+import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable
 
 public class SendText {
 
 	@Keyword
-	def sendText(TestObject object, String message, String key) {
-
+	def sendText(TestObject object, String message) {
 		WebUI.setText(object, message)
-
-		WebUI.sendKeys(object, key)
+		WebUI.sendKeys(object, Keys.chord(Keys.ENTER))
 	}
 }

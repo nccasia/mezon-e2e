@@ -17,25 +17,26 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String filePath = RunConfiguration.getProjectDir().replace('/', '\\') + '\\Data Files\\Image\\logo NCC.png'
+String filePath = CustomKeywords.'mezon.File.getPath'('\\Data Files\\Image\\logo NCC.png')
 
 WebUI.uploadFile(findTestObject('Channel Message/Send file/input_upload file'), filePath)
 
-WebUI.sendKeys(findTestObject('Channel Message/Send text to large for convert to file txt/textarea_Clan T_general channel'), 
-    Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Channel Message/Send text to large for convert to file txt/textarea_Clan T_general channel'))
+
+CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send text to large for convert to file txt/textarea_Clan T_general channel'), 
+    ' ')
 
 Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-if(isSending) {
-	WebUI.takeScreenshot()
-	
-	KeywordUtil.markFailedAndStop("Sending image failed!")
+if (isSending) {
+    WebUI.takeScreenshot()
+    KeywordUtil.markFailedAndStop('Sending image failed!')
 }
 
 WebUI.verifyElementPresent(findTestObject('Channel Message/Send Media/img_latest message'), 15)
+
 
 

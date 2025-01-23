@@ -6,6 +6,11 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'https://mezon.ai'</initValue>
+      <name>host</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'https://mezon.ai/desktop/login'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>

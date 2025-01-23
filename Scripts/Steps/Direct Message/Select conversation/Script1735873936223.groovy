@@ -30,7 +30,7 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Sel
 if (GlobalVariable.isGroupMessage) {
 	WebUI.setText(findTestObject('Object Repository/Direact Message/Select conversation/input_search'), 'Group test')
 } else {
-	WebUI.setText(findTestObject('Object Repository/Direact Message/Select conversation/input_search'), '@')
+	WebUI.setText(findTestObject('Object Repository/Direact Message/Select conversation/input_search'), 'huy.lyquang')
 }
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Select conversation/span_conversation'),

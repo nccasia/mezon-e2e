@@ -24,7 +24,7 @@ WebUI.callTestCase(findTestCase('Steps/Channel Message/Reply message'), [:], Fai
 WebUI.click(findTestObject('Channel Message/Jump to message reply/div_jump to message reply'))
 
 Boolean isJumpToMessageReplySuccess = WebUI.verifyElementInViewport(findTestObject('Object Repository/Channel Message/Jump to message reply/div_message reply jumped'),
-		1, FailureHandling.OPTIONAL)
+		2, FailureHandling.OPTIONAL)
 
 if (!isJumpToMessageReplySuccess) {
 	
@@ -33,7 +33,7 @@ if (!isJumpToMessageReplySuccess) {
 		WebUI.click(findTestObject('Channel Message/Jump to message reply/div_jump to message reply'))
 		
 		isJumpToMessageReplySuccess = WebUI.verifyElementInViewport(findTestObject('Object Repository/Channel Message/Jump to message reply/div_message reply jumped'), 
-				1, FailureHandling.OPTIONAL)
+				2, FailureHandling.OPTIONAL)
 		
 		if (isJumpToMessageReplySuccess) {
 			break

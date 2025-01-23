@@ -21,49 +21,6 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.callTestCase(findTestCase('Steps/Channel Message/Select channel'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
-
-WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), '@')
-
-if(GlobalVariable.isDirectMessage) {
-	WebUI.verifyElementPresent(findTestObject('Object Repository/Direact Message/Mention Role/div_suggestions'), 15)
-	
-	WebUI.click(findTestObject('Object Repository/Direact Message/Mention Role/li_suggestion'))
-} else {
-	WebUI.verifyElementPresent(findTestObject('Object Repository/Channel Message/Mention Role/div_suggestions display'), 15)	
-	
-	WebUI.click(findTestObject('Channel Message/Mention, hashtag/li_mention'))
-}
-
-
-String mentionText = WebUI.findWebElement(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general')).getText().trim()
-
-WebUI.sendKeys(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), Keys.chord(Keys.ENTER))
-
-Boolean isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
-
-if(isSending) {
-	WebUI.takeScreenshot()
-
-	KeywordUtil.markFailedAndStop('Sending message failed')
-}
-
-WebElement buttonMetionElement = WebUI.findWebElement(findTestObject('Channel Message/Mention, hashtag/button_mention'))
-
-String buttonMetionText = buttonMetionElement.getText().trim()
-
-if (buttonMetionText != mentionText) {
-	WebUI.takeScreenshot()
-	
-    KeywordUtil.markFailed("buttonMetionText: '${buttonMetionText}'; mentionText: '${mentionText}'")
-}
-
-WebUI.click(findTestObject('Channel Message/Mention, hashtag/button_mention'))
-
-WebUI.verifyElementPresent(findTestObject('Channel Message/Mention, hashtag/div_popup'), 10)
-
-WebUI.click(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'))
-
 WebUI.setText(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T_general'), '#')
 
 if (GlobalVariable.isDirectMessage) {
@@ -84,10 +41,8 @@ WebUI.sendKeys(findTestObject('Channel Message/Mention, hashtag/textearea_Clan T
 
 isSending = CustomKeywords.'mezon.SendingMessage.isSendingMessage'()
 
-
 if(isSending) {
 	WebUI.takeScreenshot()
-	
 	KeywordUtil.markFailedAndStop('Sending message failed')
 }
 
@@ -97,7 +52,6 @@ String LatestMessageText = spanLatestMessageElement.getText()
 
 if (LatestMessageText != hashtagWithMessage) {
 	WebUI.takeScreenshot()
-	
     KeywordUtil.markFailed("LatestMessageText: '${LatestMessageText}'; hashtagWithMessage: '${hashtagWithMessage}'")
 }
 

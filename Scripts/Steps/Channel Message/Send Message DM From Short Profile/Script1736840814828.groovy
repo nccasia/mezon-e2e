@@ -33,11 +33,11 @@ WebUI.click(findTestObject('Object Repository/Channel Message/Send Message DM Fr
 String message = "hello"
 
 CustomKeywords.'mezon.SendText.sendText'(findTestObject('Channel Message/Send Message DM From Short Profile/input_Send Message DM'), 
-    message, Keys.chord(Keys.ENTER))
+    message)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-String directMessageURL = "https://dev-mezon.nccsoft.vn/chat/direct/message"
+String directMessageURL = "$GlobalVariable.host/chat/direct/message"
 
 String isNavigated = false
 

@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;scrollLoading&quot;]/div[@class=&quot;message-list-item&quot;][last()]/div/div/div</value>
+         <value>//*[@id=&quot;scrollLoading&quot;]/div/div[@class=&quot;message-list-item&quot;][last()]/div/div/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>7ef42e79-9a7b-49e3-83ef-396ec9693d0d</webElementGuid>
+      <webElementGuid>b7042786-52ee-4168-b798-50d4bc09ca84</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>flex h-15 flex-col w-auto px-3 dark:bg-[#403D38] bg-[#EAB3081A]</value>
-      <webElementGuid>7eb1a873-643e-47b2-95a3-566a19ffbb1a</webElementGuid>
+      <webElementGuid>c63d2a9e-d124-4548-a3ab-8c6114131101</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -38,7 +38,7 @@
       <name>text</name>
       <type>Main</type>
       <value>geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot</value>
-      <webElementGuid>3f474fa4-01ee-452c-8379-4a3e693b16c1</webElementGuid>
+      <webElementGuid>175f92a8-8c08-4895-aa24-794844f295ee</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -46,7 +46,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;msg-1840651253101629440&quot;)/div[@class=&quot;relative rounded-sm overflow-visible&quot;]/div[@class=&quot;flex h-15 flex-col w-auto px-3 dark:bg-[#403D38] bg-[#EAB3081A]&quot;]</value>
-      <webElementGuid>efb13d7e-d13c-4506-9eef-4384c34a157b</webElementGuid>
+      <webElementGuid>115ea893-decb-4c7f-870a-a93fd112d02c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -54,7 +54,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='msg-1840651253101629440']/div/div[2]</value>
-      <webElementGuid>2ee73906-9123-448a-9e19-8a8e6c03b869</webElementGuid>
+      <webElementGuid>78475d63-7bbf-4ac5-9d7a-bfa2a46a509f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -62,7 +62,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='he lo mn'])[13]/following::div[10]</value>
-      <webElementGuid>fd799479-ac33-40be-9586-7347f581a3f4</webElementGuid>
+      <webElementGuid>ac1eaa63-668b-408b-9533-be4fb67db0a4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -70,7 +70,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='toi la bot'])[4]/following::div[30]</value>
-      <webElementGuid>b63ccd5a-0907-4b88-84ac-c64db78dd7c1</webElementGuid>
+      <webElementGuid>ed469a72-2528-4c43-a617-3d27933950d3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -78,7 +78,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[14]/div/div/div/div/div[2]</value>
-      <webElementGuid>dfe5fd3a-009f-4f2a-bf93-0023b3e8eac6</webElementGuid>
+      <webElementGuid>6891faba-8f0c-4fd4-9f0f-12bd88164bc5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -86,6 +86,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = 'geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot' or . = 'geBXclVQui he lo mngeBXclVQuiToday at 09:44toi la bot')]</value>
-      <webElementGuid>65bf1040-74e7-4940-b3fb-9f9e58623840</webElementGuid>
+      <webElementGuid>98240cec-a6de-4fd5-bee2-1ca338fadf70</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
