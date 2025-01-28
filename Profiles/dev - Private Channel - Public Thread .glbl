@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>dev - Channel Public</name>
+   <name>dev - Private Channel - Public Thread </name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
@@ -31,12 +31,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>false</initValue>
+      <initValue>true</initValue>
       <name>isThread</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>findTestObject('Channel Message/Select channel and send message/Channel Public')</initValue>
+      <initValue>findTestObject('Channel Message/Select channel and send message/Channel private')</initValue>
       <name>channel</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -46,7 +46,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>true</initValue>
+      <name>isPrivateChannel</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>false</initValue>
-      <name>isChannelPrivate</name>
+      <name>isPrivateThread</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -37,7 +37,7 @@ if(GlobalVariable.isDirectMessage) {
 		textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_thread'))
 		
 		WebUI.click(findTestObject('Channel Message/Jump to pin message/button_jump_thread'))
-	} else if (GlobalVariable.isChannelPrivate) {
+	} else if (GlobalVariable.isPrivateChannel) {
 		WebUI.click(findTestObject('Channel Message/Jump to pin message/button_pin panel channel Private'))
 		
 		textPinMessage = getTextPinMessage(findTestObject('Channel Message/Jump to pin message/div_text pin message_channel private'))

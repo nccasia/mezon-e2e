@@ -84,3 +84,96 @@ Katalon Documentation: http://docs.katalon.com/, especially some [Tips and Trick
 Katalon Forum: https://forum.katalon.com/
 
 Katalon Business Support: https://www.katalon.com/support-service-options/
+
+
+# Profiles
+
+Dev – Public Channel – Public Thread: This means testing in the development environment, with a public thread in a public channel.
+Variables:
+ * host: The homepage URL of Mezon.
+ * baseURL: The login page URL.
+ * email, password: Test account credentials.
+ * channel: Channel object.
+ * channelID: Channel ID.
+ * isThread: Used to determine if the test is within a thread.
+ * isPrivateThread: Used to determine if it is a private thread.
+
+Dev – Group Message: This means testing in the development environment, within group chats.
+Variables: 
+ * host, 
+ * baseURL, 
+ * email, password
+ * isDirectMessage: Determines if the test is in a direct message.
+ * isGroupMessage: Determines if the test is in a group chat.
+
+# Custom Keywords 
+[Attribute.add] Used to add attributes to an element.
+syntax: CustomKeywords.'mezon.Attribute.add'(testObject, name, value)
+ * name: The name of the attribute (String).
+ * value: The value of the attribute (String).
+Example:
+CustomKeywords.'mezon.Attribute.add'(findTestObject('Object Repository/Channel Message/Copy Image/img_Image Message'), 'id', 'test-id');
+
+[ConvertFile.toString] Used to convert file data into a String.
+syntax: CustomKeywords.'mezon.ConvertFile.toString'(path)
+ * path: The file path (String).
+Example:
+CustomKeywords.'mezon.ConvertFile.toString'('\\Data Files\\Image\\logo NCC.png');
+
+[Element.getXPath] Used to retrieve the XPath of an element.
+syntax: CustomKeywords.'mezon.Element.getXPath'(element)
+ * element: The WebElement.
+Example:
+WebElement channelElement = WebUI.findWebElement(findTestObject('Object Repository/Manage Channel/Create New Public Channel/div_New Channel'));
+CustomKeywords.'mezon.Element.getXPath'(channelElement);
+
+[File.getPath] Used to retrieve the full file path.
+syntax: CustomKeywords.'mezon.File.getXPath'(path)
+ * path: The file path (String).
+Example:
+CustomKeywords.'mezon.File.getXPath'('\\Data Files\\Image\\logo NCC.png');
+
+[GetTestObject.withXpath] Used to create a TestObject from an XPath.
+syntax: CustomKeywords.'mezon.GetTestObject.withXpath'(xpath)
+ * xpath: The XPath (String).
+Example:
+String xpath = "//*[@id='msg-46541168498']";
+TestObject MessageObj = CustomKeywords.'mezon.GetTestObject.withXpath'(xpath);
+
+[Random.text] Used to generate random String.
+syntax: CustomKeywords.'mezon.Random.text'(text)
+ * Text: The text pattern (String).
+Example:
+CustomKeywords.'mezon.Random.text'("message");
+
+[SendText.SendText] Set text and send the Enter key at input/textarea.
+syntax: CustomKeywords.'SendText.SendText'(Object)
+ * Object: The TestObject.
+Example:
+CustomKeywords.'SendText.SendText'(findTestObject('Channel Message/Send emoji, sticker, GIF/Page_Mezon/textarea'));
+
+[SendingMessage.isSendingMessage] Verifies if a message is in a sending state.
+syntax: CustomKeywords.'SendingMessage.isSendingMessage'(Object)
+ * Object: The TestObject.
+Example:
+CustomKeywords.'SendingMessage.isSendingMessage'();
+CustomKeywords.'SendingMessage.isSendingMessage'(findTestObject('Channel Message/Send message/message container'));
+
+[VerifyHrefImgExists.VerifyHrefImgExists] Checks if an image tag within an element contains the specified src.
+syntax: CustomKeywords.'VerifyHrefImgExists.VerifyHrefImgExists'(Object, src)
+ * Object: The TestObject.
+ * src: The image link.
+
+[VerifySaveImage.VerifySaveImage] Checks if the downloaded PNG file exists in the specified folder.
+syntax: CustomKeywords.'VerifySaveImage.VerifySaveImage'(folder, fileName)
+ * folder: The folder path (String).
+ * fileName: The file name.
+Example:
+String home = System.getProperty('user.home');
+String userDownloads = new File(home + '/Downloads/');
+CustomKeywords.'VerifySaveImage.VerifySaveImage'(userDownloads, 'image');
+
+Note
+•	Request developers to add a data-id attribute containing the message ID to the buttons for "jump to pinned message" and "jump to reply message" for easier verification.
+•	Currently, the sidebar in threads has changed, so test cases for selecting channels need to be updated.
+

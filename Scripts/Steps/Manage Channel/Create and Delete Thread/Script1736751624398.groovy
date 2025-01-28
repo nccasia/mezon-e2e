@@ -29,7 +29,7 @@ if (GlobalVariable.isThread) {
 	WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread -thread'))
 	
 } else {
-	if(GlobalVariable.isChannelPrivate) {
+	if(GlobalVariable.isPrivateChannel) {
 		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_thread pannel - channel private'))
 		WebUI.click(findTestObject('Channel Message/Create thread from message item/button_create thread - channel private'))
 	} else {
